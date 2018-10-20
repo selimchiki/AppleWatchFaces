@@ -22,8 +22,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             debugPrint("FaceChosen" + iPhoneContext["FaceChosen"]!)
             
             if let chosenFace = iPhoneContext["FaceChosen"] {
+                
+                UserDefaults.standard.set(chosenFace, forKey: "FaceChosen")
+                
                 if let gameScene = self.skInterface.scene as? GameScene {
-                    gameScene.redraw(labelText: chosenFace)
+                    gameScene.redraw()
                 }
             }
             

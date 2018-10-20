@@ -12,9 +12,12 @@ class GameScene: SKScene {
     
     private var spinnyNode : SKShapeNode?
     
-    func redraw( labelText: String) {
+    func redraw() {
+        
+        let faceChosen = UserDefaults.standard.string(forKey: "FaceChosen") ?? "defaultFace"
+        
         if let label = self.childNode(withName: "//helloLabel") as? SKLabelNode {
-            label.text = labelText
+            label.text = faceChosen
         }
     }
     
@@ -25,26 +28,8 @@ class GameScene: SKScene {
             label.run(SKAction.fadeIn(withDuration: 2.0))
         }
         
-        let w = (self.size.width + self.size.height) * 0.05
-        let spinnyNode = SKShapeNode(rectOf: CGSize(width: w, height: w), cornerRadius: w * 0.3)
-        
-        spinnyNode.position = CGPoint(x: 0.0, y: 0.0)
-        spinnyNode.strokeColor = UIColor.red
-        spinnyNode.lineWidth = 8.0
-            
-        spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                          SKAction.fadeOut(withDuration: 0.5),
-                                          SKAction.removeFromParent()]))
-        
-        spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: 6.28, duration: 1)))
-        
-        self.run(SKAction.repeatForever(SKAction.sequence([SKAction.wait(forDuration: 2.0),
-                                                           SKAction.run({
-                                                            let n = spinnyNode.copy() as! SKShapeNode
-                                                            self.addChild(n)
-                                                           })])))
+        redraw()
     }
-    
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
