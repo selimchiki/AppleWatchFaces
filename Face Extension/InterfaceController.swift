@@ -45,6 +45,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         
         //processApplicationContext()
         
+        setTitle(" ")
+        
         // Configure interface objects here.
         session.delegate = self
         session.activate()

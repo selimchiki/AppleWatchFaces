@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3123628D217AAB1800E78EFC /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3123628C217AAB1800E78EFC /* WatchSessionManager.swift */; };
-		3123628E217AAB1800E78EFC /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3123628C217AAB1800E78EFC /* WatchSessionManager.swift */; };
 		318808D1217815E600585AB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808D0217815E600585AB1 /* AppDelegate.swift */; };
 		318808D3217815E600585AB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808D2217815E600585AB1 /* ViewController.swift */; };
 		318808D6217815E600585AB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318808D4217815E600585AB1 /* Main.storyboard */; };
@@ -70,7 +68,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3123628C217AAB1800E78EFC /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		318808CD217815E600585AB1 /* AppleWatchFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWatchFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318808D0217815E600585AB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		318808D2217815E600585AB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +112,6 @@
 		3123628B217AAAF000E78EFC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				3123628C217AAB1800E78EFC /* WatchSessionManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -323,7 +319,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3123628D217AAB1800E78EFC /* WatchSessionManager.swift in Sources */,
 				318808D3217815E600585AB1 /* ViewController.swift in Sources */,
 				318808D1217815E600585AB1 /* AppDelegate.swift in Sources */,
 			);
@@ -333,7 +328,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3123628E217AAB1800E78EFC /* WatchSessionManager.swift in Sources */,
 				318808FA2178166B00585AB1 /* GameScene.swift in Sources */,
 				318808F62178166B00585AB1 /* InterfaceController.swift in Sources */,
 				318808FE2178166B00585AB1 /* NotificationController.swift in Sources */,
