@@ -16,8 +16,8 @@
 		318808EA2178166B00585AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 318808E92178166B00585AB1 /* Assets.xcassets */; };
 		318808F12178166B00585AB1 /* Face Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 318808F02178166B00585AB1 /* Face Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		318808F62178166B00585AB1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808F52178166B00585AB1 /* InterfaceController.swift */; };
-		318808F82178166B00585AB1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 318808F72178166B00585AB1 /* GameScene.sks */; };
-		318808FA2178166B00585AB1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808F92178166B00585AB1 /* GameScene.swift */; };
+		318808F82178166B00585AB1 /* SKWatchScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 318808F72178166B00585AB1 /* SKWatchScene.sks */; };
+		318808FA2178166B00585AB1 /* SKWatchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808F92178166B00585AB1 /* SKWatchScene.swift */; };
 		318808FC2178166B00585AB1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808FB2178166B00585AB1 /* ExtensionDelegate.swift */; };
 		318808FE2178166B00585AB1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808FD2178166B00585AB1 /* NotificationController.swift */; };
 		318809002178166B00585AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 318808FF2178166B00585AB1 /* Assets.xcassets */; };
@@ -25,6 +25,9 @@
 		318809102178172600585AB1 /* faceBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 3188090F2178172600585AB1 /* faceBackground.png */; };
 		31F56F9D21857A2000455FC6 /* SecondHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F56F9C21857A2000455FC6 /* SecondHandNode.swift */; };
 		31F56FA221857AC300455FC6 /* SecondHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F56F9C21857A2000455FC6 /* SecondHandNode.swift */; };
+		31F56FA421857FC100455FC6 /* WatchPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F56FA321857FC100455FC6 /* WatchPreviewViewController.swift */; };
+		31F56FA52185816F00455FC6 /* SKWatchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808F92178166B00585AB1 /* SKWatchScene.swift */; };
+		31F56FA62185817E00455FC6 /* SKWatchScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 318808F72178166B00585AB1 /* SKWatchScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,8 +86,8 @@
 		318808EB2178166B00585AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		318808F02178166B00585AB1 /* Face Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Face Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		318808F52178166B00585AB1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		318808F72178166B00585AB1 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		318808F92178166B00585AB1 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		318808F72178166B00585AB1 /* SKWatchScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SKWatchScene.sks; sourceTree = "<group>"; };
+		318808F92178166B00585AB1 /* SKWatchScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKWatchScene.swift; sourceTree = "<group>"; };
 		318808FB2178166B00585AB1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		318808FD2178166B00585AB1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		318808FF2178166B00585AB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 		318809022178166B00585AB1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		3188090F2178172600585AB1 /* faceBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = faceBackground.png; sourceTree = "<group>"; };
 		31F56F9C21857A2000455FC6 /* SecondHandNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondHandNode.swift; sourceTree = "<group>"; };
+		31F56FA321857FC100455FC6 /* WatchPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 			children = (
 				31F56F9E21857A5E00455FC6 /* Extensions */,
 				31F56F9C21857A2000455FC6 /* SecondHandNode.swift */,
+				318808F72178166B00585AB1 /* SKWatchScene.sks */,
+				318808F92178166B00585AB1 /* SKWatchScene.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -147,6 +153,7 @@
 			children = (
 				318808D0217815E600585AB1 /* AppDelegate.swift */,
 				318808D2217815E600585AB1 /* ViewController.swift */,
+				31F56FA321857FC100455FC6 /* WatchPreviewViewController.swift */,
 				318808D4217815E600585AB1 /* Main.storyboard */,
 				318808D7217815E700585AB1 /* Assets.xcassets */,
 				318808D9217815E700585AB1 /* LaunchScreen.storyboard */,
@@ -170,8 +177,6 @@
 			children = (
 				3188090E2178170C00585AB1 /* Assets */,
 				318808F52178166B00585AB1 /* InterfaceController.swift */,
-				318808F72178166B00585AB1 /* GameScene.sks */,
-				318808F92178166B00585AB1 /* GameScene.swift */,
 				318808FB2178166B00585AB1 /* ExtensionDelegate.swift */,
 				318808FD2178166B00585AB1 /* NotificationController.swift */,
 				318808FF2178166B00585AB1 /* Assets.xcassets */,
@@ -299,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F56FA62185817E00455FC6 /* SKWatchScene.sks in Resources */,
 				318808DB217815E700585AB1 /* LaunchScreen.storyboard in Resources */,
 				318808D8217815E700585AB1 /* Assets.xcassets in Resources */,
 				318808D6217815E600585AB1 /* Main.storyboard in Resources */,
@@ -320,7 +326,7 @@
 			files = (
 				318809102178172600585AB1 /* faceBackground.png in Resources */,
 				318809002178166B00585AB1 /* Assets.xcassets in Resources */,
-				318808F82178166B00585AB1 /* GameScene.sks in Resources */,
+				318808F82178166B00585AB1 /* SKWatchScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,9 +337,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F56FA52185816F00455FC6 /* SKWatchScene.swift in Sources */,
 				318808D3217815E600585AB1 /* ViewController.swift in Sources */,
 				31F56F9D21857A2000455FC6 /* SecondHandNode.swift in Sources */,
 				318808D1217815E600585AB1 /* AppDelegate.swift in Sources */,
+				31F56FA421857FC100455FC6 /* WatchPreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				318808FA2178166B00585AB1 /* GameScene.swift in Sources */,
+				318808FA2178166B00585AB1 /* SKWatchScene.swift in Sources */,
 				318808F62178166B00585AB1 /* InterfaceController.swift in Sources */,
 				318808FE2178166B00585AB1 /* NotificationController.swift in Sources */,
 				318808FC2178166B00585AB1 /* ExtensionDelegate.swift in Sources */,

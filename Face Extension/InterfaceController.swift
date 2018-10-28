@@ -25,8 +25,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                 
                 UserDefaults.standard.set(chosenFace, forKey: "FaceChosen")
                 
-                if let gameScene = self.skInterface.scene as? GameScene {
-                    gameScene.redraw()
+                if let skWatchScene = self.skInterface.scene as? SKWatchScene {
+                    skWatchScene.redraw()
                 }
             }
             
@@ -53,7 +53,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         
         
         // Load the SKScene from 'GameScene.sks'
-        if let scene = GameScene(fileNamed: "GameScene") {
+        if let scene = SKWatchScene(fileNamed: "SKWatchScene") {
             
             // Set the scale mode to scale to fit the window
             scene.scaleMode = .aspectFill

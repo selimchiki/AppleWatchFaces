@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class SKWatchScene: SKScene {
     
     private var spinnyNode : SKShapeNode?
     var secondHand:SKSpriteNode = SKSpriteNode()
