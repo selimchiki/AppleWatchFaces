@@ -34,7 +34,7 @@ enum SecondHandMovements: String {
     }
 }
 
-class SecondHandNode: SCNNode {
+class SecondHandNode: SKNode {
     
     static func descriptionForType(_ nodeType: SecondHandTypes) -> String {
         var typeDescription = ""
@@ -106,26 +106,27 @@ class SecondHandNode: SCNNode {
         self.name = "secondHand"
         
         if (secondHandType == SecondHandTypes.SecondHandNodeTypeNone) {
-            self.geometry = nil
+            // do nothing ? need to erase ?
         }
         
         if (secondHandType == SecondHandTypes.SecondHandTypeSphere) {
-            let sphereGeom = SCNSphere.init(radius: 0.04)
-            self.geometry = sphereGeom
-            self.pivot = SCNMatrix4MakeTranslation(0.0, -0.89, 0)
+            let shape = SKShapeNode.init(circleOfRadius: 0.04)
+            self.addChild(shape)
+            //self.pivot = SCNMatrix4MakeTranslation(0.0, -0.89, 0)
         }
         
         if (secondHandType == SecondHandTypes.SecondHandTypeSquaredHole) {
-            self.geometry = SCNBox.init(width: 0.025, height: 0.9, length: 0.002, chamferRadius: 0.0)
-            self.geometry?.firstMaterial?.diffuse.contents = SKColor.red
+            let shape = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: 0.025, height: 0.9))
+            shape.fillColor = SKColor.red
+            //self.geometry = SCNBox.init(width: 0.025, height: 0.9, length: 0.002, chamferRadius: 0.0)
+            //self.geometry?.firstMaterial?.diffuse.contents = SKColor.red
+            //self.pivot = SCNMatrix4MakeTranslation(Float(-0.0125), Float(-0.4), Float(0))
             
-            self.pivot = SCNMatrix4MakeTranslation(Float(-0.0125), Float(-0.4), Float(0))
+            self.addChild(shape)
         }
         
         if (secondHandType == SecondHandTypes.SecondHandTypePointy) {
-            
-            let scaleForHand = 0.01 as Float
-            
+        
             let bezierPath = UIBezierPath()
             bezierPath.move(to: CGPoint(x: 0.5, y: 93))
             bezierPath.addCurve(to: CGPoint(x: 0.94, y: 3.89), controlPoint1: CGPoint(x: 0.5, y: 93), controlPoint2: CGPoint(x: 0.81, y: 30.59))
@@ -143,45 +144,41 @@ class SecondHandNode: SCNNode {
             
             bezierPath.flatness = 0.2
             
-            let shape = SCNShape.init(path: bezierPath, extrusionDepth: 0.1)
-            self.geometry = shape
-            self.scale = SCNVector3Make(scaleForHand, scaleForHand, scaleForHand)
+            let shape = SKShapeNode.init(path: bezierPath.cgPath)
+            shape.fillColor = SKColor.red
             
-            self.geometry?.firstMaterial?.diffuse.contents = SKColor.red
+//            let scaleForHand = 0.01 as Float
+//            let shape = SCNShape.init(path: bezierPath, extrusionDepth: 0.1)
+//            self.geometry = shape
+//            self.scale = SCNVector3Make(scaleForHand, scaleForHand, scaleForHand)
+//
+//            self.geometry?.firstMaterial?.diffuse.contents = SKColor.red
+            
+            self.addChild(shape)
         }
         
         if (secondHandType == SecondHandTypes.SecondHandTypeSwiss) {
             
-            let scaleForHand = 0.01 as Float
-            
             let bezierPath = UIBezierPath(rect: CGRect(x: -2, y: -20, width: 4, height: 104))
-            
-            //old swiss with circle tip
-//            let bezierPath = OBezierPath()
-//            bezierPath.moveToPoint(CGPointMake(8, 72))
-//            bezierPath.addCurve(to: CGPointMake(7.88, 70.63), controlPoint1: CGPointMake(8, 71.53), controlPoint2: CGPointMake(7.96, 71.07))
-//            bezierPath.addCurve(to: CGPointMake(2, 64.25), controlPoint1: CGPointMake(7.35, 67.52), controlPoint2: CGPointMake(5.02, 65.03))
-//            bezierPath.addCurve(to: CGPointMake(2, -22), controlPoint1: CGPointMake(2, 44.12), controlPoint2: CGPointMake(2, -22))
-//            bezierPath.addLine(to: CGPointMake(-2, -22))
-//            bezierPath.addCurve(to: CGPointMake(-2, 64.25), controlPoint1: CGPointMake(-2, -22), controlPoint2: CGPointMake(-2, 44.12))
-//            bezierPath.addCurve(to: CGPointMake(-8, 72), controlPoint1: CGPointMake(-5.45, 65.14), controlPoint2: CGPointMake(-8, 68.27))
-//            bezierPath.addCurve(to: CGPointMake(0, 80), controlPoint1: CGPointMake(-8, 76.42), controlPoint2: CGPointMake(-4.42, 80))
-//            bezierPath.addCurve(to: CGPointMake(8, 72), controlPoint1: CGPointMake(4.42, 80), controlPoint2: CGPointMake(8, 76.42))
-//            bezierPath.closePath()
-            
             bezierPath.flatness = 0.1
             
-            let shape = SCNShape.init(path: bezierPath, extrusionDepth: 1.0)
-            self.geometry = shape
-            self.scale = SCNVector3Make(scaleForHand, scaleForHand, scaleForHand)
+            let shape = SKShapeNode.init(path: bezierPath.cgPath)
+            shape.fillColor = SKColor.red
+
+//            let scaleForHand = 0.01 as Float
+//            let shape = SCNShape.init(path: bezierPath, extrusionDepth: 1.0)
+//            self.geometry = shape
+//            self.scale = SCNVector3Make(scaleForHand, scaleForHand, scaleForHand)
+//            
+//            self.geometry?.firstMaterial?.diffuse.contents = SKColor.red
             
-            self.geometry?.firstMaterial?.diffuse.contents = SKColor.red
+            self.addChild(shape)
         }
 
         
         if (secondHandType == SecondHandTypes.SecondHandTypeBlocky) {
             
-            let scaleForHand = 0.01 as Float
+            
             
             let bezierPath = UIBezierPath()
             bezierPath.move(to: CGPoint(x: 0.8, y: 95))
@@ -202,25 +199,33 @@ class SecondHandNode: SCNNode {
             bezierPath.addLine(to: CGPoint(x: 0.8, y: 95))
             bezierPath.close()
             
-            let shape = SCNShape.init(path: bezierPath, extrusionDepth: 1.0)
-            self.geometry = shape
-            self.scale = SCNVector3Make(scaleForHand, scaleForHand, scaleForHand)
-
-            self.geometry?.firstMaterial?.diffuse.contents = SKColor.red
+            let shape = SKShapeNode.init(path: bezierPath.cgPath)
+            shape.fillColor = SKColor.red
+            
+//            let scaleForHand = 0.01 as Float
+//            let shape = SCNShape.init(path: bezierPath, extrusionDepth: 1.0)
+//            self.geometry = shape
+//            self.scale = SCNVector3Make(scaleForHand, scaleForHand, scaleForHand)
+//
+//            self.geometry?.firstMaterial?.diffuse.contents = SKColor.red
+            
+            self.addChild(shape)
         }
         
         if (secondHandType == SecondHandTypes.SecondHandTypeRail) {
             
-            self.geometry = SCNBox.init(width: 0.01, height: 0.9, length: 0.002, chamferRadius: 0.0)
-            self.geometry?.firstMaterial?.diffuse.contents = SKColor.red
+            let shape = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: 0.01, height: 0.9))
+            shape.fillColor = SKColor.red
             
-            self.pivot = SCNMatrix4MakeTranslation(Float(0), Float(-0.4), Float(0))
+//            self.geometry = SCNBox.init(width: 0.01, height: 0.9, length: 0.002, chamferRadius: 0.0)
+//            self.geometry?.firstMaterial?.diffuse.contents = SKColor.red
+//
+//            self.pivot = SCNMatrix4MakeTranslation(Float(0), Float(-0.4), Float(0))
             
+            self.addChild(shape)
         }
         
         if (secondHandType == SecondHandTypes.SecondHandTypeRoman) {
-            
-            let scaleForHand = 0.0031 as Float
         
             let secondHandPath = UIBezierPath()
             secondHandPath.move(to: CGPoint(x: -0.18, y: 291.2))
@@ -379,13 +384,18 @@ class SecondHandNode: SCNNode {
             secondHandPath.close()
             
             secondHandPath.flatness = 0.5
-            self.geometry = SCNShape.init(path: secondHandPath, extrusionDepth: 0.02)
-            self.scale = SCNVector3Make(scaleForHand, scaleForHand, scaleForHand)
             
-            self.geometry?.firstMaterial?.diffuse.contents = SKColor.red
+            let shape = SKShapeNode.init(path: secondHandPath.cgPath)
+            shape.fillColor = SKColor.red
+            
+//            let scaleForHand = 0.0031 as Float
+//            self.geometry = SCNShape.init(path: secondHandPath, extrusionDepth: 0.02)
+//            self.scale = SCNVector3Make(scaleForHand, scaleForHand, scaleForHand)
+//
+//            self.geometry?.firstMaterial?.diffuse.contents = SKColor.red
+            self.addChild(shape)
         }
         
-        self.castsShadow = true
     }
     
     required init?(coder aDecoder: NSCoder) {

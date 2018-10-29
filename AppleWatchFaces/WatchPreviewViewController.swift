@@ -26,7 +26,6 @@ class WatchPreviewViewController: UIViewController {
             skView.presentScene(scene)
         }
         
-        
         skView.ignoresSiblingOrder = true
         
         skView.showsFPS = false
