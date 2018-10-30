@@ -31,6 +31,8 @@
 		31F8ABAB2187E8DB0014E2ED /* WatchSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8ABAA2187E8DB0014E2ED /* WatchSettingsTableViewController.swift */; };
 		31F8ABCD2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8ABCC2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift */; };
 		31F8ABCF2187EE2F0014E2ED /* SecondHandSettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8ABCE2187EE2F0014E2ED /* SecondHandSettingCollectionViewCell.swift */; };
+		31FD61E921891B5000E15DEA /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FD61E821891B4F00E15DEA /* SwiftyJSON.swift */; };
+		31FD61EB21891B6900E15DEA /* ClockColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FD61EA21891B6900E15DEA /* ClockColorTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		31F8ABAA2187E8DB0014E2ED /* WatchSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSettingsTableViewController.swift; sourceTree = "<group>"; };
 		31F8ABCC2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondHandSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		31F8ABCE2187EE2F0014E2ED /* SecondHandSettingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondHandSettingCollectionViewCell.swift; sourceTree = "<group>"; };
+		31FD61E821891B4F00E15DEA /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		31FD61EA21891B6900E15DEA /* ClockColorTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockColorTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,7 @@
 		31F56F9E21857A5E00455FC6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				31FD61E821891B4F00E15DEA /* SwiftyJSON.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 		31F8ABD0218916DE0014E2ED /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				31FD61EA21891B6900E15DEA /* ClockColorTheme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -354,12 +360,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31FD61EB21891B6900E15DEA /* ClockColorTheme.swift in Sources */,
 				31F8ABCF2187EE2F0014E2ED /* SecondHandSettingCollectionViewCell.swift in Sources */,
 				31F56FA52185816F00455FC6 /* SKWatchScene.swift in Sources */,
 				318808D3217815E600585AB1 /* ViewController.swift in Sources */,
 				31F8ABAB2187E8DB0014E2ED /* WatchSettingsTableViewController.swift in Sources */,
 				31F56F9D21857A2000455FC6 /* SecondHandNode.swift in Sources */,
 				31F8ABCD2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift in Sources */,
+				31FD61E921891B5000E15DEA /* SwiftyJSON.swift in Sources */,
 				318808D1217815E600585AB1 /* AppDelegate.swift in Sources */,
 				31F56FA421857FC100455FC6 /* WatchPreviewViewController.swift in Sources */,
 			);
