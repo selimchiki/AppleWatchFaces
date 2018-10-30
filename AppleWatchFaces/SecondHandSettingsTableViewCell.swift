@@ -8,20 +8,27 @@
 
 import Foundation
 import UIKit
+import SpriteKit
 
 class SecondHandSettingsTableViewCell: UITableViewCell, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return 10
+       return SecondHandTypes.userSelectableValues.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "settingsHandCell", for: indexPath) as! SecondHandSettingCollectionViewCell
         
-        if let image = UIImage.init(named: "doge") {
-            cell.imageView.image = image
-        }
+        let previewScene = SKScene.init()
+        previewScene.scaleMode = .aspectFill
         
+        let handNode = SecondHandNode.init(secondHandType: SecondHandTypes.userSelectableValues[indexPath.row])
+        handNode.position = CGPoint.init(x: previewScene.size.width/2, y: previewScene.size.width/10) 
+        previewScene.addChild(handNode)
+        
+        // Present the scene
+        cell.skView.presentScene(previewScene)
+
         return cell
     }
     

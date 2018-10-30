@@ -104,6 +104,7 @@ class SecondHandNode: SKNode {
         super.init()
         
         self.name = "secondHand"
+        self.setScale(0.005)
         
         if (secondHandType == SecondHandTypes.SecondHandNodeTypeNone) {
             // do nothing ? need to erase ?

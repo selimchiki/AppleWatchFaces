@@ -123,19 +123,14 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MvA-nc-9A4">
+                                                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9mw-DT-eaz">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                                            </imageView>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            </skView>
                                                         </subviews>
                                                     </view>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="MvA-nc-9A4" secondAttribute="bottom" id="2qw-Ao-nya"/>
-                                                        <constraint firstAttribute="trailing" secondItem="MvA-nc-9A4" secondAttribute="trailing" id="4Lp-JX-qpR"/>
-                                                        <constraint firstItem="MvA-nc-9A4" firstAttribute="leading" secondItem="QB0-47-wJa" secondAttribute="leading" id="KE5-oM-zjN"/>
-                                                        <constraint firstItem="MvA-nc-9A4" firstAttribute="top" secondItem="QB0-47-wJa" secondAttribute="top" id="pge-Fn-eeG"/>
-                                                    </constraints>
                                                     <connections>
-                                                        <outlet property="imageView" destination="MvA-nc-9A4" id="q7Z-E4-hjE"/>
+                                                        <outlet property="skView" destination="9mw-DT-eaz" id="EYy-Cy-XTs"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>

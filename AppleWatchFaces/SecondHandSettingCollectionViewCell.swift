@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SpriteKit
 
 class SecondHandSettingCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var skView : SKView!
 }
