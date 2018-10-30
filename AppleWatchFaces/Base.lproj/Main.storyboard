@@ -37,24 +37,34 @@
                                     <segue destination="gcy-GJ-xSo" kind="embed" id="ImA-iE-Dqj"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L09-xH-or1">
+                                <rect key="frame" x="0.0" y="186" width="375" height="481"/>
+                                <connections>
+                                    <segue destination="g3k-ac-9zQ" kind="embed" id="9MD-Q2-0lQ"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DN7-J7-N45" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1CH-Ji-RiX"/>
-                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2fb-vY-1SI"/>
-                            <constraint firstItem="Qgc-Jr-Hks" firstAttribute="baseline" secondItem="Mqq-m7-d7p" secondAttribute="baseline" id="N8f-LA-TVn"/>
+                            <constraint firstItem="DN7-J7-N45" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="bottom" constant="8" symbolic="YES" id="Hxr-6R-ctz"/>
+                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="J1n-Ko-9Um"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="leading" id="LnT-P5-l6G"/>
+                            <constraint firstItem="Qgc-Jr-Hks" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="NhQ-KO-FHI"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="trailing" secondItem="DN7-J7-N45" secondAttribute="trailing" id="R3I-p5-ze9"/>
                             <constraint firstAttribute="trailing" secondItem="DN7-J7-N45" secondAttribute="trailing" id="UXq-Bb-Yno"/>
+                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="baseline" secondItem="Qgc-Jr-Hks" secondAttribute="baseline" id="XFw-XA-WQa"/>
+                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Z6c-EH-M6J"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DN7-J7-N45" secondAttribute="bottom" constant="481" id="e6e-qb-If6"/>
-                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="f3A-M8-g6z"/>
-                            <constraint firstItem="Qgc-Jr-Hks" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lmH-Rw-SKy"/>
-                            <constraint firstItem="DN7-J7-N45" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="bottom" constant="8" symbolic="YES" id="np1-t9-IE4"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="bottom" id="wH8-yh-hx9"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xPF-Ba-Nch"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-602" y="144"/>
+            <point key="canvasLocation" x="-602.39999999999998" y="143.47826086956522"/>
         </scene>
         <!--Watch Preview View Controller-->
         <scene sceneID="ObF-rt-ljS">
@@ -70,6 +80,7 @@
                             </skView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZEe-Vn-Uql"/>
                     </view>
                     <connections>
                         <outlet property="skView" destination="Q5a-mZ-USQ" id="JxE-pF-J77"/>
@@ -77,7 +88,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKm-1s-s5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="413.60000000000002" y="143.92803598200899"/>
+            <point key="canvasLocation" x="308" y="-124"/>
+        </scene>
+        <!--Watch Settings Table View Controller-->
+        <scene sceneID="S1k-2D-cds">
+            <objects>
+                <tableViewController id="g3k-ac-9zQ" customClass="WatchSettingsTableViewController" customModule="AppleWatchFaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eDq-3Y-cMU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="481"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondHandSettingsTableViewCell" rowHeight="100" id="zGU-j9-Y07" customClass="SecondHandSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zGU-j9-Y07" id="rXn-ye-gOH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gff-Vv-w5T">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WYP-0t-1A6">
+                                                <size key="itemSize" width="100" height="100"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="settingsHandCell" id="QB0-47-wJa" customClass="SecondHandSettingCollectionViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MvA-nc-9A4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="MvA-nc-9A4" secondAttribute="bottom" id="2qw-Ao-nya"/>
+                                                        <constraint firstAttribute="trailing" secondItem="MvA-nc-9A4" secondAttribute="trailing" id="4Lp-JX-qpR"/>
+                                                        <constraint firstItem="MvA-nc-9A4" firstAttribute="leading" secondItem="QB0-47-wJa" secondAttribute="leading" id="KE5-oM-zjN"/>
+                                                        <constraint firstItem="MvA-nc-9A4" firstAttribute="top" secondItem="QB0-47-wJa" secondAttribute="top" id="pge-Fn-eeG"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="imageView" destination="MvA-nc-9A4" id="q7Z-E4-hjE"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="zGU-j9-Y07" id="Lho-X6-xe6"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="g3k-ac-9zQ" id="Jhm-Rm-kAp"/>
+                            <outlet property="delegate" destination="g3k-ac-9zQ" id="WuD-S0-iPN"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xF8-QY-zte" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="308" y="226.23688155922042"/>
         </scene>
     </scenes>
 </document>

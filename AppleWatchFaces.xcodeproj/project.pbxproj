@@ -28,6 +28,9 @@
 		31F56FA421857FC100455FC6 /* WatchPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F56FA321857FC100455FC6 /* WatchPreviewViewController.swift */; };
 		31F56FA52185816F00455FC6 /* SKWatchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808F92178166B00585AB1 /* SKWatchScene.swift */; };
 		31F56FA62185817E00455FC6 /* SKWatchScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 318808F72178166B00585AB1 /* SKWatchScene.sks */; };
+		31F8ABAB2187E8DB0014E2ED /* WatchSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8ABAA2187E8DB0014E2ED /* WatchSettingsTableViewController.swift */; };
+		31F8ABCD2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8ABCC2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift */; };
+		31F8ABCF2187EE2F0014E2ED /* SecondHandSettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8ABCE2187EE2F0014E2ED /* SecondHandSettingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,9 @@
 		3188090F2178172600585AB1 /* faceBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = faceBackground.png; sourceTree = "<group>"; };
 		31F56F9C21857A2000455FC6 /* SecondHandNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondHandNode.swift; sourceTree = "<group>"; };
 		31F56FA321857FC100455FC6 /* WatchPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewViewController.swift; sourceTree = "<group>"; };
+		31F8ABAA2187E8DB0014E2ED /* WatchSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSettingsTableViewController.swift; sourceTree = "<group>"; };
+		31F8ABCC2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondHandSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		31F8ABCE2187EE2F0014E2ED /* SecondHandSettingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondHandSettingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,10 +160,13 @@
 				318808D0217815E600585AB1 /* AppDelegate.swift */,
 				318808D2217815E600585AB1 /* ViewController.swift */,
 				31F56FA321857FC100455FC6 /* WatchPreviewViewController.swift */,
+				31F8ABAA2187E8DB0014E2ED /* WatchSettingsTableViewController.swift */,
 				318808D4217815E600585AB1 /* Main.storyboard */,
 				318808D7217815E700585AB1 /* Assets.xcassets */,
 				318808D9217815E700585AB1 /* LaunchScreen.storyboard */,
 				318808DC217815E700585AB1 /* Info.plist */,
+				31F8ABCC2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift */,
+				31F8ABCE2187EE2F0014E2ED /* SecondHandSettingCollectionViewCell.swift */,
 			);
 			path = AppleWatchFaces;
 			sourceTree = "<group>";
@@ -337,9 +346,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F8ABCF2187EE2F0014E2ED /* SecondHandSettingCollectionViewCell.swift in Sources */,
 				31F56FA52185816F00455FC6 /* SKWatchScene.swift in Sources */,
 				318808D3217815E600585AB1 /* ViewController.swift in Sources */,
+				31F8ABAB2187E8DB0014E2ED /* WatchSettingsTableViewController.swift in Sources */,
 				31F56F9D21857A2000455FC6 /* SecondHandNode.swift in Sources */,
+				31F8ABCD2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift in Sources */,
 				318808D1217815E600585AB1 /* AppDelegate.swift in Sources */,
 				31F56FA421857FC100455FC6 /* WatchPreviewViewController.swift in Sources */,
 			);
