@@ -10,7 +10,32 @@ import Foundation
 import UIKit
 import SpriteKit
 
-class SecondHandSettingsTableViewCell: UITableViewCell, UICollectionViewDataSource {
+class SecondHandSettingsTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    let selectedColor = SKColor.init(white: 0.5, alpha: 1.0)
+    let deSelectedColor = SKColor.init(white: 0.0, alpha: 1.0)
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let secondHandType = SecondHandTypes.userSelectableValues[indexPath.row]
+        debugPrint("selected cell secondHandType: " + secondHandType.rawValue)
+        
+        if let settingsHandCell = collectionView.cellForItem(at: indexPath) as? SecondHandSettingCollectionViewCell {
+            if let currentScene = settingsHandCell.skView.scene {
+                currentScene.backgroundColor = selectedColor
+            }
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let secondHandType = SecondHandTypes.userSelectableValues[indexPath.row]
+        debugPrint("deSelected cell secondHandType: " + secondHandType.rawValue)
+        
+        if let settingsHandCell = collectionView.cellForItem(at: indexPath) as? SecondHandSettingCollectionViewCell {
+            if let currentScene = settingsHandCell.skView.scene {
+                currentScene.backgroundColor = deSelectedColor
+            }
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        return SecondHandTypes.userSelectableValues.count
@@ -21,6 +46,13 @@ class SecondHandSettingsTableViewCell: UITableViewCell, UICollectionViewDataSour
         
         let previewScene = SKScene.init()
         previewScene.scaleMode = .aspectFill
+        
+        //draw it selected
+        if cell.isSelected {
+            previewScene.backgroundColor = selectedColor
+        }
+        
+        cell.secondHandType = SecondHandTypes.userSelectableValues[indexPath.row]
         
         let handNode = SecondHandNode.init(secondHandType: SecondHandTypes.userSelectableValues[indexPath.row])
         handNode.position = CGPoint.init(x: previewScene.size.width/2, y: previewScene.size.width/10) 

@@ -125,6 +125,7 @@
 		3123628B217AAAF000E78EFC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				31F8ABD0218916DE0014E2ED /* Models */,
 				31F56F9E21857A5E00455FC6 /* Extensions */,
 				31F56F9C21857A2000455FC6 /* SecondHandNode.swift */,
 				318808F72178166B00585AB1 /* SKWatchScene.sks */,
@@ -208,6 +209,13 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		31F8ABD0218916DE0014E2ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

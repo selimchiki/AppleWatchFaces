@@ -136,6 +136,7 @@
                                             </cells>
                                             <connections>
                                                 <outlet property="dataSource" destination="zGU-j9-Y07" id="Lho-X6-xe6"/>
+                                                <outlet property="delegate" destination="zGU-j9-Y07" id="YAY-QA-Q11"/>
                                             </connections>
                                         </collectionView>
                                     </subviews>

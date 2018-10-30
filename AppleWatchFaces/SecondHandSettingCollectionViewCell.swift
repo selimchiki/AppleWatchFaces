@@ -12,4 +12,15 @@ import SpriteKit
 class SecondHandSettingCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var skView : SKView!
+    var secondHandType: SecondHandTypes = SecondHandTypes.SecondHandNodeTypeNone
+    
+//    override var isSelected: Bool{
+//        didSet{
+//            if self.isSelected {
+//                debugPrint("selected cell secondHandType: " + secondHandType.rawValue)
+//            } else {
+//                debugPrint("DEselected cell secondHandType: " + secondHandType.rawValue)
+//            }
+//        }
+//    }
 }
