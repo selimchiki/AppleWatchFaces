@@ -25,6 +25,10 @@
 		318809002178166B00585AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 318808FF2178166B00585AB1 /* Assets.xcassets */; };
 		318809052178166B00585AB1 /* Face.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 318808E42178166A00585AB1 /* Face.app */; };
 		318809102178172600585AB1 /* faceBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 3188090F2178172600585AB1 /* faceBackground.png */; };
+		31B5E8CD218BD26B00DE6429 /* MinuteHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B5E8CC218BD26B00DE6429 /* MinuteHandNode.swift */; };
+		31B5E8CF218BD5A900DE6429 /* ClockRingSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B5E8CE218BD5A900DE6429 /* ClockRingSetting.swift */; };
+		31B5E8D2218BD63E00DE6429 /* NumberTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B5E8D0218BD63E00DE6429 /* NumberTextNode.swift */; };
+		31B5E8D3218BD63E00DE6429 /* FaceIndicatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B5E8D1218BD63E00DE6429 /* FaceIndicatorNode.swift */; };
 		31F56F9D21857A2000455FC6 /* SecondHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F56F9C21857A2000455FC6 /* SecondHandNode.swift */; };
 		31F56FA221857AC300455FC6 /* SecondHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F56F9C21857A2000455FC6 /* SecondHandNode.swift */; };
 		31F56FA421857FC100455FC6 /* WatchPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F56FA321857FC100455FC6 /* WatchPreviewViewController.swift */; };
@@ -103,6 +107,10 @@
 		318809012178166B00585AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		318809022178166B00585AB1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		3188090F2178172600585AB1 /* faceBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = faceBackground.png; sourceTree = "<group>"; };
+		31B5E8CC218BD26B00DE6429 /* MinuteHandNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinuteHandNode.swift; sourceTree = "<group>"; };
+		31B5E8CE218BD5A900DE6429 /* ClockRingSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockRingSetting.swift; sourceTree = "<group>"; };
+		31B5E8D0218BD63E00DE6429 /* NumberTextNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberTextNode.swift; path = Shared/NumberTextNode.swift; sourceTree = SOURCE_ROOT; };
+		31B5E8D1218BD63E00DE6429 /* FaceIndicatorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FaceIndicatorNode.swift; path = Shared/FaceIndicatorNode.swift; sourceTree = SOURCE_ROOT; };
 		31F56F9C21857A2000455FC6 /* SecondHandNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondHandNode.swift; sourceTree = "<group>"; };
 		31F56FA321857FC100455FC6 /* WatchPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewViewController.swift; sourceTree = "<group>"; };
 		31F8ABAA2187E8DB0014E2ED /* WatchSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +153,9 @@
 		312D4C06218BCDB5008504D2 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				31B5E8D1218BD63E00DE6429 /* FaceIndicatorNode.swift */,
+				31B5E8D0218BD63E00DE6429 /* NumberTextNode.swift */,
+				31B5E8CC218BD26B00DE6429 /* MinuteHandNode.swift */,
 				312D4C07218BCDDB008504D2 /* HourHandNode.swift */,
 				31F56F9C21857A2000455FC6 /* SecondHandNode.swift */,
 			);
@@ -232,6 +243,7 @@
 		31F8ABD0218916DE0014E2ED /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				31B5E8CE218BD5A900DE6429 /* ClockRingSetting.swift */,
 				312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */,
 				31FD61EA21891B6900E15DEA /* ClockColorTheme.swift */,
 			);
@@ -377,9 +389,13 @@
 				31FD61EB21891B6900E15DEA /* ClockColorTheme.swift in Sources */,
 				31F8ABCF2187EE2F0014E2ED /* SecondHandSettingCollectionViewCell.swift in Sources */,
 				31F56FA52185816F00455FC6 /* SKWatchScene.swift in Sources */,
+				31B5E8CF218BD5A900DE6429 /* ClockRingSetting.swift in Sources */,
+				31B5E8D3218BD63E00DE6429 /* FaceIndicatorNode.swift in Sources */,
+				31B5E8CD218BD26B00DE6429 /* MinuteHandNode.swift in Sources */,
 				318808D3217815E600585AB1 /* ViewController.swift in Sources */,
 				31F8ABAB2187E8DB0014E2ED /* WatchSettingsTableViewController.swift in Sources */,
 				31F56F9D21857A2000455FC6 /* SecondHandNode.swift in Sources */,
+				31B5E8D2218BD63E00DE6429 /* NumberTextNode.swift in Sources */,
 				31F8ABCD2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift in Sources */,
 				31FD61E921891B5000E15DEA /* SwiftyJSON.swift in Sources */,
 				312D4C08218BCDDB008504D2 /* HourHandNode.swift in Sources */,
