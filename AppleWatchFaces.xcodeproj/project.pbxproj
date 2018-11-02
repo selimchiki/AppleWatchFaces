@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312D4C05218BCBF0008504D2 /* ClockDecoratorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */; };
+		312D4C08218BCDDB008504D2 /* HourHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C07218BCDDB008504D2 /* HourHandNode.swift */; };
 		318808D1217815E600585AB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808D0217815E600585AB1 /* AppDelegate.swift */; };
 		318808D3217815E600585AB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808D2217815E600585AB1 /* ViewController.swift */; };
 		318808D6217815E600585AB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318808D4217815E600585AB1 /* Main.storyboard */; };
@@ -78,6 +80,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockDecoratorTheme.swift; sourceTree = "<group>"; };
+		312D4C07218BCDDB008504D2 /* HourHandNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourHandNode.swift; sourceTree = "<group>"; };
 		318808CD217815E600585AB1 /* AppleWatchFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWatchFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318808D0217815E600585AB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		318808D2217815E600585AB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,13 +133,22 @@
 		3123628B217AAAF000E78EFC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				312D4C06218BCDB5008504D2 /* Nodes */,
 				31F8ABD0218916DE0014E2ED /* Models */,
 				31F56F9E21857A5E00455FC6 /* Extensions */,
-				31F56F9C21857A2000455FC6 /* SecondHandNode.swift */,
 				318808F72178166B00585AB1 /* SKWatchScene.sks */,
 				318808F92178166B00585AB1 /* SKWatchScene.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		312D4C06218BCDB5008504D2 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				312D4C07218BCDDB008504D2 /* HourHandNode.swift */,
+				31F56F9C21857A2000455FC6 /* SecondHandNode.swift */,
+			);
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 		318808C4217815E600585AB1 = {
@@ -219,6 +232,7 @@
 		31F8ABD0218916DE0014E2ED /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */,
 				31FD61EA21891B6900E15DEA /* ClockColorTheme.swift */,
 			);
 			path = Models;
@@ -368,6 +382,8 @@
 				31F56F9D21857A2000455FC6 /* SecondHandNode.swift in Sources */,
 				31F8ABCD2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift in Sources */,
 				31FD61E921891B5000E15DEA /* SwiftyJSON.swift in Sources */,
+				312D4C08218BCDDB008504D2 /* HourHandNode.swift in Sources */,
+				312D4C05218BCBF0008504D2 /* ClockDecoratorTheme.swift in Sources */,
 				318808D1217815E600585AB1 /* AppDelegate.swift in Sources */,
 				31F56FA421857FC100455FC6 /* WatchPreviewViewController.swift in Sources */,
 			);

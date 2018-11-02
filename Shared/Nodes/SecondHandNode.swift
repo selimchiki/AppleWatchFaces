@@ -178,9 +178,7 @@ class SecondHandNode: SKNode {
 
         
         if (secondHandType == SecondHandTypes.SecondHandTypeBlocky) {
-            
-            
-            
+
             let bezierPath = UIBezierPath()
             bezierPath.move(to: CGPoint(x: 0.8, y: 95))
             bezierPath.addCurve(to: CGPoint(x: 0.8, y: 11.59), controlPoint1: CGPoint(x: 0.8, y: 95), controlPoint2: CGPoint(x: 0.8, y: 41.91))
