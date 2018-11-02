@@ -40,13 +40,30 @@ class SKWatchScene: SKScene {
         self.addChild(faceNode)
     }
     
-    func redraw() {
+    func redraw(clockSetting: ClockSetting) {
         
         let faceChosen = UserDefaults.standard.string(forKey: "FaceChosen") ?? "defaultFace"
         
         if let label = self.childNode(withName: "//helloLabel") as? SKLabelNode {
             label.text = faceChosen
         }
+        
+        if let clockFaceSettings = clockSetting.clockFaceSettings {
+            let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType)
+            secHandNode.name = "secondHand"
+            secHandNode.position = CGPoint.init(x: 0, y: 0 ) //CGPoint.init(x: self.size.width/2, y: self.size.width/10)
+            
+//            //swap in new node
+            if let secondHandParent = secondHand.parent {
+                secondHandParent.addChild(secHandNode)
+                secondHand.removeFromParent()
+                
+                //reset global for update later
+                secondHand = secHandNode
+            }
+
+        }
+        
     }
     
     override func sceneDidLoad() {
@@ -61,7 +78,7 @@ class SKWatchScene: SKScene {
         }
         
         drawClock()
-        redraw()
+        //redraw( clockSetting: ClockSetting.defaults() )
     }
     
     override func update(_ currentTime: TimeInterval) {

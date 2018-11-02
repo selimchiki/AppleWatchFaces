@@ -34,7 +34,7 @@ enum SecondHandMovements: String {
     }
 }
 
-class SecondHandNode: SKNode {
+class SecondHandNode: SKSpriteNode {
     
     static func descriptionForType(_ nodeType: SecondHandTypes) -> String {
         var typeDescription = ""
@@ -101,10 +101,8 @@ class SecondHandNode: SKNode {
     
     init(secondHandType: SecondHandTypes) {
     
-        super.init()
-        
+        super.init(texture: nil, color: SKColor.black, size: CGSize())
         self.name = "secondHand"
-        self.setScale(0.005)
         
         if (secondHandType == SecondHandTypes.SecondHandNodeTypeNone) {
             // do nothing ? need to erase ?

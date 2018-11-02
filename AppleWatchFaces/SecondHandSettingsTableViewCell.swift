@@ -59,7 +59,8 @@ class SecondHandSettingsTableViewCell: UITableViewCell, UICollectionViewDataSour
         cell.secondHandType = SecondHandTypes.userSelectableValues[indexPath.row]
         
         let handNode = SecondHandNode.init(secondHandType: SecondHandTypes.userSelectableValues[indexPath.row])
-        handNode.position = CGPoint.init(x: previewScene.size.width/2, y: previewScene.size.width/10) 
+        handNode.setScale(0.005)
+        handNode.position = CGPoint.init(x: previewScene.size.width/2, y: previewScene.size.width/10)
         previewScene.addChild(handNode)
         
         // Present the scene

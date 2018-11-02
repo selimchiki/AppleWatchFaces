@@ -11,11 +11,13 @@ import WatchConnectivity
 import Foundation
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
-
+    
+    @IBOutlet var skInterface: WKInterfaceSKScene!
+    
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) { }
     let session = WCSession.default
     
-    @IBOutlet var skInterface: WKInterfaceSKScene!
+    var currentClockSetting: ClockSetting = ClockSetting.defaults()
     
     func processApplicationContext() {
         if let iPhoneContext = session.receivedApplicationContext as? [String : String] {
@@ -26,7 +28,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                 UserDefaults.standard.set(chosenFace, forKey: "FaceChosen")
                 
                 if let skWatchScene = self.skInterface.scene as? SKWatchScene {
-                    skWatchScene.redraw()
+                    skWatchScene.redraw(clockSetting: currentClockSetting)
                 }
             }
             

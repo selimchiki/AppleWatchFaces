@@ -212,7 +212,7 @@ class NumberTextNode: SCNNode {
         let textScale = Float(0.3)
         
         let titleText = SCNText.init(string: title, extrusionDepth: CGFloat(textSize/3.5))
-        titleText.alignmentMode = CATextLayerAlignmentMode.center.rawValue
+//        titleText.alignmentMode = CATextLayerAlignmentMode.center.rawValue
         
         titleText.flatness = 0.001
         

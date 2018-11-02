@@ -15,7 +15,7 @@ class WatchPreviewViewController: UIViewController {
     
     func redraw() {
         if let watchScene = skView.scene as? SKWatchScene {
-            watchScene.redraw()
+            watchScene.redraw(clockSetting: SettingsViewController.currentClockSetting)
         }
     }
     
