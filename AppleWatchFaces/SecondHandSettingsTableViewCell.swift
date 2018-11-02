@@ -19,6 +19,10 @@ class SecondHandSettingsTableViewCell: UITableViewCell, UICollectionViewDataSour
         let secondHandType = SecondHandTypes.userSelectableValues[indexPath.row]
         debugPrint("selected cell secondHandType: " + secondHandType.rawValue)
         
+        //update the value
+        SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandType = secondHandType
+        NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil) //userInfo:["data": 42, "isImportant": true]
+        
         if let settingsHandCell = collectionView.cellForItem(at: indexPath) as? SecondHandSettingCollectionViewCell {
             if let currentScene = settingsHandCell.skView.scene {
                 currentScene.backgroundColor = selectedColor

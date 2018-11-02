@@ -12,7 +12,10 @@ import WatchConnectivity
 class SettingsViewController: UIViewController, WCSessionDelegate {
     
     var session: WCSession?
-    var currentClockSetting: ClockSetting = ClockSetting.defaults()
+    var watchPreviewViewController:WatchPreviewViewController?
+    static var currentClockSetting: ClockSetting = ClockSetting.defaults()
+    
+    static let settingsChangedNotificationName = Notification.Name("settingsChanged")
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         debugPrint("session activationDidCompleteWith")
@@ -24,6 +27,15 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
 
     func sessionDidDeactivate(_ session: WCSession) {
         debugPrint("session sessionDidDeactivate")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is WatchPreviewViewController
+        {
+            let vc = segue.destination as? WatchPreviewViewController
+            watchPreviewViewController = vc
+        }
     }
     
     
@@ -57,9 +69,19 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         }
     }
     
+    @objc func onNotification(notification:Notification)
+    {
+        //tell preview to reload
+        if watchPreviewViewController != nil {
+            watchPreviewViewController?.redraw()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(onNotification(notification:)), name: SettingsViewController.settingsChangedNotificationName, object: nil)
         
         if WCSession.isSupported() {
             session = WCSession.default

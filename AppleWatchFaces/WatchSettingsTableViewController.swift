@@ -12,7 +12,6 @@ import Foundation
 class WatchSettingsTableViewController: UITableViewController {
     
     var objects = [Any]()
-    
     // MARK: - Table View
     
     override func numberOfSections(in tableView: UITableView) -> Int {

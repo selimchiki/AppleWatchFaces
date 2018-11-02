@@ -13,6 +13,12 @@ class WatchPreviewViewController: UIViewController {
 
     @IBOutlet var skView: SKView!
     
+    func redraw() {
+        if let watchScene = skView.scene as? SKWatchScene {
+            watchScene.redraw()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
