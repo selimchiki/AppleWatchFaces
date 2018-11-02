@@ -32,13 +32,13 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DN7-J7-N45">
-                                <rect key="frame" x="0.0" y="58" width="375" height="128"/>
+                                <rect key="frame" x="0.0" y="58" width="375" height="200"/>
                                 <connections>
                                     <segue destination="gcy-GJ-xSo" kind="embed" id="ImA-iE-Dqj"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L09-xH-or1">
-                                <rect key="frame" x="0.0" y="186" width="375" height="481"/>
+                                <rect key="frame" x="0.0" y="258" width="375" height="478"/>
                                 <connections>
                                     <segue destination="g3k-ac-9zQ" kind="embed" id="9MD-Q2-0lQ"/>
                                 </connections>
@@ -46,18 +46,18 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DN7-J7-N45" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1CH-Ji-RiX"/>
-                            <constraint firstItem="DN7-J7-N45" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="bottom" constant="8" symbolic="YES" id="Hxr-6R-ctz"/>
+                            <constraint firstAttribute="bottom" secondItem="DN7-J7-N45" secondAttribute="bottom" constant="409" id="Gfe-Js-mDc"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="J1n-Ko-9Um"/>
-                            <constraint firstItem="L09-xH-or1" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="leading" id="LnT-P5-l6G"/>
+                            <constraint firstAttribute="trailing" secondItem="DN7-J7-N45" secondAttribute="trailing" id="MZR-2K-8H9"/>
                             <constraint firstItem="Qgc-Jr-Hks" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="NhQ-KO-FHI"/>
-                            <constraint firstItem="L09-xH-or1" firstAttribute="trailing" secondItem="DN7-J7-N45" secondAttribute="trailing" id="R3I-p5-ze9"/>
-                            <constraint firstAttribute="trailing" secondItem="DN7-J7-N45" secondAttribute="trailing" id="UXq-Bb-Yno"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="leading" id="WV2-gk-87q"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="baseline" secondItem="Qgc-Jr-Hks" secondAttribute="baseline" id="XFw-XA-WQa"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Z6c-EH-M6J"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DN7-J7-N45" secondAttribute="bottom" constant="481" id="e6e-qb-If6"/>
-                            <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="bottom" id="wH8-yh-hx9"/>
-                            <constraint firstItem="L09-xH-or1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xPF-Ba-Nch"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="trailing" secondItem="DN7-J7-N45" secondAttribute="trailing" id="cTJ-bx-Z4I"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="bottom" id="iBZ-XD-VQh"/>
+                            <constraint firstItem="DN7-J7-N45" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="bottom" constant="8" symbolic="YES" id="nSU-z6-Urf"/>
+                            <constraint firstItem="DN7-J7-N45" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ndP-YF-MTO"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="L09-xH-or1" secondAttribute="bottom" constant="-69" id="rVF-mr-OUz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -71,11 +71,11 @@
             <objects>
                 <viewController id="gcy-GJ-xSo" customClass="WatchPreviewViewController" customModule="AppleWatchFaces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M7r-jU-xTR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q5a-mZ-USQ">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </skView>
                         </subviews>
@@ -95,7 +95,7 @@
             <objects>
                 <tableViewController id="g3k-ac-9zQ" customClass="WatchSettingsTableViewController" customModule="AppleWatchFaces" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eDq-3Y-cMU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="481"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="478"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>

@@ -23,7 +23,7 @@ enum HourHandTypes: String {
     }
 }
 
-class HourHandNode: SKNode {
+class HourHandNode: SKSpriteNode {
     
     static func descriptionForType(_ nodeType: HourHandTypes) -> String {
         var typeDescription = ""
@@ -60,7 +60,7 @@ class HourHandNode: SKNode {
     
     init(hourHandType: HourHandTypes) {
         
-        super.init()
+        super.init(texture: nil, color: SKColor.black, size: CGSize())
         
         self.name = "hourHand"
         
@@ -92,7 +92,8 @@ class HourHandNode: SKNode {
             bezierPath.flatness = 0.01
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = SKColor.black
+            shape.fillColor = SKColor.white
+            shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
             
@@ -108,7 +109,8 @@ class HourHandNode: SKNode {
             let rectanglePath = UIBezierPath(rect: CGRect(x: -1.5, y: -11, width: 3, height: 60))
             
             let shape = SKShapeNode.init(path: rectanglePath.cgPath)
-            shape.fillColor = SKColor.black
+            shape.fillColor = SKColor.white
+            shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
             
@@ -136,7 +138,8 @@ class HourHandNode: SKNode {
             bezierPath.close()
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = SKColor.black
+            shape.fillColor = SKColor.white
+            shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
             
@@ -157,7 +160,8 @@ class HourHandNode: SKNode {
             bezierPath.close()
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = SKColor.black
+            shape.fillColor = SKColor.white
+            shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
             
@@ -184,7 +188,8 @@ class HourHandNode: SKNode {
             bezierPath.flatness = 0.01
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = SKColor.black
+            shape.fillColor = SKColor.white
+            shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
             
@@ -334,7 +339,8 @@ class HourHandNode: SKNode {
             hourHandPath.flatness = 0.1
             
             let shape = SKShapeNode.init(path: hourHandPath.cgPath)
-            shape.fillColor = SKColor.black
+            shape.fillColor = SKColor.white
+            shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
             
