@@ -9,9 +9,10 @@
 import UIKit
 import WatchConnectivity
 
-class ViewController: UIViewController, WCSessionDelegate {
+class SettingsViewController: UIViewController, WCSessionDelegate {
     
     var session: WCSession?
+    var currentClockSetting: ClockSetting = ClockSetting.defaults()
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         debugPrint("session activationDidCompleteWith")
