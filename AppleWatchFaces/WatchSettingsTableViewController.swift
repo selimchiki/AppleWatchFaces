@@ -19,12 +19,15 @@ class WatchSettingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "secondHandSettingsTableViewCell", for: indexPath)
+        var cellId = ""
+        if indexPath.row == 0 { cellId = "secondHandSettingsTableViewCell" }
+        if indexPath.row == 1 { cellId = "minuteHandSettingsTableViewCell" }
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         return cell
     }
     
