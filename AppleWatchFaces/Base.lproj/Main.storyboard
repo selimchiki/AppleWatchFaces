@@ -17,47 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-m7-d7p">
-                                <rect key="frame" x="16" y="20" width="51" height="30"/>
-                                <state key="normal" title="Facey 1"/>
-                                <connections>
-                                    <action selector="face1WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8eR-bK-dPv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgc-Jr-Hks">
-                                <rect key="frame" x="313" y="20" width="46" height="30"/>
-                                <state key="normal" title="Face 2"/>
-                                <connections>
-                                    <action selector="face2WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BMy-9r-6Qq"/>
-                                </connections>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DN7-J7-N45">
-                                <rect key="frame" x="0.0" y="58" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="20" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="NHd-0I-dua"/>
+                                    <constraint firstAttribute="height" constant="200" id="VMM-WS-WZG"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="gcy-GJ-xSo" kind="embed" id="ImA-iE-Dqj"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L09-xH-or1">
-                                <rect key="frame" x="0.0" y="258" width="375" height="478"/>
+                                <rect key="frame" x="0.0" y="228" width="375" height="508"/>
                                 <connections>
                                     <segue destination="g3k-ac-9zQ" kind="embed" id="9MD-Q2-0lQ"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-m7-d7p">
+                                <rect key="frame" x="258" y="20" width="101" height="30"/>
+                                <state key="normal" title="Send to Watch"/>
+                                <connections>
+                                    <action selector="face1WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8eR-bK-dPv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="DN7-J7-N45" secondAttribute="bottom" constant="409" id="Gfe-Js-mDc"/>
-                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="J1n-Ko-9Um"/>
-                            <constraint firstAttribute="trailing" secondItem="DN7-J7-N45" secondAttribute="trailing" id="MZR-2K-8H9"/>
-                            <constraint firstItem="Qgc-Jr-Hks" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="NhQ-KO-FHI"/>
-                            <constraint firstItem="L09-xH-or1" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="leading" id="WV2-gk-87q"/>
-                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="baseline" secondItem="Qgc-Jr-Hks" secondAttribute="baseline" id="XFw-XA-WQa"/>
-                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Z6c-EH-M6J"/>
-                            <constraint firstItem="L09-xH-or1" firstAttribute="trailing" secondItem="DN7-J7-N45" secondAttribute="trailing" id="cTJ-bx-Z4I"/>
-                            <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="bottom" id="iBZ-XD-VQh"/>
-                            <constraint firstItem="DN7-J7-N45" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="bottom" constant="8" symbolic="YES" id="nSU-z6-Urf"/>
-                            <constraint firstItem="DN7-J7-N45" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ndP-YF-MTO"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="L09-xH-or1" secondAttribute="bottom" constant="-69" id="rVF-mr-OUz"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="leading" id="6zg-yG-dX1"/>
+                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Btr-xi-dXg"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="L09-xH-or1" secondAttribute="bottom" constant="-69" id="NZ6-HR-4XD"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="bottom" constant="8" symbolic="YES" id="Sr7-2i-36u"/>
+                            <constraint firstItem="DN7-J7-N45" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="anx-7m-RWa"/>
+                            <constraint firstItem="DN7-J7-N45" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cq9-uT-uh4"/>
+                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pkI-2Y-Zvg"/>
+                            <constraint firstAttribute="trailing" secondItem="L09-xH-or1" secondAttribute="trailing" id="zhh-WG-J4I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -71,7 +64,7 @@
             <objects>
                 <viewController id="gcy-GJ-xSo" customClass="WatchPreviewViewController" customModule="AppleWatchFaces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M7r-jU-xTR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q5a-mZ-USQ">
@@ -79,7 +72,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </skView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ZEe-Vn-Uql"/>
                     </view>
                     <connections>
@@ -88,16 +81,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKm-1s-s5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308" y="-124"/>
+            <point key="canvasLocation" x="259" y="-195"/>
         </scene>
         <!--Watch Settings Table View Controller-->
         <scene sceneID="S1k-2D-cds">
             <objects>
                 <tableViewController id="g3k-ac-9zQ" customClass="WatchSettingsTableViewController" customModule="AppleWatchFaces" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eDq-3Y-cMU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="478"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="508"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondHandSettingsTableViewCell" rowHeight="100" id="zGU-j9-Y07" customClass="SecondHandSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
