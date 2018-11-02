@@ -10,20 +10,20 @@ import Foundation
 import UIKit
 import SpriteKit
 
-class MinuteHandSettingsTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+class HourHandSettingsTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
     let selectedColor = SKColor.init(white: 0.5, alpha: 1.0)
     let deSelectedColor = SKColor.init(white: 0.0, alpha: 1.0)
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let minuteHandType = MinuteHandTypes.userSelectableValues[indexPath.row]
-        debugPrint("selected cell minuteHandType: " + minuteHandType.rawValue)
+        let hourHandType = HourHandTypes.userSelectableValues[indexPath.row]
+        debugPrint("selected cell hourHandType: " + hourHandType.rawValue)
         
         //update the value
-        SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandType = minuteHandType
+        SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandType = hourHandType
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
         
-        if let settingsHandCell = collectionView.cellForItem(at: indexPath) as? MinuteHandSettingCollectionViewCell {
+        if let settingsHandCell = collectionView.cellForItem(at: indexPath) as? HourHandSettingCollectionViewCell {
             if let currentScene = settingsHandCell.skView.scene {
                 currentScene.backgroundColor = selectedColor
             }
@@ -31,10 +31,10 @@ class MinuteHandSettingsTableViewCell: UITableViewCell, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let minuteHandType = MinuteHandTypes.userSelectableValues[indexPath.row]
-        debugPrint("deSelected cell minuteHandType: " + minuteHandType.rawValue)
+        let hourHandType = HourHandTypes.userSelectableValues[indexPath.row]
+        debugPrint("deSelected cell hourHandType: " + hourHandType.rawValue)
         
-        if let settingsHandCell = collectionView.cellForItem(at: indexPath) as? MinuteHandSettingCollectionViewCell {
+        if let settingsHandCell = collectionView.cellForItem(at: indexPath) as? HourHandSettingCollectionViewCell {
             if let currentScene = settingsHandCell.skView.scene {
                 currentScene.backgroundColor = deSelectedColor
             }
@@ -42,11 +42,11 @@ class MinuteHandSettingsTableViewCell: UITableViewCell, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return MinuteHandTypes.userSelectableValues.count
+       return HourHandTypes.userSelectableValues.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "settingsHandCell", for: indexPath) as! MinuteHandSettingCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "settingsHandCell", for: indexPath) as! HourHandSettingCollectionViewCell
         
         let previewScene = SKScene.init()
         previewScene.scaleMode = .aspectFill
@@ -56,9 +56,9 @@ class MinuteHandSettingsTableViewCell: UITableViewCell, UICollectionViewDataSour
             previewScene.backgroundColor = selectedColor
         }
         
-        cell.minuteHandType = MinuteHandTypes.userSelectableValues[indexPath.row]
+        cell.hourHandType = HourHandTypes.userSelectableValues[indexPath.row]
         
-        let handNode = MinuteHandNode.init(minuteHandType: MinuteHandTypes.userSelectableValues[indexPath.row])
+        let handNode = HourHandNode.init(hourHandType: HourHandTypes.userSelectableValues[indexPath.row])
         handNode.setScale(0.005)
         handNode.position = CGPoint.init(x: previewScene.size.width/2, y: previewScene.size.width/10)
         previewScene.addChild(handNode)

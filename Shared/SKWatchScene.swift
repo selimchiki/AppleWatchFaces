@@ -11,10 +11,12 @@ import SpriteKit
 class SKWatchScene: SKScene {
     
     private var spinnyNode : SKShapeNode?
+    
     var secondHand:SKSpriteNode = SKSpriteNode()
     var minuteHand:SKSpriteNode = SKSpriteNode()
+    var hourHand:SKSpriteNode = SKSpriteNode()
     
-    func drawClock() {
+    func drawClockFace() {
         let faceNode = SKNode.init()
         faceNode.name = "faceNode"
         
@@ -52,13 +54,15 @@ class SKWatchScene: SKScene {
         if let clockFaceSettings = clockSetting.clockFaceSettings {
             let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType)
             secHandNode.name = "secondHand"
-            secHandNode.position = CGPoint.init(x: 0, y: 0 ) //CGPoint.init(x: self.size.width/2, y: self.size.width/10)
+            secHandNode.zPosition = 1
             
             let minHandNode = MinuteHandNode.init(minuteHandType: clockFaceSettings.minuteHandType)
             minHandNode.name = "minuteHand"
-            minHandNode.position = CGPoint.init(x: 0, y: 0 ) //CGPoint.init(x: self.size.width/2, y: self.size.width/10)
             
-//            //swap in new node
+            let hourHandNode = HourHandNode.init(hourHandType: clockFaceSettings.hourHandType)
+            hourHandNode.name = "hourHand"
+            
+            //swap in new node
             if let secondHandParent = secondHand.parent {
                 secondHandParent.addChild(secHandNode)
                 secondHand.removeFromParent()
@@ -74,6 +78,14 @@ class SKWatchScene: SKScene {
                 //reset global for update later
                 minuteHand = minHandNode
             }
+            
+            if let hourHandParent = hourHand.parent {
+                hourHandParent.addChild(hourHandNode)
+                hourHand.removeFromParent()
+                
+                //reset global for update later
+                hourHand = hourHandNode
+            }
 
         }
         
@@ -81,11 +93,14 @@ class SKWatchScene: SKScene {
     
     override func sceneDidLoad() {
         
-        if let secHand:SKSpriteNode = self.childNode(withName: "secondHand") as? SKSpriteNode{
-            secondHand = secHand
-        }
         if let minHand:SKSpriteNode = self.childNode(withName: "minuteHand") as? SKSpriteNode{
             minuteHand = minHand
+        }
+        if let hrHand:SKSpriteNode = self.childNode(withName: "hourHand") as? SKSpriteNode{
+            hourHand = hrHand
+        }
+        if let secHand:SKSpriteNode = self.childNode(withName: "secondHand") as? SKSpriteNode{
+            secondHand = secHand
         }
         
         if let label = self.childNode(withName: "//helloLabel") as? SKLabelNode {
@@ -93,15 +108,12 @@ class SKWatchScene: SKScene {
             label.run(SKAction.fadeIn(withDuration: 2.0))
         }
         
-        drawClock()
+        drawClockFace()
         redraw( clockSetting: ClockSetting.defaults() )
     }
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
-        
-        // Called before each frame is rendered
-        
         let date = Date()
         let calendar = Calendar.current
 
@@ -111,8 +123,7 @@ class SKWatchScene: SKScene {
         
         secondHand.zRotation = -1 * deg2rad(seconds * 6)
         minuteHand.zRotation = -1 * deg2rad(minutes * 6)
-//        hourHand.zRotation = -1 * deg2rad(hour * 30 + minutes/2)
-        
+        hourHand.zRotation = -1 * deg2rad(hour * 30 + minutes/2)
     }
     
     func deg2rad(_ number: CGFloat) -> CGFloat {

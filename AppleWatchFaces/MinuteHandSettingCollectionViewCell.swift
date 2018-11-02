@@ -1,5 +1,5 @@
 //
-//  SecondHandSettingCollectionViewCell.swift
+//  MinuteHandSettingCollectionViewCell.swift
 //  AppleWatchFaces
 //
 //  Created by Michael Hill on 10/29/18.

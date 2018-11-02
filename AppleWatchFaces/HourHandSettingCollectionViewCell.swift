@@ -1,5 +1,5 @@
 //
-//  SecondHandSettingCollectionViewCell.swift
+//  HourHandSettingCollectionViewCell
 //  AppleWatchFaces
 //
 //  Created by Michael Hill on 10/29/18.
@@ -9,9 +9,9 @@
 import UIKit
 import SpriteKit
 
-class MinuteHandSettingCollectionViewCell: UICollectionViewCell {
+class HourHandSettingCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var skView : SKView!
-    var minuteHandType: MinuteHandTypes = MinuteHandTypes.MinuteHandTypeSwiss
+    var hourHandType: HourHandTypes = HourHandTypes.HourHandTypeSwiss
     
 }
