@@ -38,6 +38,32 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         }
     }
     
+    @IBAction func sendSettingAction(sender: UIButton) {
+        debugPrint("sendSetting tapped")
+        if let validSession = session {
+            if let curClockSettingString = SettingsViewController.currentClockSetting.toJSONString(){
+                validSession.sendMessage(["curClockSettingString":curClockSettingString as String], replyHandler: { reply in
+                                        debugPrint("reply")
+                                    }, errorHandler: { error in
+                                        print("error: \(error)")
+                                    })
+            }
+        }
+        
+//        if let validSession = session {
+//            if let curClockSetting = SettingsViewController.currentClockSetting.toJSON() {
+//                let settingJSONContext = ["newSetting" : curClockSetting as JSON]
+//
+//                validSession.sendMessage(settingJSONContext, replyHandler: { reply in
+//                    debugPrint("reply")
+//                }, errorHandler: { error in
+//                    print("error: \(error)")
+//                })
+//
+//            }
+//        }
+    
+    }
     
     @IBAction func face1(sender: UIButton) {
         debugPrint("face1 tapped")

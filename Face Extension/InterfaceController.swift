@@ -19,7 +19,34 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     var currentClockSetting: ClockSetting = ClockSetting.defaults()
     
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        var replyValues = Dictionary<String, String>()
+        
+        if let curClockSettingString = message["curClockSettingString"] as? String {
+            
+            let jsonData = JSON.init(parseJSON: curClockSettingString)
+            let newClockSetting = ClockSetting.init(jsonObj: jsonData)
+
+            currentClockSetting = newClockSetting
+            if let skWatchScene = self.skInterface.scene as? SKWatchScene {
+                skWatchScene.redraw(clockSetting: currentClockSetting)
+            }
+            replyValues["status"] = "success"
+        } else {
+            replyValues["status"] = "error"
+        }
+        
+        replyHandler(replyValues)
+    }
+    
     func processApplicationContext() {
+        if let iPhoneContext = session.receivedApplicationContext as? [String : JSON] {
+            debugPrint("newSetting")
+            if let clockSettingJSON = iPhoneContext["newSetting"] {
+                let newClockSetting = ClockSetting.init(jsonObj: clockSettingJSON)
+                
+            }
+        }
         if let iPhoneContext = session.receivedApplicationContext as? [String : String] {
             debugPrint("FaceChosen" + iPhoneContext["FaceChosen"]!)
             

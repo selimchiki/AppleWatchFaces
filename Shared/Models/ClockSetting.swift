@@ -44,6 +44,33 @@ class ClockSetting: NSObject {
         self.clockFaceSettings?.applyDecoratorTheme( theme )
     }
     
+    func toJSONString() -> String? {
+        let settingsDict = self.serializedSettings()
+        //let settingsData = NSKeyedArchiver.archivedDataWithRootObject(settingsDict)
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: settingsDict, options: JSONSerialization.WritingOptions.prettyPrinted)
+            let theJSONText = String(data: jsonData, encoding: String.Encoding(rawValue: String.Encoding.ascii.rawValue))
+            return theJSONText
+        } catch let error as NSError {
+            print(error)
+        }
+        return nil
+    }
+    
+    func toJSON() -> JSON? {
+        let settingsDict = self.serializedSettings()
+        //let settingsData = NSKeyedArchiver.archivedDataWithRootObject(settingsDict)
+        
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: settingsDict, options: JSONSerialization.WritingOptions.prettyPrinted)
+            let jsonObj = try! JSON(data: jsonData)
+            return jsonObj
+        } catch let error as NSError {
+            print(error)
+        }
+        return nil
+    }
+    
     func clone() -> ClockSetting? {
         // use JSON to clone it cause, you know , you can!
         
