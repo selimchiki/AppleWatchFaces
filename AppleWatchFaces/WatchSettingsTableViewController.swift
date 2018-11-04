@@ -15,18 +15,37 @@ class WatchSettingsTableViewController: UITableViewController {
     // MARK: - Table View
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 1
+    }
+    
+//    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 45.0
+//    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        switch section
+        {
+        case 0:
+            return "Second Hand"
+        case 1:
+            return "Minute Hand"
+        case 2:
+            return "Hour Hand"
+        default:
+            return ""
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cellId = ""
-        if indexPath.row == 0 { cellId = "secondHandSettingsTableViewCell" }
-        if indexPath.row == 1 { cellId = "minuteHandSettingsTableViewCell" }
-        if indexPath.row == 2 { cellId = "hourHandSettingsTableViewCell" }
+        if indexPath.section == 0 { cellId = "secondHandSettingsTableViewCell" }
+        if indexPath.section == 1 { cellId = "minuteHandSettingsTableViewCell" }
+        if indexPath.section == 2 { cellId = "hourHandSettingsTableViewCell" }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         return cell

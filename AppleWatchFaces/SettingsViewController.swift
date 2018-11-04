@@ -81,20 +81,6 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         //WatchSessionManager.sharedManager.sendMessage(message: ["FaceChosen" : "face1" as AnyObject])
     }
     
-    @IBAction func face2(sender: UIButton) {
-        debugPrint("face2 tapped")
-        
-        if let validSession = session {
-            let iPhoneAppContext = ["FaceChosen" : "face2" as String]
-            
-            do {
-                try validSession.updateApplicationContext(iPhoneAppContext)
-            } catch {
-                print("Something went wrong")
-            }
-        }
-    }
-    
     @objc func onNotification(notification:Notification)
     {
         //tell preview to reload

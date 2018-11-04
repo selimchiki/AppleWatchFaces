@@ -33,42 +33,32 @@
                                     <segue destination="g3k-ac-9zQ" kind="embed" id="9MD-Q2-0lQ"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-m7-d7p">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-m7-d7p" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
                                 <rect key="frame" x="208" y="20" width="151" height="30"/>
                                 <state key="normal" title="Send to Watch"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBorderColor">
+                                        <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendSettingActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bL5-J1-OEN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nI9-pT-qtv">
-                                <rect key="frame" x="288" y="50" width="42" height="30"/>
-                                <state key="normal" title="Face1"/>
-                                <connections>
-                                    <action selector="face1WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xf7-4r-hXV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWd-hf-k0u">
-                                <rect key="frame" x="288" y="79" width="42" height="30"/>
-                                <state key="normal" title="Face2"/>
-                                <connections>
-                                    <action selector="face2WithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b5T-Hb-Veh"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="L09-xH-or1" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="leading" id="6zg-yG-dX1"/>
-                            <constraint firstItem="nI9-pT-qtv" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="trailing" constant="88" id="91m-ET-0S5"/>
-                            <constraint firstItem="nI9-pT-qtv" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="bottom" id="95i-di-8Zv"/>
-                            <constraint firstItem="nI9-pT-qtv" firstAttribute="leading" secondItem="NWd-hf-k0u" secondAttribute="leading" id="Bjb-xM-FgA"/>
-                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Btr-xi-dXg"/>
-                            <constraint firstItem="NWd-hf-k0u" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="bottom" constant="29" id="Kfh-Hd-Kb3"/>
                             <constraint firstAttribute="bottomMargin" secondItem="L09-xH-or1" secondAttribute="bottom" constant="-69" id="NZ6-HR-4XD"/>
                             <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="bottom" constant="8" symbolic="YES" id="Sr7-2i-36u"/>
                             <constraint firstItem="DN7-J7-N45" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="anx-7m-RWa"/>
                             <constraint firstItem="DN7-J7-N45" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cq9-uT-uh4"/>
-                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pkI-2Y-Zvg"/>
-                            <constraint firstItem="nI9-pT-qtv" firstAttribute="trailing" secondItem="NWd-hf-k0u" secondAttribute="trailing" id="seM-ZY-Az8"/>
+                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lCl-gV-ALq"/>
+                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="top" id="mOV-p5-WLe"/>
+                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="trailing" constant="8" symbolic="YES" id="qbB-9s-Av0"/>
                             <constraint firstAttribute="trailing" secondItem="L09-xH-or1" secondAttribute="trailing" id="zhh-WG-J4I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
