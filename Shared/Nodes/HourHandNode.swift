@@ -64,14 +64,15 @@ class HourHandNode: SKSpriteNode {
         
         self.name = "hourHand"
         
-        var scaleForHourHand = 0.01 as Float
-        
         if (hourHandType == HourHandTypes.HourHandTypeSphere) {
             
-            let shape = SKShapeNode.init(circleOfRadius: 0.05)
-            self.addChild(shape)
+            let shape = SKShapeNode.init(circleOfRadius: 5)
+            shape.position = CGPoint.init(x: 0, y: 53.0)
             
-            //self.pivot = SCNMatrix4MakeTranslation(0.0, -0.53, 0)
+            shape.fillColor = SKColor.white
+            shape.strokeColor = SKColor.clear
+            
+            self.addChild(shape)
         }
         
         if (hourHandType == HourHandTypes.HourHandTypeCutout) {
@@ -201,8 +202,6 @@ class HourHandNode: SKSpriteNode {
         }
         
         if (hourHandType == HourHandTypes.HourHandTypeRoman) {
-            
-            scaleForHourHand = 0.0035 as Float
             
             let hourHandPath = UIBezierPath()
             hourHandPath.move(to: CGPoint(x: 0.08, y: 168.9))
@@ -339,6 +338,7 @@ class HourHandNode: SKSpriteNode {
             hourHandPath.flatness = 0.1
             
             let shape = SKShapeNode.init(path: hourHandPath.cgPath)
+            shape.setScale(0.35)
             shape.fillColor = SKColor.white
             shape.strokeColor = SKColor.clear
             

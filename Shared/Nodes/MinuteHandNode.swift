@@ -74,18 +74,15 @@ class MinuteHandNode: SKSpriteNode {
         super.init(texture: nil, color: SKColor.black, size: CGSize())
         self.name = "minuteHand"
         
-        var scaleForMinuteHand = 0.01 as Float
-        
         if (minuteHandType == MinuteHandTypes.MinuteHandTypeSphere) {
-            let shape = SKShapeNode.init(circleOfRadius: 0.05)
+            
+            let shape = SKShapeNode.init(circleOfRadius: 5)
+            shape.position = CGPoint.init(x: 0, y: 70.0)
+            
             shape.fillColor = SKColor.white
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
-            
-//            let sphereGeom = SCNSphere.init(radius: 0.05)
-//            self.geometry = sphereGeom
-//            self.pivot = SCNMatrix4MakeTranslation(0.0, -0.70, 0)
         }
         
         if (minuteHandType == MinuteHandTypes.MinuteHandTypeFatBoxy) {
@@ -232,8 +229,6 @@ class MinuteHandNode: SKSpriteNode {
         }
         
         if (minuteHandType == MinuteHandTypes.MinuteHandTypeRoman) {
-            
-            scaleForMinuteHand = 0.0035 as Float
             
             let minuteHandPath = UIBezierPath()
             minuteHandPath.move(to: CGPoint(x: 0.83, y: 269.09))
@@ -418,6 +413,7 @@ class MinuteHandNode: SKSpriteNode {
             minuteHandPath.flatness = 0.05
             
             let shape = SKShapeNode.init(path: minuteHandPath.cgPath)
+            shape.setScale(0.35)
             shape.fillColor = SKColor.white
             shape.strokeColor = SKColor.clear
             
