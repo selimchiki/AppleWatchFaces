@@ -22,6 +22,7 @@ class MinuteHandSettingsTableViewCell: UITableViewCell, UICollectionViewDataSour
         //update the value
         SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandType = minuteHandType
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
+        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"minuteHand"])
         
         if let settingsHandCell = collectionView.cellForItem(at: indexPath) as? MinuteHandSettingCollectionViewCell {
             if let currentScene = settingsHandCell.skView.scene {

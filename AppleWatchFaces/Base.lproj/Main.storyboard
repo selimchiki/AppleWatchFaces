@@ -101,16 +101,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" rowHeight="30" id="s44-NY-Sow" customClass="SettingsTableHeaderViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s44-NY-Sow" id="g8i-LF-ORY" customClass="SettingsTableHeaderView" customModule="AppleWatchFaces" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="29.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvG-hi-jfr">
+                                            <rect key="frame" x="9" y="4" width="168" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Setting" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgm-cV-fEQ">
+                                            <rect key="frame" x="185" y="4" width="167" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="167" id="vSz-aQ-17I"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="YvG-hi-jfr" firstAttribute="leading" secondItem="g8i-LF-ORY" secondAttribute="leadingMargin" constant="-7" id="0n1-Lb-ZoR"/>
+                                        <constraint firstItem="bgm-cV-fEQ" firstAttribute="bottom" secondItem="YvG-hi-jfr" secondAttribute="bottom" id="6fM-qx-ZiO"/>
+                                        <constraint firstItem="YvG-hi-jfr" firstAttribute="centerY" secondItem="g8i-LF-ORY" secondAttribute="centerY" id="Dtu-4o-kyh"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bgm-cV-fEQ" secondAttribute="trailing" constant="7" id="KMr-su-8jY"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="YvG-hi-jfr" secondAttribute="bottom" constant="-5" id="e5R-12-20s"/>
+                                        <constraint firstItem="bgm-cV-fEQ" firstAttribute="leading" secondItem="YvG-hi-jfr" secondAttribute="trailing" constant="8" symbolic="YES" id="k7v-dp-0O3"/>
+                                        <constraint firstItem="bgm-cV-fEQ" firstAttribute="top" secondItem="YvG-hi-jfr" secondAttribute="top" id="uI4-Z6-tdB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="settingLabel" destination="bgm-cV-fEQ" id="OQJ-fn-2Ha"/>
+                                    <outlet property="titleLabel" destination="YvG-hi-jfr" id="jqI-gt-1DR"/>
+                                </connections>
+                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondHandSettingsTableViewCell" rowHeight="100" id="zGU-j9-Y07" customClass="SecondHandSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="58" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zGU-j9-Y07" id="rXn-ye-gOH">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gff-Vv-w5T">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gff-Vv-w5T">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WYP-0t-1A6">
                                                 <size key="itemSize" width="100" height="100"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -119,18 +157,23 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="settingsHandCell" id="QB0-47-wJa" customClass="SecondHandSettingCollectionViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <rect key="frame" x="0.0" y="-0.5" width="100" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9mw-DT-eaz">
+                                                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mw-DT-eaz">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </skView>
                                                         </subviews>
                                                     </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="9mw-DT-eaz" secondAttribute="bottom" id="00u-kw-qRV"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9mw-DT-eaz" secondAttribute="trailing" id="0aB-ef-yHa"/>
+                                                        <constraint firstItem="9mw-DT-eaz" firstAttribute="top" secondItem="QB0-47-wJa" secondAttribute="top" id="3K9-6m-pWV"/>
+                                                        <constraint firstItem="9mw-DT-eaz" firstAttribute="leading" secondItem="QB0-47-wJa" secondAttribute="leading" id="zJF-sB-9HN"/>
+                                                    </constraints>
                                                     <connections>
                                                         <outlet property="skView" destination="9mw-DT-eaz" id="EYy-Cy-XTs"/>
                                                     </connections>
@@ -142,18 +185,23 @@
                                             </connections>
                                         </collectionView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="gff-Vv-w5T" firstAttribute="top" secondItem="rXn-ye-gOH" secondAttribute="top" id="Bf8-wY-apc"/>
+                                        <constraint firstItem="gff-Vv-w5T" firstAttribute="centerY" secondItem="rXn-ye-gOH" secondAttribute="centerY" id="M1m-UJ-q3x"/>
+                                        <constraint firstAttribute="trailing" secondItem="gff-Vv-w5T" secondAttribute="trailing" id="ZUH-XC-HyB"/>
+                                        <constraint firstItem="gff-Vv-w5T" firstAttribute="leading" secondItem="rXn-ye-gOH" secondAttribute="leading" id="aPd-AD-X0I"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="minuteHandSettingsTableViewCell" rowHeight="100" id="j9t-aJ-bZY" customClass="MinuteHandSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="128" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="158" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j9t-aJ-bZY" id="cbT-jL-8we">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="v7v-zT-wDu">
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="v7v-zT-wDu">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Ch-zj-J7V">
                                                 <size key="itemSize" width="100" height="100"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -168,12 +216,17 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mfQ-pX-H2G">
+                                                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfQ-pX-H2G">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </skView>
                                                         </subviews>
                                                     </view>
+                                                    <constraints>
+                                                        <constraint firstItem="mfQ-pX-H2G" firstAttribute="leading" secondItem="PFn-VR-hjG" secondAttribute="leading" id="GW5-w8-Scs"/>
+                                                        <constraint firstItem="mfQ-pX-H2G" firstAttribute="top" secondItem="PFn-VR-hjG" secondAttribute="top" id="L5K-R8-CM3"/>
+                                                        <constraint firstAttribute="bottom" secondItem="mfQ-pX-H2G" secondAttribute="bottom" id="fYO-VY-IqY"/>
+                                                        <constraint firstAttribute="trailing" secondItem="mfQ-pX-H2G" secondAttribute="trailing" id="ftI-AP-WNv"/>
+                                                    </constraints>
                                                     <connections>
                                                         <outlet property="skView" destination="mfQ-pX-H2G" id="Mrd-eR-G9e"/>
                                                     </connections>
@@ -185,18 +238,23 @@
                                             </connections>
                                         </collectionView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="v7v-zT-wDu" firstAttribute="centerY" secondItem="cbT-jL-8we" secondAttribute="centerY" id="JXI-EC-671"/>
+                                        <constraint firstItem="v7v-zT-wDu" firstAttribute="leading" secondItem="cbT-jL-8we" secondAttribute="leading" id="aU5-Ja-2Dd"/>
+                                        <constraint firstAttribute="trailing" secondItem="v7v-zT-wDu" secondAttribute="trailing" id="bia-kA-l2V"/>
+                                        <constraint firstItem="v7v-zT-wDu" firstAttribute="top" secondItem="cbT-jL-8we" secondAttribute="top" id="ejo-ME-FUA"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hourHandSettingsTableViewCell" rowHeight="100" id="wsc-L4-sN6" customClass="HourHandSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="228" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="258" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wsc-L4-sN6" id="qUK-oX-fRy">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vdC-I5-V82">
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vdC-I5-V82">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N5M-h0-HHm">
                                                 <size key="itemSize" width="100" height="100"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -211,12 +269,17 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WLH-jE-Fs5">
+                                                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLH-jE-Fs5">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </skView>
                                                         </subviews>
                                                     </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="WLH-jE-Fs5" secondAttribute="bottom" id="Ige-Xc-ZYl"/>
+                                                        <constraint firstItem="WLH-jE-Fs5" firstAttribute="leading" secondItem="gEC-nR-f8J" secondAttribute="leading" id="fSl-2I-ToV"/>
+                                                        <constraint firstAttribute="trailing" secondItem="WLH-jE-Fs5" secondAttribute="trailing" id="rwk-je-smO"/>
+                                                        <constraint firstItem="WLH-jE-Fs5" firstAttribute="top" secondItem="gEC-nR-f8J" secondAttribute="top" id="tkK-li-xqa"/>
+                                                    </constraints>
                                                     <connections>
                                                         <outlet property="skView" destination="WLH-jE-Fs5" id="H46-0h-mEM"/>
                                                     </connections>
@@ -228,6 +291,12 @@
                                             </connections>
                                         </collectionView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vdC-I5-V82" firstAttribute="top" secondItem="qUK-oX-fRy" secondAttribute="top" id="55m-ke-v9G"/>
+                                        <constraint firstItem="vdC-I5-V82" firstAttribute="leading" secondItem="qUK-oX-fRy" secondAttribute="leading" id="EHF-YY-r8t"/>
+                                        <constraint firstItem="vdC-I5-V82" firstAttribute="centerY" secondItem="qUK-oX-fRy" secondAttribute="centerY" id="Oj5-u3-ajZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="vdC-I5-V82" secondAttribute="trailing" id="xDX-8K-zMr"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -239,7 +308,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xF8-QY-zte" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308" y="226.23688155922042"/>
+            <point key="canvasLocation" x="308" y="225.78710644677662"/>
         </scene>
     </scenes>
 </document>

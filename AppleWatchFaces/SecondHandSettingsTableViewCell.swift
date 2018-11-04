@@ -22,6 +22,7 @@ class SecondHandSettingsTableViewCell: UITableViewCell, UICollectionViewDataSour
         //update the value
         SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandType = secondHandType
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil) //userInfo:["data": 42, "isImportant": true]
+        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"secondHand"])
         
         if let settingsHandCell = collectionView.cellForItem(at: indexPath) as? SecondHandSettingCollectionViewCell {
             if let currentScene = settingsHandCell.skView.scene {

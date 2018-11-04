@@ -12,7 +12,8 @@ import Foundation
 class WatchSettingsTableViewController: UITableViewController {
     
     var objects = [Any]()
-    // MARK: - Table View
+
+    static let settingsTableSectionReloadNotificationName = Notification.Name("settingsTableSectionReload")
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 3
@@ -22,9 +23,35 @@ class WatchSettingsTableViewController: UITableViewController {
         return 1
     }
     
-//    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 45.0
-//    }
+    //MARK: UITableViewDelegate
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        if let headerCell = tableView.dequeueReusableCell(withIdentifier: "header") as? SettingsTableHeaderViewCell {
+            headerCell.titleLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+            
+            var settingText = ""
+            switch section
+            {
+            case 0:
+                settingText = SecondHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandType)!)
+            case 1:
+                settingText = MinuteHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandType)!)
+            case 2:
+                settingText = HourHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandType)!)
+            default:
+                settingText = ""
+            }
+            
+            headerCell.settingLabel.text = settingText
+            return headerCell
+        }
+        
+        return nil
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
@@ -64,4 +91,18 @@ class WatchSettingsTableViewController: UITableViewController {
 //            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
 //        }
 //    }
+    
+    @objc func onNotification(notification:Notification)
+    {
+        //TODO: tell correct section to reload
+        self.tableView.reloadData()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(onNotification(notification:)), name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil)
+    }
+    
 }
+
