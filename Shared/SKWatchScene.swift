@@ -1,5 +1,5 @@
 //
-//  GameScene.swift
+//  SKWatchScene.swift
 //  Face Extension
 //
 //  Created by Michael Hill on 10/17/18.
@@ -21,7 +21,7 @@ class SKWatchScene: SKScene {
         faceNode.name = "faceNode"
         
         let screenWidth = self.size.width
-        let screenHeight = self.size.height
+        //let screenHeight = self.size.height
         
         let tickWidth:CGFloat = 3.0
         let tickHeight:CGFloat = 20.0

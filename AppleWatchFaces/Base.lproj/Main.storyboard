@@ -48,10 +48,10 @@
                                     <action selector="sendSettingActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bL5-J1-OEN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiH-q3-0ff">
-                                <rect key="frame" x="208" y="58" width="151" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiH-q3-0ff">
+                                <rect key="frame" x="208" y="58" width="151" height="162"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="skv-Br-1mV"/>
+                                    <constraint firstAttribute="height" constant="162" id="ffS-SM-hgz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="1" green="0.12852664389999999" blue="0.067248547749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -61,16 +61,16 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="L09-xH-or1" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="leading" id="6zg-yG-dX1"/>
-                            <constraint firstItem="QiH-q3-0ff" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="bottom" constant="8" symbolic="YES" id="8bl-Er-g6s"/>
+                            <constraint firstItem="QiH-q3-0ff" firstAttribute="trailing" secondItem="Mqq-m7-d7p" secondAttribute="trailing" id="JAh-tK-awE"/>
                             <constraint firstAttribute="bottomMargin" secondItem="L09-xH-or1" secondAttribute="bottom" constant="-69" id="NZ6-HR-4XD"/>
                             <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="bottom" constant="8" symbolic="YES" id="Sr7-2i-36u"/>
-                            <constraint firstItem="QiH-q3-0ff" firstAttribute="leading" secondItem="Mqq-m7-d7p" secondAttribute="leading" id="Win-Ce-TAe"/>
                             <constraint firstItem="DN7-J7-N45" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="anx-7m-RWa"/>
                             <constraint firstItem="DN7-J7-N45" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cq9-uT-uh4"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lCl-gV-ALq"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="top" id="mOV-p5-WLe"/>
-                            <constraint firstItem="QiH-q3-0ff" firstAttribute="trailing" secondItem="Mqq-m7-d7p" secondAttribute="trailing" id="n0P-cZ-IdB"/>
+                            <constraint firstItem="QiH-q3-0ff" firstAttribute="leading" secondItem="Mqq-m7-d7p" secondAttribute="leading" id="osR-bA-66O"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="trailing" constant="8" symbolic="YES" id="qbB-9s-Av0"/>
+                            <constraint firstItem="QiH-q3-0ff" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="bottom" constant="8" symbolic="YES" id="uBK-VV-fli"/>
                             <constraint firstAttribute="trailing" secondItem="L09-xH-or1" secondAttribute="trailing" id="zhh-WG-J4I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

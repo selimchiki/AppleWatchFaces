@@ -81,7 +81,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         session.activate()
         
         
-        // Load the SKScene from 'GameScene.sks'
+        // Load the SKScene
         if let scene = SKWatchScene(fileNamed: "SKWatchScene") {
             
             // Set the scale mode to scale to fit the window
