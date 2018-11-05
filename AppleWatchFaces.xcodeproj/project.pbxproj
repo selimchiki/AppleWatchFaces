@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31061F2E218FEAA600EF511B /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 31061F2D218FEAA600EF511B /* readme.md */; };
 		312D4C05218BCBF0008504D2 /* ClockDecoratorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */; };
 		312D4C08218BCDDB008504D2 /* HourHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C07218BCDDB008504D2 /* HourHandNode.swift */; };
 		318808D1217815E600585AB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808D0217815E600585AB1 /* AppDelegate.swift */; };
@@ -104,6 +105,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		31061F2D218FEAA600EF511B /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockDecoratorTheme.swift; sourceTree = "<group>"; };
 		312D4C07218BCDDB008504D2 /* HourHandNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourHandNode.swift; sourceTree = "<group>"; };
 		318808CD217815E600585AB1 /* AppleWatchFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWatchFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +198,7 @@
 		318808C4217815E600585AB1 = {
 			isa = PBXGroup;
 			children = (
+				31061F2D218FEAA600EF511B /* readme.md */,
 				3123628B217AAAF000E78EFC /* Shared */,
 				318808CF217815E600585AB1 /* AppleWatchFaces */,
 				318808E52178166A00585AB1 /* Face */,
@@ -404,6 +407,7 @@
 				31F56FA62185817E00455FC6 /* SKWatchScene.sks in Resources */,
 				318808DB217815E700585AB1 /* LaunchScreen.storyboard in Resources */,
 				318808D8217815E700585AB1 /* Assets.xcassets in Resources */,
+				31061F2E218FEAA600EF511B /* readme.md in Resources */,
 				318808D6217815E600585AB1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
