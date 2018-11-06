@@ -44,13 +44,11 @@ class ClockSetting: NSObject {
         self.clockFaceSettings?.applyDecoratorTheme( theme )
     }
     
-    func toJSONString() -> String? {
+    func toJSONData() -> Data? {
         let settingsDict = self.serializedSettings()
-        //let settingsData = NSKeyedArchiver.archivedDataWithRootObject(settingsDict)
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: settingsDict, options: JSONSerialization.WritingOptions.prettyPrinted)
-            let theJSONText = String(data: jsonData, encoding: String.Encoding(rawValue: String.Encoding.ascii.rawValue))
-            return theJSONText
+            return jsonData
         } catch let error as NSError {
             print(error)
         }

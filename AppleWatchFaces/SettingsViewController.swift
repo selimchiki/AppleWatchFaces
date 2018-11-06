@@ -75,49 +75,19 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     
     @IBAction func sendSettingAction(sender: UIButton) {
         debugPrint("sendSetting tapped")
-        if let validSession = session {
-            if let curClockSettingString = SettingsViewController.currentClockSetting.toJSONString(){
-                validSession.sendMessage(["curClockSettingString":curClockSettingString as String], replyHandler: { reply in
-                                        debugPrint("reply")
-                                        self.showMessage( message: "Watch replied success.")
-                                    }, errorHandler: { error in
-                                        print("error: \(error)")
-                                        self.showError(errorMessage: error.localizedDescription)
-                                    })
-            }
+        if let validSession = session, let jsonData = SettingsViewController.currentClockSetting.toJSONData() {
+            
+            validSession.sendMessageData(jsonData, replyHandler: { reply in
+                debugPrint("reply")
+                self.showMessage( message: "Watch replied success.")
+            }, errorHandler: { error in
+                print("error: \(error)")
+                self.showError(errorMessage: error.localizedDescription)
+            })
+            
         } else {
-            
+            self.showError(errorMessage: "No valid watch session")
         }
-        
-//        if let validSession = session {
-//            if let curClockSetting = SettingsViewController.currentClockSetting.toJSON() {
-//                let settingJSONContext = ["newSetting" : curClockSetting as JSON]
-//
-//                validSession.sendMessage(settingJSONContext, replyHandler: { reply in
-//                    debugPrint("reply")
-//                }, errorHandler: { error in
-//                    print("error: \(error)")
-//                })
-//
-//            }
-//        }
-    
-    }
-    
-    @IBAction func face1(sender: UIButton) {
-        debugPrint("face1 tapped")
-        
-        if let validSession = session {
-            let iPhoneAppContext = ["FaceChosen" : "face1" as String]
-            
-            do {
-                try validSession.updateApplicationContext(iPhoneAppContext)
-            } catch {
-                print("Something went wrong")
-            }
-        }
-    
-        //WatchSessionManager.sharedManager.sendMessage(message: ["FaceChosen" : "face1" as AnyObject])
     }
     
     @objc func onNotification(notification:Notification)
