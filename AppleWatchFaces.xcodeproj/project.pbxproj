@@ -225,7 +225,6 @@
 		318808CF217815E600585AB1 /* AppleWatchFaces */ = {
 			isa = PBXGroup;
 			children = (
-				31B3F8CF218F4BAE00AD22A5 /* SecondHandColorSettingsTableViewCell.swift */,
 				318808D0217815E600585AB1 /* AppDelegate.swift */,
 				318808D2217815E600585AB1 /* SettingsViewController.swift */,
 				31F56FA321857FC100455FC6 /* WatchPreviewViewController.swift */,
@@ -236,6 +235,7 @@
 				31061F2F2192657200EF511B /* Colors.plist */,
 				318808DC217815E700585AB1 /* Info.plist */,
 				31F8ABCC2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift */,
+				31B3F8CF218F4BAE00AD22A5 /* SecondHandColorSettingsTableViewCell.swift */,
 				31B5E8E3218CEF9000DE6429 /* MinuteHandSettingsTableViewCell.swift */,
 				31B5E8E7218CF6E300DE6429 /* HourHandSettingsTableViewCell.swift */,
 				31F8ABCE2187EE2F0014E2ED /* SecondHandSettingCollectionViewCell.swift */,
