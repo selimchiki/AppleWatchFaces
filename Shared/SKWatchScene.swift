@@ -52,7 +52,8 @@ class SKWatchScene: SKScene {
         }
         
         if let clockFaceSettings = clockSetting.clockFaceSettings {
-            let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType)
+            let fillColor = SKColor.init(hexString: clockFaceSettings.secondHandMaterialName)
+            let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType, fillColor: fillColor)
             secHandNode.name = "secondHand"
             secHandNode.zPosition = 1
             

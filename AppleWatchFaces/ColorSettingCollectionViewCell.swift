@@ -10,6 +10,9 @@ import UIKit
 
 @IBDesignable
 class ColorSettingCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet var circleView: UIView!
+    
     @IBInspectable var borderWidth: CGFloat = 0 {
         didSet {
             layer.borderWidth = borderWidth

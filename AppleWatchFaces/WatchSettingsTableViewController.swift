@@ -35,8 +35,10 @@ class WatchSettingsTableViewController: UITableViewController {
             case 0:
                 settingText = SecondHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandType)!)
             case 1:
-                settingText = MinuteHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandType)!)
+                settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandMaterialName ?? ""
             case 2:
+                settingText = MinuteHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandType)!)
+            case 3:
                 settingText = HourHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandType)!)
             default:
                 settingText = ""
@@ -60,8 +62,10 @@ class WatchSettingsTableViewController: UITableViewController {
         case 0:
             return "Second Hand"
         case 1:
-            return "Minute Hand"
+            return "Second Hand Color"
         case 2:
+            return "Minute Hand"
+        case 3:
             return "Hour Hand"
         default:
             return ""
@@ -71,8 +75,9 @@ class WatchSettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cellId = ""
         if indexPath.section == 0 { cellId = "secondHandSettingsTableViewCell" }
-        if indexPath.section == 1 { cellId = "minuteHandSettingsTableViewCell" }
-        if indexPath.section == 2 { cellId = "hourHandSettingsTableViewCell" }
+        if indexPath.section == 1 { cellId = "secondHandColorsTableViewCell" }
+        if indexPath.section == 2 { cellId = "minuteHandSettingsTableViewCell" }
+        if indexPath.section == 3 { cellId = "hourHandSettingsTableViewCell" }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         return cell
