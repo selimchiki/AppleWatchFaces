@@ -1,7 +1,9 @@
 
 ## TODO:
-- add color picker
-- add shapes / textures for backgrounds ( so we can have things like vunyl record )
+- fix warnings in IB 
+- fix warnings in logs
+- add color for minute hand ( and subclass color picker controller )
+- add shapes / textures for backgrounds ( so we can have things like vinyl record )
 - save / load current setting on watch
 - save load list of watch faces
 - switch to SVG files for shapes : https://github.com/mchoe/SwiftSVG or https://github.com/pocketsvg/PocketSVG
@@ -12,3 +14,5 @@
 
 ## COMPLETED
 - switch to sending JSONData for watch comms
+- add color picker
+
