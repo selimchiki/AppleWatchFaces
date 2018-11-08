@@ -12,6 +12,7 @@ class SKWatchScene: SKScene {
     
     private var spinnyNode : SKShapeNode?
     
+    var backgroundNode:SKShapeNode = SKShapeNode()
     var secondHand:SKSpriteNode = SKSpriteNode()
     var minuteHand:SKSpriteNode = SKSpriteNode()
     var hourHand:SKSpriteNode = SKSpriteNode()
@@ -52,20 +53,27 @@ class SKWatchScene: SKScene {
         }
         
         if let clockFaceSettings = clockSetting.clockFaceSettings {
+            
+            let faceBackgroundColor = SKColor.init(hexString: clockSetting.clockFaceMaterialName)
+            
             let secondHandFillColor = SKColor.init(hexString: clockFaceSettings.secondHandMaterialName)
             let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType, fillColor: secondHandFillColor)
             secHandNode.name = "secondHand"
-            secHandNode.zPosition = 1
+            secHandNode.zPosition = 2
             
             let minuteHandFillColor = SKColor.init(hexString: clockFaceSettings.minuteHandMaterialName)
             let minHandNode = MinuteHandNode.init(minuteHandType: clockFaceSettings.minuteHandType, fillColor: minuteHandFillColor)
             minHandNode.name = "minuteHand"
+            minHandNode.zPosition = 1
             
             let hourHandFillColor = SKColor.init(hexString: clockFaceSettings.hourHandMaterialName)
             let hourHandNode = HourHandNode.init(hourHandType: clockFaceSettings.hourHandType, fillColor: hourHandFillColor)
             hourHandNode.name = "hourHand"
+            hourHandNode.zPosition = 1
             
-            //swap in new node
+            backgroundNode.fillColor = faceBackgroundColor
+            
+            //swap in new nodes
             if let secondHandParent = secondHand.parent {
                 secondHandParent.addChild(secHandNode)
                 secondHand.removeFromParent()
@@ -95,6 +103,14 @@ class SKWatchScene: SKScene {
     }
     
     override func sceneDidLoad() {
+        
+        let background = SKShapeNode.init(circleOfRadius: 150.0)
+        background.name = "background"
+        background.fillColor = SKColor.black
+        background.strokeColor = SKColor.clear
+        
+        self.addChild(background)
+        backgroundNode = background
         
         if let minHand:SKSpriteNode = self.childNode(withName: "minuteHand") as? SKSpriteNode{
             minuteHand = minHand

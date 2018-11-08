@@ -13,23 +13,25 @@ class WatchSettingsTableViewController: UITableViewController {
     
     //header text,
     let sectionsData = [
-        ["title":"Second Hand",       "cellID":"secondHandSettingsTableViewCell"],
-        ["title":"Second Hand Color", "cellID":"secondHandColorsTableViewCell"],
-        ["title":"Minute Hand",       "cellID":"minuteHandSettingsTableViewCell"],
-        ["title":"Minute Hand Color",   "cellID":"minuteHandColorTableViewCell"],
-        ["title":"Hour Hand",         "cellID":"hourHandSettingsTableViewCell"],
-        ["title":"Hour Hand Color",   "cellID":"hourHandColorTableViewCell"],
+        ["title":"Face Background Color",   "cellID":"faceBackgroundColorsTableViewCell"],
+        ["title":"Second Hand",             "cellID":"secondHandSettingsTableViewCell"],
+        ["title":"Second Hand Color",       "cellID":"secondHandColorsTableViewCell"],
+        ["title":"Minute Hand",             "cellID":"minuteHandSettingsTableViewCell"],
+        ["title":"Minute Hand Color",       "cellID":"minuteHandColorTableViewCell"],
+        ["title":"Hour Hand",               "cellID":"hourHandSettingsTableViewCell"],
+        ["title":"Hour Hand Color",         "cellID":"hourHandColorTableViewCell"],
     ]
     
     func valueForHeader( section: Int) -> String {
         var settingText = ""
         switch section {
-            case 0: settingText = SecondHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandType)!)
-            case 1: settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandMaterialName ?? ""
-            case 2: settingText = MinuteHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandType)!)
-            case 3: settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandMaterialName ?? ""
-            case 4: settingText = HourHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandType)!)
-            case 5: settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandMaterialName ?? ""
+            case 0: settingText = SettingsViewController.currentClockSetting.clockFaceMaterialName
+            case 1: settingText = SecondHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandType)!)
+            case 2: settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandMaterialName ?? ""
+            case 3: settingText = MinuteHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandType)!)
+            case 4: settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandMaterialName ?? ""
+            case 5: settingText = HourHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandType)!)
+            case 6: settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandMaterialName ?? ""
         
             default: settingText = ""
         }

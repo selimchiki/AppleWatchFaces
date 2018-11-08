@@ -56,6 +56,7 @@
 		31BC68EA21931F1400DD8CD6 /* ColorSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC68E921931F1400DD8CD6 /* ColorSettingsTableViewCell.swift */; };
 		31BC68EC2193D20A00DD8CD6 /* MinuteHandColorSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC68EB2193D20A00DD8CD6 /* MinuteHandColorSettingsTableViewCell.swift */; };
 		31BC68EE2193D88D00DD8CD6 /* HourHandColorSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC68ED2193D88D00DD8CD6 /* HourHandColorSettingsTableViewCell.swift */; };
+		31BC68F02193DFEE00DD8CD6 /* FaceBackgroundColorSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC68EF2193DFEE00DD8CD6 /* FaceBackgroundColorSettingTableViewCell.swift */; };
 		31F56F9D21857A2000455FC6 /* SecondHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F56F9C21857A2000455FC6 /* SecondHandNode.swift */; };
 		31F56FA221857AC300455FC6 /* SecondHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F56F9C21857A2000455FC6 /* SecondHandNode.swift */; };
 		31F56FA421857FC100455FC6 /* WatchPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F56FA321857FC100455FC6 /* WatchPreviewViewController.swift */; };
@@ -154,6 +155,7 @@
 		31BC68E921931F1400DD8CD6 /* ColorSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		31BC68EB2193D20A00DD8CD6 /* MinuteHandColorSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteHandColorSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		31BC68ED2193D88D00DD8CD6 /* HourHandColorSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourHandColorSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		31BC68EF2193DFEE00DD8CD6 /* FaceBackgroundColorSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceBackgroundColorSettingTableViewCell.swift; sourceTree = "<group>"; };
 		31F56F9C21857A2000455FC6 /* SecondHandNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondHandNode.swift; sourceTree = "<group>"; };
 		31F56FA321857FC100455FC6 /* WatchPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewViewController.swift; sourceTree = "<group>"; };
 		31F8ABAA2187E8DB0014E2ED /* WatchSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				31B3F8CB218F2F1F00AD22A5 /* SettingsTableHeaderViewCell.swift */,
 				31B3F8CD218F4A0700AD22A5 /* ColorSettingCollectionViewCell.swift */,
 				31BC68ED2193D88D00DD8CD6 /* HourHandColorSettingsTableViewCell.swift */,
+				31BC68EF2193DFEE00DD8CD6 /* FaceBackgroundColorSettingTableViewCell.swift */,
 			);
 			path = AppleWatchFaces;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				31B5E8D5218BD81800DE6429 /* ClockSetting.swift in Sources */,
 				31BC68EC2193D20A00DD8CD6 /* MinuteHandColorSettingsTableViewCell.swift in Sources */,
 				31B3F8C7218F22EF00AD22A5 /* RoundedButton.swift in Sources */,
+				31BC68F02193DFEE00DD8CD6 /* FaceBackgroundColorSettingTableViewCell.swift in Sources */,
 				31B5E8D3218BD63E00DE6429 /* FaceIndicatorNode.swift in Sources */,
 				31BC68EA21931F1400DD8CD6 /* ColorSettingsTableViewCell.swift in Sources */,
 				31B5E8CD218BD26B00DE6429 /* MinuteHandNode.swift in Sources */,

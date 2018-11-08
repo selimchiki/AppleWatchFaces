@@ -134,7 +134,7 @@ class ClockSetting: NSObject {
     
     static func defaults() -> ClockSetting {
         return ClockSetting.init(
-            clockFaceMaterialName: "#FFFFFFFF",
+            clockFaceMaterialName: "#000000FF",
             housingType: HousingTypes.HousingTypeTableBell,
             
             clockCasingMaterialName: "#FF0000FF",
