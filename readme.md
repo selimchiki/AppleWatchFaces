@@ -1,8 +1,8 @@
 
 ## TODO:
+- get rid of digital time from watch app ( from original tutorial )
 - fix warnings in IB 
 - fix warnings in logs
-- add color for minute hand ( and subclass color picker controller )
 - add shapes / textures for backgrounds ( so we can have things like vinyl record )
 - save / load current setting on watch
 - save load list of watch faces
@@ -15,4 +15,5 @@
 ## COMPLETED
 - switch to sending JSONData for watch comms
 - add color picker
+- add color for minute hand ( and subclass color picker controller )
 
