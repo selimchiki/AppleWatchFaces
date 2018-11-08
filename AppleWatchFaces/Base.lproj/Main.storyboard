@@ -28,7 +28,7 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L09-xH-or1">
-                                <rect key="frame" x="0.0" y="228" width="375" height="508"/>
+                                <rect key="frame" x="0.0" y="228" width="375" height="439"/>
                                 <connections>
                                     <segue destination="g3k-ac-9zQ" kind="embed" id="9MD-Q2-0lQ"/>
                                 </connections>
@@ -60,18 +60,18 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="L09-xH-or1" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="leading" id="6zg-yG-dX1"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="leading" id="BYp-If-h75"/>
                             <constraint firstItem="QiH-q3-0ff" firstAttribute="trailing" secondItem="Mqq-m7-d7p" secondAttribute="trailing" id="JAh-tK-awE"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="L09-xH-or1" secondAttribute="bottom" constant="-69" id="NZ6-HR-4XD"/>
-                            <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="bottom" constant="8" symbolic="YES" id="Sr7-2i-36u"/>
                             <constraint firstItem="DN7-J7-N45" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="anx-7m-RWa"/>
                             <constraint firstItem="DN7-J7-N45" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cq9-uT-uh4"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lCl-gV-ALq"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="top" id="mOV-p5-WLe"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oOd-Sb-kbI"/>
                             <constraint firstItem="QiH-q3-0ff" firstAttribute="leading" secondItem="Mqq-m7-d7p" secondAttribute="leading" id="osR-bA-66O"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="bottom" constant="8" symbolic="YES" id="p4q-1W-D2S"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="trailing" constant="8" symbolic="YES" id="qbB-9s-Av0"/>
                             <constraint firstItem="QiH-q3-0ff" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="bottom" constant="8" symbolic="YES" id="uBK-VV-fli"/>
-                            <constraint firstAttribute="trailing" secondItem="L09-xH-or1" secondAttribute="trailing" id="zhh-WG-J4I"/>
+                            <constraint firstAttribute="trailing" secondItem="L09-xH-or1" secondAttribute="trailing" id="wAU-fU-c2g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -112,14 +112,14 @@
             <objects>
                 <tableViewController id="g3k-ac-9zQ" customClass="WatchSettingsTableViewController" customModule="AppleWatchFaces" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eDq-3Y-cMU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="508"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="439"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" rowHeight="30" id="s44-NY-Sow" customClass="SettingsTableHeaderViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="30"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s44-NY-Sow" id="g8i-LF-ORY" customClass="SettingsTableHeaderView" customModule="AppleWatchFaces" customModuleProvider="target">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s44-NY-Sow" id="g8i-LF-ORY">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="29.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -316,8 +316,63 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hourHandSettingsTableViewCell" rowHeight="100" id="wsc-L4-sN6" customClass="HourHandSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="minuteHandColorTableViewCell" rowHeight="100" id="s4M-Qx-GZL" customClass="MinuteHandColorSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="358" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s4M-Qx-GZL" id="Gyl-og-gLv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-DC-r6Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nt7-J2-0XF">
+                                                <size key="itemSize" width="100" height="100"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="settingsColorCell" id="BdG-RP-NbW" customClass="ColorSettingCollectionViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="-0.5" width="100" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T56-Ng-ipT" userLabel="CircleView">
+                                                                <rect key="frame" x="15.5" y="15.5" width="70" height="70"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </view>
+                                                    <color key="backgroundColor" red="0.14900952579999999" green="0.1490265727" blue="0.14899522069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="circleView" destination="T56-Ng-ipT" id="rBi-uw-wqq"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="s4M-Qx-GZL" id="St7-7d-KXr"/>
+                                                <outlet property="delegate" destination="s4M-Qx-GZL" id="aUO-SI-yAG"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KEJ-DC-r6Z" firstAttribute="leading" secondItem="Gyl-og-gLv" secondAttribute="leading" id="BHD-4W-XkB"/>
+                                        <constraint firstAttribute="trailing" secondItem="KEJ-DC-r6Z" secondAttribute="trailing" id="O8q-QJ-3FC"/>
+                                        <constraint firstItem="KEJ-DC-r6Z" firstAttribute="centerY" secondItem="Gyl-og-gLv" secondAttribute="centerY" id="QdP-JD-DHB"/>
+                                        <constraint firstItem="KEJ-DC-r6Z" firstAttribute="top" secondItem="Gyl-og-gLv" secondAttribute="top" id="nKl-bx-C8l"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hourHandSettingsTableViewCell" rowHeight="100" id="wsc-L4-sN6" customClass="HourHandSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="458" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wsc-L4-sN6" id="qUK-oX-fRy">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
@@ -366,6 +421,61 @@
                                         <constraint firstItem="vdC-I5-V82" firstAttribute="leading" secondItem="qUK-oX-fRy" secondAttribute="leading" id="EHF-YY-r8t"/>
                                         <constraint firstItem="vdC-I5-V82" firstAttribute="centerY" secondItem="qUK-oX-fRy" secondAttribute="centerY" id="Oj5-u3-ajZ"/>
                                         <constraint firstAttribute="trailing" secondItem="vdC-I5-V82" secondAttribute="trailing" id="xDX-8K-zMr"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hourHandColorTableViewCell" rowHeight="100" id="umM-ic-tGC" customClass="HourHandColorSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="558" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="umM-ic-tGC" id="LVA-43-tHd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j2G-5R-fUd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oNv-Qk-QXn">
+                                                <size key="itemSize" width="100" height="100"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="settingsColorCell" id="oPn-u2-TB9" customClass="ColorSettingCollectionViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="-0.5" width="100" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Pg-ND-UtD" userLabel="CircleView">
+                                                                <rect key="frame" x="15.5" y="15.5" width="70" height="70"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </view>
+                                                    <color key="backgroundColor" red="0.14900952579999999" green="0.1490265727" blue="0.14899522069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="circleView" destination="1Pg-ND-UtD" id="jjm-gu-K4Z"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="umM-ic-tGC" id="zqi-sd-ftV"/>
+                                                <outlet property="delegate" destination="umM-ic-tGC" id="D8z-Wk-SPf"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="j2G-5R-fUd" firstAttribute="top" secondItem="LVA-43-tHd" secondAttribute="top" id="abT-VE-4Dl"/>
+                                        <constraint firstItem="j2G-5R-fUd" firstAttribute="leading" secondItem="LVA-43-tHd" secondAttribute="leading" id="abq-3r-krd"/>
+                                        <constraint firstAttribute="trailing" secondItem="j2G-5R-fUd" secondAttribute="trailing" id="lT4-O3-EQJ"/>
+                                        <constraint firstItem="j2G-5R-fUd" firstAttribute="centerY" secondItem="LVA-43-tHd" secondAttribute="centerY" id="qPL-Ja-WYg"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>

@@ -1,5 +1,5 @@
-//
-//  SecondHandSettingsTableViewCell.swift
+
+//  HourHandColorSettingsTableViewCell.swift
 //  AppleWatchFaces
 //
 //  Created by Michael Hill on 10/29/18.
@@ -10,17 +10,17 @@ import Foundation
 import UIKit
 import SpriteKit
 
-class SecondHandColorSettingsTableViewCell: ColorSettingsTableViewCell {
+class HourHandColorSettingsTableViewCell: ColorSettingsTableViewCell {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let newColor = colorList[indexPath.row]
-        debugPrint("selected cell secondHandColor: " + newColor)
+        debugPrint("selected cell hourHandColor: " + newColor)
         
         //update the value
-        SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandMaterialName = newColor
+        SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandMaterialName = newColor
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
-        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"secondHandMaterialName"])
-
+        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"hourHandMaterialName"])
+        
         if let settingsHandCell = collectionView.cellForItem(at: indexPath) {
             settingsHandCell.backgroundColor = selectedColor
         }

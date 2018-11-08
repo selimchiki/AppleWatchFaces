@@ -52,15 +52,17 @@ class SKWatchScene: SKScene {
         }
         
         if let clockFaceSettings = clockSetting.clockFaceSettings {
-            let fillColor = SKColor.init(hexString: clockFaceSettings.secondHandMaterialName)
-            let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType, fillColor: fillColor)
+            let secondHandFillColor = SKColor.init(hexString: clockFaceSettings.secondHandMaterialName)
+            let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType, fillColor: secondHandFillColor)
             secHandNode.name = "secondHand"
             secHandNode.zPosition = 1
             
-            let minHandNode = MinuteHandNode.init(minuteHandType: clockFaceSettings.minuteHandType)
+            let minuteHandFillColor = SKColor.init(hexString: clockFaceSettings.minuteHandMaterialName)
+            let minHandNode = MinuteHandNode.init(minuteHandType: clockFaceSettings.minuteHandType, fillColor: minuteHandFillColor)
             minHandNode.name = "minuteHand"
             
-            let hourHandNode = HourHandNode.init(hourHandType: clockFaceSettings.hourHandType)
+            let hourHandFillColor = SKColor.init(hexString: clockFaceSettings.hourHandMaterialName)
+            let hourHandNode = HourHandNode.init(hourHandType: clockFaceSettings.hourHandType, fillColor: hourHandFillColor)
             hourHandNode.name = "hourHand"
             
             //swap in new node

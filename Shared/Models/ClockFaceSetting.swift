@@ -93,8 +93,8 @@ class ClockFaceSetting: NSObject {
     static func defaults() -> ClockFaceSetting {
         return ClockFaceSetting.init(
             secondHandMaterialName: "#FF0000FF",
-            hourHandMaterialName: "#000000FF",
-            minuteHandMaterialName: "#000000FF",
+            hourHandMaterialName: "#FFFFFFFF",
+            minuteHandMaterialName: "#FFFFFFFF",
             
             hourHandType: HourHandTypes.HourHandTypeSwiss,
             minuteHandType: MinuteHandTypes.MinuteHandTypeSwiss,

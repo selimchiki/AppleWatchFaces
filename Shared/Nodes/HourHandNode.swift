@@ -58,9 +58,13 @@ class HourHandNode: SKSpriteNode {
         return typeKeysArray
     }
     
-    init(hourHandType: HourHandTypes) {
+    convenience init(hourHandType: HourHandTypes) {
+        self.init(hourHandType: hourHandType, fillColor: SKColor.white)
+    }
+    
+    init(hourHandType: HourHandTypes, fillColor: SKColor) {
         
-        super.init(texture: nil, color: SKColor.black, size: CGSize())
+        super.init(texture: nil, color: fillColor, size: CGSize())
         
         self.name = "hourHand"
         
@@ -69,7 +73,7 @@ class HourHandNode: SKSpriteNode {
             let shape = SKShapeNode.init(circleOfRadius: 5)
             shape.position = CGPoint.init(x: 0, y: 53.0)
             
-            shape.fillColor = SKColor.white
+            shape.fillColor = fillColor
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
@@ -93,7 +97,7 @@ class HourHandNode: SKSpriteNode {
             bezierPath.flatness = 0.01
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = SKColor.white
+            shape.fillColor = fillColor
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
@@ -110,7 +114,7 @@ class HourHandNode: SKSpriteNode {
             let rectanglePath = UIBezierPath(rect: CGRect(x: -1.5, y: -11, width: 3, height: 60))
             
             let shape = SKShapeNode.init(path: rectanglePath.cgPath)
-            shape.fillColor = SKColor.white
+            shape.fillColor = fillColor
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
@@ -139,7 +143,7 @@ class HourHandNode: SKSpriteNode {
             bezierPath.close()
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = SKColor.white
+            shape.fillColor = fillColor
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
@@ -161,7 +165,7 @@ class HourHandNode: SKSpriteNode {
             bezierPath.close()
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = SKColor.white
+            shape.fillColor = fillColor
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
@@ -189,7 +193,7 @@ class HourHandNode: SKSpriteNode {
             bezierPath.flatness = 0.01
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = SKColor.white
+            shape.fillColor = fillColor
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
@@ -339,7 +343,7 @@ class HourHandNode: SKSpriteNode {
             
             let shape = SKShapeNode.init(path: hourHandPath.cgPath)
             shape.setScale(0.35)
-            shape.fillColor = SKColor.white
+            shape.fillColor = fillColor
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
