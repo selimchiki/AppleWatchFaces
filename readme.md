@@ -1,7 +1,5 @@
 
 ## TODO:
-- fix warnings in IB 
-- fix warnings in logs
 - add shapes / textures for backgrounds ( so we can have things like vinyl record )
 - save load themes / default faces
 - save / load current settings on watch
@@ -17,4 +15,5 @@
 - add color picker
 - add color for minute hand ( and subclass color picker controller )
 - get rid of digital time from watch app ( from original tutorial )
-
+- fix warnings in IB 
+- fix warnings in logs

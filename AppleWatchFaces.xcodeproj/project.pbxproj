@@ -13,6 +13,9 @@
 		31061F332192730A00EF511B /* SKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31061F312192716C00EF511B /* SKColor.swift */; };
 		312D4C05218BCBF0008504D2 /* ClockDecoratorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */; };
 		312D4C08218BCDDB008504D2 /* HourHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C07218BCDDB008504D2 /* HourHandNode.swift */; };
+		314A010A21960409009BCE3C /* UserClockSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A010921960409009BCE3C /* UserClockSetting.swift */; };
+		314A010D219605AA009BCE3C /* Settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 314A010B219605AA009BCE3C /* Settings.json */; };
+		314A010E219605AA009BCE3C /* Themes.json in Resources */ = {isa = PBXBuildFile; fileRef = 314A010C219605AA009BCE3C /* Themes.json */; };
 		318808D1217815E600585AB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808D0217815E600585AB1 /* AppDelegate.swift */; };
 		318808D3217815E600585AB1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808D2217815E600585AB1 /* SettingsViewController.swift */; };
 		318808D6217815E600585AB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318808D4217815E600585AB1 /* Main.storyboard */; };
@@ -118,6 +121,9 @@
 		31061F312192716C00EF511B /* SKColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKColor.swift; sourceTree = "<group>"; };
 		312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockDecoratorTheme.swift; sourceTree = "<group>"; };
 		312D4C07218BCDDB008504D2 /* HourHandNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourHandNode.swift; sourceTree = "<group>"; };
+		314A010921960409009BCE3C /* UserClockSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClockSetting.swift; sourceTree = "<group>"; };
+		314A010B219605AA009BCE3C /* Settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Settings.json; sourceTree = "<group>"; };
+		314A010C219605AA009BCE3C /* Themes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Themes.json; sourceTree = "<group>"; };
 		318808CD217815E600585AB1 /* AppleWatchFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWatchFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318808D0217815E600585AB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		318808D2217815E600585AB1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +202,8 @@
 				31F56F9E21857A5E00455FC6 /* Extensions */,
 				318808F72178166B00585AB1 /* SKWatchScene.sks */,
 				318808F92178166B00585AB1 /* SKWatchScene.swift */,
+				314A010B219605AA009BCE3C /* Settings.json */,
+				314A010C219605AA009BCE3C /* Themes.json */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -318,6 +326,7 @@
 		31F8ABD0218916DE0014E2ED /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				314A010921960409009BCE3C /* UserClockSetting.swift */,
 				31B5E8D6218BD91400DE6429 /* ClockFaceSetting.swift */,
 				31B5E8D4218BD81800DE6429 /* ClockSetting.swift */,
 				31B5E8CE218BD5A900DE6429 /* ClockRingSetting.swift */,
@@ -432,6 +441,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				31061F302192657200EF511B /* Colors.plist in Resources */,
+				314A010E219605AA009BCE3C /* Themes.json in Resources */,
+				314A010D219605AA009BCE3C /* Settings.json in Resources */,
 				31F56FA62185817E00455FC6 /* SKWatchScene.sks in Resources */,
 				318808DB217815E700585AB1 /* LaunchScreen.storyboard in Resources */,
 				318808D8217815E700585AB1 /* Assets.xcassets in Resources */,
@@ -492,6 +503,7 @@
 				312D4C08218BCDDB008504D2 /* HourHandNode.swift in Sources */,
 				31B5E8D7218BD91400DE6429 /* ClockFaceSetting.swift in Sources */,
 				312D4C05218BCBF0008504D2 /* ClockDecoratorTheme.swift in Sources */,
+				314A010A21960409009BCE3C /* UserClockSetting.swift in Sources */,
 				318808D1217815E600585AB1 /* AppDelegate.swift in Sources */,
 				31B5E8E6218CEFF100DE6429 /* MinuteHandSettingCollectionViewCell.swift in Sources */,
 				31B3F8CC218F2F1F00AD22A5 /* SettingsTableHeaderViewCell.swift in Sources */,
