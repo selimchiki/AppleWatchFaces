@@ -19,7 +19,7 @@ class WatchFaceNode: SKSpriteNode {
         if let clockFaceSettings = clockSetting.clockFaceSettings {
             
             //add background shape
-            let background = SKShapeNode.init(circleOfRadius: 150.0)
+            let background = SKShapeNode.init(circleOfRadius: SKWatchScene.sizeMulitplier)
             background.name = "background"
             background.fillColor = SKColor.init(hexString: clockSetting.clockFaceMaterialName)
             background.strokeColor = SKColor.init(hexString: clockSetting.clockCasingMaterialName)
@@ -77,7 +77,7 @@ class WatchFaceNode: SKSpriteNode {
         //just exit for spacer
         if (ringType == RingTypes.RingTypeSpacer) { return }
         
-        let ringRadius:Float = 100.0 // in pixels radius for ring circle
+        let sizeMultiplier:Float = Float(SKWatchScene.sizeMulitplier)
         
         // exit if pattern array is empty
         if (patternArray.count == 0) { return }
@@ -103,7 +103,7 @@ class WatchFaceNode: SKSpriteNode {
             var numberToRender = outerRingIndex
             if numberToRender == 0 { numberToRender = patternTotal }
         
-            outerRingNode.position = CGPoint.init(x: Double(currentDistance * ringRadius), y: 0.0)
+            outerRingNode.position = CGPoint.init(x: Double(currentDistance * sizeMultiplier), y: 0.0)
             
             let outerRingParentNode = SKNode.init()
             outerRingParentNode.zRotation = CGFloat(angleOffset)

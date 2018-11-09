@@ -11,6 +11,8 @@ import SpriteKit
 class SKWatchScene: SKScene {
     private var spinnyNode : SKShapeNode?
     
+    static let sizeMulitplier:CGFloat = 100.0 //in pixels 
+    
     func redraw(clockSetting: ClockSetting) {
         
         if let titleLabel = self.childNode(withName: "titleLabel") as? SKLabelNode {
@@ -18,6 +20,7 @@ class SKWatchScene: SKScene {
         }
         
         let newWatchFaceNode = WatchFaceNode.init(clockSetting: clockSetting, size: self.size )
+        newWatchFaceNode.setScale(1.5)
         
         if let oldNode = self.childNode(withName: "watchFaceNode") {
             oldNode.removeFromParent()

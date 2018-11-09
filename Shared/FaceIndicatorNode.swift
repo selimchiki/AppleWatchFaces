@@ -64,7 +64,7 @@ class FaceIndicatorNode: SKSpriteNode {
         super.init(texture: nil, color: SKColor.clear, size: CGSize.init())
         
         self.name = "FaceIndicator"
-        let sizeMultiplier:CGFloat = 100.0 // multiplier value for sizing
+        let sizeMultiplier:CGFloat = SKWatchScene.sizeMulitplier
         
         if (indicatorType == FaceIndicatorTypes.FaceIndicatorTypeBox) {
             let w = CGFloat( size * Float(0.1) )
