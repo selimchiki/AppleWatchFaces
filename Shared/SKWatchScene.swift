@@ -55,6 +55,7 @@ class SKWatchScene: SKScene {
         if let clockFaceSettings = clockSetting.clockFaceSettings {
             
             let faceBackgroundColor = SKColor.init(hexString: clockSetting.clockFaceMaterialName)
+            let faceStrokeColor = SKColor.init(hexString: clockSetting.clockCasingMaterialName)
             
             let secondHandFillColor = SKColor.init(hexString: clockFaceSettings.secondHandMaterialName)
             let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType, fillColor: secondHandFillColor)
@@ -72,6 +73,7 @@ class SKWatchScene: SKScene {
             hourHandNode.zPosition = 1
             
             backgroundNode.fillColor = faceBackgroundColor
+            backgroundNode.strokeColor = faceStrokeColor
             
             //swap in new nodes
             if let secondHandParent = secondHand.parent {
