@@ -48,19 +48,17 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        debugPrint("session activationDidCompleteWith")
-        
+        //debugPrint("session activationDidCompleteWith")
         showMessage( message: "Watch session active.")
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
-        debugPrint("session sessionDidBecomeInactive")
+        //debugPrint("session sessionDidBecomeInactive")
         showError(errorMessage: "Watch session became inactive.")
     }
 
     func sessionDidDeactivate(_ session: WCSession) {
-        debugPrint("session sessionDidDeactivate")
-        
+        //debugPrint("session sessionDidDeactivate")
         showError(errorMessage: "Watch session deactivated.")
     }
     
@@ -74,14 +72,14 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     }
     
     @IBAction func sendSettingAction(sender: UIButton) {
-        debugPrint("sendSetting tapped")
+        //debugPrint("sendSetting tapped")
         if let validSession = session, let jsonData = SettingsViewController.currentClockSetting.toJSONData() {
             
             validSession.sendMessageData(jsonData, replyHandler: { reply in
-                debugPrint("reply")
+                //debugPrint("reply")
                 self.showMessage( message: "Watch replied success.")
             }, errorHandler: { error in
-                print("error: \(error)")
+                //debugPrint("error: \(error)")
                 self.showError(errorMessage: error.localizedDescription)
             })
             

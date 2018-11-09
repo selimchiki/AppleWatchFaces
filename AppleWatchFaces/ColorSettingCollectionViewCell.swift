@@ -14,11 +14,13 @@ class ColorSettingCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var circleView: UIView!
     
-//    @IBInspectable var borderWidth: CGFloat = 0 {
-//        didSet {
-//            layer.borderWidth = borderWidth
-//        }
-//    }
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet {
+            if let circleView = circleView {
+                circleView.layer.borderWidth = borderWidth
+            }
+        }
+    }
 //    //Normal state bg and border
 //    @IBInspectable var normalBorderColor: UIColor? {
 //        didSet {
