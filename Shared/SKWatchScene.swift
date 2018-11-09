@@ -9,148 +9,31 @@
 import SpriteKit
 
 class SKWatchScene: SKScene {
-    
     private var spinnyNode : SKShapeNode?
-    
-    var backgroundNode:SKShapeNode = SKShapeNode()
-    var secondHand:SKSpriteNode = SKSpriteNode()
-    var minuteHand:SKSpriteNode = SKSpriteNode()
-    var hourHand:SKSpriteNode = SKSpriteNode()
-    
-    func drawClockFace() {
-        let faceNode = SKNode.init()
-        faceNode.name = "faceNode"
-        
-        let screenWidth = self.size.width
-        //let screenHeight = self.size.height
-        
-        let tickWidth:CGFloat = 3.0
-        let tickHeight:CGFloat = 20.0
-        let bufferWidth:CGFloat = 15.0
-        
-        for numberStep in 0...11 {
-            let tickNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: tickWidth, height: tickHeight))
-            tickNode.fillColor = SKColor.white
-            tickNode.zRotation = deg2rad(90)
-            
-            let tickHolderNode = SKSpriteNode.init()
-            tickHolderNode.addChild(tickNode)
-            tickHolderNode.anchorPoint = CGPoint.init(x: 0, y: 0.5)
-            tickNode.position = CGPoint.init(x: screenWidth/2 - tickWidth*2 - bufferWidth, y: 0)
-            tickHolderNode.zRotation = deg2rad(CGFloat(numberStep) * 360/12)
-            
-            faceNode.addChild(tickHolderNode)
-        }
-        self.addChild(faceNode)
-    }
     
     func redraw(clockSetting: ClockSetting) {
         
-        let faceChosen = UserDefaults.standard.string(forKey: "FaceChosen") ?? "defaultFace"
-        
-        if let label = self.childNode(withName: "//helloLabel") as? SKLabelNode {
-            label.text = faceChosen
+        if let titleLabel = self.childNode(withName: "titleLabel") as? SKLabelNode {
+            titleLabel.text = clockSetting.title
         }
         
-        if let clockFaceSettings = clockSetting.clockFaceSettings {
-            
-            let faceBackgroundColor = SKColor.init(hexString: clockSetting.clockFaceMaterialName)
-            let faceStrokeColor = SKColor.init(hexString: clockSetting.clockCasingMaterialName)
-            
-            let secondHandFillColor = SKColor.init(hexString: clockFaceSettings.secondHandMaterialName)
-            let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType, fillColor: secondHandFillColor)
-            secHandNode.name = "secondHand"
-            secHandNode.zPosition = 2
-            
-            let minuteHandFillColor = SKColor.init(hexString: clockFaceSettings.minuteHandMaterialName)
-            let minHandNode = MinuteHandNode.init(minuteHandType: clockFaceSettings.minuteHandType, fillColor: minuteHandFillColor)
-            minHandNode.name = "minuteHand"
-            minHandNode.zPosition = 1
-            
-            let hourHandFillColor = SKColor.init(hexString: clockFaceSettings.hourHandMaterialName)
-            let hourHandNode = HourHandNode.init(hourHandType: clockFaceSettings.hourHandType, fillColor: hourHandFillColor)
-            hourHandNode.name = "hourHand"
-            hourHandNode.zPosition = 1
-            
-            backgroundNode.fillColor = faceBackgroundColor
-            backgroundNode.strokeColor = faceStrokeColor
-            
-            //swap in new nodes
-            if let secondHandParent = secondHand.parent {
-                secondHandParent.addChild(secHandNode)
-                secondHand.removeFromParent()
-                
-                //reset global for update later
-                secondHand = secHandNode
-            }
-            
-            if let minuteHandParent = minuteHand.parent {
-                minuteHandParent.addChild(minHandNode)
-                minuteHand.removeFromParent()
-                
-                //reset global for update later
-                minuteHand = minHandNode
-            }
-            
-            if let hourHandParent = hourHand.parent {
-                hourHandParent.addChild(hourHandNode)
-                hourHand.removeFromParent()
-                
-                //reset global for update later
-                hourHand = hourHandNode
-            }
-
-        }
+        let newWatchFaceNode = WatchFaceNode.init(clockSetting: clockSetting, size: self.size )
         
+        if let oldNode = self.childNode(withName: "watchFaceNode") {
+            oldNode.removeFromParent()
+        }
+        self.addChild(newWatchFaceNode)
     }
     
     override func sceneDidLoad() {
-        
-        let background = SKShapeNode.init(circleOfRadius: 150.0)
-        background.name = "background"
-        background.fillColor = SKColor.black
-        background.strokeColor = SKColor.clear
-        
-        self.addChild(background)
-        backgroundNode = background
-        
-        if let minHand:SKSpriteNode = self.childNode(withName: "minuteHand") as? SKSpriteNode{
-            minuteHand = minHand
-        }
-        if let hrHand:SKSpriteNode = self.childNode(withName: "hourHand") as? SKSpriteNode{
-            hourHand = hrHand
-        }
-        if let secHand:SKSpriteNode = self.childNode(withName: "secondHand") as? SKSpriteNode{
-            secondHand = secHand
-        }
-        
-        if let label = self.childNode(withName: "//helloLabel") as? SKLabelNode {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }
-        
-        drawClockFace()
         redraw( clockSetting: ClockSetting.defaults() )
     }
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
-        let date = Date()
-        let calendar = Calendar.current
-
-        let hour = CGFloat(calendar.component(.hour, from: date))
-        let minutes = CGFloat(calendar.component(.minute, from: date))
-        let seconds = CGFloat(calendar.component(.second, from: date))
-        
-        secondHand.zRotation = -1 * deg2rad(seconds * 6)
-        minuteHand.zRotation = -1 * deg2rad(minutes * 6)
-        hourHand.zRotation = -1 * deg2rad(hour * 30 + minutes/2)
+        if let watchFaceNode = self.childNode(withName: "watchFaceNode") as? WatchFaceNode {
+            watchFaceNode.setToTime()
+        }
     }
-    
-    func deg2rad(_ number: CGFloat) -> CGFloat {
-        return number * .pi / 180
-    }
-
     
     
 }

@@ -1,5 +1,6 @@
 
 ## TODO:
+- add some buttons to swap out a few watch faces for testing
 - start drawing the rings / fonts ( can test using default data )
 - add shapes / textures for backgrounds ( so we can have things like vinyl record )
 - save / load current settings on watch

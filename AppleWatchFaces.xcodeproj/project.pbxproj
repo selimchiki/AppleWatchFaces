@@ -16,6 +16,8 @@
 		314A010A21960409009BCE3C /* UserClockSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A010921960409009BCE3C /* UserClockSetting.swift */; };
 		314A010D219605AA009BCE3C /* Settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 314A010B219605AA009BCE3C /* Settings.json */; };
 		314A010E219605AA009BCE3C /* Themes.json in Resources */ = {isa = PBXBuildFile; fileRef = 314A010C219605AA009BCE3C /* Themes.json */; };
+		314A011021962FF4009BCE3C /* WatchFaceNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A010F21962FF4009BCE3C /* WatchFaceNode.swift */; };
+		314A011121963537009BCE3C /* WatchFaceNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A010F21962FF4009BCE3C /* WatchFaceNode.swift */; };
 		318808D1217815E600585AB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808D0217815E600585AB1 /* AppDelegate.swift */; };
 		318808D3217815E600585AB1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808D2217815E600585AB1 /* SettingsViewController.swift */; };
 		318808D6217815E600585AB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318808D4217815E600585AB1 /* Main.storyboard */; };
@@ -124,6 +126,7 @@
 		314A010921960409009BCE3C /* UserClockSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClockSetting.swift; sourceTree = "<group>"; };
 		314A010B219605AA009BCE3C /* Settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Settings.json; sourceTree = "<group>"; };
 		314A010C219605AA009BCE3C /* Themes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Themes.json; sourceTree = "<group>"; };
+		314A010F21962FF4009BCE3C /* WatchFaceNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFaceNode.swift; sourceTree = "<group>"; };
 		318808CD217815E600585AB1 /* AppleWatchFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWatchFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318808D0217815E600585AB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		318808D2217815E600585AB1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 		312D4C06218BCDB5008504D2 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				314A010F21962FF4009BCE3C /* WatchFaceNode.swift */,
 				31B5E8D1218BD63E00DE6429 /* FaceIndicatorNode.swift */,
 				31B5E8D0218BD63E00DE6429 /* NumberTextNode.swift */,
 				31B5E8CC218BD26B00DE6429 /* MinuteHandNode.swift */,
@@ -496,6 +500,7 @@
 				31B5E8D2218BD63E00DE6429 /* NumberTextNode.swift in Sources */,
 				31F8ABCD2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift in Sources */,
 				31B3F8D0218F4BAE00AD22A5 /* SecondHandColorSettingsTableViewCell.swift in Sources */,
+				314A011021962FF4009BCE3C /* WatchFaceNode.swift in Sources */,
 				31B5E8EA218CF6E400DE6429 /* HourHandSettingCollectionViewCell.swift in Sources */,
 				31B3F8CE218F4A0700AD22A5 /* ColorSettingCollectionViewCell.swift in Sources */,
 				31B5E8E4218CEF9000DE6429 /* MinuteHandSettingsTableViewCell.swift in Sources */,
@@ -520,6 +525,7 @@
 				31B5E8DD218CE01B00DE6429 /* ClockColorTheme.swift in Sources */,
 				31BC68FB21954BED00DD8CD6 /* KKInterfaceController.m in Sources */,
 				318808F62178166B00585AB1 /* InterfaceController.swift in Sources */,
+				314A011121963537009BCE3C /* WatchFaceNode.swift in Sources */,
 				31B5E8E2218CE08E00DE6429 /* SwiftyJSON.swift in Sources */,
 				31B5E8E0218CE03200DE6429 /* MinuteHandNode.swift in Sources */,
 				31061F332192730A00EF511B /* SKColor.swift in Sources */,
