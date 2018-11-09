@@ -17,7 +17,7 @@ class WatchFaceNode: SKSpriteNode {
         self.name = "watchFaceNode"
         
         if let clockFaceSettings = clockSetting.clockFaceSettings {
-        
+            
             //add background shape
             let background = SKShapeNode.init(circleOfRadius: 150.0)
             background.name = "background"
@@ -46,32 +46,73 @@ class WatchFaceNode: SKSpriteNode {
             hourHandNode.zPosition = 1
             
             self.addChild(hourHandNode)
-            
-            //draw the rings
-            let tickWidth:CGFloat = 3.0
-            let tickHeight:CGFloat = 20.0
-            let bufferWidth:CGFloat = 15.0
-            
-            let faceNode = SKNode.init()
-            faceNode.name = "faceNode"
-            
-            for numberStep in 0...11 {
-                let tickNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: tickWidth, height: tickHeight))
-                tickNode.fillColor = SKColor.white
-                tickNode.zRotation = deg2rad(90)
+        
+            //loop through ring settings and render rings from outside to inside
+            for ringSetting in clockFaceSettings.ringSettings {
+                var currentDistance = Float(1.0)
                 
-                let tickHolderNode = SKSpriteNode.init()
-                tickHolderNode.addChild(tickNode)
-                tickHolderNode.anchorPoint = CGPoint.init(x: 0, y: 0.5)
-                tickNode.position = CGPoint.init(x: size.width/2 - tickWidth*2 - bufferWidth, y: 0)
-                tickHolderNode.zRotation = deg2rad(CGFloat(numberStep) * 360/12)
+                generateRingNode(
+                    self,
+                    patternTotal: ringSetting.ringPatternTotal,
+                    patternArray: ringSetting.ringPattern,
+                    ringType: ringSetting.ringType,
+                    material: ringSetting.ringMaterialName,
+                    currentDistance: currentDistance,
+                    clockFaceSettings: clockFaceSettings,
+                    ringSettings: ringSetting,
+                    renderNumbers: true,
+                    renderShapes: true)
                 
-                faceNode.addChild(tickHolderNode)
+                //move it closer to center
+                currentDistance = currentDistance - ringSetting.ringWidth
             }
             
-            self.addChild(faceNode)
         }
 
+    }
+    
+    func generateRingNode( _ clockFaceNode: SKSpriteNode, patternTotal: Int, patternArray: [Int], ringType: RingTypes, material: String, currentDistance: Float, clockFaceSettings: ClockFaceSetting,
+                           ringSettings: ClockRingSetting, renderNumbers: Bool, renderShapes: Bool ) {
+        
+        //just exit for spacer
+        if (ringType == RingTypes.RingTypeSpacer) { return }
+        
+        let ringRadius:Float = 100.0 // in pixels radius for ring circle
+        
+        // exit if pattern array is empty
+        if (patternArray.count == 0) { return }
+        
+        var patternCounter = 0
+        
+        generateLoop: for outerRingIndex in 0...(patternTotal-1) {
+            //dont draw when pattern == 0
+            var doDraw = true
+            if ( patternArray[patternCounter] == 0) { doDraw = false }
+            patternCounter = patternCounter + 1
+            if (patternCounter >= patternArray.count) { patternCounter = 0 }
+            
+            if (!doDraw) { continue }
+            
+            let outerRingNode = FaceIndicatorNode.init(indicatorType:  ringSettings.indicatorType, size: ringSettings.indicatorSize, fillColor: SKColor.init(hexString: material))
+            
+            let angleDiv = patternTotal
+            let angleOffset = -1.0 * Float(Double.pi*2) / Float(angleDiv)  * Float(outerRingIndex) + Float(Double.pi/2)
+            
+            outerRingNode.zRotation = CGFloat(Double.pi/2)
+            
+            var numberToRender = outerRingIndex
+            if numberToRender == 0 { numberToRender = patternTotal }
+        
+            outerRingNode.position = CGPoint.init(x: Double(currentDistance * ringRadius), y: 0.0)
+            
+            let outerRingParentNode = SKNode.init()
+            outerRingParentNode.zRotation = CGFloat(angleOffset)
+            
+            outerRingParentNode.addChild(outerRingNode)
+            clockFaceNode.addChild(outerRingParentNode)
+        }
+        
+        
     }
     
     func setToTime() {

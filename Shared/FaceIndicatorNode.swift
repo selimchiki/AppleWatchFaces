@@ -23,7 +23,7 @@ enum FaceIndicatorTypes: String {
     }
 }
 
-class FaceIndicatorNode: SCNNode {
+class FaceIndicatorNode: SKSpriteNode {
     
     static func descriptionForType(_ nodeType: FaceIndicatorTypes) -> String {
         var typeDescription = ""
@@ -55,47 +55,73 @@ class FaceIndicatorNode: SCNNode {
         return typeKeysArray
     }
     
-    override init() {
-        super.init()
-    }
+//    override init() {
+//        super.init(texture: nil, color: SKColor.clear, size: CGSize.init())
+//    }
     
-    init(indicatorType: FaceIndicatorTypes, size: Float) {
+    init(indicatorType: FaceIndicatorTypes, size: Float, fillColor: SKColor) {
         
-        super.init()
+        super.init(texture: nil, color: SKColor.clear, size: CGSize.init())
         
         self.name = "FaceIndicator"
+        let sizeMultiplier:CGFloat = 100.0 // multiplier value for sizing
         
         if (indicatorType == FaceIndicatorTypes.FaceIndicatorTypeBox) {
             let w = CGFloat( size * Float(0.1) )
             let h = CGFloat( size * Float(0.7) )
-            self.geometry = SCNBox.init(width: w, height: h, length: 0.002, chamferRadius: 0)
+            let shapeNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: w * sizeMultiplier, height: h * sizeMultiplier))
+            shapeNode.fillColor = fillColor
+            shapeNode.strokeColor = SKColor.clear
+            self.addChild(shapeNode)
+            
+            //self.geometry = SCNBox.init(width: w, height: h, length: 0.002, chamferRadius: 0)
         }
         
         if (indicatorType == FaceIndicatorTypes.FaceIndicatorTypeMediumBox) {
             let w = CGFloat( size * Float(0.2) )
             let h = CGFloat( size * Float(0.7) )
-            self.geometry = SCNBox.init(width: w, height: h, length: 0.002, chamferRadius: 0)
+            let shapeNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: w * sizeMultiplier, height: h * sizeMultiplier))
+            shapeNode.fillColor = fillColor
+            shapeNode.strokeColor = SKColor.clear
+            self.addChild(shapeNode)
+            
+            //self.geometry = SCNBox.init(width: w, height: h, length: 0.002, chamferRadius: 0)
         }
         
         if (indicatorType == FaceIndicatorTypes.FaceIndicatorTypeFatBox) {
             let w = CGFloat( size * Float(0.25) )
             let h = CGFloat( size * Float(0.7) )
-            self.geometry = SCNBox.init(width: w, height: h, length: 0.002, chamferRadius: 0)
+            let shapeNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: w * sizeMultiplier, height: h * sizeMultiplier))
+            shapeNode.fillColor = fillColor
+            shapeNode.strokeColor = SKColor.clear
+            self.addChild(shapeNode)
+            
+            //self.geometry = SCNBox.init(width: w, height: h, length: 0.002, chamferRadius: 0)
         }
         
         if (indicatorType == FaceIndicatorTypes.FaceIndicatorTypeTube) {
             let w = CGFloat( size * Float(0.1) )
             let h = CGFloat( size * Float(0.6) )
-            let l = CGFloat( size * Float(0.1) )
+            //let l = CGFloat( size * Float(0.1) )
             let cham = CGFloat( size * Float(0.05) )
-            self.geometry = SCNBox.init(width: w, height: h, length: l, chamferRadius: cham )
-            self.scale = SCNVector3Make( 1.0, 1.0, 0.3)
+            let shapeNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: w * sizeMultiplier, height: h * sizeMultiplier), cornerRadius: cham * sizeMultiplier)
+            shapeNode.fillColor = fillColor
+            shapeNode.strokeColor = SKColor.clear
+            self.addChild(shapeNode)
+            
+            //self.geometry = SCNBox.init(width: w, height: h, length: l, chamferRadius: cham )
+            //self.scale = SCNVector3Make( 1.0, 1.0, 0.3)
         }
         
         if (indicatorType == FaceIndicatorTypes.FaceIndicatorTypeSphere) {
             let r = CGFloat( size * Float(0.1) )
-            self.geometry = SCNSphere.init(radius: r)
-            self.scale = SCNVector3Make( 1.0, 1.0, 0.2)
+            let shapeNode = SKShapeNode.init(circleOfRadius: r * sizeMultiplier)
+            shapeNode.fillColor = fillColor
+            shapeNode.strokeColor = SKColor.clear
+            self.addChild(shapeNode)
+                
+            //self.geometry = SCNSphere.init(radius: r)
+            //self.scale = SCNVector3Make( 1.0, 1.0, 0.2)
         }
         
         
