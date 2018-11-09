@@ -10,7 +10,7 @@ import WatchKit
 import WatchConnectivity
 import Foundation
 
-class InterfaceController: WKInterfaceController, WCSessionDelegate {
+class InterfaceController: KKInterfaceController, WCSessionDelegate {
     
     @IBOutlet var skInterface: WKInterfaceSKScene!
     

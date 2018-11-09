@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e8u-53-jRT">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sJs-aO-AIS">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,20 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
     <scenes>
-        <!--Watch-->
-        <scene sceneID="aou-V4-d1y">
-            <objects>
-                <controller identifier="InterfaceController" title="Watch" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Face_Extension">
-                    <items>
-                        <spriteKitScene alignment="left" id="eh2-bW-rMT"/>
-                    </items>
-                    <connections>
-                        <outlet property="skInterface" destination="eh2-bW-rMT" id="Wme-JX-I9n"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="220" y="345"/>
-        </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>
@@ -53,20 +39,25 @@
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
-        <!--Intro Interface Controller-->
-        <scene sceneID="4jF-vJ-MOl">
+        <!--Interface Controller-->
+        <scene sceneID="RCf-p0-6eU">
             <objects>
-                <controller id="e8u-53-jRT" customClass="IntroInterfaceController" customModule="Face_Extension">
+                <controller spacing="0.0" fullScreen="YES" id="sJs-aO-AIS" customClass="InterfaceController" customModule="Face_Extension">
                     <items>
-                        <button width="1" alignment="left" title="Watch Face" id="aKz-lc-d3I">
-                            <connections>
-                                <action selector="goToWatchFace" destination="e8u-53-jRT" id="lvb-oC-Ugg"/>
-                            </connections>
-                        </button>
+                        <group width="1" alignment="left" spacing="0.0" id="peu-MO-7Wq">
+                            <items>
+                                <spriteKitScene width="184" height="224" alignment="center" preferredFramesPerSecond="60" scene="FaceScene.sks" id="Ubu-78-iLh"/>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                        </group>
                     </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                    <connections>
+                        <outlet property="skInterface" destination="Ubu-78-iLh" id="Uck-1q-ekg"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-124" y="262"/>
+            <point key="canvasLocation" x="207" y="345"/>
         </scene>
     </scenes>
 </document>
