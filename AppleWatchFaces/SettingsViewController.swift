@@ -107,7 +107,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         UserClockSetting.loadFromFile()
         
         //get current selected clock
-        SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[0]
+        SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[2]
         redrawPreviewClock()
         
         self.errorMessageLabel.alpha = 0.0

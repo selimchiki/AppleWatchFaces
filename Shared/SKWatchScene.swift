@@ -20,7 +20,7 @@ class SKWatchScene: SKScene {
         }
         
         let newWatchFaceNode = WatchFaceNode.init(clockSetting: clockSetting, size: self.size )
-        newWatchFaceNode.setScale(1.5)
+        newWatchFaceNode.setScale(1.45)
         
         if let oldNode = self.childNode(withName: "watchFaceNode") {
             oldNode.removeFromParent()
