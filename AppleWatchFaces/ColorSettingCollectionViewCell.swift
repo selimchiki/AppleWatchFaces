@@ -55,7 +55,7 @@ class ColorSettingCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
         
         circleView.layer.cornerRadius = circleView.layer.frame.height / 2
-        circleView.layer.borderWidth = 2.0
+        circleView.layer.borderWidth = 1.0
         circleView.layer.borderColor = SKColor.white.cgColor
         
         clipsToBounds = true
