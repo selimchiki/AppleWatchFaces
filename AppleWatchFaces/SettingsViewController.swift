@@ -16,7 +16,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     var session: WCSession?
     var watchPreviewViewController:WatchPreviewViewController?
     static var currentClockSetting: ClockSetting = ClockSetting.defaults()
-    var currentClockIndex = 0
+    var currentClockIndex = 1
     
     static let settingsChangedNotificationName = Notification.Name("settingsChanged")
     

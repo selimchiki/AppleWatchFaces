@@ -62,12 +62,96 @@ class WatchFaceNode: SKSpriteNode {
                     renderNumbers: true,
                     renderShapes: true)
                 
+                generateTextRingNode(
+                    self,
+                    patternTotal: ringSetting.ringPatternTotal,
+                    patternArray: ringSetting.ringPattern,
+                    ringType: ringSetting.ringType,
+                    material: ringSetting.ringMaterialName,
+                    currentDistance: currentDistance,
+                    clockFaceSettings: clockFaceSettings,
+                    ringSettings: ringSetting,
+                    renderNumbers: true,
+                    renderShapes: true)
+                
                 //move it closer to center
                 currentDistance = currentDistance - ringSetting.ringWidth
             }
             
         }
 
+    }
+    
+    func generateTextRingNode( _ clockFaceNode: SKSpriteNode, patternTotal: Int, patternArray: [Int], ringType: RingTypes, material: String, currentDistance: Float, clockFaceSettings: ClockFaceSetting, ringSettings: ClockRingSetting, renderNumbers: Bool, renderShapes: Bool ) {
+        
+        // exit if pattern array is empty
+        if (patternArray.count == 0) { return }
+        
+        var patternCounter = 0
+        let sizeMultiplier:CGFloat = CGFloat(SKWatchScene.sizeMulitplier)
+        
+        generateLoop: for outerRingIndex in 0...(patternTotal-1) {
+            //dont draw when pattern == 0
+            var doDraw = true
+            
+            var newNode = SKNode()
+            
+            if ( patternArray[patternCounter] == 0) { doDraw = false }
+            
+            patternCounter = patternCounter + 1
+            if (patternCounter >= patternArray.count) { patternCounter = 0 }
+            
+            if (!doDraw) { continue }
+            
+            let angleDiv = patternTotal
+            let angleOffset = -1.0 * Float(Double.pi*2) / Float(angleDiv)  * Float(outerRingIndex) + Float(Double.pi/2)
+            
+            let cx:Float = 0.0 //center x
+            let cy:Float = 0.0 //center y
+            
+            let xpos:CGFloat = CGFloat(cx + currentDistance * cos(angleOffset))
+            let ypos:CGFloat = CGFloat(cy + currentDistance * sin(angleOffset))
+            
+            var numberToRender = outerRingIndex
+            if numberToRender == 0 { numberToRender = patternTotal }
+            
+            if (renderNumbers && ringType == RingTypes.RingTypeTextRotatingNode) {
+                newNode  = NumberTextNode.init(
+                    numberTextType: ringSettings.textType,
+                    textSize: ringSettings.textSize,
+                    currentNum: numberToRender,
+                    totalNum: patternTotal,
+                    shouldDisplayRomanNumerals: clockFaceSettings.shouldShowRomanNumeralText,
+                    pivotMode: 0, fillColor: SKColor.init(hexString: material))
+                
+                let angleForQuad = Float(Double.pi/2) - angleOffset
+                let quadrandt = MathFunctions.getQuadrant(angleForQuad)
+                
+                //print("minText num: ",numberToRender, "angle: ", angleForQuad, "quad:", quadrandt )
+                
+                var counterRotAngle = Float( -angleForQuad )
+                if (quadrandt > 1 && quadrandt < 4) { counterRotAngle = -angleForQuad + Float( Double.pi ) }
+                
+                newNode.zRotation = CGFloat(counterRotAngle)
+                //newNode.eulerAngles = SCNVector3Make( 0, 0, counterRotAngle )
+            }
+            
+            if (renderNumbers && ringType == RingTypes.RingTypeTextNode) {
+                //print("patternDraw")
+                
+                newNode  = NumberTextNode.init(
+                    numberTextType: ringSettings.textType,
+                    textSize: ringSettings.textSize,
+                    currentNum: numberToRender,
+                    totalNum: patternTotal,
+                    shouldDisplayRomanNumerals: clockFaceSettings.shouldShowRomanNumeralText,
+                    pivotMode: 0, fillColor: SKColor.init(hexString: material))
+            }
+            
+            //newNode.geometry?.firstMaterial? = material
+            newNode.position = CGPoint.init(x: xpos*sizeMultiplier, y: ypos*sizeMultiplier) //SCNVector3Make(xpos, ypos, newNodeZPos)
+            clockFaceNode.addChild(newNode)
+        }
     }
     
     func generateRingNode( _ clockFaceNode: SKSpriteNode, patternTotal: Int, patternArray: [Int], ringType: RingTypes, material: String, currentDistance: Float, clockFaceSettings: ClockFaceSetting,
@@ -105,7 +189,7 @@ class WatchFaceNode: SKSpriteNode {
             var numberToRender = outerRingIndex
             if numberToRender == 0 { numberToRender = patternTotal }
         
-            debugPrint("CD:" + String(currentDistance))
+            //debugPrint("CD:" + String(currentDistance))
             outerRingNode.position = CGPoint.init(x: Double(currentDistance * sizeMultiplier), y: 0.0)
             
             let outerRingParentNode = SKNode.init()

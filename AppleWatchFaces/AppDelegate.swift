@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set up and activate your session early here!
         //WatchSessionManager.sharedManager.startSession()
         
-        //printFonts()
+        printFonts()
         
         return true
     }

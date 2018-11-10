@@ -63,7 +63,7 @@ enum NumberTextTypes: String {
     }
 }
 
-class NumberTextNode: SCNNode {
+class NumberTextNode: SKNode {
     
     static func typeDescriptions() -> [String] {
         var typeDescriptionsArray = [String]()
@@ -134,7 +134,7 @@ class NumberTextNode: SCNNode {
     }
     
     //used when generating node for clock faces ( the numbers )
-    init(numberTextType: NumberTextTypes, textSize: Float, currentNum: Int, totalNum: Int, shouldDisplayRomanNumerals: Bool, pivotMode: Int) {
+    init(numberTextType: NumberTextTypes, textSize: Float, currentNum: Int, totalNum: Int, shouldDisplayRomanNumerals: Bool, pivotMode: Int, fillColor: SKColor) {
         
         super.init()
 
@@ -142,7 +142,7 @@ class NumberTextNode: SCNNode {
         var currentNum = currentNum
         if (currentNum == 0 && totalNum == 12) { currentNum = totalNum }
         
-        let textScale = Float(0.3)
+        let textScale = Float(0.0175)
         
         //support for roman numerals
         var hourString = currentNum.description
@@ -150,86 +150,34 @@ class NumberTextNode: SCNNode {
             hourString = self.toRoman(currentNum)
         }
         
-        /* Describes how individual lines of text are aligned within the layer
-         * bounds. The possible options are `natural', `left', `right',
-         * `center' and `justified'. Defaults to `natural'. */
-        
-        let hourText = SCNText.init(string: hourString, extrusionDepth: 0.02)
+        //let hourText = SCNText.init(string: hourString, extrusionDepth: 0.02)
+        let hourText = SKLabelNode.init(text: hourString)
         //hourText.alignmentMode = "center"
         
-        hourText.flatness = 0.001
-        
-        //was causing crashes with some custom fonts
-        //hourText.chamferRadius = 0.1
-        
         let fontName = fontNameForNumberTextType(numberTextType)
-        
-        #if os(OSX)
-            //hourText.font = NSFont.monospacedDigitSystemFontOfSize(Float((textSize/1.2)/textScale), weight: (textSize/12)/textScale)
-            hourText.font =  NSFont(name: fontName, size: Float(textSize/textScale))
-        #endif
-       #if os(iOS) || os(tvOS)
-            //hourText.font = UIFont.monospacedDigitSystemFontOfSize( CGFloat( Float(0.2) / textScale ) , weight: CGFloat( Float(0.08)/textScale ) )
-            hourText.font = UIFont.init(name: fontName, size: CGFloat( Float(textSize) / textScale ) )
-        #endif
+        hourText.fontName = fontName
+        hourText.fontSize = CGFloat( Float(textSize) / textScale )
+        hourText.fontColor = fillColor
+        hourText.color = fillColor
 
-        self.geometry = hourText
+        self.addChild(hourText)
         
-        self.scale = SCNVector3(x: textScale,y: textScale,z: textScale)
+//        if (numberTextType == .NumberTextTypeHelvicaNeueBold) {
+//            self.scale = SCNVector3(x: textScale*1.2,y: textScale,z: textScale)
+//        }
         
-        if (numberTextType == .NumberTextTypeHelvicaNeueBold) {
-            self.scale = SCNVector3(x: textScale*1.2,y: textScale,z: textScale)
-        }
-        
-        //centering
-        var min = SCNVector3Zero
-        var max = SCNVector3Zero
-        _ = self.__getBoundingBoxMin(&min, max: &max )
-        
-        if (pivotMode==0) { //normal text
-            let dx = (max.x - min.x) / 2.0
-            let dy = (max.y - min.y) / 2.0 + min.y
-            self.pivot = SCNMatrix4Translate(self.pivot, dx, dy, 0)
-        }
-        
-        if (pivotMode==1) { //rotated text
-//            let dx:CGFloat = 1.0 //(max.x - min.x) / 2.0
-//            let dy:CGFloat = 0.0 //(max.y - min.y) / 1.0 + min.y
-            //self.pivot = SCNMatrix4Translate(self.pivot, dx, dy, 0)
-        }
-
+//        //centering
+//        var min = SCNVector3Zero
+//        var max = SCNVector3Zero
+//        _ = self.__getBoundingBoxMin(&min, max: &max )
+//
+//        if (pivotMode==0) { //normal text
+//            let dx = (max.x - min.x) / 2.0
+//            let dy = (max.y - min.y) / 2.0 + min.y
+//            self.pivot = SCNMatrix4Translate(self.pivot, dx, dy, 0)
+//        }
 
         //debugPrint("n:",hourString, "minX:", min.y, "maxX:", max.y, "textSize:", textSize)
-    }
-    
-    //used when generating titles that pan with clocks ( preference for show description )
-    init(numberTextType: NumberTextTypes, textSize: Float, title: String) {
-        
-        super.init()
-        
-        self.name = "descriptionText"
-        
-        let textScale = Float(0.3)
-        
-        let titleText = SCNText.init(string: title, extrusionDepth: CGFloat(textSize/3.5))
-//        titleText.alignmentMode = CATextLayerAlignmentMode.center.rawValue
-        
-        titleText.flatness = 0.001
-        
-        let fontName = fontNameForNumberTextType(numberTextType)
-
-        #if os(OSX)
-            //hourText.font = NSFont.monospacedDigitSystemFontOfSize(Float((textSize/1.2)/textScale), weight: (textSize/12)/textScale)
-            titleText.font =  NSFont(name: fontName, size: Float(textSize/textScale))
-        #endif
-        #if os(iOS) || os(tvOS)
-            //hourText.font = UIFont.monospacedDigitSystemFontOfSize( CGFloat( Float(0.2) / textScale ) , weight: CGFloat( Float(0.08)/textScale ) )
-            titleText.font = UIFont.init(name: fontName, size: CGFloat( Float(textSize) / textScale ) )
-        #endif
-        
-        self.geometry = titleText
-        
-        self.scale = SCNVector3(x: textScale,y: textScale,z: textScale)
     }
     
     required init?(coder aDecoder: NSCoder) {
