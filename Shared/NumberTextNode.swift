@@ -6,12 +6,7 @@
 //  Copyright © 2015 Mike Hill. All rights reserved.
 //
 
-#if os(iOS) || os(tvOS)
-    import UIKit
-#endif
-#if os(OSX)
-    import Cocoa
-#endif
+import UIKit
 import SpriteKit
 import SceneKit
 
@@ -142,6 +137,7 @@ class NumberTextNode: SKNode {
         var currentNum = currentNum
         if (currentNum == 0 && totalNum == 12) { currentNum = totalNum }
         
+        //TODO this should dependant on overall scale setting?
         let textScale = Float(0.0175)
         
         //support for roman numerals
@@ -150,34 +146,18 @@ class NumberTextNode: SKNode {
             hourString = self.toRoman(currentNum)
         }
         
-        //let hourText = SCNText.init(string: hourString, extrusionDepth: 0.02)
         let hourText = SKLabelNode.init(text: hourString)
-        //hourText.alignmentMode = "center"
         
         let fontName = fontNameForNumberTextType(numberTextType)
         hourText.fontName = fontName
         hourText.fontSize = CGFloat( Float(textSize) / textScale )
         hourText.fontColor = fillColor
         hourText.color = fillColor
+        
+        hourText.horizontalAlignmentMode = .center
+        hourText.verticalAlignmentMode = .center
 
         self.addChild(hourText)
-        
-//        if (numberTextType == .NumberTextTypeHelvicaNeueBold) {
-//            self.scale = SCNVector3(x: textScale*1.2,y: textScale,z: textScale)
-//        }
-        
-//        //centering
-//        var min = SCNVector3Zero
-//        var max = SCNVector3Zero
-//        _ = self.__getBoundingBoxMin(&min, max: &max )
-//
-//        if (pivotMode==0) { //normal text
-//            let dx = (max.x - min.x) / 2.0
-//            let dy = (max.y - min.y) / 2.0 + min.y
-//            self.pivot = SCNMatrix4Translate(self.pivot, dx, dy, 0)
-//        }
-
-        //debugPrint("n:",hourString, "minX:", min.y, "maxX:", max.y, "textSize:", textSize)
     }
     
     required init?(coder aDecoder: NSCoder) {

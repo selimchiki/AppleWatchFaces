@@ -9,7 +9,6 @@
 import UIKit
 
 import SpriteKit
-//import SceneKit
 
 enum MinuteHandTypes: String {
     case MinuteHandTypeSwiss, MinuteHandTypeRounded, MinuteHandTypeRoman, MinuteHandTypeBoxy, MinuteHandTypeFatBoxy, MinuteHandTypeSquaredHole, MinuteHandTypeSphere
@@ -112,11 +111,6 @@ class MinuteHandNode: SKSpriteNode {
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
-            
-//            self.geometry = SCNShape.init(path: bezierPath, extrusionDepth: 0.02)
-//            self.scale = SCNVector3Make(scaleForMinuteHand, scaleForMinuteHand, scaleForMinuteHand)
-//
-//            self.geometry?.firstMaterial?.diffuse.contents = SKColor.black
         }
         
         if (minuteHandType == MinuteHandTypes.MinuteHandTypeSquaredHole) {
@@ -143,11 +137,6 @@ class MinuteHandNode: SKSpriteNode {
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
-            
-//            self.geometry = SCNShape.init(path: bezierPath, extrusionDepth: 0.02)
-//            self.scale = SCNVector3Make(scaleForMinuteHand, scaleForMinuteHand, scaleForMinuteHand)
-//
-//            self.geometry?.firstMaterial?.diffuse.contents = SKColor.black
 
         }
         
@@ -175,11 +164,6 @@ class MinuteHandNode: SKSpriteNode {
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
-
-//            self.geometry = SCNShape.init(path: bezierPath, extrusionDepth: 0.02)
-//            self.scale = SCNVector3Make(scaleForMinuteHand, scaleForMinuteHand, scaleForMinuteHand)
-//
-//            self.geometry?.firstMaterial?.diffuse.contents = SKColor.black
         }
         
         if (minuteHandType == MinuteHandTypes.MinuteHandTypeSwiss) {
@@ -197,11 +181,6 @@ class MinuteHandNode: SKSpriteNode {
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
-    
-//            self.geometry = SCNShape.init(path: minuteHandPath, extrusionDepth: 0.02)
-//            self.scale = SCNVector3Make(scaleForMinuteHand, scaleForMinuteHand, scaleForMinuteHand)
-//
-//            self.geometry?.firstMaterial?.diffuse.contents = SKColor.black
         }
         
         if (minuteHandType == MinuteHandTypes.MinuteHandTypeRounded) {
@@ -225,11 +204,6 @@ class MinuteHandNode: SKSpriteNode {
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
-            
-//            self.geometry = SCNShape.init(path: bezierPath, extrusionDepth: 0.02)
-//            self.scale = SCNVector3Make(scaleForMinuteHand, scaleForMinuteHand, scaleForMinuteHand)
-//
-//            self.geometry?.firstMaterial?.diffuse.contents = SKColor.black
         }
         
         if (minuteHandType == MinuteHandTypes.MinuteHandTypeRoman) {

@@ -6,7 +6,6 @@
 //  Copyright © 2015 Mike Hill. All rights reserved.
 //
 
-//import Cocoa
 import SpriteKit
 import SceneKit
 
