@@ -6,9 +6,7 @@
 //  Copyright © 2015 Mike Hill. All rights reserved.
 //
 
-//import Cocoa
 import SpriteKit
-//import SceneKit
 
 enum HourHandTypes: String {
     case HourHandTypeSwiss, HourHandTypeRounded, HourHandTypeRoman, HourHandTypeBoxy, HourHandTypeSquaredHole, HourHandTypeSphere,
@@ -36,7 +34,6 @@ class HourHandNode: SKSpriteNode {
         if (nodeType == HourHandTypes.HourHandTypeSquaredHole)  { typeDescription = "Squared Hole" }
         if (nodeType == HourHandTypes.HourHandTypeCutout)  { typeDescription = "Square Cutout" }
 
-        
         return typeDescription
     }
     
@@ -101,11 +98,6 @@ class HourHandNode: SKSpriteNode {
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
-            
-//            self.geometry = SCNShape.init(path: bezierPath, extrusionDepth: 0.02)
-//            self.scale = SCNVector3Make(Float(scaleForHourHand), scaleForHourHand, scaleForHourHand)
-//
-//            self.geometry?.firstMaterial?.diffuse.contents = SKColor.black
         }
 
         
@@ -118,11 +110,6 @@ class HourHandNode: SKSpriteNode {
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
-            
-//            self.geometry = SCNShape.init(path: rectanglePath, extrusionDepth: 0.02)
-//            self.scale = SCNVector3Make(scaleForHourHand, scaleForHourHand, scaleForHourHand)
-//
-//            self.geometry?.firstMaterial?.diffuse.contents = SKColor.black
         }
         
         if (hourHandType == HourHandTypes.HourHandTypeSquaredHole) {
@@ -147,11 +134,6 @@ class HourHandNode: SKSpriteNode {
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
-            
-//            self.geometry = SCNShape.init(path: bezierPath, extrusionDepth: 0.02)
-//            self.scale = SCNVector3Make(scaleForHourHand, scaleForHourHand, scaleForHourHand)
-//
-//            self.geometry?.firstMaterial?.diffuse.contents = SKColor.black
         }
         
         if (hourHandType == HourHandTypes.HourHandTypeSwiss) {
@@ -169,11 +151,6 @@ class HourHandNode: SKSpriteNode {
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
-            
-//            self.geometry = SCNShape.init(path: hourHandPath, extrusionDepth: 0.02)
-//
-//            self.scale = SCNVector3Make(scaleForHourHand, scaleForHourHand, scaleForHourHand)
-//            self.geometry?.firstMaterial? = ClockMaterials.materialFromScene("#000000FF")
         }
         
         if (hourHandType == HourHandTypes.HourHandTypeRounded) {
@@ -197,12 +174,6 @@ class HourHandNode: SKSpriteNode {
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
-            
-//            let shape = SCNShape.init(path: bezierPath, extrusionDepth: 0.02)
-//            self.geometry = shape
-//
-//            self.scale = SCNVector3Make(scaleForHourHand, scaleForHourHand, scaleForHourHand)
-//            self.geometry?.firstMaterial? = ClockMaterials.materialFromScene("#000000FF")
         }
         
         if (hourHandType == HourHandTypes.HourHandTypeRoman) {
@@ -347,11 +318,6 @@ class HourHandNode: SKSpriteNode {
             shape.strokeColor = SKColor.clear
             
             self.addChild(shape)
-            
-//            self.geometry = SCNShape.init(path: hourHandPath, extrusionDepth: 0.02)
-//
-//            self.scale = SCNVector3Make(scaleForHourHand, scaleForHourHand, scaleForHourHand)
-//            self.geometry?.firstMaterial? = ClockMaterials.materialFromScene("#000000FF")
         }
     }
     
