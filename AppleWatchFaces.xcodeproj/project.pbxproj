@@ -33,6 +33,8 @@
 		318809002178166B00585AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 318808FF2178166B00585AB1 /* Assets.xcassets */; };
 		318809052178166B00585AB1 /* Face.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 318808E42178166A00585AB1 /* Face.app */; };
 		318809102178172600585AB1 /* faceBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 3188090F2178172600585AB1 /* faceBackground.png */; };
+		31A5F7EC21966967000F1677 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 31A5F7EB21966967000F1677 /* fonts */; };
+		31A5F7ED21966967000F1677 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 31A5F7EB21966967000F1677 /* fonts */; };
 		31B3F8C7218F22EF00AD22A5 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B3F8C6218F22EF00AD22A5 /* RoundedButton.swift */; };
 		31B3F8CC218F2F1F00AD22A5 /* SettingsTableHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B3F8CB218F2F1F00AD22A5 /* SettingsTableHeaderViewCell.swift */; };
 		31B3F8CE218F4A0700AD22A5 /* ColorSettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B3F8CD218F4A0700AD22A5 /* ColorSettingCollectionViewCell.swift */; };
@@ -148,6 +150,7 @@
 		318809012178166B00585AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		318809022178166B00585AB1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		3188090F2178172600585AB1 /* faceBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = faceBackground.png; sourceTree = "<group>"; };
+		31A5F7EB21966967000F1677 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		31B3F8C6218F22EF00AD22A5 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		31B3F8CB218F2F1F00AD22A5 /* SettingsTableHeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableHeaderViewCell.swift; sourceTree = "<group>"; };
 		31B3F8CD218F4A0700AD22A5 /* ColorSettingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -199,6 +202,7 @@
 		3123628B217AAAF000E78EFC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				31A5F7EA2196692B000F1677 /* Resources */,
 				31B3F8C8218F283000AD22A5 /* CustomClasses */,
 				312D4C06218BCDB5008504D2 /* Nodes */,
 				31F8ABD0218916DE0014E2ED /* Models */,
@@ -308,6 +312,14 @@
 				3188090F2178172600585AB1 /* faceBackground.png */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		31A5F7EA2196692B000F1677 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				31A5F7EB21966967000F1677 /* fonts */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		31B3F8C8218F283000AD22A5 /* CustomClasses */ = {
@@ -450,6 +462,7 @@
 				31F56FA62185817E00455FC6 /* SKWatchScene.sks in Resources */,
 				318808DB217815E700585AB1 /* LaunchScreen.storyboard in Resources */,
 				318808D8217815E700585AB1 /* Assets.xcassets in Resources */,
+				31A5F7EC21966967000F1677 /* fonts in Resources */,
 				31061F2E218FEAA600EF511B /* readme.md in Resources */,
 				318808D6217815E600585AB1 /* Main.storyboard in Resources */,
 			);
@@ -471,6 +484,7 @@
 				318809102178172600585AB1 /* faceBackground.png in Resources */,
 				318809002178166B00585AB1 /* Assets.xcassets in Resources */,
 				318808F82178166B00585AB1 /* SKWatchScene.sks in Resources */,
+				31A5F7ED21966967000F1677 /* fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
