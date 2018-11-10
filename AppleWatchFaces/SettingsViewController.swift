@@ -16,6 +16,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     var session: WCSession?
     var watchPreviewViewController:WatchPreviewViewController?
     static var currentClockSetting: ClockSetting = ClockSetting.defaults()
+    var currentClockIndex = 0
     
     static let settingsChangedNotificationName = Notification.Name("settingsChanged")
     
@@ -97,7 +98,19 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         //tell preview to reload
         if watchPreviewViewController != nil {
             watchPreviewViewController?.redraw()
+            self.showMessage( message: SettingsViewController.currentClockSetting.title)
         }
+    }
+    
+    @IBAction func nextClock() {
+        currentClockIndex = currentClockIndex + 1
+        if (UserClockSetting.sharedClockSettings.count <= currentClockIndex) {
+            currentClockIndex = 0
+        }
+        
+        let newClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex]
+        SettingsViewController.currentClockSetting = newClockSetting
+        redrawPreviewClock()
     }
     
     override func viewDidLoad() {
@@ -107,7 +120,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         UserClockSetting.loadFromFile()
         
         //get current selected clock
-        SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[2]
+        SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[0]
         redrawPreviewClock()
         
         self.errorMessageLabel.alpha = 0.0

@@ -15,9 +15,9 @@ class SKWatchScene: SKScene {
     
     func redraw(clockSetting: ClockSetting) {
         
-        if let titleLabel = self.childNode(withName: "titleLabel") as? SKLabelNode {
-            titleLabel.text = clockSetting.title
-        }
+//        if let titleLabel = self.childNode(withName: "titleLabel") as? SKLabelNode {
+//            titleLabel.text = clockSetting.title
+//        }
         
         let newWatchFaceNode = WatchFaceNode.init(clockSetting: clockSetting, size: self.size )
         newWatchFaceNode.setScale(1.45)

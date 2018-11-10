@@ -47,10 +47,9 @@ class WatchFaceNode: SKSpriteNode {
             
             self.addChild(hourHandNode)
         
+            var currentDistance = Float(1.0)
             //loop through ring settings and render rings from outside to inside
             for ringSetting in clockFaceSettings.ringSettings {
-                var currentDistance = Float(1.0)
-                
                 generateRingNode(
                     self,
                     patternTotal: ringSetting.ringPatternTotal,
@@ -76,6 +75,9 @@ class WatchFaceNode: SKSpriteNode {
         
         //just exit for spacer
         if (ringType == RingTypes.RingTypeSpacer) { return }
+        
+        //only render shapes
+        if (ringType != RingTypes.RingTypeShapeNode) { return }
         
         let sizeMultiplier:Float = Float(SKWatchScene.sizeMulitplier)
         
@@ -103,6 +105,7 @@ class WatchFaceNode: SKSpriteNode {
             var numberToRender = outerRingIndex
             if numberToRender == 0 { numberToRender = patternTotal }
         
+            debugPrint("CD:" + String(currentDistance))
             outerRingNode.position = CGPoint.init(x: Double(currentDistance * sizeMultiplier), y: 0.0)
             
             let outerRingParentNode = SKNode.init()

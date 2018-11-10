@@ -72,6 +72,7 @@ class FaceIndicatorNode: SKSpriteNode {
             let shapeNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: w * sizeMultiplier, height: h * sizeMultiplier))
             shapeNode.fillColor = fillColor
             shapeNode.strokeColor = SKColor.clear
+            shapeNode.position = CGPoint.init(x: -(w * sizeMultiplier)/2, y: -(h * sizeMultiplier)/2)
             self.addChild(shapeNode)
             
             //self.geometry = SCNBox.init(width: w, height: h, length: 0.002, chamferRadius: 0)
@@ -83,6 +84,7 @@ class FaceIndicatorNode: SKSpriteNode {
             let shapeNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: w * sizeMultiplier, height: h * sizeMultiplier))
             shapeNode.fillColor = fillColor
             shapeNode.strokeColor = SKColor.clear
+            shapeNode.position = CGPoint.init(x: -(w * sizeMultiplier)/2, y: -(h * sizeMultiplier)/2)
             self.addChild(shapeNode)
             
             //self.geometry = SCNBox.init(width: w, height: h, length: 0.002, chamferRadius: 0)
@@ -94,6 +96,7 @@ class FaceIndicatorNode: SKSpriteNode {
             let shapeNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: w * sizeMultiplier, height: h * sizeMultiplier))
             shapeNode.fillColor = fillColor
             shapeNode.strokeColor = SKColor.clear
+            shapeNode.position = CGPoint.init(x: -(w * sizeMultiplier)/2, y: -(h * sizeMultiplier)/2)
             self.addChild(shapeNode)
             
             //self.geometry = SCNBox.init(width: w, height: h, length: 0.002, chamferRadius: 0)
@@ -107,6 +110,7 @@ class FaceIndicatorNode: SKSpriteNode {
             let shapeNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: w * sizeMultiplier, height: h * sizeMultiplier), cornerRadius: cham * sizeMultiplier)
             shapeNode.fillColor = fillColor
             shapeNode.strokeColor = SKColor.clear
+            shapeNode.position = CGPoint.init(x: -(w * sizeMultiplier)/2, y: -(h * sizeMultiplier)/2)
             self.addChild(shapeNode)
             
             //self.geometry = SCNBox.init(width: w, height: h, length: l, chamferRadius: cham )
