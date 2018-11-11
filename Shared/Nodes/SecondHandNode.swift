@@ -103,7 +103,11 @@ class SecondHandNode: SKSpriteNode {
         self.init(secondHandType: secondHandType, fillColor: SKColor.red)
     }
     
-    init(secondHandType: SecondHandTypes, fillColor: SKColor) {
+    convenience init(secondHandType: SecondHandTypes, fillColor: SKColor) {
+        self.init(secondHandType: secondHandType, fillColor: SKColor.red, strokeColor: SKColor.clear, lineWidth: 2.0)
+    }
+    
+    init(secondHandType: SecondHandTypes, fillColor: SKColor, strokeColor: SKColor, lineWidth: CGFloat) {
     
         super.init(texture: nil, color: fillColor, size: CGSize())
         self.name = "secondHand"
@@ -116,7 +120,8 @@ class SecondHandNode: SKSpriteNode {
             let shape = SKShapeNode.init(circleOfRadius: 4)
             shape.position = CGPoint.init(x: 0, y: 89.0)
             shape.fillColor = fillColor
-            shape.strokeColor = SKColor.clear
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
             self.addChild(shape)
             //self.pivot = SCNMatrix4MakeTranslation(0.0, -0.89, 0)
@@ -125,7 +130,8 @@ class SecondHandNode: SKSpriteNode {
         if (secondHandType == SecondHandTypes.SecondHandTypeSquaredHole) {
             let shape = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: 2.5, height: 90))
             shape.fillColor = fillColor
-            shape.strokeColor = SKColor.clear
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             //self.pivot = SCNMatrix4MakeTranslation(Float(-0.0125), Float(-0.4), Float(0))
             
             self.addChild(shape)
@@ -152,7 +158,8 @@ class SecondHandNode: SKSpriteNode {
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
             shape.fillColor = fillColor
-            shape.strokeColor = SKColor.clear
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
             self.addChild(shape)
         }
@@ -164,7 +171,8 @@ class SecondHandNode: SKSpriteNode {
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
             shape.fillColor = fillColor
-            shape.strokeColor = SKColor.clear
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
             self.addChild(shape)
         }
@@ -193,7 +201,8 @@ class SecondHandNode: SKSpriteNode {
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
             shape.fillColor = fillColor
-            shape.strokeColor = SKColor.clear
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
             self.addChild(shape)
         }
@@ -202,7 +211,8 @@ class SecondHandNode: SKSpriteNode {
             
             let shape = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: 1, height: 90))
             shape.fillColor = fillColor
-            shape.strokeColor = SKColor.clear
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
             self.addChild(shape)
         }
@@ -369,7 +379,8 @@ class SecondHandNode: SKSpriteNode {
             
             let shape = SKShapeNode.init(path: secondHandPath.cgPath)
             shape.fillColor = fillColor
-            shape.strokeColor = SKColor.clear
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             shape.setScale(0.31)
         
             self.addChild(shape)

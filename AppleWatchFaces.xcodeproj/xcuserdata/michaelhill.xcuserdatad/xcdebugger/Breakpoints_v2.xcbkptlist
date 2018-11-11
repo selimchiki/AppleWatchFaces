@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shared/Nodes/WatchFaceNode.swift"
-            timestampString = "563559942.802218"
+            timestampString = "563658158.688359"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shared/NumberTextNode.swift"
-            timestampString = "563559942.802796"
+            timestampString = "563658158.6888731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "init(numberTextType:textSize:currentNum:totalNum:shouldDisplayRomanNumerals:pivotMode:fillColor:)"
             landmarkType = "7">
          </BreakpointContent>

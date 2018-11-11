@@ -9,7 +9,16 @@
 import UIKit
 import Foundation
 
+//used in the subclassed cells to override calling selection
+class WatchSettingsSelectableTableViewCell:UITableViewCell {
+    func chooseSetting( animated: Bool ) {
+        debugPrint("** generic chooseSetting called, not overridden **")
+    }
+}
+
 class WatchSettingsTableViewController: UITableViewController {
+    
+    static let settingsTableSectionReloadNotificationName = Notification.Name("settingsTableSectionReload")
     
     //header text,
     let sectionsData = [
@@ -38,7 +47,24 @@ class WatchSettingsTableViewController: UITableViewController {
         return settingText
     }
     
-    static let settingsTableSectionReloadNotificationName = Notification.Name("settingsTableSectionReload")
+    func selectCurrentSettings(animated: Bool) {
+        //loop through the cells and tell them to select their collectionView current item
+        for sectionNum in 0 ... sectionsData.count {
+            let indexPath = IndexPath.init(row: 0, section: sectionNum)
+            
+            //tell the header to update it value
+            if let headerView = self.tableView.headerView(forSection: sectionNum) {
+                if let headerCell = headerView as? SettingsTableHeaderViewCell {
+                    headerCell.settingLabel.text = valueForHeader( section: sectionNum)
+                }
+            }
+            //get the cell, tell is to select its current item ( knows its own type to be able to select it )
+            if let currentcell = self.tableView.cellForRow(at: indexPath) as? WatchSettingsSelectableTableViewCell {
+                currentcell.chooseSetting(animated: true)
+            }
+        
+        }
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sectionsData.count
@@ -50,10 +76,9 @@ class WatchSettingsTableViewController: UITableViewController {
     
     //MARK: UITableViewDelegate
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        if let headerCell = tableView.dequeueReusableCell(withIdentifier: "header") as? SettingsTableHeaderViewCell {
+    
+        if let headerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SettingsTableHeaderViewID") as? SettingsTableHeaderViewCell {
             headerCell.titleLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
-            
             headerCell.settingLabel.text = valueForHeader( section: section)
             return headerCell
         }
@@ -80,11 +105,14 @@ class WatchSettingsTableViewController: UITableViewController {
     @objc func onNotification(notification:Notification)
     {
         //TODO: tell correct section to reload, type sent along
+        debugPrint("tableView full reload!!")
         self.tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register(UINib(nibName: "SettingsTableHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "SettingsTableHeaderViewID")
         
         NotificationCenter.default.addObserver(self, selector: #selector(onNotification(notification:)), name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil)
     }

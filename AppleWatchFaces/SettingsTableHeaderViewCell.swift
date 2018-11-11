@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsTableHeaderViewCell: UITableViewCell {
+class SettingsTableHeaderViewCell: UITableViewHeaderFooterView {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var settingLabel: UILabel!

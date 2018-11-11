@@ -19,7 +19,7 @@ class SecondHandColorSettingsTableViewCell: ColorSettingsTableViewCell {
         //update the value
         SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandMaterialName = newColor
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
-        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"secondHandMaterialName"])
+        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"clockFaceSettings.secondHandMaterialName"])
 
         if let settingsHandCell = collectionView.cellForItem(at: indexPath) {
             settingsHandCell.backgroundColor = selectedColor

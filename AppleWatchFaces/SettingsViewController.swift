@@ -15,6 +15,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     
     var session: WCSession?
     var watchPreviewViewController:WatchPreviewViewController?
+    var watchSettingsTableViewController:WatchSettingsTableViewController?
     static var currentClockSetting: ClockSetting = ClockSetting.defaults()
     var currentClockIndex = 1
     
@@ -65,10 +66,13 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.destination is WatchPreviewViewController
-        {
+        if segue.destination is WatchPreviewViewController {
             let vc = segue.destination as? WatchPreviewViewController
             watchPreviewViewController = vc
+        }
+        if segue.destination is WatchSettingsTableViewController {
+            let vc = segue.destination as? WatchSettingsTableViewController
+            watchSettingsTableViewController = vc
         }
     }
     
@@ -102,6 +106,13 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         }
     }
     
+    func redrawSettingsTable() {
+        //tell the settings table to reload
+        if watchSettingsTableViewController != nil {
+            watchSettingsTableViewController?.selectCurrentSettings(animated: true)
+        }
+    }
+    
     @IBAction func nextClock() {
         currentClockIndex = currentClockIndex + 1
         if (UserClockSetting.sharedClockSettings.count <= currentClockIndex) {
@@ -111,6 +122,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         let newClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex]
         SettingsViewController.currentClockSetting = newClockSetting
         redrawPreviewClock()
+        redrawSettingsTable()
     }
     
     override func viewDidLoad() {
@@ -122,6 +134,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         //get current selected clock
         SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[0]
         redrawPreviewClock()
+        redrawSettingsTable()
         
         self.errorMessageLabel.alpha = 0.0
         

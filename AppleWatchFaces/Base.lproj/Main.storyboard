@@ -57,9 +57,8 @@
                                 <color key="textColor" red="1" green="0.12852664389999999" blue="0.067248547749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33s-up-Wg3" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33s-up-Wg3" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
                                 <rect key="frame" x="208" y="190" width="151" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next Design"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -78,14 +77,17 @@
                         <constraints>
                             <constraint firstItem="L09-xH-or1" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="leading" id="BYp-If-h75"/>
                             <constraint firstItem="QiH-q3-0ff" firstAttribute="trailing" secondItem="Mqq-m7-d7p" secondAttribute="trailing" id="JAh-tK-awE"/>
+                            <constraint firstItem="33s-up-Wg3" firstAttribute="trailing" secondItem="QiH-q3-0ff" secondAttribute="trailing" id="UwN-vA-uYw"/>
                             <constraint firstItem="DN7-J7-N45" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="anx-7m-RWa"/>
                             <constraint firstItem="DN7-J7-N45" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cq9-uT-uh4"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lCl-gV-ALq"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="top" id="mOV-p5-WLe"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="33s-up-Wg3" secondAttribute="bottom" constant="8" symbolic="YES" id="muS-XC-pdH"/>
                             <constraint firstItem="L09-xH-or1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oOd-Sb-kbI"/>
                             <constraint firstItem="QiH-q3-0ff" firstAttribute="leading" secondItem="Mqq-m7-d7p" secondAttribute="leading" id="osR-bA-66O"/>
                             <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="bottom" constant="8" symbolic="YES" id="p4q-1W-D2S"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="trailing" constant="8" symbolic="YES" id="qbB-9s-Av0"/>
+                            <constraint firstItem="33s-up-Wg3" firstAttribute="leading" secondItem="QiH-q3-0ff" secondAttribute="leading" id="sL6-bp-2mZ"/>
                             <constraint firstItem="QiH-q3-0ff" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="bottom" constant="8" symbolic="YES" id="uBK-VV-fli"/>
                             <constraint firstAttribute="trailing" secondItem="L09-xH-or1" secondAttribute="trailing" id="wAU-fU-c2g"/>
                         </constraints>
@@ -132,45 +134,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" rowHeight="30" id="s44-NY-Sow" customClass="SettingsTableHeaderViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s44-NY-Sow" id="g8i-LF-ORY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="w7r-uv-ggR">
-                                            <rect key="frame" x="9" y="4" width="358" height="20.5"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvG-hi-jfr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="301.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Setting" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgm-cV-fEQ">
-                                                    <rect key="frame" x="311.5" y="0.0" width="46.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="w7r-uv-ggR" firstAttribute="top" secondItem="g8i-LF-ORY" secondAttribute="top" constant="4" id="Emw-ed-FaZ"/>
-                                        <constraint firstAttribute="trailing" secondItem="w7r-uv-ggR" secondAttribute="trailing" constant="8" id="Irv-o1-Qjv"/>
-                                        <constraint firstItem="w7r-uv-ggR" firstAttribute="leading" secondItem="g8i-LF-ORY" secondAttribute="leading" constant="9" id="efc-OG-HKt"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="settingLabel" destination="bgm-cV-fEQ" id="OQJ-fn-2Ha"/>
-                                    <outlet property="titleLabel" destination="YvG-hi-jfr" id="jqI-gt-1DR"/>
-                                </connections>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="faceBackgroundColorsTableViewCell" rowHeight="100" id="0u0-0a-aMy" customClass="FaceBackgroundColorSettingTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="58" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0u0-0a-aMy" id="aqJ-lb-pZm">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -220,7 +185,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondHandSettingsTableViewCell" rowHeight="100" id="zGU-j9-Y07" customClass="SecondHandSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="158" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="128" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zGU-j9-Y07" id="rXn-ye-gOH">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -271,9 +236,12 @@
                                         <constraint firstItem="gff-Vv-w5T" firstAttribute="leading" secondItem="rXn-ye-gOH" secondAttribute="leading" id="aPd-AD-X0I"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="secondHandSelectionCollectionView" destination="gff-Vv-w5T" id="yKr-bU-fgg"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondHandColorsTableViewCell" rowHeight="100" id="Cw2-1l-ieM" customClass="SecondHandColorSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="258" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="228" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cw2-1l-ieM" id="OfW-Hz-WYS">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -323,7 +291,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="minuteHandSettingsTableViewCell" rowHeight="100" id="j9t-aJ-bZY" customClass="MinuteHandSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="358" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="328" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j9t-aJ-bZY" id="cbT-jL-8we">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -376,10 +344,10 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="minuteHandColorTableViewCell" rowHeight="100" id="s4M-Qx-GZL" customClass="MinuteHandColorSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="458" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="428" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s4M-Qx-GZL" id="Gyl-og-gLv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-DC-r6Z">
@@ -426,7 +394,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hourHandSettingsTableViewCell" rowHeight="100" id="wsc-L4-sN6" customClass="HourHandSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="558" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="528" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wsc-L4-sN6" id="qUK-oX-fRy">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
@@ -479,7 +447,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hourHandColorTableViewCell" rowHeight="100" id="umM-ic-tGC" customClass="HourHandColorSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="658" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="628" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="umM-ic-tGC" id="LVA-43-tHd">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
