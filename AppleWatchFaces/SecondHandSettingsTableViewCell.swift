@@ -18,7 +18,7 @@ class SecondHandSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UIC
     
     // called after a new setting should be selected ( IE a new design is loaded )
     override func chooseSetting( animated: Bool ) {
-        debugPrint("** SecondHandSettingsTableViewCell called **")
+        //debugPrint("** SecondHandSettingsTableViewCell called **")
     
         if let currentSecondHandType = SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandType {
             if let secondHandTypeIndex = SecondHandTypes.userSelectableValues.firstIndex(of: currentSecondHandType) {
@@ -29,13 +29,13 @@ class SecondHandSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UIC
                 
                 //stupid hack to force selection after scroll
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.15, execute: {
-                    self.setCellSelecton(indexPath: indexPath)
+                    self.setCellSelection(indexPath: indexPath)
                 })
             }
         }
     }
     
-    func setCellSelecton( indexPath: IndexPath ) {
+    func setCellSelection( indexPath: IndexPath ) {
         //select new one
         if let settingsHandCell = secondHandSelectionCollectionView.cellForItem(at: indexPath) as? SecondHandSettingCollectionViewCell {
             if let scene = settingsHandCell.skView.scene, let selectedNode = scene.childNode(withName: "selectedNode") {

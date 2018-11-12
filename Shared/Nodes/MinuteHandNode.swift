@@ -73,7 +73,7 @@ class MinuteHandNode: SKSpriteNode {
     }
     
     convenience init(minuteHandType: MinuteHandTypes, fillColor: SKColor) {
-        self.init(minuteHandType: minuteHandType, fillColor: SKColor.red, strokeColor: SKColor.clear, lineWidth: 2.0)
+        self.init(minuteHandType: minuteHandType, fillColor: fillColor, strokeColor: SKColor.clear, lineWidth: 2.0)
     }
     
     init(minuteHandType: MinuteHandTypes, fillColor: SKColor, strokeColor: SKColor, lineWidth: CGFloat) {

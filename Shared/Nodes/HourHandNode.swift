@@ -60,7 +60,7 @@ class HourHandNode: SKSpriteNode {
     }
     
     convenience init(hourHandType: HourHandTypes, fillColor: SKColor) {
-        self.init(hourHandType: hourHandType, fillColor: SKColor.red, strokeColor: SKColor.clear, lineWidth: 2.0)
+        self.init(hourHandType: hourHandType, fillColor: fillColor, strokeColor: SKColor.clear, lineWidth: 2.0)
     }
     
     init(hourHandType: HourHandTypes, fillColor: SKColor, strokeColor: SKColor, lineWidth: CGFloat) {

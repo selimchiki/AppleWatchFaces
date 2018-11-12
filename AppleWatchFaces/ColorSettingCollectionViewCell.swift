@@ -21,42 +21,26 @@ class ColorSettingCollectionViewCell: UICollectionViewCell {
             }
         }
     }
-//    //Normal state bg and border
-//    @IBInspectable var normalBorderColor: UIColor? {
-//        didSet {
-//            layer.borderColor = normalBorderColor?.cgColor
-//        }
-//    }
-//
-//    @IBInspectable var normalBackgroundColor: UIColor? {
-//        didSet {
-//            setBgColorForState(color: normalBackgroundColor, forState: .normal)
-//        }
-//    }
-//
-//
-//    //Highlighted state bg and border
-//    @IBInspectable var highlightedBorderColor: UIColor?
-//
-//    @IBInspectable var highlightedBackgroundColor: UIColor? {
-//        didSet {
-//            setBgColorForState(color: highlightedBackgroundColor, forState: .highlighted)
-//        }
-//    }
-//
-//
-//    private func setBgColorForState(color: UIColor?, forState: UIControl.State){
-//        if color != nil {
-//            self.layer.backgroundColor = color?.cgColor
-//        }
-//    }
+    
+    override var isSelected: Bool {
+        didSet {
+            if self.isSelected {
+                circleView.layer.borderWidth = 2.0
+                circleView.layer.borderColor = SKColor.init(hexString: AppUISettings.settingHighlightColor).cgColor
+            }
+            else {
+                circleView.layer.borderWidth = 0.0
+                circleView.layer.borderColor = SKColor.clear.cgColor
+            }
+        }
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
         circleView.layer.cornerRadius = circleView.layer.frame.height / 2
-        circleView.layer.borderWidth = 1.0
-        circleView.layer.borderColor = SKColor.white.cgColor
+        circleView.layer.borderWidth = 0.0
+        circleView.layer.borderColor = SKColor.clear.cgColor
         
         clipsToBounds = true
         

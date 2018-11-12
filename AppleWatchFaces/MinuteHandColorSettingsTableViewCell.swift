@@ -19,10 +19,6 @@ class MinuteHandColorSettingsTableViewCell: ColorSettingsTableViewCell {
         SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandMaterialName = newColor
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
         NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"minuteHandMaterialName"])
-        
-        if let settingsHandCell = collectionView.cellForItem(at: indexPath) {
-            settingsHandCell.backgroundColor = selectedColor
-        }
     }
     
 }

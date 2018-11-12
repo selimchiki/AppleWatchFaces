@@ -16,7 +16,7 @@ class MinuteHandSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UIC
     
     // called after a new setting should be selected ( IE a new design is loaded )
     override func chooseSetting( animated: Bool ) {
-        debugPrint("** MinuteHandSettingsTableViewCell called **")
+        //debugPrint("** MinuteHandSettingsTableViewCell called **")
         
         if let currentMinuteHandType = SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandType {
             if let minuteHandTypeIndex = MinuteHandTypes.userSelectableValues.firstIndex(of: currentMinuteHandType) {
@@ -27,13 +27,13 @@ class MinuteHandSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UIC
                 
                 //stupid hack to force selection after scroll
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.15, execute: {
-                    self.setCellSelecton(indexPath: indexPath)
+                    self.setCellSelection(indexPath: indexPath)
                 })
             }
         }
     }
     
-    func setCellSelecton( indexPath: IndexPath ) {
+    func setCellSelection( indexPath: IndexPath ) {
         //select new one
         if let settingsHandCell = minuteHandSelectionCollectionView.cellForItem(at: indexPath) as? MinuteHandSettingCollectionViewCell {
             if let scene = settingsHandCell.skView.scene, let selectedNode = scene.childNode(withName: "selectedNode") {

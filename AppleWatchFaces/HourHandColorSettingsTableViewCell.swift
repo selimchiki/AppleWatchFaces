@@ -20,10 +20,6 @@ class HourHandColorSettingsTableViewCell: ColorSettingsTableViewCell {
         SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandMaterialName = newColor
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
         NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"hourHandMaterialName"])
-        
-        if let settingsHandCell = collectionView.cellForItem(at: indexPath) {
-            settingsHandCell.backgroundColor = selectedColor
-        }
     }
     
 }

@@ -9,17 +9,9 @@
 import UIKit
 import SpriteKit
 
-class ColorSettingsTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
-
-    let selectedColor = SKColor.init(white: 0.5, alpha: 1.0)
-    let deSelectedColor = SKColor.init(white: 0.0, alpha: 1.0)
+class ColorSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
     public var colorList : [String] = []
-    //    {
-    //        didSet {
-    //            self.reloadData()
-    //        }
-    // }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -27,10 +19,13 @@ class ColorSettingsTableViewCell: UITableViewCell, UICollectionViewDataSource, U
         loadColorList()
     }
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        if let settingsHandCell = collectionView.cellForItem(at: indexPath) {
-            settingsHandCell.backgroundColor = deSelectedColor
-        }
+    func colorListVersion( unfilteredColor: String ) -> String {
+        //lowercase and remove any # signs
+        let colorListVersion = unfilteredColor.lowercased().replacingOccurrences(of: "#", with: "", options: NSString.CompareOptions.literal, range:nil)
+        //keep only first 6 chars
+        let colorListVersionSubString = String(colorListVersion.prefix(6))
+        
+        return colorListVersionSubString
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -39,14 +34,7 @@ class ColorSettingsTableViewCell: UITableViewCell, UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "settingsColorCell", for: indexPath) as! ColorSettingCollectionViewCell
-        
-        //draw it selected
-        if cell.isSelected {
-            cell.backgroundColor = selectedColor
-        } else {
-            cell.backgroundColor = deSelectedColor
-        }
-        
+                
         cell.circleView.backgroundColor = SKColor.init(hexString: colorList[indexPath.row] )
         
         return cell
