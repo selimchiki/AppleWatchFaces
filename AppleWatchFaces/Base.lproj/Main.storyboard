@@ -401,12 +401,15 @@
                                         <constraint firstItem="KEJ-DC-r6Z" firstAttribute="top" secondItem="Gyl-og-gLv" secondAttribute="top" id="nKl-bx-C8l"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="minuteHandColorSelectionCollectionView" destination="KEJ-DC-r6Z" id="kxj-hN-I2Z"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hourHandSettingsTableViewCell" rowHeight="100" id="wsc-L4-sN6" customClass="HourHandSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="528" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wsc-L4-sN6" id="qUK-oX-fRy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vdC-I5-V82">
@@ -462,7 +465,7 @@
                                 <rect key="frame" x="0.0" y="628" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="umM-ic-tGC" id="LVA-43-tHd">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j2G-5R-fUd">
@@ -507,6 +510,9 @@
                                         <constraint firstItem="j2G-5R-fUd" firstAttribute="centerY" secondItem="LVA-43-tHd" secondAttribute="centerY" id="qPL-Ja-WYg"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="hourHandColorSelectionCollectionView" destination="j2G-5R-fUd" id="6hm-JB-hPj"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
