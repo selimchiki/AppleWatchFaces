@@ -14,13 +14,20 @@ class SecondHandSettingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var skView : SKView!
     var secondHandType: SecondHandTypes = SecondHandTypes.SecondHandNodeTypeNone
     
-//    override var isSelected: Bool{
-//        didSet{
-//            if self.isSelected {
-//                debugPrint("selected cell secondHandType: " + secondHandType.rawValue)
-//            } else {
-//                debugPrint("DEselected cell secondHandType: " + secondHandType.rawValue)
-//            }
-//        }
-//    }
+    override var isSelected: Bool {
+        didSet {
+            if let scene = skView.scene, let selectedNode = scene.childNode(withName: "selectedNode") {
+                
+                if self.isSelected {
+                    selectedNode.isHidden = false
+                }
+                else {
+                    selectedNode.isHidden = true
+                }
+                
+            }
+            
+        }
+    }
+    
 }

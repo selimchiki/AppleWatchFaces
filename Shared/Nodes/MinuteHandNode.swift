@@ -72,8 +72,12 @@ class MinuteHandNode: SKSpriteNode {
         self.init(minuteHandType: minuteHandType, fillColor: SKColor.white)
     }
     
-    init(minuteHandType: MinuteHandTypes, fillColor: SKColor) {
-        
+    convenience init(minuteHandType: MinuteHandTypes, fillColor: SKColor) {
+        self.init(minuteHandType: minuteHandType, fillColor: SKColor.red, strokeColor: SKColor.clear, lineWidth: 2.0)
+    }
+    
+    init(minuteHandType: MinuteHandTypes, fillColor: SKColor, strokeColor: SKColor, lineWidth: CGFloat) {
+    
         super.init(texture: nil, color: fillColor, size: CGSize())
         self.name = "minuteHand"
         
@@ -83,7 +87,8 @@ class MinuteHandNode: SKSpriteNode {
             shape.position = CGPoint.init(x: 0, y: 70.0)
             
             shape.fillColor = fillColor
-            shape.strokeColor = SKColor.clear
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
             self.addChild(shape)
         }
@@ -108,7 +113,8 @@ class MinuteHandNode: SKSpriteNode {
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
             shape.fillColor = fillColor
-            shape.strokeColor = SKColor.clear
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
             self.addChild(shape)
         }
@@ -134,7 +140,8 @@ class MinuteHandNode: SKSpriteNode {
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
             shape.fillColor = fillColor
-            shape.strokeColor = SKColor.clear
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
             self.addChild(shape)
 
@@ -161,7 +168,8 @@ class MinuteHandNode: SKSpriteNode {
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
             shape.fillColor = fillColor
-            shape.strokeColor = SKColor.clear
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
             self.addChild(shape)
         }
@@ -178,7 +186,8 @@ class MinuteHandNode: SKSpriteNode {
             
             let shape = SKShapeNode.init(path: minuteHandPath.cgPath)
             shape.fillColor = fillColor
-            shape.strokeColor = SKColor.clear
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
             self.addChild(shape)
         }
@@ -201,7 +210,8 @@ class MinuteHandNode: SKSpriteNode {
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
             shape.fillColor = fillColor
-            shape.strokeColor = SKColor.clear
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
             self.addChild(shape)
         }
@@ -393,7 +403,8 @@ class MinuteHandNode: SKSpriteNode {
             let shape = SKShapeNode.init(path: minuteHandPath.cgPath)
             shape.setScale(0.35)
             shape.fillColor = fillColor
-            shape.strokeColor = SKColor.clear
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
             self.addChild(shape)
         }
