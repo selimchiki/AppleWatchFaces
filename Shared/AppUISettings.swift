@@ -20,6 +20,6 @@ class AppUISettings: NSObject {
     static let settingHighlightColor:String = "#38ff9b"
 
     //line width for settings SKNodes strokes ( before scaling )
-    static let settingLineWidthBeforeScale:CGFloat = 8.0
+    static let settingLineWidthBeforeScale:CGFloat = 4.0
 
 }

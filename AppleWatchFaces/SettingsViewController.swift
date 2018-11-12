@@ -125,6 +125,10 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         redrawSettingsTable()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        redrawSettingsTable()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -134,7 +138,6 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         //get current selected clock
         SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[0]
         redrawPreviewClock()
-        redrawSettingsTable()
         
         self.errorMessageLabel.alpha = 0.0
         
