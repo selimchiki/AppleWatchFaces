@@ -104,7 +104,7 @@ class SecondHandNode: SKSpriteNode {
     }
     
     convenience init(secondHandType: SecondHandTypes, fillColor: SKColor) {
-        self.init(secondHandType: secondHandType, fillColor: SKColor.red, strokeColor: SKColor.clear, lineWidth: 2.0)
+        self.init(secondHandType: secondHandType, fillColor: fillColor, strokeColor: SKColor.clear, lineWidth: 2.0)
     }
     
     init(secondHandType: SecondHandTypes, fillColor: SKColor, strokeColor: SKColor, lineWidth: CGFloat) {
