@@ -34,8 +34,14 @@ class ColorSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "settingsColorCell", for: indexPath) as! ColorSettingCollectionViewCell
-                
-        cell.circleView.backgroundColor = SKColor.init(hexString: colorList[indexPath.row] )
+        
+        if AppUISettings.materialIsColor(materialName: colorList[indexPath.row] ) {
+            cell.circleView.backgroundColor = SKColor.init(hexString: colorList[indexPath.row] )
+        } else {
+            if let image = UIImage.init(named: colorList[indexPath.row] ) {
+                cell.circleView.backgroundColor = SKColor.init(patternImage: image)
+            }
+        }
         
         return cell
     }

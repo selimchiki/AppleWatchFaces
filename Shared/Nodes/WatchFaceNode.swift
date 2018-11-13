@@ -19,10 +19,18 @@ class WatchFaceNode: SKSpriteNode {
         if let clockFaceSettings = clockSetting.clockFaceSettings {
             
             //add background shape
-            let background = SKShapeNode.init(circleOfRadius: SKWatchScene.sizeMulitplier*1.05)
+            let background = SKShapeNode.init(rect: CGRect.init(x: -self.size.height/2, y: -self.size.height/2, width: self.size.height, height: self.size.height)) //(circleOfRadius: SKWatchScene.sizeMulitplier*1.05)
             background.name = "background"
-            background.fillColor = SKColor.init(hexString: clockSetting.clockFaceMaterialName)
-            background.strokeColor = SKColor.init(hexString: clockSetting.clockCasingMaterialName)
+            
+            if AppUISettings.materialIsColor(materialName: clockSetting.clockFaceMaterialName) {
+                background.fillColor = SKColor.init(hexString: clockSetting.clockFaceMaterialName)
+                background.strokeColor = SKColor.init(hexString: clockSetting.clockCasingMaterialName)
+            } else {
+                if let image = UIImage.init(named: clockSetting.clockFaceMaterialName) {
+                    background.fillTexture = SKTexture.init(image: image)
+                    background.fillColor = SKColor.white
+                }
+            }
             
             self.addChild(background)
             

@@ -21,5 +21,21 @@ class AppUISettings: NSObject {
 
     //line width for settings SKNodes strokes ( before scaling )
     static let settingLineWidthBeforeScale:CGFloat = 4.0
+    
+    static let materialFiles = ["vinylAlbum.jpg", "watchGears.jpg", "brass.jpg", "copper.jpg","kork.jpg", "light-wood.jpg",
+                                "wallpaper70s.jpg","wallpaperFlower.jpg","watchGears.jpg"]
+    
+    static func materialIsColor( materialName: String ) -> Bool {
+        if (materialName.lengthOfBytes(using: String.Encoding.utf8) > 0) {
+            let index = materialName.characters.index(materialName.startIndex, offsetBy: 1)
+            let firstChar = materialName.substring(to: index)
+            
+            if ( firstChar == "#") {
+                return true
+            }
+        }
+        
+        return false
+    }
 
 }

@@ -1,8 +1,8 @@
 
 ## TODO:
-- select options after loading in new design
-- add shapes / textures for backgrounds ( so we can have things like vinyl record )
-- save / load current settings on watch
+- save / load current settings on watch, abort -- dont always save
+- add background shapes ( circle / square / side by side 2 color )
+- add textures for backgrounds ( so we can have things like vinyl record ), if material does not have #, then try its name as a texture
 - allow for user to cycle faces from the list using the crown
 - switch to SVG files for shapes : https://github.com/mchoe/SwiftSVG or https://github.com/pocketsvg/PocketSVG
 
@@ -20,3 +20,4 @@
 - save load themes / default faces
 - add some buttons to swap out a few watch faces for testing
 - start drawing the rings / fonts ( can test using default data )
+- choose current options in CVs ( after loading a new faceSetting )
