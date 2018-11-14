@@ -17,7 +17,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     var watchPreviewViewController:WatchPreviewViewController?
     var watchSettingsTableViewController:WatchSettingsTableViewController?
     static var currentClockSetting: ClockSetting = ClockSetting.defaults()
-    var currentClockIndex = 1
+    var currentClockIndex = 0
     
     static let settingsChangedNotificationName = Notification.Name("settingsChanged")
     
@@ -119,8 +119,31 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
             currentClockIndex = 0
         }
         
-        let newClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex]
-        SettingsViewController.currentClockSetting = newClockSetting
+        SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
+        redrawPreviewClock()
+        redrawSettingsTable()
+    }
+    
+    @IBAction func prevClock() {
+        currentClockIndex = currentClockIndex - 1
+        if (currentClockIndex<0) {
+            currentClockIndex = UserClockSetting.sharedClockSettings.count - 1
+        }
+        
+        SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
+        redrawPreviewClock()
+        redrawSettingsTable()
+    }
+    
+    @IBAction func saveClock() {
+        //just save this clock
+        UserClockSetting.sharedClockSettings[currentClockIndex] = SettingsViewController.currentClockSetting
+        self.showMessage( message: SettingsViewController.currentClockSetting.title + " saved.")
+    }
+    
+    @IBAction func revertClock() {
+        //just revert this clock
+        SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
         redrawPreviewClock()
         redrawSettingsTable()
     }
@@ -136,7 +159,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         UserClockSetting.loadFromFile()
         
         //get current selected clock
-        SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[0]
+        SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
         redrawPreviewClock()
         
         self.errorMessageLabel.alpha = 0.0
