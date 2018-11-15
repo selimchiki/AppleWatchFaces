@@ -10,7 +10,7 @@ import WatchKit
 import WatchConnectivity
 import Foundation
 
-class InterfaceController: KKInterfaceController, WCSessionDelegate {
+class InterfaceController: KKInterfaceController, WCSessionDelegate, WKCrownDelegate {
     
     @IBOutlet var skInterface: WKInterfaceSKScene!
     
@@ -18,6 +18,43 @@ class InterfaceController: KKInterfaceController, WCSessionDelegate {
     let session = WCSession.default
     
     var currentClockSetting: ClockSetting = ClockSetting.defaults()
+    var currentClockIndex: Int = 0
+    var crownAccumulator = 0.0
+    
+    func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double) {
+        crownAccumulator += rotationalDelta
+        if crownAccumulator > 0.1 {
+            nextClock()
+            crownAccumulator = 0.0
+        } else if crownAccumulator < -0.1 {
+            prevClock()
+            crownAccumulator = 0.0
+        }
+    }
+    
+    func nextClock() {
+        currentClockIndex = currentClockIndex + 1
+        if (UserClockSetting.sharedClockSettings.count <= currentClockIndex) {
+            currentClockIndex = 0
+        }
+        
+        currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex]
+        if let skWatchScene = self.skInterface.scene as? SKWatchScene {
+            skWatchScene.redraw(clockSetting: currentClockSetting)
+        }
+    }
+    
+    func prevClock() {
+        currentClockIndex = currentClockIndex - 1
+        if (currentClockIndex<0) {
+            currentClockIndex = UserClockSetting.sharedClockSettings.count - 1
+        }
+        
+        currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex]
+        if let skWatchScene = self.skInterface.scene as? SKWatchScene {
+            skWatchScene.redraw(clockSetting: currentClockSetting)
+        }
+    }
     
     //sending the whole settings file
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
@@ -78,6 +115,9 @@ class InterfaceController: KKInterfaceController, WCSessionDelegate {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        //capture crpwn events
+        crownSequencer.delegate = self
+        
         //load the last settings
         UserClockSetting.loadFromFile()
         
@@ -101,6 +141,12 @@ class InterfaceController: KKInterfaceController, WCSessionDelegate {
             self.skInterface.preferredFramesPerSecond = 30
         }
     }
+    
+    override func didAppear() {
+        //focus the crown to us at last possible moment
+        crownSequencer.focus()
+    }
+
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
