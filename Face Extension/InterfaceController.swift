@@ -21,7 +21,18 @@ class InterfaceController: KKInterfaceController, WCSessionDelegate {
     
     //sending the whole settings file
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
+        // Create a FileManager instance
+        let fileManager = FileManager.default
         
+        do {
+            try fileManager.copyItem(at: file.fileURL, to: UserClockSetting.ArchiveURL)
+        }
+        catch let error as NSError {
+            print("Ooops! Something went wrong: \(error)")
+        }
+        
+        //reload userClockSettings
+        UserClockSetting.loadFromFile()
     }
     
     //got one new setting

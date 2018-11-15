@@ -17,7 +17,7 @@ class FaceChooserViewController: UIViewController, WCSessionDelegate {
     @IBAction func sendAllSettingsAction(sender: UIButton) {
         //debugPrint("sendAllSettingsAction tapped")
         if let validSession = session {
-            
+            self.showMessage(message: "trying to send")
             validSession.transferFile(UserClockSetting.ArchiveURL, metadata: ["type":"settingsFile"])
             
         } else {
@@ -29,16 +29,27 @@ class FaceChooserViewController: UIViewController, WCSessionDelegate {
         UserClockSetting.resetToDefaults()
     }
     
+    func session(_ session: WCSession, didFinish fileTransfer: WCSessionFileTransfer, error: Error?) {
+        if let error = error {
+            self.showError(errorMessage: error.localizedDescription)
+        } else {
+            self.showMessage(message: "all settings sent")
+        }
+    }
+    
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        //
+        //debugPrint("session activationDidCompleteWith")
+        showMessage( message: "Watch session active.")
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
-        //
+        //debugPrint("session sessionDidBecomeInactive")
+        showError(errorMessage: "Watch session became inactive.")
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
-        //
+        //debugPrint("session sessionDidDeactivate")
+        showError(errorMessage: "Watch session deactivated.")
     }
     
     func showError( errorMessage: String) {
@@ -71,8 +82,14 @@ class FaceChooserViewController: UIViewController, WCSessionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         UserClockSetting.loadFromFile()
+        
+        if WCSession.isSupported() {
+            session = WCSession.default
+            session?.delegate = self
+            session?.activate()
+        }
     }
 
     

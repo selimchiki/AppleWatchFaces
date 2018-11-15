@@ -48,11 +48,9 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="NsY-6c-dCw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmc-ba-uhr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmc-ba-uhr">
                                 <rect key="frame" x="16" y="215" width="343" height="86"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="86" id="fQm-rA-2zQ"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="1" green="0.12852664389999999" blue="0.067248547749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -81,9 +79,6 @@
                             <constraint firstItem="99M-cH-COa" firstAttribute="leading" secondItem="0eE-eN-zvf" secondAttribute="leadingMargin" id="CSA-Ot-IYf"/>
                             <constraint firstItem="99M-cH-COa" firstAttribute="trailing" secondItem="SFP-PZ-A7W" secondAttribute="trailing" id="Ewc-w7-kOM"/>
                             <constraint firstItem="99M-cH-COa" firstAttribute="leading" secondItem="SFP-PZ-A7W" secondAttribute="leading" id="FrO-U5-R2c"/>
-                            <constraint firstItem="pmc-ba-uhr" firstAttribute="leading" secondItem="SFP-PZ-A7W" secondAttribute="leading" id="VX0-HB-OyE"/>
-                            <constraint firstItem="pmc-ba-uhr" firstAttribute="trailing" secondItem="SFP-PZ-A7W" secondAttribute="trailing" id="Yk6-zJ-xCa"/>
-                            <constraint firstItem="pmc-ba-uhr" firstAttribute="top" secondItem="SFP-PZ-A7W" secondAttribute="bottom" constant="8" symbolic="YES" id="uTj-G6-Tas"/>
                             <constraint firstItem="SFP-PZ-A7W" firstAttribute="top" secondItem="99M-cH-COa" secondAttribute="bottom" constant="41" id="wPu-58-Ll0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vUG-c0-AEw"/>
