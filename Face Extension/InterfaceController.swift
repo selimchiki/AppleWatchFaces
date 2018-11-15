@@ -19,6 +19,12 @@ class InterfaceController: KKInterfaceController, WCSessionDelegate {
     
     var currentClockSetting: ClockSetting = ClockSetting.defaults()
     
+    //sending the whole settings file
+    func session(_ session: WCSession, didReceive file: WCSessionFile) {
+        
+    }
+    
+    //got one new setting
     func session(_ session: WCSession, didReceiveMessageData messageData: Data, replyHandler: @escaping (Data) -> Void) {
         do {
             let jsonObj = try JSON(data: messageData)
@@ -61,7 +67,8 @@ class InterfaceController: KKInterfaceController, WCSessionDelegate {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        //processApplicationContext()
+        //load the last settings
+        UserClockSetting.loadFromFile()
         
         setTitle(" ")
         

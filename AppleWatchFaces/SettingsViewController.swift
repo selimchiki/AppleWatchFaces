@@ -156,8 +156,6 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        UserClockSetting.loadFromFile()
-        
         //get current selected clock
         SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
         redrawPreviewClock()

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="boa-z5-6mY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,94 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--My Faces-->
+        <scene sceneID="o6q-UQ-lig">
+            <objects>
+                <viewController id="jKv-ap-UqF" customClass="FaceChooserViewController" customModule="AppleWatchFaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0eE-eN-zvf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFP-PZ-A7W" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
+                                <rect key="frame" x="16" y="177" width="343" height="30"/>
+                                <state key="normal" title="Send All to Watch"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBorderColor">
+                                        <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendAllSettingsActionWithSender:" destination="jKv-ap-UqF" eventType="touchUpInside" id="RgR-My-gti"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99M-cH-COa" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
+                                <rect key="frame" x="16" y="106" width="343" height="30"/>
+                                <state key="normal" title="Settings"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBorderColor">
+                                        <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendSettingActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V9f-gm-cmZ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="NsY-6c-dCw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmc-ba-uhr">
+                                <rect key="frame" x="16" y="215" width="343" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="fQm-rA-2zQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.12852664389999999" blue="0.067248547749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQr-wG-VwM" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset All Settings"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBorderColor">
+                                        <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetAllSettingActionWithSender:" destination="jKv-ap-UqF" eventType="touchUpInside" id="whr-7w-7sO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="99M-cH-COa" firstAttribute="trailing" secondItem="0eE-eN-zvf" secondAttribute="trailingMargin" id="4Ow-yl-6rU"/>
+                            <constraint firstItem="99M-cH-COa" firstAttribute="top" secondItem="vUG-c0-AEw" secondAttribute="top" constant="42" id="8g4-OX-U0B"/>
+                            <constraint firstItem="99M-cH-COa" firstAttribute="leading" secondItem="0eE-eN-zvf" secondAttribute="leadingMargin" id="CSA-Ot-IYf"/>
+                            <constraint firstItem="99M-cH-COa" firstAttribute="trailing" secondItem="SFP-PZ-A7W" secondAttribute="trailing" id="Ewc-w7-kOM"/>
+                            <constraint firstItem="99M-cH-COa" firstAttribute="leading" secondItem="SFP-PZ-A7W" secondAttribute="leading" id="FrO-U5-R2c"/>
+                            <constraint firstItem="pmc-ba-uhr" firstAttribute="leading" secondItem="SFP-PZ-A7W" secondAttribute="leading" id="VX0-HB-OyE"/>
+                            <constraint firstItem="pmc-ba-uhr" firstAttribute="trailing" secondItem="SFP-PZ-A7W" secondAttribute="trailing" id="Yk6-zJ-xCa"/>
+                            <constraint firstItem="pmc-ba-uhr" firstAttribute="top" secondItem="SFP-PZ-A7W" secondAttribute="bottom" constant="8" symbolic="YES" id="uTj-G6-Tas"/>
+                            <constraint firstItem="SFP-PZ-A7W" firstAttribute="top" secondItem="99M-cH-COa" secondAttribute="bottom" constant="41" id="wPu-58-Ll0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vUG-c0-AEw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Faces" id="u2g-6W-vb9"/>
+                    <connections>
+                        <outlet property="errorMessageLabel" destination="pmc-ba-uhr" id="vKC-GB-9v8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFC-fX-PEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-751.20000000000005" y="130.88455772113943"/>
+        </scene>
         <!--Settings View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,26 +106,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DN7-J7-N45">
-                                <rect key="frame" x="19" y="20" width="160" height="200"/>
+                                <rect key="frame" x="19" y="71" width="160" height="200"/>
                                 <connections>
                                     <segue destination="gcy-GJ-xSo" kind="embed" id="ImA-iE-Dqj"/>
                                 </connections>
                             </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watchFrame" translatesAutoresizingMaskIntoConstraints="NO" id="Sam-R2-V8l">
-                                <rect key="frame" x="0.0" y="6" width="202" height="226"/>
+                                <rect key="frame" x="0.0" y="57" width="202" height="226"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="202" id="Bcx-W4-Vv4"/>
                                     <constraint firstAttribute="height" constant="226" id="Xzz-nn-1J4"/>
                                 </constraints>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L09-xH-or1">
-                                <rect key="frame" x="0.0" y="228" width="375" height="439"/>
+                                <rect key="frame" x="0.0" y="279" width="375" height="395"/>
                                 <connections>
                                     <segue destination="g3k-ac-9zQ" kind="embed" id="9MD-Q2-0lQ"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-m7-d7p" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="208" y="20" width="151" height="30"/>
+                                <rect key="frame" x="208" y="71" width="151" height="30"/>
                                 <state key="normal" title="Send to Watch"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -52,7 +140,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiH-q3-0ff">
-                                <rect key="frame" x="208" y="96" width="151" height="86"/>
+                                <rect key="frame" x="208" y="147" width="151" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="86" id="N4W-QG-dpZ"/>
                                 </constraints>
@@ -61,7 +149,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33s-up-Wg3" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="208" y="190" width="65" height="30"/>
+                                <rect key="frame" x="208" y="241" width="65" height="30"/>
                                 <state key="normal" title="-"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -76,7 +164,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaP-cM-mRw" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="294" y="190" width="65" height="30"/>
+                                <rect key="frame" x="294" y="241" width="65" height="30"/>
                                 <state key="normal" title="+"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -91,7 +179,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBk-sQ-bdK" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="208" y="58" width="65" height="30"/>
+                                <rect key="frame" x="208" y="109" width="65" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="czG-8q-OIx"/>
                                 </constraints>
@@ -109,7 +197,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ha-Se-ezX" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="294" y="58" width="65" height="30"/>
+                                <rect key="frame" x="294" y="109" width="65" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="rxs-Kv-mXv"/>
                                 </constraints>
@@ -128,22 +216,23 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="DN7-J7-N45" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="top" id="1X3-DP-L0V"/>
                             <constraint firstItem="33s-up-Wg3" firstAttribute="top" secondItem="QiH-q3-0ff" secondAttribute="bottom" constant="8" symbolic="YES" id="1gJ-mF-eNn"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="29O-sb-uGp"/>
                             <constraint firstItem="Sam-R2-V8l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3IY-HH-QqY"/>
-                            <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="bottom" constant="8" symbolic="YES" id="9Dg-u1-Spa"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="DN7-J7-N45" secondAttribute="bottom" constant="8" id="9Dg-u1-Spa"/>
                             <constraint firstItem="6Ha-Se-ezX" firstAttribute="leading" secondItem="rBk-sQ-bdK" secondAttribute="trailing" constant="21" id="9l7-4l-9Ff"/>
                             <constraint firstItem="DN7-J7-N45" firstAttribute="leading" secondItem="L09-xH-or1" secondAttribute="leading" constant="19" id="Bcs-m4-FOH"/>
-                            <constraint firstItem="L09-xH-or1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Bub-zJ-Buu"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="7" id="Bub-zJ-Buu"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="trailing" secondItem="6Ha-Se-ezX" secondAttribute="trailing" id="J2E-pL-qPX"/>
                             <constraint firstItem="QiH-q3-0ff" firstAttribute="leading" secondItem="rBk-sQ-bdK" secondAttribute="leading" id="X5s-hC-znG"/>
                             <constraint firstItem="6Ha-Se-ezX" firstAttribute="leading" secondItem="FaP-cM-mRw" secondAttribute="leading" id="XP6-oQ-T2O"/>
                             <constraint firstItem="QiH-q3-0ff" firstAttribute="trailing" secondItem="FaP-cM-mRw" secondAttribute="trailing" id="apz-tx-JIS"/>
                             <constraint firstItem="QiH-q3-0ff" firstAttribute="top" secondItem="rBk-sQ-bdK" secondAttribute="bottom" constant="8" symbolic="YES" id="bVc-Al-DfN"/>
                             <constraint firstItem="QiH-q3-0ff" firstAttribute="leading" secondItem="33s-up-Wg3" secondAttribute="leading" id="bZL-nt-BHi"/>
-                            <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="33s-up-Wg3" secondAttribute="bottom" constant="8" symbolic="YES" id="e7s-DZ-NN9"/>
+                            <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="33s-up-Wg3" secondAttribute="bottom" constant="8" id="e7s-DZ-NN9"/>
                             <constraint firstItem="DN7-J7-N45" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="19" id="ejq-Zp-TWz"/>
                             <constraint firstItem="33s-up-Wg3" firstAttribute="baseline" secondItem="FaP-cM-mRw" secondAttribute="baseline" id="en4-Vy-xOs"/>
                             <constraint firstItem="QiH-q3-0ff" firstAttribute="trailing" secondItem="6Ha-Se-ezX" secondAttribute="trailing" id="f5c-Ce-p72"/>
@@ -151,20 +240,21 @@
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="leading" secondItem="DN7-J7-N45" secondAttribute="trailing" constant="29" id="iBZ-Hm-dPo"/>
                             <constraint firstItem="rBk-sQ-bdK" firstAttribute="baseline" secondItem="6Ha-Se-ezX" secondAttribute="baseline" id="oYV-9r-0Dv"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="leading" secondItem="rBk-sQ-bdK" secondAttribute="leading" id="omQ-kn-VPs"/>
-                            <constraint firstItem="DN7-J7-N45" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xrT-KC-qUr"/>
+                            <constraint firstItem="DN7-J7-N45" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="xrT-KC-qUr"/>
                             <constraint firstAttribute="trailing" secondItem="L09-xH-or1" secondAttribute="trailing" id="ypT-qb-aSN"/>
                             <constraint firstItem="Sam-R2-V8l" firstAttribute="top" secondItem="L09-xH-or1" secondAttribute="top" constant="-222" id="zVh-8g-yXd"/>
                             <constraint firstItem="rBk-sQ-bdK" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="bottom" constant="8" symbolic="YES" id="zuH-nO-Z8q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oju-CW-kdg"/>
                     <connections>
                         <outlet property="errorMessageLabel" destination="QiH-q3-0ff" id="JxF-K8-isp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-602.39999999999998" y="143.47826086956522"/>
+            <point key="canvasLocation" x="5.5999999999999996" y="130.88455772113943"/>
         </scene>
         <!--Watch Preview View Controller-->
         <scene sceneID="ObF-rt-ljS">
@@ -188,14 +278,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKm-1s-s5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="261" y="-222"/>
+            <point key="canvasLocation" x="1200" y="-222.1889055472264"/>
         </scene>
         <!--Watch Settings Table View Controller-->
         <scene sceneID="S1k-2D-cds">
             <objects>
                 <tableViewController id="g3k-ac-9zQ" customClass="WatchSettingsTableViewController" customModule="AppleWatchFaces" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="eDq-3Y-cMU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="439"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="395"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -421,7 +511,7 @@
                                 <rect key="frame" x="0.0" y="428" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s4M-Qx-GZL" id="Gyl-og-gLv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-DC-r6Z">
@@ -588,7 +678,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xF8-QY-zte" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308" y="225.33733133433284"/>
+            <point key="canvasLocation" x="1247.2" y="225.33733133433284"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RgW-Ug-Ui4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="boa-z5-6mY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="lXJ-MG-EsV">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jKv-ap-UqF" kind="relationship" relationship="rootViewController" id="ggG-Ll-cIe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSg-AM-Gy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1468" y="131"/>
         </scene>
     </scenes>
     <resources>
