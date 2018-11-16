@@ -32,6 +32,12 @@ class InterfaceController: KKInterfaceController, WCSessionDelegate, WKCrownDele
         }
     }
     
+    func redrawCurrent() {
+        if let skWatchScene = self.skInterface.scene as? SKWatchScene {
+            skWatchScene.redraw(clockSetting: currentClockSetting)
+        }
+    }
+    
     func nextClock() {
         currentClockIndex = currentClockIndex + 1
         if (UserClockSetting.sharedClockSettings.count <= currentClockIndex) {
@@ -39,9 +45,7 @@ class InterfaceController: KKInterfaceController, WCSessionDelegate, WKCrownDele
         }
         
         currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex]
-        if let skWatchScene = self.skInterface.scene as? SKWatchScene {
-            skWatchScene.redraw(clockSetting: currentClockSetting)
-        }
+        redrawCurrent()
     }
     
     func prevClock() {
@@ -51,9 +55,7 @@ class InterfaceController: KKInterfaceController, WCSessionDelegate, WKCrownDele
         }
         
         currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex]
-        if let skWatchScene = self.skInterface.scene as? SKWatchScene {
-            skWatchScene.redraw(clockSetting: currentClockSetting)
-        }
+        redrawCurrent()
     }
     
     //sending the whole settings file
@@ -61,6 +63,12 @@ class InterfaceController: KKInterfaceController, WCSessionDelegate, WKCrownDele
         // Create a FileManager instance
         let fileManager = FileManager.default
         
+        do {
+            try fileManager.removeItem(at: UserClockSetting.ArchiveURL)
+            print("Existing file deleted.")
+        } catch {
+            print("Failed to delete existing file:\n\((error as NSError).description)")
+        }
         do {
             try fileManager.copyItem(at: file.fileURL, to: UserClockSetting.ArchiveURL)
         }
@@ -70,6 +78,9 @@ class InterfaceController: KKInterfaceController, WCSessionDelegate, WKCrownDele
         
         //reload userClockSettings
         UserClockSetting.loadFromFile()
+        currentClockIndex = 0
+        currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex]
+        redrawCurrent()
     }
     
     //got one new setting
@@ -143,6 +154,8 @@ class InterfaceController: KKInterfaceController, WCSessionDelegate, WKCrownDele
     }
     
     override func didAppear() {
+        super.didAppear() // important for removing digital time display hack
+        
         //focus the crown to us at last possible moment
         crownSequencer.focus()
     }
