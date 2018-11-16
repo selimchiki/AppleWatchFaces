@@ -138,6 +138,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     @IBAction func saveClock() {
         //just save this clock
         UserClockSetting.sharedClockSettings[currentClockIndex] = SettingsViewController.currentClockSetting
+        UserClockSetting.saveToFile() //remove this to reset to defaults each time app loads
         self.showMessage( message: SettingsViewController.currentClockSetting.title + " saved.")
     }
     
@@ -150,25 +151,27 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         redrawSettingsTable()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //get current selected clock
-        SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
-        redrawPreviewClock()
-        
-        self.errorMessageLabel.alpha = 0.0
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(onNotification(notification:)), name: SettingsViewController.settingsChangedNotificationName, object: nil)
         
         if WCSession.isSupported() {
             session = WCSession.default
             session?.delegate = self
             session?.activate()
         }
+        
+        //get current selected clock
+        SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
+        redrawPreviewClock()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
+        self.errorMessageLabel.alpha = 0.0
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(onNotification(notification:)), name: SettingsViewController.settingsChangedNotificationName, object: nil)
     }
     
 }

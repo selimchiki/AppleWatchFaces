@@ -80,16 +80,17 @@ class FaceChooserViewController: UIViewController, WCSessionDelegate {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        UserClockSetting.loadFromFile()
-        
+    override func viewDidAppear(_ animated: Bool) {
         if WCSession.isSupported() {
             session = WCSession.default
             session?.delegate = self
             session?.activate()
         }
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        UserClockSetting.loadFromFile()
     }
 
     
