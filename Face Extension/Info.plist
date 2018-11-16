@@ -2,19 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>IRONLOUNGE.TTF</string>
-		<string>ULTRACONDENSEDSARIF.TTF</string>
-		<string>RATIONALINT.TTF</string>
-		<string>ROMAN-TRAJAN-PRO.TTF</string>
-		<string>DINPRO-LIGHT.TTF</string>
-		<string>CONERIASCRIPT.TTF</string>
-		<string>KINGTHINGS.TTF</string>
-		<string>ROTHERNBURGDECORATIVE.TTF</string>
-		<string>GERMANICA.TTF</string>
-		<string>BLACKROSE.TTF</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -43,6 +30,19 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>IRONLOUNGE.TTF</string>
+		<string>ULTRACONDENSEDSARIF.TTF</string>
+		<string>RATIONALINT.TTF</string>
+		<string>ROMAN-TRAJAN-PRO.TTF</string>
+		<string>DINPRO-LIGHT.TTF</string>
+		<string>CONERIASCRIPT.TTF</string>
+		<string>KINGTHINGS.TTF</string>
+		<string>ROTHERNBURGDECORATIVE.TTF</string>
+		<string>GERMANICA.TTF</string>
+		<string>BLACKROSE.TTF</string>
+	</array>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
 </dict>
