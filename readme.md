@@ -1,10 +1,8 @@
 
 ## TODO:
-- send to watch sends whole list
-- watch cycles thru designs using crown
 - add background shapes ( circle / square / side by side 2 color )
-- allow for user to cycle faces from the list using the crown
 - switch to SVG files for shapes : https://github.com/mchoe/SwiftSVG or https://github.com/pocketsvg/PocketSVG
+- make watch face chooser on main view TV + CV to allow for more settings 
 
 ## IDEAS:
 - show name of current face on watch when first starting ( then fade it out )
@@ -23,5 +21,8 @@
 - choose current options in CVs ( after loading a new faceSetting )
 - add textures for backgrounds ( so we can have things like vinyl record ), if material does not have #, then try its name as a texture
 - save / revert for current settings
-- add a watch "frame" to the top left of the layout to better see what full screen textures look like 
+- add a watch "frame" to the top left of the layout to better see what full screen textures look like
+- send to watch sends whole list
+- watch cycles thru designs using crown
+- organize source files for settings view into group for view 
 

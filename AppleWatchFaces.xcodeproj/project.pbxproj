@@ -319,27 +319,14 @@
 				318808D0217815E600585AB1 /* AppDelegate.swift */,
 				31F4F1D8219D08890050177A /* FaceChooserViewController.swift */,
 				318808D2217815E600585AB1 /* SettingsViewController.swift */,
+				31EF9991219E602D00BB54E7 /* SettingsView */,
 				31F56FA321857FC100455FC6 /* WatchPreviewViewController.swift */,
 				31F8ABAA2187E8DB0014E2ED /* WatchSettingsTableViewController.swift */,
-				31B3F8CB218F2F1F00AD22A5 /* SettingsTableHeaderViewCell.swift */,
-				31F4F1B5219899420050177A /* SettingsTableHeaderView.xib */,
 				318808D4217815E600585AB1 /* Main.storyboard */,
 				318808D7217815E700585AB1 /* Assets.xcassets */,
 				318808D9217815E700585AB1 /* LaunchScreen.storyboard */,
 				31061F2F2192657200EF511B /* Colors.plist */,
 				318808DC217815E700585AB1 /* Info.plist */,
-				31BC68E921931F1400DD8CD6 /* ColorSettingsTableViewCell.swift */,
-				31BC68EF2193DFEE00DD8CD6 /* FaceBackgroundColorSettingTableViewCell.swift */,
-				31F8ABCC2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift */,
-				31B5E8E3218CEF9000DE6429 /* MinuteHandSettingsTableViewCell.swift */,
-				31BC68EB2193D20A00DD8CD6 /* MinuteHandColorSettingsTableViewCell.swift */,
-				31B5E8E7218CF6E300DE6429 /* HourHandSettingsTableViewCell.swift */,
-				31BC68ED2193D88D00DD8CD6 /* HourHandColorSettingsTableViewCell.swift */,
-				31F8ABCE2187EE2F0014E2ED /* SecondHandSettingCollectionViewCell.swift */,
-				31B3F8CF218F4BAE00AD22A5 /* SecondHandColorSettingsTableViewCell.swift */,
-				31B5E8E5218CEFF100DE6429 /* MinuteHandSettingCollectionViewCell.swift */,
-				31B5E8E8218CF6E400DE6429 /* HourHandSettingCollectionViewCell.swift */,
-				31B3F8CD218F4A0700AD22A5 /* ColorSettingCollectionViewCell.swift */,
 			);
 			path = AppleWatchFaces;
 			sourceTree = "<group>";
@@ -412,6 +399,27 @@
 				31B3F8C6218F22EF00AD22A5 /* RoundedButton.swift */,
 			);
 			path = CustomClasses;
+			sourceTree = "<group>";
+		};
+		31EF9991219E602D00BB54E7 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				31F4F1B5219899420050177A /* SettingsTableHeaderView.xib */,
+				31B3F8CB218F2F1F00AD22A5 /* SettingsTableHeaderViewCell.swift */,
+				31BC68E921931F1400DD8CD6 /* ColorSettingsTableViewCell.swift */,
+				31BC68EF2193DFEE00DD8CD6 /* FaceBackgroundColorSettingTableViewCell.swift */,
+				31F8ABCC2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift */,
+				31B5E8E3218CEF9000DE6429 /* MinuteHandSettingsTableViewCell.swift */,
+				31BC68EB2193D20A00DD8CD6 /* MinuteHandColorSettingsTableViewCell.swift */,
+				31B5E8E7218CF6E300DE6429 /* HourHandSettingsTableViewCell.swift */,
+				31BC68ED2193D88D00DD8CD6 /* HourHandColorSettingsTableViewCell.swift */,
+				31F8ABCE2187EE2F0014E2ED /* SecondHandSettingCollectionViewCell.swift */,
+				31B3F8CF218F4BAE00AD22A5 /* SecondHandColorSettingsTableViewCell.swift */,
+				31B5E8E5218CEFF100DE6429 /* MinuteHandSettingCollectionViewCell.swift */,
+				31B5E8E8218CF6E400DE6429 /* HourHandSettingCollectionViewCell.swift */,
+				31B3F8CD218F4A0700AD22A5 /* ColorSettingCollectionViewCell.swift */,
+			);
+			path = SettingsView;
 			sourceTree = "<group>";
 		};
 		31F4F1B9219A57CA0050177A /* Materials */ = {
