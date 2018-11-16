@@ -25,4 +25,4 @@
 - send to watch sends whole list
 - watch cycles thru designs using crown
 - organize source files for settings view into group for view 
-
+- fix app icon -- cannot have alpha channel in app store 
