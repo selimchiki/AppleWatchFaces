@@ -89,6 +89,9 @@
 		31EF999421A0AF4F00BB54E7 /* FaceBackgroundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF999221A0AF4F00BB54E7 /* FaceBackgroundNode.swift */; };
 		31EF999621A0B6B700BB54E7 /* SKShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF999521A0B6B700BB54E7 /* SKShapeNode.swift */; };
 		31EF999721A0B6B700BB54E7 /* SKShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF999521A0B6B700BB54E7 /* SKShapeNode.swift */; };
+		31EF999921A0BF3D00BB54E7 /* FaceBackgroundSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF999821A0BF3D00BB54E7 /* FaceBackgroundSettingsTableViewCell.swift */; };
+		31EF999B21A0BF9E00BB54E7 /* FaceBackgroundSettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF999A21A0BF9E00BB54E7 /* FaceBackgroundSettingCollectionViewCell.swift */; };
+		31EF999D21A0C63A00BB54E7 /* MainBackgroundColorSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF999C21A0C63A00BB54E7 /* MainBackgroundColorSettingTableViewCell.swift */; };
 		31F4F1B6219899420050177A /* SettingsTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F4F1B5219899420050177A /* SettingsTableHeaderView.xib */; };
 		31F4F1B82198ACB50050177A /* AppUISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F4F1B72198ACB50050177A /* AppUISettings.swift */; };
 		31F4F1BE219A5C310050177A /* brass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31F4F1BD219A5C310050177A /* brass.jpg */; };
@@ -229,6 +232,9 @@
 		31BC68FA21954BEC00DD8CD6 /* KKInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKInterfaceController.m; sourceTree = "<group>"; };
 		31EF999221A0AF4F00BB54E7 /* FaceBackgroundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceBackgroundNode.swift; sourceTree = "<group>"; };
 		31EF999521A0B6B700BB54E7 /* SKShapeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKShapeNode.swift; sourceTree = "<group>"; };
+		31EF999821A0BF3D00BB54E7 /* FaceBackgroundSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceBackgroundSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		31EF999A21A0BF9E00BB54E7 /* FaceBackgroundSettingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceBackgroundSettingCollectionViewCell.swift; sourceTree = "<group>"; };
+		31EF999C21A0C63A00BB54E7 /* MainBackgroundColorSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackgroundColorSettingTableViewCell.swift; sourceTree = "<group>"; };
 		31F4F1B5219899420050177A /* SettingsTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableHeaderView.xib; sourceTree = "<group>"; };
 		31F4F1B72198ACB50050177A /* AppUISettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUISettings.swift; sourceTree = "<group>"; };
 		31F4F1BD219A5C310050177A /* brass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brass.jpg; sourceTree = "<group>"; };
@@ -414,6 +420,7 @@
 				31F4F1B5219899420050177A /* SettingsTableHeaderView.xib */,
 				31B3F8CB218F2F1F00AD22A5 /* SettingsTableHeaderViewCell.swift */,
 				31BC68E921931F1400DD8CD6 /* ColorSettingsTableViewCell.swift */,
+				31EF999821A0BF3D00BB54E7 /* FaceBackgroundSettingsTableViewCell.swift */,
 				31BC68EF2193DFEE00DD8CD6 /* FaceBackgroundColorSettingTableViewCell.swift */,
 				31F8ABCC2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift */,
 				31B5E8E3218CEF9000DE6429 /* MinuteHandSettingsTableViewCell.swift */,
@@ -421,10 +428,12 @@
 				31B5E8E7218CF6E300DE6429 /* HourHandSettingsTableViewCell.swift */,
 				31BC68ED2193D88D00DD8CD6 /* HourHandColorSettingsTableViewCell.swift */,
 				31F8ABCE2187EE2F0014E2ED /* SecondHandSettingCollectionViewCell.swift */,
+				31EF999A21A0BF9E00BB54E7 /* FaceBackgroundSettingCollectionViewCell.swift */,
 				31B3F8CF218F4BAE00AD22A5 /* SecondHandColorSettingsTableViewCell.swift */,
 				31B5E8E5218CEFF100DE6429 /* MinuteHandSettingCollectionViewCell.swift */,
 				31B5E8E8218CF6E400DE6429 /* HourHandSettingCollectionViewCell.swift */,
 				31B3F8CD218F4A0700AD22A5 /* ColorSettingCollectionViewCell.swift */,
+				31EF999C21A0C63A00BB54E7 /* MainBackgroundColorSettingTableViewCell.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -666,10 +675,12 @@
 				31F4F1D9219D08890050177A /* FaceChooserViewController.swift in Sources */,
 				31F8ABCD2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift in Sources */,
 				31B3F8D0218F4BAE00AD22A5 /* SecondHandColorSettingsTableViewCell.swift in Sources */,
+				31EF999B21A0BF9E00BB54E7 /* FaceBackgroundSettingCollectionViewCell.swift in Sources */,
 				314A011021962FF4009BCE3C /* WatchFaceNode.swift in Sources */,
 				31EF999621A0B6B700BB54E7 /* SKShapeNode.swift in Sources */,
 				31B5E8EA218CF6E400DE6429 /* HourHandSettingCollectionViewCell.swift in Sources */,
 				31B3F8CE218F4A0700AD22A5 /* ColorSettingCollectionViewCell.swift in Sources */,
+				31EF999921A0BF3D00BB54E7 /* FaceBackgroundSettingsTableViewCell.swift in Sources */,
 				31B5E8E4218CEF9000DE6429 /* MinuteHandSettingsTableViewCell.swift in Sources */,
 				31FD61E921891B5000E15DEA /* SwiftyJSON.swift in Sources */,
 				312D4C08218BCDDB008504D2 /* HourHandNode.swift in Sources */,
@@ -677,6 +688,7 @@
 				31B5E8D7218BD91400DE6429 /* ClockFaceSetting.swift in Sources */,
 				312D4C05218BCBF0008504D2 /* ClockDecoratorTheme.swift in Sources */,
 				314A010A21960409009BCE3C /* UserClockSetting.swift in Sources */,
+				31EF999D21A0C63A00BB54E7 /* MainBackgroundColorSettingTableViewCell.swift in Sources */,
 				318808D1217815E600585AB1 /* AppDelegate.swift in Sources */,
 				31B5E8E6218CEFF100DE6429 /* MinuteHandSettingCollectionViewCell.swift in Sources */,
 				31B3F8CC218F2F1F00AD22A5 /* SettingsTableHeaderViewCell.swift in Sources */,
