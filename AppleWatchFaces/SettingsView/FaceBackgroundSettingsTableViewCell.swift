@@ -80,11 +80,11 @@ class FaceBackgroundSettingsTableViewCell: WatchSettingsSelectableTableViewCell,
             
             cell.faceBackgroundType = FaceBackgroundTypes.userSelectableValues[indexPath.row]
             
-            let scaleMultiplier:CGFloat = 0.005
+            let scaleMultiplier:CGFloat = 0.0025
             
             let handNode = FaceBackgroundNode.init(backgroundType: FaceBackgroundTypes.userSelectableValues[indexPath.row], material: "#FF000000FF")
             handNode.setScale(scaleMultiplier)
-            handNode.position = CGPoint.init(x: scene.size.width/2, y: scene.size.width/10)
+            handNode.position = CGPoint.init(x: scene.size.width/2, y: scene.size.width/2)
             scene.addChild(handNode)
             
             //let highlightLineWidth = AppUISettings.settingLineWidthBeforeScale
@@ -92,7 +92,7 @@ class FaceBackgroundSettingsTableViewCell: WatchSettingsSelectableTableViewCell,
             
             selectedHandNode.name = "selectedNode"
             selectedHandNode.setScale(scaleMultiplier)
-            selectedHandNode.position = CGPoint.init(x: scene.size.width/2, y: scene.size.width/10)
+            selectedHandNode.position = CGPoint.init(x: scene.size.width/2, y: scene.size.width/2)
             
             selectedHandNode.isHidden = !cell.isSelected
             

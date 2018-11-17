@@ -10,10 +10,12 @@ import SpriteKit
 import SceneKit
 
 enum FaceBackgroundTypes: String {
-    case FaceBackgroundTypeCircle, FaceBackgroundTypeFilled, FaceBackgroundTypeDiagonalSplit
+    case FaceBackgroundTypeFilled, FaceBackgroundTypeCircle, FaceBackgroundTypeDiagonalSplit, FaceBackgroundTypeVerticalSplit, FaceBackgroundTypeHorizontalSplit, FaceBackgroundTypeNone
     
-    static let randomizableValues = [FaceBackgroundTypeCircle, FaceBackgroundTypeFilled, FaceBackgroundTypeDiagonalSplit]
-    static let userSelectableValues = [FaceBackgroundTypeCircle, FaceBackgroundTypeFilled, FaceBackgroundTypeDiagonalSplit]
+    static let randomizableValues = [FaceBackgroundTypeCircle, FaceBackgroundTypeFilled, FaceBackgroundTypeDiagonalSplit,
+        FaceBackgroundTypeVerticalSplit, FaceBackgroundTypeHorizontalSplit, FaceBackgroundTypeNone]
+    static let userSelectableValues = [FaceBackgroundTypeFilled, FaceBackgroundTypeCircle, FaceBackgroundTypeDiagonalSplit,
+        FaceBackgroundTypeVerticalSplit, FaceBackgroundTypeHorizontalSplit, FaceBackgroundTypeNone]
     
     static func random() -> FaceBackgroundTypes {
         let randomIndex = Int(arc4random_uniform(UInt32(randomizableValues.count)))
@@ -28,7 +30,10 @@ class FaceBackgroundNode: SKSpriteNode {
         
         if (nodeType == FaceBackgroundTypes.FaceBackgroundTypeCircle)  { typeDescription = "Circle" }
         if (nodeType == FaceBackgroundTypes.FaceBackgroundTypeFilled)  { typeDescription = "Filled" }
-        if (nodeType == FaceBackgroundTypes.FaceBackgroundTypeDiagonalSplit)  { typeDescription = "Split" }
+        if (nodeType == FaceBackgroundTypes.FaceBackgroundTypeDiagonalSplit)  { typeDescription = "Split Diagonal" }
+        if (nodeType == FaceBackgroundTypes.FaceBackgroundTypeVerticalSplit)  { typeDescription = "Vertical Split" }
+        if (nodeType == FaceBackgroundTypes.FaceBackgroundTypeHorizontalSplit)  { typeDescription = "Horizonatal Split" }
+        if (nodeType == FaceBackgroundTypes.FaceBackgroundTypeNone)  { typeDescription = "None" }
         
         return typeDescription
     }
@@ -59,7 +64,47 @@ class FaceBackgroundNode: SKSpriteNode {
         let sizeMultiplier = CGFloat(SKWatchScene.sizeMulitplier)
         
         if (backgroundType == FaceBackgroundTypes.FaceBackgroundTypeDiagonalSplit) {
+            let boundsPosition = 1.5 * sizeMultiplier
+            let bezierPath = UIBezierPath()
+            bezierPath.move(to: CGPoint(x: boundsPosition, y: boundsPosition))
+            bezierPath.addLine(to: CGPoint(x: -boundsPosition, y: -boundsPosition))
+            bezierPath.addLine(to: CGPoint(x: boundsPosition, y: -boundsPosition))
+            bezierPath.close()
             
+            let shapeNode = SKShapeNode.init(path: bezierPath.cgPath)
+            shapeNode.setMaterial(material: material)
+            
+            self.addChild(shapeNode)
+        }
+        
+        if (backgroundType == FaceBackgroundTypes.FaceBackgroundTypeVerticalSplit) {
+            let boundsPosition = 1.5 * sizeMultiplier
+            let bezierPath = UIBezierPath()
+            bezierPath.move(to: CGPoint(x: 0, y: boundsPosition))
+            bezierPath.addLine(to: CGPoint(x: boundsPosition, y: boundsPosition))
+            bezierPath.addLine(to: CGPoint(x: boundsPosition, y: -boundsPosition))
+            bezierPath.addLine(to: CGPoint(x: 0, y: -boundsPosition))
+            bezierPath.close()
+            
+            let shapeNode = SKShapeNode.init(path: bezierPath.cgPath)
+            shapeNode.setMaterial(material: material)
+            
+            self.addChild(shapeNode)
+        }
+        
+        if (backgroundType == FaceBackgroundTypes.FaceBackgroundTypeHorizontalSplit) {
+            let boundsPosition = 1.5 * sizeMultiplier
+            let bezierPath = UIBezierPath()
+            bezierPath.move(to: CGPoint(x: boundsPosition, y: 0))
+            bezierPath.addLine(to: CGPoint(x: boundsPosition, y: -boundsPosition))
+            bezierPath.addLine(to: CGPoint(x: -boundsPosition, y: -boundsPosition))
+            bezierPath.addLine(to: CGPoint(x: -boundsPosition, y: 0))
+            bezierPath.close()
+            
+            let shapeNode = SKShapeNode.init(path: bezierPath.cgPath)
+            shapeNode.setMaterial(material: material)
+            
+            self.addChild(shapeNode)
         }
         
         if (backgroundType == FaceBackgroundTypes.FaceBackgroundTypeFilled) {

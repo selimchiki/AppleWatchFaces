@@ -59,7 +59,7 @@
           "minuteHandType" : "MinuteHandTypeSwiss",
           "secondHandType" : "SecondHandTypeSwiss"
           },
-          "clockCasingMaterialName" : "metalTexture",
+          "clockCasingMaterialName" : "#1c1c1cff",
           "title" : "Swiss Wall Clock"
           },
         
@@ -68,7 +68,7 @@
                        "clockFaceMaterialName" : "#334050",
                        "faceBackgroundType" : "FaceBackgroundTypeCircle",
                        "clockFaceSettings" : {
-                       "secondHandMaterialName" : "metalTexture",
+                       "secondHandMaterialName" : "#1c1c1cff",
                        "minuteHandType" : "MinuteHandTypeBoxy",
                        "shouldShowRomanNumeralText" : true,
                        "ringSettings" : [
@@ -271,7 +271,7 @@
                        
                        {
                        "title" : "spectacle",
-                       "clockFaceMaterialName" : "steelTexture",
+                       "clockFaceMaterialName" : "#545454ff",
                        "faceBackgroundType" : "FaceBackgroundTypeCircle",
                        "clockFaceSettings" : {
                        "secondHandMaterialName" : "#FFD700FF",
@@ -523,7 +523,7 @@
                        "secondHandType" : "SecondHandTypeBlocky",
                        "minuteHandMovement" : "MinuteHandMovementSmooth"
                        },
-                    "clockCasingMaterialName" : "wood2Texture"
+                    "clockCasingMaterialName" : "light-wood.jpg"
                 },
                        
             {
@@ -602,7 +602,7 @@
             },
                     {
                        "title" : "highlighter2",
-                       "clockFaceMaterialName" : "ironTexture",
+                       "clockFaceMaterialName" : "#1c1c1cff",
                        "faceBackgroundType" : "FaceBackgroundTypeCircle",
                        "clockFaceSettings" : {
                        "secondHandMaterialName" : "#ffff00ff",
@@ -694,7 +694,7 @@
                        "secondHandType" : "SecondHandTypeSquaredHole",
                        "minuteHandMovement" : "MinuteHandMovementSmooth"
                        },
-                       "clockCasingMaterialName" : "metalTexture"
+                       "clockCasingMaterialName" : "#1c1c1cff"
                        },
                        
 
@@ -729,7 +729,7 @@
                                          "ringPatternTotal" : "12",
                                          "ringType" : "RingTypeShapeNode",
                                          "indicatorType" : "FaceIndicatorTypeSphere",
-                                         "ringMaterialName" : "metalTexture",
+                                         "ringMaterialName" : "#1c1c1cff",
                                          "textType" : "NumberTextTypeDINPro",
                                          "textSize" : "0.2"
                                          },
@@ -784,7 +784,7 @@
                        "secondHandType" : "SecondHandTypeBlocky",
                        "minuteHandMovement" : "MinuteHandMovementStep"
                        },
-                       "clockCasingMaterialName" : "metalTexture"
+                       "clockCasingMaterialName" : "#1c1c1cff"
                     },
                        
                     {
@@ -817,7 +817,7 @@
                                          "ringPatternTotal" : "60",
                                          "ringType" : "RingTypeTextRotatingNode",
                                          "indicatorType" : "FaceIndicatorTypeBox",
-                                         "ringMaterialName" : "metalTexture",
+                                         "ringMaterialName" : "#1c1c1cff",
                                          "textType" : "NumberTextTypeHelvica",
                                          "textSize" : "0.05"
                                          },
@@ -856,7 +856,7 @@
                                          "ringPatternTotal" : "12",
                                          "ringType" : "RingTypeTextNode",
                                          "indicatorType" : "FaceIndicatorTypeBox",
-                                         "ringMaterialName" : "metalTexture",
+                                         "ringMaterialName" : "#1c1c1cff",
                                          "textType" : "NumberTextTypeModernInteger",
                                          "textSize" : "0.29"
                                          }
@@ -1078,7 +1078,7 @@
            "clockFaceMaterialName" : "#ffeaadff",
            "faceBackgroundType" : "FaceBackgroundTypeCircle",
            "clockFaceSettings" : {
-           "secondHandMaterialName" : "metalTexture",
+           "secondHandMaterialName" : "#1c1c1cff",
            "minuteHandType" : "MinuteHandTypeSquaredHole",
            "ringSettings" : [
                              {
@@ -1446,7 +1446,7 @@
           "minuteHandType" : "MinuteHandTypeRoman",
           "secondHandType" : "SecondHandTypeRoman"
           },
-          "clockCasingMaterialName" : "metalTexture",
+          "clockCasingMaterialName" : "#1c1c1cff",
           "title" : "Roman Numerals Test Clock"
           },
           
@@ -1738,7 +1738,7 @@
           "title" : "orange loft"
           },
           {
-          "clockFaceMaterialName" : "wood2Texture",
+          "clockFaceMaterialName" : "light-wood.jpg",
           "faceBackgroundType" : "FaceBackgroundTypeCircle",
           "clockFaceSettings" : {
           "hourHandType" : "HourHandTypeSwiss",
@@ -1880,7 +1880,7 @@
           "minuteHandType" : "MinuteHandTypeSphere",
           "secondHandType" : "SecondHandTypeSphere"
           },
-          "clockCasingMaterialName" : "ironTexture",
+          "clockCasingMaterialName" : "#1c1c1cff",
           "title" : "Solar System"
           },
         {
@@ -2058,7 +2058,7 @@
                        },
                    "clockFaceMaterialName" : "#c6c6c6ff",
                    "faceBackgroundType" : "FaceBackgroundTypeCircle",
-                   "clockCasingMaterialName" : "metalTexture"
+                   "clockCasingMaterialName" : "#1c1c1cff"
                    },
                        
                        {
