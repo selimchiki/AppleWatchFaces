@@ -20,10 +20,16 @@ class ColorSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UICollec
     }
     
     func colorListVersion( unfilteredColor: String ) -> String {
-        //lowercase and remove any # signs
-        let colorListVersion = unfilteredColor.lowercased().replacingOccurrences(of: "#", with: "", options: NSString.CompareOptions.literal, range:nil)
+        debugPrint("unnfiltered:" + unfilteredColor)
+        //TODO: add #
+        let colorListVersion = unfilteredColor.lowercased()
         //keep only first 6 chars
-        let colorListVersionSubString = String(colorListVersion.prefix(6))
+        let colorListVersionSubString = String(colorListVersion.prefix(9))
+        
+        //should be
+        //#d8fff8ff
+        
+        debugPrint("filtered:" + colorListVersionSubString)
         
         return colorListVersionSubString
     }
