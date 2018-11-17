@@ -9,49 +9,45 @@
 import Foundation
 import SpriteKit
 
-class WatchFaceNode: SKSpriteNode {
+class WatchFaceNode: SKShapeNode {
     
     init(clockSetting: ClockSetting, size: CGSize) {
-        super.init(texture: nil, color: SKColor.clear, size: size)
+        super.init()
         
         self.name = "watchFaceNode"
         
         if let clockFaceSettings = clockSetting.clockFaceSettings {
             
-            //add background shape
-            let background = SKShapeNode.init(rect: CGRect.init(x: -self.size.height/2, y: -self.size.height/2, width: self.size.height, height: self.size.height)) //(circleOfRadius: SKWatchScene.sizeMulitplier*1.05)
-            background.name = "background"
+            let backgroundNode = FaceBackgroundNode.init(backgroundType: FaceBackgroundTypes.FaceBackgroundTypeFilled , material: clockSetting.clockCasingMaterialName)
+            backgroundNode.name = "background"
+            backgroundNode.zPosition = 0
             
-            if AppUISettings.materialIsColor(materialName: clockSetting.clockFaceMaterialName) {
-                background.fillColor = SKColor.init(hexString: clockSetting.clockFaceMaterialName)
-                background.strokeColor = SKColor.init(hexString: clockSetting.clockCasingMaterialName)
-            } else {
-                if let image = UIImage.init(named: clockSetting.clockFaceMaterialName) {
-                    background.fillTexture = SKTexture.init(image: image)
-                    background.fillColor = SKColor.white
-                }
-            }
+            self.addChild(backgroundNode)
             
-            self.addChild(background)
+            let backgroundShapeNode = FaceBackgroundNode.init(backgroundType: clockSetting.faceBackgroundType , material: clockSetting.clockFaceMaterialName)
+            backgroundShapeNode.name = "backgroundShape"
+            backgroundShapeNode.zPosition = 1
+            
+            self.addChild(backgroundShapeNode)
             
             let secondHandFillColor = SKColor.init(hexString: clockFaceSettings.secondHandMaterialName)
             let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType, fillColor: secondHandFillColor)
             secHandNode.name = "secondHand"
-            secHandNode.zPosition = 2
+            secHandNode.zPosition = 4
             
             self.addChild(secHandNode)
             
             let minuteHandFillColor = SKColor.init(hexString: clockFaceSettings.minuteHandMaterialName)
             let minHandNode = MinuteHandNode.init(minuteHandType: clockFaceSettings.minuteHandType, fillColor: minuteHandFillColor)
             minHandNode.name = "minuteHand"
-            minHandNode.zPosition = 1
+            minHandNode.zPosition = 3
             
             self.addChild(minHandNode)
             
             let hourHandFillColor = SKColor.init(hexString: clockFaceSettings.hourHandMaterialName)
             let hourHandNode = HourHandNode.init(hourHandType: clockFaceSettings.hourHandType, fillColor: hourHandFillColor)
             hourHandNode.name = "hourHand"
-            hourHandNode.zPosition = 1
+            hourHandNode.zPosition = 3
             
             self.addChild(hourHandNode)
         
@@ -90,7 +86,7 @@ class WatchFaceNode: SKSpriteNode {
 
     }
     
-    func generateTextRingNode( _ clockFaceNode: SKSpriteNode, patternTotal: Int, patternArray: [Int], ringType: RingTypes, material: String, currentDistance: Float, clockFaceSettings: ClockFaceSetting, ringSettings: ClockRingSetting, renderNumbers: Bool, renderShapes: Bool ) {
+    func generateTextRingNode( _ clockFaceNode: SKShapeNode, patternTotal: Int, patternArray: [Int], ringType: RingTypes, material: String, currentDistance: Float, clockFaceSettings: ClockFaceSetting, ringSettings: ClockRingSetting, renderNumbers: Bool, renderShapes: Bool ) {
         
         // exit if pattern array is empty
         if (patternArray.count == 0) { return }
@@ -157,12 +153,13 @@ class WatchFaceNode: SKSpriteNode {
             }
             
             //newNode.geometry?.firstMaterial? = material
-            newNode.position = CGPoint.init(x: xpos*sizeMultiplier, y: ypos*sizeMultiplier) //SCNVector3Make(xpos, ypos, newNodeZPos)
+            newNode.position = CGPoint.init(x: xpos*sizeMultiplier, y: ypos*sizeMultiplier)
+            newNode.zPosition = 1
             clockFaceNode.addChild(newNode)
         }
     }
     
-    func generateRingNode( _ clockFaceNode: SKSpriteNode, patternTotal: Int, patternArray: [Int], ringType: RingTypes, material: String, currentDistance: Float, clockFaceSettings: ClockFaceSetting,
+    func generateRingNode( _ clockFaceNode: SKShapeNode, patternTotal: Int, patternArray: [Int], ringType: RingTypes, material: String, currentDistance: Float, clockFaceSettings: ClockFaceSetting,
                            ringSettings: ClockRingSetting, renderNumbers: Bool, renderShapes: Bool ) {
         
         //just exit for spacer
@@ -204,6 +201,7 @@ class WatchFaceNode: SKSpriteNode {
             outerRingParentNode.zRotation = CGFloat(angleOffset)
             
             outerRingParentNode.addChild(outerRingNode)
+            outerRingParentNode.zPosition = 1
             clockFaceNode.addChild(outerRingParentNode)
         }
         

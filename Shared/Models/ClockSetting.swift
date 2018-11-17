@@ -92,8 +92,8 @@ class ClockSetting: NSObject {
         return nil
     }
     
-    // housing types
-    var housingType:HousingTypes?
+    // background type
+    var faceBackgroundType:FaceBackgroundTypes
     
     // face settings
     var clockFaceSettings:ClockFaceSetting?
@@ -106,7 +106,7 @@ class ClockSetting: NSObject {
     var clockCasingMaterialName:String
     
     init(clockFaceMaterialName: String,
-        housingType: HousingTypes,
+        faceBackgroundType: FaceBackgroundTypes,
         
         clockCasingMaterialName: String,
         
@@ -114,7 +114,7 @@ class ClockSetting: NSObject {
         title: String)
     {
         self.clockFaceMaterialName = clockFaceMaterialName
-        self.housingType = housingType
+        self.faceBackgroundType = faceBackgroundType
         self.clockFaceSettings = clockFaceSettings
         self.title = title
         self.clockCasingMaterialName = clockCasingMaterialName
@@ -135,7 +135,7 @@ class ClockSetting: NSObject {
     static func defaults() -> ClockSetting {
         return ClockSetting.init(
             clockFaceMaterialName: "#000000FF",
-            housingType: HousingTypes.HousingTypeTableBell,
+            faceBackgroundType: FaceBackgroundTypes.FaceBackgroundTypeFilled,
             
             clockCasingMaterialName: "#FF0000FF",
             
@@ -146,7 +146,7 @@ class ClockSetting: NSObject {
     
     func randomize( newColors: Bool, newScene: Bool, newFace: Bool ) {
 //        if (newScene) {
-//            self.housingType = HousingTypes.random()
+//            self.faceBackgroundType = FaceBackgroundTypes.random()
 //        }
 //        if (newFace) {
 //            self.applyDecoratorTheme(UserClockSetting.randomDecoratorTheme())
@@ -160,10 +160,10 @@ class ClockSetting: NSObject {
     
 //    static func random() -> ClockSetting {
 //
-//        let housingType = HousingTypes.random()
+//        let faceBackgroundType = FaceBackgroundTypes.random()
 //        let clockSetting = ClockSetting.init(
 //            clockFaceMaterialName: "#FFFFFFFF",
-//            housingType: housingType,
+//            faceBackgroundType: faceBackgroundType,
 //
 //            clockCasingMaterialName: "#FF0000FF",
 //
@@ -187,11 +187,11 @@ class ClockSetting: NSObject {
     //init from serialized
     convenience init( jsonObj: JSON ) {
         
-        let housingType = HousingTypes(rawValue: jsonObj["housingType"].stringValue)!
+        let faceBackgroundType = FaceBackgroundTypes(rawValue: jsonObj["faceBackgroundType"].stringValue)!
         
         self.init(
             clockFaceMaterialName: jsonObj["clockFaceMaterialName"].stringValue,
-            housingType: housingType,
+            faceBackgroundType: faceBackgroundType,
             
             clockCasingMaterialName: jsonObj["clockCasingMaterialName"].stringValue,
             
@@ -226,7 +226,7 @@ class ClockSetting: NSObject {
         
         serializedDict[ "title" ] = self.title as AnyObject
         serializedDict[ "clockFaceMaterialName" ] = self.clockFaceMaterialName as AnyObject
-        serializedDict[ "housingType" ] = self.housingType?.rawValue as AnyObject
+        serializedDict[ "faceBackgroundType" ] = self.faceBackgroundType.rawValue as AnyObject
         serializedDict[ "clockFaceSettings" ] = self.clockFaceSettings!.serializedSettings()
         
         serializedDict[ "clockCasingMaterialName" ] = self.clockCasingMaterialName as AnyObject
@@ -235,18 +235,4 @@ class ClockSetting: NSObject {
         return serializedDict as NSDictionary
     }
 
-}
-
-//TODO: Delete this once its not needed anymore
-enum HousingTypes: String {
-    case HousingTypePreview, HousingTypeRail, HousingTypeWall, HousingTypeBall, HousingTypeGrandfather, HousingTypeTableBell, HousingTypeSquare,
-    HousingTypeFireWorks, HousingTypePushButton, HousingTypeWood, HousingTypeRecord, HousingTypeBoxy, HousingTypeArtDeco
-    
-    static let randomizableValues = [HousingTypeRail, HousingTypeWall, HousingTypeBall, HousingTypeTableBell, HousingTypeSquare, HousingTypeFireWorks, HousingTypePushButton, HousingTypeWood, HousingTypeRecord, HousingTypeBoxy]
-    static let userSelectableValues = [HousingTypeRail, HousingTypeWall, HousingTypeBall, HousingTypeGrandfather, HousingTypeTableBell, HousingTypeSquare, HousingTypeFireWorks, HousingTypePushButton, HousingTypeWood, HousingTypeRecord, HousingTypeBoxy]
-    
-    static func random() -> HousingTypes {
-        let randomIndex = Int(arc4random_uniform(UInt32(randomizableValues.count)))
-        return randomizableValues[randomIndex]
-    }
 }

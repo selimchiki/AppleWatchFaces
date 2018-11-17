@@ -2,7 +2,7 @@
     "clockSettings" : [
           {
           "clockFaceMaterialName" : "#FFFFFFFF",
-          "housingType" : "HousingTypeRail",
+          "faceBackgroundType" : "FaceBackgroundTypeCircle",
           "clockFaceSettings" : {
           "hourHandType" : "HourHandTypeSwiss",
           "minuteHandMaterialName" : "#000000FF",
@@ -66,7 +66,7 @@
             {
                        "title" : "alien ware",
                        "clockFaceMaterialName" : "#334050",
-                       "housingType" : "HousingTypePushButton",
+                       "faceBackgroundType" : "FaceBackgroundTypeCircle",
                        "clockFaceSettings" : {
                        "secondHandMaterialName" : "metalTexture",
                        "minuteHandType" : "MinuteHandTypeBoxy",
@@ -156,7 +156,7 @@
                 {
                            "title" : "Obsidian Wave",
                            "clockFaceMaterialName" : "#E5FCC2",
-                           "housingType" : "HousingTypeBoxy",
+                           "faceBackgroundType" : "FaceBackgroundTypeCircle",
                            "clockFaceSettings" : {
                            "secondHandMaterialName" : "#547980",
                            "minuteHandType" : "MinuteHandTypeSwiss",
@@ -272,7 +272,7 @@
                        {
                        "title" : "spectacle",
                        "clockFaceMaterialName" : "steelTexture",
-                       "housingType" : "HousingTypeSquare",
+                       "faceBackgroundType" : "FaceBackgroundTypeCircle",
                        "clockFaceSettings" : {
                        "secondHandMaterialName" : "#FFD700FF",
                        "minuteHandType" : "MinuteHandTypeSwiss",
@@ -358,7 +358,7 @@
                     {
                        "title" : "yellow submarine",
                        "clockFaceMaterialName" : "#F9F1FE",
-                       "housingType" : "HousingTypeRecord",
+                       "faceBackgroundType" : "FaceBackgroundTypeCircle",
                        "clockFaceSettings" : {
                        "secondHandMaterialName" : "#377243",
                        "minuteHandType" : "MinuteHandTypeSquaredHole",
@@ -447,7 +447,7 @@
                        {
                        "title" : "exploding pastel",
                        "clockFaceMaterialName" : "#d8fff8ff",
-                       "housingType" : "HousingTypeFireWorks",
+                       "faceBackgroundType" : "FaceBackgroundTypeCircle",
                        "clockFaceSettings" : {
                        "secondHandMaterialName" : "#FF0000FF",
                        "minuteHandType" : "MinuteHandTypeRounded",
@@ -508,7 +508,7 @@
                        {
                        "title" : "rusty",
                        "clockFaceMaterialName" : "#001133ff",
-                       "housingType" : "HousingTypeWood",
+                       "faceBackgroundType" : "FaceBackgroundTypeCircle",
                        "clockFaceSettings" : {
                        "secondHandMaterialName" : "#ff8282ff",
                        "minuteHandType" : "MinuteHandTypeBoxy",
@@ -529,7 +529,7 @@
             {
                 "title" : "Dark Inverse",
                "clockFaceMaterialName" : "#ffffffff",
-               "housingType" : "HousingTypeWall",
+               "faceBackgroundType" : "FaceBackgroundTypeCircle",
                "clockFaceSettings" : {
                "secondHandMaterialName" : "#ffffffff",
                "minuteHandType" : "MinuteHandTypeFatBoxy",
@@ -603,7 +603,7 @@
                     {
                        "title" : "highlighter2",
                        "clockFaceMaterialName" : "ironTexture",
-                       "housingType" : "HousingTypeWall",
+                       "faceBackgroundType" : "FaceBackgroundTypeCircle",
                        "clockFaceSettings" : {
                        "secondHandMaterialName" : "#ffff00ff",
                        "minuteHandType" : "MinuteHandTypeSquaredHole",
@@ -701,7 +701,7 @@
             {
                        "title" : "Silverado ",
                        "clockFaceMaterialName" : "#ffffffff",
-                       "housingType" : "HousingTypePushButton",
+                       "faceBackgroundType" : "FaceBackgroundTypeCircle",
                        "clockFaceSettings" : {
                        "secondHandMaterialName" : "#A00000FF",
                        "minuteHandType" : "MinuteHandTypeBoxy",
@@ -790,7 +790,7 @@
                     {
                        "title" : "Midnight Cowboy",
                        "clockFaceMaterialName" : "#000000ff",
-                       "housingType" : "HousingTypeSquare",
+                       "faceBackgroundType" : "FaceBackgroundTypeCircle",
                        "clockFaceSettings" : {
                        "secondHandMaterialName" : "#ffaa56ff",
                        "minuteHandType" : "MinuteHandTypeFatBoxy",
@@ -877,7 +877,7 @@
             {
                "title" : "Air Clockey",
                "clockFaceMaterialName" : "#ffffffff",
-               "housingType" : "HousingTypeBall",
+               "faceBackgroundType" : "FaceBackgroundTypeCircle",
                "clockFaceSettings" : {
                "secondHandMaterialName" : "#d10000ff",
                "minuteHandType" : "MinuteHandTypeRounded",
@@ -988,7 +988,7 @@
            {
            "title" : "Cottage Squared",
            "clockFaceMaterialName" : "#A8DBA8",
-           "housingType" : "HousingTypeSquare",
+           "faceBackgroundType" : "FaceBackgroundTypeCircle",
            "clockFaceSettings" : {
            "secondHandMaterialName" : "#0B486B",
            "minuteHandType" : "MinuteHandTypeSquaredHole",
@@ -1076,7 +1076,7 @@
            {
            "title" : "Old Times",
            "clockFaceMaterialName" : "#ffeaadff",
-           "housingType" : "HousingTypeBall",
+           "faceBackgroundType" : "FaceBackgroundTypeCircle",
            "clockFaceSettings" : {
            "secondHandMaterialName" : "metalTexture",
            "minuteHandType" : "MinuteHandTypeSquaredHole",
@@ -1164,7 +1164,7 @@
                        
                        {
                        "clockFaceMaterialName" : "#FFFFFFFF",
-          "housingType" : "HousingTypeTableBell",
+          "faceBackgroundType" : "FaceBackgroundTypeCircle",
           "clockFaceSettings" : {
           "hourHandType" : "HourHandTypeSwiss",
           "minuteHandMaterialName" : "#000000FF",
@@ -1224,7 +1224,7 @@
           },
           {
           "clockFaceMaterialName" : "#FFFFFFFF",
-          "housingType" : "HousingTypeBall",
+          "faceBackgroundType" : "FaceBackgroundTypeCircle",
           "clockFaceSettings" : {
           "hourHandType" : "HourHandTypeSwiss",
           "minuteHandMaterialName" : "#000000FF",
@@ -1288,7 +1288,7 @@
                     {
                        "clockCasingMaterialName" : "#A7DBD8",
                        "title" : "Boxy Retro",
-                       "housingType" : "HousingTypeSquare",
+                       "faceBackgroundType" : "FaceBackgroundTypeCircle",
                        "clockFaceMaterialName" : "#E0E4CC",
                        "clockFaceSettings" : {
                            "minuteHandMaterialName" : "#F38630",
@@ -1376,7 +1376,7 @@
 
                     {
           "clockFaceMaterialName" : "#FFFFFFFF",
-          "housingType" : "HousingTypeWall",
+          "faceBackgroundType" : "FaceBackgroundTypeCircle",
           "clockFaceSettings" : {
           "hourHandType" : "HourHandTypeRoman",
           "minuteHandMaterialName" : "#000000FF",
@@ -1613,13 +1613,13 @@
                        "hourHandMaterialName" : "#000000FF"
                        },
                        "clockFaceMaterialName" : "#FFFFFFFF",
-                       "housingType" : "HousingTypeGrandfather",
+                       "faceBackgroundType" : "FaceBackgroundTypeCircle",
                        "clockCasingMaterialName" : "woodTexture"
                        },
                        
                        {
                        "clockFaceMaterialName" : "#000000ff",
-                       "housingType" : "HousingTypeTableBell",
+                       "faceBackgroundType" : "FaceBackgroundTypeCircle",
           "clockFaceSettings" : {
           "hourHandType" : "HourHandTypeRounded",
           "minuteHandMaterialName" : "#00ad00ff",
@@ -1664,7 +1664,7 @@
           },
           {
           "clockFaceMaterialName" : "#a82a00ff",
-          "housingType" : "HousingTypeWall",
+          "faceBackgroundType" : "FaceBackgroundTypeCircle",
           "clockFaceSettings" : {
           "hourHandType" : "HourHandTypeBoxy",
           "minuteHandMaterialName" : "#ffffffff",
@@ -1739,7 +1739,7 @@
           },
           {
           "clockFaceMaterialName" : "wood2Texture",
-          "housingType" : "HousingTypeRail",
+          "faceBackgroundType" : "FaceBackgroundTypeCircle",
           "clockFaceSettings" : {
           "hourHandType" : "HourHandTypeSwiss",
           "minuteHandMaterialName" : "#333333FF",
@@ -1814,7 +1814,7 @@
           },
           {
           "clockFaceMaterialName" : "#000000ff",
-          "housingType" : "HousingTypeWall",
+          "faceBackgroundType" : "FaceBackgroundTypeCircle",
           "clockFaceSettings" : {
           "hourHandType" : "HourHandTypeSphere",
           "minuteHandMaterialName" : "#0044ccff",
@@ -1968,7 +1968,7 @@
            "hourHandMaterialName" : "#000000FF"
            },
            "clockFaceMaterialName" : "#e2e2e2ff",
-           "housingType" : "HousingTypeWall",
+           "faceBackgroundType" : "FaceBackgroundTypeCircle",
            "clockCasingMaterialName" : "#d8e5ffff"
                        },
                        
@@ -2057,7 +2057,7 @@
                        "hourHandMaterialName" : "#333333FF"
                        },
                    "clockFaceMaterialName" : "#c6c6c6ff",
-                   "housingType" : "HousingTypeRail",
+                   "faceBackgroundType" : "FaceBackgroundTypeCircle",
                    "clockCasingMaterialName" : "metalTexture"
                    },
                        
@@ -2185,7 +2185,7 @@
                        "hourHandMaterialName" : "#000000FF"
                        },
                        "clockFaceMaterialName" : "#FFFFFFFF",
-                       "housingType" : "HousingTypeTableBell",
+                       "faceBackgroundType" : "FaceBackgroundTypeCircle",
                        "clockCasingMaterialName" : "#777777FF"
                        },
                        {
@@ -2338,7 +2338,7 @@
                        "hourHandMaterialName" : "#FFFFFFFF"
                        },
                    "clockFaceMaterialName" : "#000000FF",
-                   "housingType" : "HousingTypeWall",
+                   "faceBackgroundType" : "FaceBackgroundTypeCircle",
                    "clockCasingMaterialName" : "#FF0000FF"
                    }
     ]
