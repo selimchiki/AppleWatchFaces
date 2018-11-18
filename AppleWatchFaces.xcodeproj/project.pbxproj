@@ -95,6 +95,8 @@
 		31EF999F21A2045B00BB54E7 /* FaceChooserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF999E21A2045B00BB54E7 /* FaceChooserTableViewController.swift */; };
 		31EF99A221A205F200BB54E7 /* FaceChooserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF99A121A205F200BB54E7 /* FaceChooserTableViewCell.swift */; };
 		31EF99A421A2072C00BB54E7 /* FaceChooserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF99A321A2072C00BB54E7 /* FaceChooserCollectionViewCell.swift */; };
+		31EF99A521A21A1300BB54E7 /* Settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 314A010B219605AA009BCE3C /* Settings.json */; };
+		31EF99A621A21A2200BB54E7 /* Themes.json in Resources */ = {isa = PBXBuildFile; fileRef = 314A010C219605AA009BCE3C /* Themes.json */; };
 		31F4F1B6219899420050177A /* SettingsTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F4F1B5219899420050177A /* SettingsTableHeaderView.xib */; };
 		31F4F1B82198ACB50050177A /* AppUISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F4F1B72198ACB50050177A /* AppUISettings.swift */; };
 		31F4F1BE219A5C310050177A /* brass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31F4F1BD219A5C310050177A /* brass.jpg */; };
@@ -648,11 +650,13 @@
 				31F4F1D5219A6B030050177A /* light-wood.jpg in Resources */,
 				31F4F1D2219A6B030050177A /* brass.jpg in Resources */,
 				31F4F1D4219A6B030050177A /* kork.jpg in Resources */,
+				31EF99A621A21A2200BB54E7 /* Themes.json in Resources */,
 				318809102178172600585AB1 /* faceBackground.png in Resources */,
 				31F4F1D1219A6B030050177A /* watchGears.jpg in Resources */,
 				31A5F80F21968223000F1677 /* CONERIASCRIPT.TTF in Resources */,
 				318809002178166B00585AB1 /* Assets.xcassets in Resources */,
 				31A5F80921968223000F1677 /* DINPRO-LIGHT.TTF in Resources */,
+				31EF99A521A21A1300BB54E7 /* Settings.json in Resources */,
 				31F4F1D3219A6B030050177A /* copper.jpg in Resources */,
 				318808F82178166B00585AB1 /* SKWatchScene.sks in Resources */,
 				31A5F7FF21968223000F1677 /* ROTHERNBURGDECORATIVE.TTF in Resources */,

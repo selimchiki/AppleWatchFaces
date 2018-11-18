@@ -32,11 +32,9 @@ class WatchPreviewViewController: UIViewController {
             skView.presentScene(scene)
         }
         
-        skView.ignoresSiblingOrder = true
-        
+        //debug options
         skView.showsFPS = false
         skView.showsNodeCount = false
-        
     }
 
 }

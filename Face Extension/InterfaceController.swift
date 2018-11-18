@@ -131,6 +131,7 @@ class InterfaceController: KKInterfaceController, WCSessionDelegate, WKCrownDele
         
         //load the last settings
         UserClockSetting.loadFromFile()
+        currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex]
         
         setTitle(" ")
         
@@ -155,6 +156,8 @@ class InterfaceController: KKInterfaceController, WCSessionDelegate, WKCrownDele
     
     override func didAppear() {
         super.didAppear() // important for removing digital time display hack
+        
+        redrawCurrent()
         
         //focus the crown to us at last possible moment
         crownSequencer.focus()

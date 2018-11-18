@@ -25,7 +25,7 @@ class SKWatchScene: SKScene {
     }
     
     override func sceneDidLoad() {
-        redraw( clockSetting: ClockSetting.defaults() )
+        //redraw( clockSetting: ClockSetting.defaults() )
     }
     
     override func update(_ currentTime: TimeInterval) {
