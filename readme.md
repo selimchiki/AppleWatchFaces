@@ -1,8 +1,8 @@
 
 ## TODO:
-- add background shapes ( circle / square / side by side 2 color )
 - switch to SVG files for shapes : https://github.com/mchoe/SwiftSVG or https://github.com/pocketsvg/PocketSVG
 - make watch face chooser on main view TV + CV to allow for more settings 
+- get ring settings / editor working
 
 ## IDEAS:
 - show name of current face on watch when first starting ( then fade it out )
@@ -26,3 +26,4 @@
 - watch cycles thru designs using crown
 - organize source files for settings view into group for view 
 - fix app icon -- cannot have alpha channel in app store 
+- add background shapes ( circle / square / side by side 2 color )

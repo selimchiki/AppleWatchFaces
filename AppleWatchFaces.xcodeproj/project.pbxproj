@@ -92,6 +92,9 @@
 		31EF999921A0BF3D00BB54E7 /* FaceBackgroundSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF999821A0BF3D00BB54E7 /* FaceBackgroundSettingsTableViewCell.swift */; };
 		31EF999B21A0BF9E00BB54E7 /* FaceBackgroundSettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF999A21A0BF9E00BB54E7 /* FaceBackgroundSettingCollectionViewCell.swift */; };
 		31EF999D21A0C63A00BB54E7 /* MainBackgroundColorSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF999C21A0C63A00BB54E7 /* MainBackgroundColorSettingTableViewCell.swift */; };
+		31EF999F21A2045B00BB54E7 /* FaceChooserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF999E21A2045B00BB54E7 /* FaceChooserTableViewController.swift */; };
+		31EF99A221A205F200BB54E7 /* FaceChooserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF99A121A205F200BB54E7 /* FaceChooserTableViewCell.swift */; };
+		31EF99A421A2072C00BB54E7 /* FaceChooserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF99A321A2072C00BB54E7 /* FaceChooserCollectionViewCell.swift */; };
 		31F4F1B6219899420050177A /* SettingsTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F4F1B5219899420050177A /* SettingsTableHeaderView.xib */; };
 		31F4F1B82198ACB50050177A /* AppUISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F4F1B72198ACB50050177A /* AppUISettings.swift */; };
 		31F4F1BE219A5C310050177A /* brass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31F4F1BD219A5C310050177A /* brass.jpg */; };
@@ -235,6 +238,9 @@
 		31EF999821A0BF3D00BB54E7 /* FaceBackgroundSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceBackgroundSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		31EF999A21A0BF9E00BB54E7 /* FaceBackgroundSettingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceBackgroundSettingCollectionViewCell.swift; sourceTree = "<group>"; };
 		31EF999C21A0C63A00BB54E7 /* MainBackgroundColorSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackgroundColorSettingTableViewCell.swift; sourceTree = "<group>"; };
+		31EF999E21A2045B00BB54E7 /* FaceChooserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceChooserTableViewController.swift; sourceTree = "<group>"; };
+		31EF99A121A205F200BB54E7 /* FaceChooserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceChooserTableViewCell.swift; sourceTree = "<group>"; };
+		31EF99A321A2072C00BB54E7 /* FaceChooserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceChooserCollectionViewCell.swift; sourceTree = "<group>"; };
 		31F4F1B5219899420050177A /* SettingsTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableHeaderView.xib; sourceTree = "<group>"; };
 		31F4F1B72198ACB50050177A /* AppUISettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUISettings.swift; sourceTree = "<group>"; };
 		31F4F1BD219A5C310050177A /* brass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brass.jpg; sourceTree = "<group>"; };
@@ -331,10 +337,11 @@
 			children = (
 				318808D0217815E600585AB1 /* AppDelegate.swift */,
 				31F4F1D8219D08890050177A /* FaceChooserViewController.swift */,
+				31EF99A021A2046100BB54E7 /* ChooserView */,
 				318808D2217815E600585AB1 /* SettingsViewController.swift */,
-				31EF9991219E602D00BB54E7 /* SettingsView */,
 				31F56FA321857FC100455FC6 /* WatchPreviewViewController.swift */,
 				31F8ABAA2187E8DB0014E2ED /* WatchSettingsTableViewController.swift */,
+				31EF9991219E602D00BB54E7 /* SettingsView */,
 				318808D4217815E600585AB1 /* Main.storyboard */,
 				318808D7217815E700585AB1 /* Assets.xcassets */,
 				318808D9217815E700585AB1 /* LaunchScreen.storyboard */,
@@ -436,6 +443,16 @@
 				31EF999C21A0C63A00BB54E7 /* MainBackgroundColorSettingTableViewCell.swift */,
 			);
 			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		31EF99A021A2046100BB54E7 /* ChooserView */ = {
+			isa = PBXGroup;
+			children = (
+				31EF999E21A2045B00BB54E7 /* FaceChooserTableViewController.swift */,
+				31EF99A121A205F200BB54E7 /* FaceChooserTableViewCell.swift */,
+				31EF99A321A2072C00BB54E7 /* FaceChooserCollectionViewCell.swift */,
+			);
+			path = ChooserView;
 			sourceTree = "<group>";
 		};
 		31F4F1B9219A57CA0050177A /* Materials */ = {
@@ -666,6 +683,7 @@
 				31B3F8C7218F22EF00AD22A5 /* RoundedButton.swift in Sources */,
 				31BC68F02193DFEE00DD8CD6 /* FaceBackgroundColorSettingTableViewCell.swift in Sources */,
 				31B5E8D3218BD63E00DE6429 /* FaceIndicatorNode.swift in Sources */,
+				31EF99A421A2072C00BB54E7 /* FaceChooserCollectionViewCell.swift in Sources */,
 				31BC68EA21931F1400DD8CD6 /* ColorSettingsTableViewCell.swift in Sources */,
 				31B5E8CD218BD26B00DE6429 /* MinuteHandNode.swift in Sources */,
 				318808D3217815E600585AB1 /* SettingsViewController.swift in Sources */,
@@ -675,9 +693,11 @@
 				31F4F1D9219D08890050177A /* FaceChooserViewController.swift in Sources */,
 				31F8ABCD2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift in Sources */,
 				31B3F8D0218F4BAE00AD22A5 /* SecondHandColorSettingsTableViewCell.swift in Sources */,
+				31EF999F21A2045B00BB54E7 /* FaceChooserTableViewController.swift in Sources */,
 				31EF999B21A0BF9E00BB54E7 /* FaceBackgroundSettingCollectionViewCell.swift in Sources */,
 				314A011021962FF4009BCE3C /* WatchFaceNode.swift in Sources */,
 				31EF999621A0B6B700BB54E7 /* SKShapeNode.swift in Sources */,
+				31EF99A221A205F200BB54E7 /* FaceChooserTableViewCell.swift in Sources */,
 				31B5E8EA218CF6E400DE6429 /* HourHandSettingCollectionViewCell.swift in Sources */,
 				31B3F8CE218F4A0700AD22A5 /* ColorSettingCollectionViewCell.swift in Sources */,
 				31EF999921A0BF3D00BB54E7 /* FaceBackgroundSettingsTableViewCell.swift in Sources */,
