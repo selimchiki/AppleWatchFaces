@@ -17,9 +17,13 @@ class FaceChooserViewController: UIViewController, WCSessionDelegate {
     @IBAction func sendAllSettingsAction(sender: UIButton) {
         //debugPrint("sendAllSettingsAction tapped")
         if let validSession = session {
-            self.showMessage(message: "trying to send")
-            validSession.transferFile(UserClockSetting.ArchiveURL, metadata: ["type":"settingsFile"])
-            
+            self.showMessage(message: "Sending ...")
+            let fileManager = FileManager.default
+            if fileManager.fileExists(atPath: UserClockSetting.ArchiveURL.absoluteString) {
+                validSession.transferFile(UserClockSetting.ArchiveURL, metadata: ["type":"settingsFile"])
+            } else {
+                self.showError(errorMessage: "No changes to send")
+            }
         } else {
             self.showError(errorMessage: "No valid watch session")
         }
@@ -33,7 +37,7 @@ class FaceChooserViewController: UIViewController, WCSessionDelegate {
         if let error = error {
             self.showError(errorMessage: error.localizedDescription)
         } else {
-            self.showMessage(message: "all settings sent")
+            self.showMessage(message: "All settings sent")
         }
     }
     
