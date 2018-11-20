@@ -1,6 +1,73 @@
 {
     "clockSettings" : [
         {
+            "clockCasingMaterialName" : "#003300ff",
+            "faceBackgroundType" : "FaceBackgroundTypeDiagonalSplit",
+            "title" : "Green Machine",
+            "clockFaceMaterialName" : "#002613ff",
+            "clockFaceSettings" : {
+                "hourHandMaterialName" : "#00ad00ff",
+                "secondHandMaterialName" : "#00ff00ff",
+                "secondHandType" : "SecondHandTypeRail",
+                "shouldShowRomanNumeralText" : false,
+                "ringSettings" : [
+                    {
+                        "indicatorType" : "FaceIndicatorTypeSphere",
+                        "textSize" : "0.05",
+                        "ringWidth" : "0.21",
+                        "ringType" : "RingTypeShapeNode",
+                        "ringPatternTotal" : "12",
+                        "ringPattern" : [
+                            1
+                        ],
+                        "ringMaterialName" : "#00ad00ff",
+                        "indicatorSize" : "0.09",
+                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "textType" : "NumberTextTypeHelvica"
+                    },
+                    {
+                        "indicatorType" : "FaceIndicatorTypeBox",
+                        "textSize" : "0.325",
+                        "ringWidth" : "0.2",
+                        "ringType" : "RingTypeTextNode",
+                        "ringPatternTotal" : "12",
+                        "ringPattern" : [
+                            1
+                        ],
+                        "ringMaterialName" : "#00ad00ff",
+                        "indicatorSize" : "0.33",
+                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "textType" : "NumberTextTypeDINPro"
+                    }
+                ],
+                "minuteHandType" : "MinuteHandTypeRounded",
+                "minuteHandMovement" : "MinuteHandMovementSmooth",
+                "secondHandMovement" : "SecondHandMovementStepOver",
+                "hourHandType" : "HourHandTypeRounded",
+                "minuteHandMaterialName" : "#00ad00ff"
+            }
+        },
+        {
+            "clockCasingMaterialName" : "#000000FF",
+            "faceBackgroundType" : "FaceBackgroundTypeFilled",
+            "title" : "Album Cover",
+            "clockFaceMaterialName" : "vinylAlbum.jpg",
+            "clockFaceSettings" : {
+                "hourHandMaterialName" : "#FFFFFFFF",
+                "secondHandMaterialName" : "#ff0000ff",
+                "secondHandType" : "SecondHandTypeBlocky",
+                "shouldShowRomanNumeralText" : false,
+                "ringSettings" : [
+                    
+                ],
+                "minuteHandType" : "MinuteHandTypeFatBoxy",
+                "minuteHandMovement" : "MinuteHandMovementSmooth",
+                "secondHandMovement" : "SecondHandMovementStepOver",
+                "hourHandType" : "HourHandTypeFatBoxy",
+                "minuteHandMaterialName" : "#FFFFFFFF"
+            }
+        },
+        {
             "clockCasingMaterialName" : "#1c1c1cff",
             "faceBackgroundType" : "FaceBackgroundTypeCircle",
             "title" : "Swiss Wall Clock",
@@ -541,26 +608,6 @@
                 "secondHandMovement" : "SecondHandMovementOscillate",
                 "hourHandType" : "HourHandTypeRounded",
                 "minuteHandMaterialName" : "#000000FF"
-            }
-        },
-        {
-            "clockCasingMaterialName" : "light-wood.jpg",
-            "faceBackgroundType" : "FaceBackgroundTypeCircle",
-            "title" : "rusty",
-            "clockFaceMaterialName" : "#001133ff",
-            "clockFaceSettings" : {
-                "hourHandMaterialName" : "#FFFFFFFF",
-                "secondHandMaterialName" : "#ff8282ff",
-                "secondHandType" : "SecondHandTypeBlocky",
-                "shouldShowRomanNumeralText" : false,
-                "ringSettings" : [
-                    
-                ],
-                "minuteHandType" : "MinuteHandTypeBoxy",
-                "minuteHandMovement" : "MinuteHandMovementSmooth",
-                "secondHandMovement" : "SecondHandMovementStepOver",
-                "hourHandType" : "HourHandTypeBoxy",
-                "minuteHandMaterialName" : "#FFFFFFFF"
             }
         },
         {
@@ -1741,53 +1788,6 @@
                 "secondHandMovement" : "SecondHandMovementStepOver",
                 "hourHandType" : "HourHandTypeRoman",
                 "minuteHandMaterialName" : "#000000FF"
-            }
-        },
-        {
-            "clockCasingMaterialName" : "#003300ff",
-            "faceBackgroundType" : "FaceBackgroundTypeDiagonalSplit",
-            "title" : "Green Machine",
-            "clockFaceMaterialName" : "#002613ff",
-            "clockFaceSettings" : {
-                "hourHandMaterialName" : "#00ad00ff",
-                "secondHandMaterialName" : "#00ff00ff",
-                "secondHandType" : "SecondHandTypeRail",
-                "shouldShowRomanNumeralText" : false,
-                "ringSettings" : [
-                    {
-                        "indicatorType" : "FaceIndicatorTypeBox",
-                        "textSize" : "0.05",
-                        "ringWidth" : "0.21",
-                        "ringType" : "RingTypeTextRotatingNode",
-                        "ringPatternTotal" : "60",
-                        "ringPattern" : [
-                            1
-                        ],
-                        "ringMaterialName" : "#00ad00ff",
-                        "indicatorSize" : "0.15",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
-                        "textType" : "NumberTextTypeHelvica"
-                    },
-                    {
-                        "indicatorType" : "FaceIndicatorTypeBox",
-                        "textSize" : "0.22",
-                        "ringWidth" : "0.2",
-                        "ringType" : "RingTypeTextNode",
-                        "ringPatternTotal" : "12",
-                        "ringPattern" : [
-                            1
-                        ],
-                        "ringMaterialName" : "#00ad00ff",
-                        "indicatorSize" : "0.33",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
-                        "textType" : "NumberTextTypeDINPro"
-                    }
-                ],
-                "minuteHandType" : "MinuteHandTypeRounded",
-                "minuteHandMovement" : "MinuteHandMovementSmooth",
-                "secondHandMovement" : "SecondHandMovementStepOver",
-                "hourHandType" : "HourHandTypeRounded",
-                "minuteHandMaterialName" : "#00ad00ff"
             }
         },
         {
