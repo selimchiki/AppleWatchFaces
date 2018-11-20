@@ -27,7 +27,7 @@ class AppUISettings: NSObject {
     
     static func materialIsColor( materialName: String ) -> Bool {
         if (materialName.lengthOfBytes(using: String.Encoding.utf8) > 0) {
-            let index = materialName.characters.index(materialName.startIndex, offsetBy: 1)
+            let index = materialName.index(materialName.startIndex, offsetBy: 1)
             let firstChar = materialName.substring(to: index)
             
             if ( firstChar == "#") {

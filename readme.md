@@ -1,7 +1,12 @@
 
 ## TODO:
+
+-enable saving thumbnails when saving a watch
+-copy thumbs from bundle to docs folder for loading in the main view, but do this only once ( save in preferences )
+
+-enable swiping controls on the watch face ( L/R for prev/next , up for send to watch )
+
 - switch to SVG files for shapes : https://github.com/mchoe/SwiftSVG or https://github.com/pocketsvg/PocketSVG
-- make watch face chooser on main view TV + CV to allow for more settings 
 - get ring settings / editor working
 
 ## IDEAS:
@@ -27,3 +32,5 @@
 - organize source files for settings view into group for view 
 - fix app icon -- cannot have alpha channel in app store 
 - add background shapes ( circle / square / side by side 2 color )
+- make watch face chooser on main view TV + CV to allow for more settings 
+
