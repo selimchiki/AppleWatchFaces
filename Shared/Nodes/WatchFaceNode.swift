@@ -31,21 +31,21 @@ class WatchFaceNode: SKShapeNode {
             self.addChild(backgroundShapeNode)
             
             let secondHandFillColor = SKColor.init(hexString: clockFaceSettings.secondHandMaterialName)
-            let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType, fillColor: secondHandFillColor)
+            let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType, fillColor: secondHandFillColor, strokeColor: secondHandFillColor, lineWidth: 1.0)
             secHandNode.name = "secondHand"
             secHandNode.zPosition = 4
             
             self.addChild(secHandNode)
             
             let minuteHandFillColor = SKColor.init(hexString: clockFaceSettings.minuteHandMaterialName)
-            let minHandNode = MinuteHandNode.init(minuteHandType: clockFaceSettings.minuteHandType, fillColor: minuteHandFillColor)
+            let minHandNode = MinuteHandNode.init(minuteHandType: clockFaceSettings.minuteHandType, fillColor: minuteHandFillColor, strokeColor: minuteHandFillColor, lineWidth: 1.0)
             minHandNode.name = "minuteHand"
             minHandNode.zPosition = 3
             
             self.addChild(minHandNode)
             
             let hourHandFillColor = SKColor.init(hexString: clockFaceSettings.hourHandMaterialName)
-            let hourHandNode = HourHandNode.init(hourHandType: clockFaceSettings.hourHandType, fillColor: hourHandFillColor)
+            let hourHandNode = HourHandNode.init(hourHandType: clockFaceSettings.hourHandType, fillColor: hourHandFillColor, strokeColor: hourHandFillColor, lineWidth: 1.0)
             hourHandNode.name = "hourHand"
             hourHandNode.zPosition = 3
             
@@ -184,7 +184,8 @@ class WatchFaceNode: SKShapeNode {
             
             if (!doDraw) { continue }
             
-            let outerRingNode = FaceIndicatorNode.init(indicatorType:  ringSettings.indicatorType, size: ringSettings.indicatorSize, fillColor: SKColor.init(hexString: material))
+            let outerRingNode =
+                FaceIndicatorNode.init(indicatorType:  ringSettings.indicatorType, size: ringSettings.indicatorSize, fillColor: SKColor.init(hexString: material))
             
             let angleDiv = patternTotal
             let angleOffset = -1.0 * Float(Double.pi*2) / Float(angleDiv)  * Float(outerRingIndex) + Float(Double.pi/2)

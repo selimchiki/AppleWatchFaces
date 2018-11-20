@@ -70,7 +70,8 @@ class FaceIndicatorNode: SKSpriteNode {
             let h = CGFloat( size * Float(0.7) )
             let shapeNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: w * sizeMultiplier, height: h * sizeMultiplier))
             shapeNode.fillColor = fillColor
-            shapeNode.strokeColor = SKColor.clear
+            shapeNode.strokeColor = fillColor
+            shapeNode.lineWidth = 1.0
             shapeNode.position = CGPoint.init(x: -(w * sizeMultiplier)/2, y: -(h * sizeMultiplier)/2)
             self.addChild(shapeNode)
             
@@ -82,7 +83,8 @@ class FaceIndicatorNode: SKSpriteNode {
             let h = CGFloat( size * Float(0.7) )
             let shapeNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: w * sizeMultiplier, height: h * sizeMultiplier))
             shapeNode.fillColor = fillColor
-            shapeNode.strokeColor = SKColor.clear
+            shapeNode.strokeColor = fillColor
+            shapeNode.lineWidth = 1.0
             shapeNode.position = CGPoint.init(x: -(w * sizeMultiplier)/2, y: -(h * sizeMultiplier)/2)
             self.addChild(shapeNode)
             
@@ -94,7 +96,8 @@ class FaceIndicatorNode: SKSpriteNode {
             let h = CGFloat( size * Float(0.7) )
             let shapeNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: w * sizeMultiplier, height: h * sizeMultiplier))
             shapeNode.fillColor = fillColor
-            shapeNode.strokeColor = SKColor.clear
+            shapeNode.strokeColor = fillColor
+            shapeNode.lineWidth = 1.0
             shapeNode.position = CGPoint.init(x: -(w * sizeMultiplier)/2, y: -(h * sizeMultiplier)/2)
             self.addChild(shapeNode)
             
@@ -108,7 +111,8 @@ class FaceIndicatorNode: SKSpriteNode {
             let cham = CGFloat( size * Float(0.05) )
             let shapeNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: w * sizeMultiplier, height: h * sizeMultiplier), cornerRadius: cham * sizeMultiplier)
             shapeNode.fillColor = fillColor
-            shapeNode.strokeColor = SKColor.clear
+            shapeNode.strokeColor = fillColor
+            shapeNode.lineWidth = 1.0
             shapeNode.position = CGPoint.init(x: -(w * sizeMultiplier)/2, y: -(h * sizeMultiplier)/2)
             self.addChild(shapeNode)
             
@@ -120,7 +124,8 @@ class FaceIndicatorNode: SKSpriteNode {
             let r = CGFloat( size * Float(0.1) )
             let shapeNode = SKShapeNode.init(circleOfRadius: r * sizeMultiplier)
             shapeNode.fillColor = fillColor
-            shapeNode.strokeColor = SKColor.clear
+            shapeNode.strokeColor = fillColor
+            shapeNode.lineWidth = 1.0
             self.addChild(shapeNode)
                 
             //self.geometry = SCNSphere.init(radius: r)

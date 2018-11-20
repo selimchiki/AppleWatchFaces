@@ -33,4 +33,6 @@
 - fix app icon -- cannot have alpha channel in app store 
 - add background shapes ( circle / square / side by side 2 color )
 - make watch face chooser on main view TV + CV to allow for more settings 
+- test on larger watch in simulator
+- anti aliasing shapes!
 
