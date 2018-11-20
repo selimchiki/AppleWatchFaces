@@ -9,11 +9,11 @@
 import SpriteKit
 
 enum HourHandTypes: String {
-    case HourHandTypeSwiss, HourHandTypeRounded, HourHandTypeRoman, HourHandTypeBoxy, HourHandTypeSquaredHole, HourHandTypeSphere,
+    case HourHandTypeSwiss, HourHandTypeRounded, HourHandTypeRoman, HourHandTypeBoxy, HourHandTypeFatBoxy, HourHandTypeSquaredHole, HourHandTypeSphere,
         HourHandTypeCutout
     
-    static let randomizableValues = [HourHandTypeSwiss, HourHandTypeRounded, HourHandTypeBoxy, HourHandTypeSquaredHole]
-    static let userSelectableValues = [HourHandTypeSwiss, HourHandTypeRounded, HourHandTypeBoxy, HourHandTypeSquaredHole, HourHandTypeRoman, HourHandTypeSphere, HourHandTypeCutout]
+    static let randomizableValues = [HourHandTypeSwiss, HourHandTypeRounded, HourHandTypeBoxy, HourHandTypeFatBoxy, HourHandTypeSquaredHole]
+    static let userSelectableValues = [HourHandTypeSwiss, HourHandTypeRounded, HourHandTypeBoxy, HourHandTypeFatBoxy, HourHandTypeSquaredHole, HourHandTypeRoman, HourHandTypeSphere, HourHandTypeCutout]
     
     static func random() -> HourHandTypes {
         let randomIndex = Int(arc4random_uniform(UInt32(randomizableValues.count)))
@@ -31,6 +31,7 @@ class HourHandNode: SKSpriteNode {
         if (nodeType == HourHandTypes.HourHandTypeRoman)  { typeDescription = "Roman" }
         if (nodeType == HourHandTypes.HourHandTypeSphere)  { typeDescription = "Magnetic Sphere" }
         if (nodeType == HourHandTypes.HourHandTypeBoxy)  { typeDescription = "Boxy" }
+        if (nodeType == HourHandTypes.HourHandTypeFatBoxy)  { typeDescription = "Fat Boxy" }
         if (nodeType == HourHandTypes.HourHandTypeSquaredHole)  { typeDescription = "Squared Hole" }
         if (nodeType == HourHandTypes.HourHandTypeCutout)  { typeDescription = "Square Cutout" }
 
@@ -110,6 +111,18 @@ class HourHandNode: SKSpriteNode {
         if (hourHandType == HourHandTypes.HourHandTypeBoxy) {
 
             let rectanglePath = UIBezierPath(rect: CGRect(x: -1.5, y: -11, width: 3, height: 60))
+            
+            let shape = SKShapeNode.init(path: rectanglePath.cgPath)
+            shape.fillColor = fillColor
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
+            
+            self.addChild(shape)
+        }
+        
+        if (hourHandType == HourHandTypes.HourHandTypeFatBoxy) {
+            
+            let rectanglePath = UIBezierPath(rect: CGRect(x: -3, y: -15, width: 6, height: 65))
             
             let shape = SKShapeNode.init(path: rectanglePath.cgPath)
             shape.fillColor = fillColor
