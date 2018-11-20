@@ -85,6 +85,9 @@
 		31BC68EE2193D88D00DD8CD6 /* HourHandColorSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC68ED2193D88D00DD8CD6 /* HourHandColorSettingsTableViewCell.swift */; };
 		31BC68F02193DFEE00DD8CD6 /* FaceBackgroundColorSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC68EF2193DFEE00DD8CD6 /* FaceBackgroundColorSettingTableViewCell.swift */; };
 		31BC68FB21954BED00DD8CD6 /* KKInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BC68FA21954BEC00DD8CD6 /* KKInterfaceController.m */; };
+		31E5BC4B21A39DAF00C1B35E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5BC4A21A39DAF00C1B35E /* StringExtension.swift */; };
+		31E5BC4C21A39DAF00C1B35E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5BC4A21A39DAF00C1B35E /* StringExtension.swift */; };
+		31E5BC4E21A3A0F700C1B35E /* UIImage+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5BC4D21A3A0F700C1B35E /* UIImage+Loading.swift */; };
 		31EF999321A0AF4F00BB54E7 /* FaceBackgroundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF999221A0AF4F00BB54E7 /* FaceBackgroundNode.swift */; };
 		31EF999421A0AF4F00BB54E7 /* FaceBackgroundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF999221A0AF4F00BB54E7 /* FaceBackgroundNode.swift */; };
 		31EF999621A0B6B700BB54E7 /* SKShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EF999521A0B6B700BB54E7 /* SKShapeNode.swift */; };
@@ -235,6 +238,8 @@
 		31BC68F821954BEB00DD8CD6 /* Face Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Face Extension-Bridging-Header.h"; sourceTree = "<group>"; };
 		31BC68F921954BEC00DD8CD6 /* KKInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKInterfaceController.h; sourceTree = "<group>"; };
 		31BC68FA21954BEC00DD8CD6 /* KKInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKInterfaceController.m; sourceTree = "<group>"; };
+		31E5BC4A21A39DAF00C1B35E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		31E5BC4D21A3A0F700C1B35E /* UIImage+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Loading.swift"; sourceTree = "<group>"; };
 		31EF999221A0AF4F00BB54E7 /* FaceBackgroundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceBackgroundNode.swift; sourceTree = "<group>"; };
 		31EF999521A0B6B700BB54E7 /* SKShapeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKShapeNode.swift; sourceTree = "<group>"; };
 		31EF999821A0BF3D00BB54E7 /* FaceBackgroundSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceBackgroundSettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -475,10 +480,12 @@
 		31F56F9E21857A5E00455FC6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				31E5BC4A21A39DAF00C1B35E /* StringExtension.swift */,
 				31A5F7EE21966CED000F1677 /* MathFunctions.swift */,
 				31FD61E821891B4F00E15DEA /* SwiftyJSON.swift */,
 				31061F312192716C00EF511B /* SKColor.swift */,
 				31EF999521A0B6B700BB54E7 /* SKShapeNode.swift */,
+				31E5BC4D21A3A0F700C1B35E /* UIImage+Loading.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -698,6 +705,7 @@
 				31F8ABCD2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift in Sources */,
 				31B3F8D0218F4BAE00AD22A5 /* SecondHandColorSettingsTableViewCell.swift in Sources */,
 				31EF999F21A2045B00BB54E7 /* FaceChooserTableViewController.swift in Sources */,
+				31E5BC4E21A3A0F700C1B35E /* UIImage+Loading.swift in Sources */,
 				31EF999B21A0BF9E00BB54E7 /* FaceBackgroundSettingCollectionViewCell.swift in Sources */,
 				314A011021962FF4009BCE3C /* WatchFaceNode.swift in Sources */,
 				31EF999621A0B6B700BB54E7 /* SKShapeNode.swift in Sources */,
@@ -708,6 +716,7 @@
 				31B5E8E4218CEF9000DE6429 /* MinuteHandSettingsTableViewCell.swift in Sources */,
 				31FD61E921891B5000E15DEA /* SwiftyJSON.swift in Sources */,
 				312D4C08218BCDDB008504D2 /* HourHandNode.swift in Sources */,
+				31E5BC4B21A39DAF00C1B35E /* StringExtension.swift in Sources */,
 				31F4F1B82198ACB50050177A /* AppUISettings.swift in Sources */,
 				31B5E8D7218BD91400DE6429 /* ClockFaceSetting.swift in Sources */,
 				312D4C05218BCBF0008504D2 /* ClockDecoratorTheme.swift in Sources */,
@@ -747,6 +756,7 @@
 				318808FC2178166B00585AB1 /* ExtensionDelegate.swift in Sources */,
 				31B5E8DA218CE01300DE6429 /* ClockFaceSetting.swift in Sources */,
 				31EF999721A0B6B700BB54E7 /* SKShapeNode.swift in Sources */,
+				31E5BC4C21A39DAF00C1B35E /* StringExtension.swift in Sources */,
 				31B5E8DC218CE01800DE6429 /* ClockDecoratorTheme.swift in Sources */,
 				31F56FA221857AC300455FC6 /* SecondHandNode.swift in Sources */,
 				31B5E8DF218CE03000DE6429 /* NumberTextNode.swift in Sources */,

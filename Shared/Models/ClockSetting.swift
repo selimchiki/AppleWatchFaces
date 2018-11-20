@@ -144,45 +144,45 @@ class ClockSetting: NSObject {
         )
     }
     
-    func randomize( newColors: Bool, newScene: Bool, newFace: Bool ) {
-//        if (newScene) {
-//            self.faceBackgroundType = FaceBackgroundTypes.random()
-//        }
-//        if (newFace) {
-//            self.applyDecoratorTheme(UserClockSetting.randomDecoratorTheme())
-//        }
-//        if (newColors) {
-//            self.applyColorTheme(UserClockSetting.randomColorTheme())
-//        }
-//    
-//        self.setTitleForRandomClock()
+    func randomize( newColors: Bool, newBackground: Bool, newFace: Bool ) {
+        if (newBackground) {
+            self.faceBackgroundType = FaceBackgroundTypes.random()
+        }
+        if (newFace) {
+            self.applyDecoratorTheme(UserClockSetting.randomDecoratorTheme())
+        }
+        if (newColors) {
+            self.applyColorTheme(UserClockSetting.randomColorTheme())
+        }
+    
+        self.setTitleForRandomClock()
     }
     
-//    static func random() -> ClockSetting {
-//
-//        let faceBackgroundType = FaceBackgroundTypes.random()
-//        let clockSetting = ClockSetting.init(
-//            clockFaceMaterialName: "#FFFFFFFF",
-//            faceBackgroundType: faceBackgroundType,
-//
-//            clockCasingMaterialName: "#FF0000FF",
-//
-//            clockFaceSettings: ClockFaceSetting.random(),
-//            title: "random"
-//        )
-//
-//        //add a random theme
-//        let randoDecoTheme = UserClockSetting.randomDecoratorTheme() //UserClockSetting.sharedDecoratorThemeSettings[1]
-//        clockSetting.applyDecoratorTheme(randoDecoTheme)
-//
-//        //add a random theme
-//        let randoTheme =  UserClockSetting.randomColorTheme() //UserClockSetting.sharedColorThemeSettings[0]
-//        clockSetting.applyColorTheme(randoTheme)
-//
-//        clockSetting.setTitleForRandomClock()
-//
-//        return clockSetting
-//    }
+    static func random() -> ClockSetting {
+
+        let faceBackgroundType = FaceBackgroundTypes.random()
+        let clockSetting = ClockSetting.init(
+            clockFaceMaterialName: "#FFFFFFFF",
+            faceBackgroundType: faceBackgroundType,
+
+            clockCasingMaterialName: "#FF0000FF",
+
+            clockFaceSettings: ClockFaceSetting.random(),
+            title: "random"
+        )
+
+        //add a random theme
+        let randoDecoTheme = UserClockSetting.randomDecoratorTheme() //UserClockSetting.sharedDecoratorThemeSettings[1]
+        clockSetting.applyDecoratorTheme(randoDecoTheme)
+
+        //add a random theme
+        let randoTheme =  UserClockSetting.randomColorTheme() //UserClockSetting.sharedColorThemeSettings[0]
+        clockSetting.applyColorTheme(randoTheme)
+
+        clockSetting.setTitleForRandomClock()
+
+        return clockSetting
+    }
     
     //init from serialized
     convenience init( jsonObj: JSON ) {
@@ -201,15 +201,15 @@ class ClockSetting: NSObject {
     
     }
     
-//    func setTitleForRandomClock() {
-//        self.title = "randomClock-" + String.random(20)
-//    }
-//
-//    func uniqueID() -> String {
-//        let okayChars : Set<Character> =
-//            Set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890".characters)
-//        return String(self.title.characters.filter {okayChars.contains($0) })
-//    }
+    func setTitleForRandomClock() {
+        self.title = "randomClock-" + String.random(20)
+    }
+
+    func uniqueID() -> String {
+        let okayChars : Set<Character> =
+            Set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890")
+        return String(self.title.filter {okayChars.contains($0) })
+    }
     
     //returns a JSON serializable safe version ( 
     
