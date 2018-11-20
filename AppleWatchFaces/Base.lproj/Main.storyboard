@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQr-wG-VwM" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQr-wG-VwM" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
                                 <rect key="frame" x="16" y="617" width="343" height="30"/>
                                 <state key="normal" title="Reset All Settings"/>
                                 <userDefinedRuntimeAttributes>
@@ -67,16 +67,17 @@
                         <constraints>
                             <constraint firstItem="EFY-Sg-kEX" firstAttribute="top" secondItem="vUG-c0-AEw" secondAttribute="top" id="1re-nF-ntO"/>
                             <constraint firstItem="pmc-ba-uhr" firstAttribute="top" secondItem="SFP-PZ-A7W" secondAttribute="bottom" id="1w2-gg-TxX"/>
+                            <constraint firstItem="WQr-wG-VwM" firstAttribute="trailing" secondItem="pmc-ba-uhr" secondAttribute="trailing" id="A9B-0t-qfF"/>
                             <constraint firstItem="SFP-PZ-A7W" firstAttribute="leading" secondItem="0eE-eN-zvf" secondAttribute="leadingMargin" id="ApQ-ZN-IQr"/>
+                            <constraint firstItem="WQr-wG-VwM" firstAttribute="leading" secondItem="pmc-ba-uhr" secondAttribute="leading" id="FR1-pg-R8M"/>
                             <constraint firstItem="SFP-PZ-A7W" firstAttribute="top" secondItem="EFY-Sg-kEX" secondAttribute="bottom" constant="8" symbolic="YES" id="GaF-Nx-Ovw"/>
                             <constraint firstItem="EFY-Sg-kEX" firstAttribute="leading" secondItem="0eE-eN-zvf" secondAttribute="leading" id="IwG-lh-250"/>
                             <constraint firstItem="SFP-PZ-A7W" firstAttribute="top" secondItem="vUG-c0-AEw" secondAttribute="top" constant="248" id="QN4-K3-wd4"/>
-                            <constraint firstItem="pmc-ba-uhr" firstAttribute="trailing" secondItem="WQr-wG-VwM" secondAttribute="trailing" id="QWw-rQ-SHk"/>
                             <constraint firstItem="SFP-PZ-A7W" firstAttribute="leading" secondItem="pmc-ba-uhr" secondAttribute="leading" id="SJM-DZ-398"/>
                             <constraint firstItem="EFY-Sg-kEX" firstAttribute="centerX" secondItem="SFP-PZ-A7W" secondAttribute="centerX" id="Yc5-Mg-iXs"/>
                             <constraint firstItem="SFP-PZ-A7W" firstAttribute="trailing" secondItem="0eE-eN-zvf" secondAttribute="trailingMargin" id="jcm-bt-nkK"/>
                             <constraint firstItem="SFP-PZ-A7W" firstAttribute="trailing" secondItem="pmc-ba-uhr" secondAttribute="trailing" id="kil-wA-kjh"/>
-                            <constraint firstItem="pmc-ba-uhr" firstAttribute="leading" secondItem="WQr-wG-VwM" secondAttribute="leading" id="mjW-KY-HQS"/>
+                            <constraint firstAttribute="bottom" secondItem="WQr-wG-VwM" secondAttribute="bottom" constant="20" symbolic="YES" id="tGF-dQ-VRb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vUG-c0-AEw"/>
                     </view>
@@ -671,7 +672,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="v7v-zT-wDu">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="3Ch-zj-J7V">
                                                 <size key="itemSize" width="100" height="100"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -680,7 +681,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="settingsHandCell" id="PFn-VR-hjG" customClass="MinuteHandSettingCollectionViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="-0.5" width="100" height="100"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -727,7 +728,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-DC-r6Z">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Nt7-J2-0XF">
                                                 <size key="itemSize" width="33" height="33"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
