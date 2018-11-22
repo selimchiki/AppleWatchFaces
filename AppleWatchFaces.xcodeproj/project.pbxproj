@@ -85,6 +85,7 @@
 		31BC68EE2193D88D00DD8CD6 /* HourHandColorSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC68ED2193D88D00DD8CD6 /* HourHandColorSettingsTableViewCell.swift */; };
 		31BC68F02193DFEE00DD8CD6 /* FaceBackgroundColorSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BC68EF2193DFEE00DD8CD6 /* FaceBackgroundColorSettingTableViewCell.swift */; };
 		31BC68FB21954BED00DD8CD6 /* KKInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BC68FA21954BEC00DD8CD6 /* KKInterfaceController.m */; };
+		31C05DA521A712BD0021AEAB /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C05DA421A712BD0021AEAB /* UIView+Snapshot.swift */; };
 		31E5BC4B21A39DAF00C1B35E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5BC4A21A39DAF00C1B35E /* StringExtension.swift */; };
 		31E5BC4C21A39DAF00C1B35E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5BC4A21A39DAF00C1B35E /* StringExtension.swift */; };
 		31E5BC4E21A3A0F700C1B35E /* UIImage+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E5BC4D21A3A0F700C1B35E /* UIImage+Loading.swift */; };
@@ -238,6 +239,7 @@
 		31BC68F821954BEB00DD8CD6 /* Face Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Face Extension-Bridging-Header.h"; sourceTree = "<group>"; };
 		31BC68F921954BEC00DD8CD6 /* KKInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKInterfaceController.h; sourceTree = "<group>"; };
 		31BC68FA21954BEC00DD8CD6 /* KKInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKInterfaceController.m; sourceTree = "<group>"; };
+		31C05DA421A712BD0021AEAB /* UIView+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Snapshot.swift"; sourceTree = "<group>"; };
 		31E5BC4A21A39DAF00C1B35E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		31E5BC4D21A3A0F700C1B35E /* UIImage+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Loading.swift"; sourceTree = "<group>"; };
 		31EF999221A0AF4F00BB54E7 /* FaceBackgroundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceBackgroundNode.swift; sourceTree = "<group>"; };
@@ -486,6 +488,7 @@
 				31061F312192716C00EF511B /* SKColor.swift */,
 				31EF999521A0B6B700BB54E7 /* SKShapeNode.swift */,
 				31E5BC4D21A3A0F700C1B35E /* UIImage+Loading.swift */,
+				31C05DA421A712BD0021AEAB /* UIView+Snapshot.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 			files = (
 				31FD61EB21891B6900E15DEA /* ClockColorTheme.swift in Sources */,
 				31F8ABCF2187EE2F0014E2ED /* SecondHandSettingCollectionViewCell.swift in Sources */,
+				31C05DA521A712BD0021AEAB /* UIView+Snapshot.swift in Sources */,
 				31F56FA52185816F00455FC6 /* SKWatchScene.swift in Sources */,
 				31BC68EE2193D88D00DD8CD6 /* HourHandColorSettingsTableViewCell.swift in Sources */,
 				31061F322192716C00EF511B /* SKColor.swift in Sources */,

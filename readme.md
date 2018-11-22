@@ -1,5 +1,7 @@
 
-## TODO:
+## TO DO:
+
+-push app to hockeyapp for beta testing
 
 -enable saving thumbnails when saving a watch
 -copy thumbs from bundle to docs folder for loading in the main view, but do this only once ( save in preferences )

@@ -11,7 +11,7 @@ import UIKit
 extension UIImage {
     
     func getImagePath( imageName: String ) -> String {
-        let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(imageName).png"
+        let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/thumbs/\(imageName).jpg"
         return imagePath
     }
     
@@ -34,8 +34,11 @@ extension UIImage {
         }
     }
     
-    func save(image: UIImage, imageName: String ) -> Bool {
+    func save(imageName: String ) -> Bool {
         // image has not been created yet: create it, store it, return it
-        return ((try? image.pngData()?.write(to: getImageURL(imageName: imageName) )) != nil)
+        let imageUrl = getImageURL(imageName: imageName)
+        debugPrint("attempting save if image: "+imageUrl.absoluteString)
+        return ((try? self.jpegData(compressionQuality: 0.7)?.write(to: imageUrl )) != nil)
+        //return ((try? self.pngData()?.write(to: imageUrl )) != nil)
     }
 }

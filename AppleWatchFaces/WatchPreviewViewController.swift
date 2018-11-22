@@ -13,6 +13,15 @@ class WatchPreviewViewController: UIViewController {
 
     @IBOutlet var skView: SKView!
     
+    func makeThumb() -> Bool {
+        //let newView = skView.snapshotView(afterScreenUpdates: true)
+        if let newImage = skView?.snapshot {
+            return newImage.save(imageName: "testImage")
+        } else {
+            return false
+        }
+    }
+    
     func redraw() {
         if let watchScene = skView.scene as? SKWatchScene {
             watchScene.redraw(clockSetting: SettingsViewController.currentClockSetting)
