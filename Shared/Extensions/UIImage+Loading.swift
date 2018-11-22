@@ -14,8 +14,7 @@ extension UIImage {
         let fileManager = FileManager.default
         let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
         if let documentDirectory: URL = urls.first {
-            //let imagePath = documentDirectory.appendingPathComponent(AppUISettings.thumbnailFolder, isDirectory: true).appendingPathComponent( imageName + ".jpg" )
-            let imagePath = documentDirectory.appendingPathComponent( imageName + ".jpg" )
+            let imagePath = documentDirectory.appendingPathComponent(AppUISettings.thumbnailFolder, isDirectory: true).appendingPathComponent( imageName + ".jpg" )
             return imagePath.absoluteString
         }
         
