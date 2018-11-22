@@ -28,6 +28,8 @@ class FaceChooserTableViewCell: FaceChooserSelectableTableViewCell, UICollection
         //debugPrint("U: " + clockSetting.uniqueID)
         if let newImage = UIImage.getImageFor(imageName: clockSetting.uniqueID) {
             cell.imageView.image = newImage
+        } else {
+            cell.imageView.image = nil
         }
         
         return cell

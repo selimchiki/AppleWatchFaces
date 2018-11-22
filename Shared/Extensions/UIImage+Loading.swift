@@ -31,13 +31,11 @@ extension UIImage {
     }
     
     static func getImageFor(imageName: String) -> UIImage? {
-        
-        debugPrint("looking getImagePath: " + getImagePath(imageName: imageName))
-        
+        //debugPrint("looking getImagePath: " + getImagePath(imageName: imageName))
         let fileManager = FileManager.default
         // check if the image is stored already
         if fileManager.fileExists(atPath: getImageURL(imageName: imageName).path ) {
-            debugPrint("UIIMAGE.load!")
+            //debugPrint("UIIMAGE.load!")
             if let imageData: Data = try? Data(contentsOf: getImageURL(imageName: imageName) ),
                 let image: UIImage = UIImage(data: imageData, scale: UIScreen.main.scale) {
                 return image
@@ -53,7 +51,7 @@ extension UIImage {
     func save(imageName: String ) -> Bool {
         // image has not been created yet: create it, store it, return it
         let imageUrl = UIImage.getImageURL(imageName: imageName)
-        debugPrint("attempting save if image: "+imageUrl.absoluteString)
+        //debugPrint("attempting save image: "+imageUrl.absoluteString)
         return ((try? self.jpegData(compressionQuality: 0.75)?.write(to: imageUrl )) != nil)
         //return ((try? self.pngData()?.write(to: imageUrl )) != nil)
     }

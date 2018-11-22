@@ -52,4 +52,11 @@ class FaceChooserTableViewController: UITableViewController {
         return cell
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        //may have new items, lets reload them
+        if let fCv = faceChooserCollectionView {
+            fCv.reloadItems(at: fCv.indexPathsForVisibleItems)
+        }
+    }
+    
 }
