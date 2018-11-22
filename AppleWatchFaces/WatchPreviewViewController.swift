@@ -13,10 +13,10 @@ class WatchPreviewViewController: UIViewController {
 
     @IBOutlet var skView: SKView!
     
-    func makeThumb() -> Bool {
+    func makeThumb( imageName:String ) -> Bool {
         //let newView = skView.snapshotView(afterScreenUpdates: true)
         if let newImage = skView?.snapshot {
-            return newImage.save(imageName: "testImage")
+            return newImage.save(imageName: imageName)
         } else {
             return false
         }

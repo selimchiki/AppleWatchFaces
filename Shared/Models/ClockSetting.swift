@@ -80,7 +80,10 @@ class ClockSetting: NSObject {
             let jsonObj = try! JSON(data: jsonData)
             
             if jsonObj != JSON.null {
-                return ClockSetting.init(jsonObj: jsonObj)
+                let newSetting = ClockSetting.init(jsonObj: jsonObj)
+                //re-assing the uid
+                newSetting.uniqueID = UUID().uuidString
+                return newSetting
             } else {
                 print("could not get json from clone, make sure that contains valid json.")
             }
@@ -105,13 +108,31 @@ class ClockSetting: NSObject {
     var clockFaceMaterialName:String
     var clockCasingMaterialName:String
     
+    var uniqueID:String
+    
+    //no uniqueID ( generate one )
+    convenience init(clockFaceMaterialName: String,
+                     faceBackgroundType: FaceBackgroundTypes,
+                     clockCasingMaterialName: String,
+                     clockFaceSettings: ClockFaceSetting,
+                     title: String) {
+        
+        self.init(clockFaceMaterialName: clockFaceMaterialName,
+                  faceBackgroundType: faceBackgroundType,
+                  clockCasingMaterialName: clockCasingMaterialName,
+                  clockFaceSettings: clockFaceSettings,
+                  title: title ,
+                  uniqueID: UUID().uuidString)
+    }
+    
     init(clockFaceMaterialName: String,
         faceBackgroundType: FaceBackgroundTypes,
         
         clockCasingMaterialName: String,
         
         clockFaceSettings: ClockFaceSetting,
-        title: String)
+        title: String,
+        uniqueID: String)
     {
         self.clockFaceMaterialName = clockFaceMaterialName
         self.faceBackgroundType = faceBackgroundType
@@ -120,6 +141,9 @@ class ClockSetting: NSObject {
         self.clockCasingMaterialName = clockCasingMaterialName
         self.themeTitle = ""
         self.decoratorThemeTitle = ""
+        
+        //create this on init
+        self.uniqueID = uniqueID
         
         super.init()
     }
@@ -196,19 +220,14 @@ class ClockSetting: NSObject {
             clockCasingMaterialName: jsonObj["clockCasingMaterialName"].stringValue,
             
             clockFaceSettings: ClockFaceSetting.init(jsonObj: jsonObj["clockFaceSettings"]),
-            title: jsonObj["title"].stringValue
+            title: jsonObj["title"].stringValue,
+            uniqueID: jsonObj["uniqueID"].stringValue
         )
     
     }
     
     func setTitleForRandomClock() {
         self.title = "randomClock-" + String.random(20)
-    }
-
-    func uniqueID() -> String {
-        let okayChars : Set<Character> =
-            Set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890")
-        return String(self.title.filter {okayChars.contains($0) })
     }
     
     //returns a JSON serializable safe version ( 
@@ -225,6 +244,7 @@ class ClockSetting: NSObject {
         var serializedDict = [String:AnyObject]()
         
         serializedDict[ "title" ] = self.title as AnyObject
+        serializedDict[ "uniqueID" ] = self.uniqueID as AnyObject
         serializedDict[ "clockFaceMaterialName" ] = self.clockFaceMaterialName as AnyObject
         serializedDict[ "faceBackgroundType" ] = self.faceBackgroundType.rawValue as AnyObject
         serializedDict[ "clockFaceSettings" ] = self.clockFaceSettings!.serializedSettings()

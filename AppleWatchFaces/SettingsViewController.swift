@@ -135,26 +135,22 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         redrawSettingsTable()
     }
     
-    func makeThumb() {
+    @IBAction func saveClock() {
+        //just save this clock
+        UserClockSetting.sharedClockSettings[currentClockIndex] = SettingsViewController.currentClockSetting
+        UserClockSetting.saveToFile() //remove this to reset to defaults each time app loads
+        self.showMessage( message: SettingsViewController.currentClockSetting.title + " saved.")
+        
+        //make thumbnail
         if let watchVC = watchPreviewViewController {
-
-            if watchVC.makeThumb() {
+            
+            if watchVC.makeThumb( imageName: SettingsViewController.currentClockSetting.uniqueID ) {
                 self.showMessage( message: "Screenshot successful.")
             } else {
                 self.showError(errorMessage: "Problem creating screenshot.")
             }
             
         }
-    }
-    
-    @IBAction func saveClock() {
-        
-        makeThumb()
-        
-        //just save this clock
-        UserClockSetting.sharedClockSettings[currentClockIndex] = SettingsViewController.currentClockSetting
-        UserClockSetting.saveToFile() //remove this to reset to defaults each time app loads
-        self.showMessage( message: SettingsViewController.currentClockSetting.title + " saved.")
     }
     
     @IBAction func revertClock() {

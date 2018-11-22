@@ -37,5 +37,8 @@ class AppUISettings: NSObject {
         
         return false
     }
+    
+    //some other DRY settings
+    static let thumbnailFolder = "thumbs"
 
 }
