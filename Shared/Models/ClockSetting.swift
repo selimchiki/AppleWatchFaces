@@ -70,19 +70,26 @@ class ClockSetting: NSObject {
     }
     
     func clone() -> ClockSetting? {
+        return clone(keepUniqueID: true)
+    }
+    
+    func clone( keepUniqueID: Bool ) -> ClockSetting? {
         // use JSON to clone it cause, you know , you can!
         
         let settingsDict = self.serializedSettings()
         //let settingsData = NSKeyedArchiver.archivedDataWithRootObject(settingsDict)
-        
+    
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: settingsDict, options: JSONSerialization.WritingOptions.prettyPrinted)
             let jsonObj = try! JSON(data: jsonData)
             
             if jsonObj != JSON.null {
                 let newSetting = ClockSetting.init(jsonObj: jsonObj)
-                //re-assing the uid
-                newSetting.uniqueID = UUID().uuidString
+                
+                if !keepUniqueID {
+                    //re-assing the uid
+                    newSetting.uniqueID = UUID().uuidString
+                }
                 return newSetting
             } else {
                 print("could not get json from clone, make sure that contains valid json.")

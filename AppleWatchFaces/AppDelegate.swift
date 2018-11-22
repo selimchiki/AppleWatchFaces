@@ -22,7 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //printFonts()
         
         //TODO: do this only once on initial launch ( save a pref to skip it )
-        createFolders()
+        AppUISettings.createFolders()
+        //TODO: definitely only do this once or resetting to defaults
+        AppUISettings.copyFolders()
         
         return true
     }
@@ -47,19 +49,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-    
-    func createFolders() {
-        let filemgr = FileManager.default
-        let dirPaths = filemgr.urls(for: .documentDirectory, in: .userDomainMask)
-        let docsURL = dirPaths[0]
-        let newDir = docsURL.appendingPathComponent(AppUISettings.thumbnailFolder).path
-        
-        do{
-            try filemgr.createDirectory(atPath: newDir,withIntermediateDirectories: true, attributes: nil)
-        } catch {
-            print("Error: \(error.localizedDescription)")
-        }
     }
     
     func printFonts() {

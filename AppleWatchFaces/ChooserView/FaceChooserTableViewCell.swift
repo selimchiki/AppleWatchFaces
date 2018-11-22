@@ -25,7 +25,7 @@ class FaceChooserTableViewCell: FaceChooserSelectableTableViewCell, UICollection
         
         let clockSetting = UserClockSetting.sharedClockSettings[indexPath.row]
         cell.title.text = clockSetting.title
-        //debugPrint("U: " + clockSetting.uniqueID)
+        debugPrint("U: " + clockSetting.title + " " + clockSetting.uniqueID)
         if let newImage = UIImage.getImageFor(imageName: clockSetting.uniqueID) {
             cell.imageView.image = newImage
         } else {

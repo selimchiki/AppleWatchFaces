@@ -13,6 +13,7 @@ class FaceChooserViewController: UIViewController, WCSessionDelegate {
     
     var session: WCSession?
     @IBOutlet var errorMessageLabel: UILabel!
+    var faceChooserTableViewController:FaceChooserTableViewController?
     
     @IBAction func sendAllSettingsAction(sender: UIButton) {
         //debugPrint("sendAllSettingsAction tapped")
@@ -31,6 +32,14 @@ class FaceChooserViewController: UIViewController, WCSessionDelegate {
     
     @IBAction func resetAllSettingAction(sender: UIButton) {
         UserClockSetting.resetToDefaults()
+        
+        AppUISettings.deleteAllFolders()
+        AppUISettings.createFolders()
+        AppUISettings.copyFolders()
+    
+        if let faceChooserTableVC  = faceChooserTableViewController  {
+            faceChooserTableVC.reloadVisibleThumbs()
+        }
     }
     
     func session(_ session: WCSession, didFinish fileTransfer: WCSessionFileTransfer, error: Error?) {
@@ -97,6 +106,12 @@ class FaceChooserViewController: UIViewController, WCSessionDelegate {
         UserClockSetting.loadFromFile()
     }
 
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is FaceChooserTableViewController {
+            let vc = segue.destination as? FaceChooserTableViewController
+            faceChooserTableViewController = vc
+        }
+    }
 
 }

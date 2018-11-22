@@ -178,8 +178,6 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
-        
         self.errorMessageLabel.alpha = 0.0
         
         NotificationCenter.default.addObserver(self, selector: #selector(onNotification(notification:)), name: SettingsViewController.settingsChangedNotificationName, object: nil)

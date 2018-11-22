@@ -40,5 +40,59 @@ class AppUISettings: NSObject {
     
     //some other DRY settings
     static let thumbnailFolder = "thumbs"
+    
+    static func deleteAllFolders() {
+        let filemgr = FileManager.default
+        let dirPaths = filemgr.urls(for: .documentDirectory, in: .userDomainMask)
+        let docsURL = dirPaths[0]
+        let newDir = docsURL.appendingPathComponent(AppUISettings.thumbnailFolder)
+        
+        do{
+            try filemgr.removeItem(at: newDir)
+        } catch {
+            print("Error: \(error.localizedDescription)")
+        }
+    }
+    
+    static func createFolders() {
+        let filemgr = FileManager.default
+        let dirPaths = filemgr.urls(for: .documentDirectory, in: .userDomainMask)
+        let docsURL = dirPaths[0]
+        let newDir = docsURL.appendingPathComponent(AppUISettings.thumbnailFolder).path
+        
+        do{
+            try filemgr.createDirectory(atPath: newDir,withIntermediateDirectories: true, attributes: nil)
+        } catch {
+            print("Error: \(error.localizedDescription)")
+        }
+    }
+    
+    static func copyFolders() {
+        let filemgr = FileManager.default
+        
+        let dirPaths = filemgr.urls(for: .documentDirectory, in: .userDomainMask)
+        let docsURL = dirPaths[0]
+        
+        let folderPath = Bundle.main.resourceURL!.path
+        let docsFolder = docsURL.appendingPathComponent(AppUISettings.thumbnailFolder).path
+        copyFiles(pathFromBundle: folderPath, pathDestDocs: docsFolder)
+    }
+    
+    static func copyFiles(pathFromBundle : String, pathDestDocs: String) {
+        let fileManagerIs = FileManager.default
+        
+        do {
+            let filelist = try fileManagerIs.contentsOfDirectory(atPath: pathFromBundle)
+            try? fileManagerIs.copyItem(atPath: pathFromBundle, toPath: pathDestDocs)
+            
+            for filename in filelist {
+                if URL.init(string: filename)?.pathExtension == "jpg"  {
+                    try? fileManagerIs.copyItem(atPath: "\(pathFromBundle)/\(filename)", toPath: "\(pathDestDocs)/\(filename)")
+                }
+            }
+        } catch {
+            print("\nError\n")
+        }
+    }
 
 }
