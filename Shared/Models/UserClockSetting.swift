@@ -112,6 +112,7 @@ class UserClockSetting: NSObject {
         for clockSettingSerialized in clockSettingsSerializedArray {
             //print("got title", clockSettingSerialized["title"])
             let newClockSetting = ClockSetting.init(jsonObj: clockSettingSerialized)
+            //debugPrint("n:" + newClockSetting.title + " " + newClockSetting.uniqueID)
             sharedClockSettings.append( newClockSetting )
         }
         
