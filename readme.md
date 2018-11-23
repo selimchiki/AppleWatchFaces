@@ -1,11 +1,8 @@
 
 ## TO DO:
 
-- clean up layout / UI for settings 
-    - move save to top action
-    - hide revert button ( not needed )
-- add more buttons for random ( color, face )
-- get ring settings / editor working
+- add edit table modal for chooser to be able to reorder, delete and add faces
+- get ring settings / editor working ( modal on top might be best ?)
 - refactor AppUISettings
 
 - switch to SVG files for shapes : https://github.com/mchoe/SwiftSVG or https://github.com/pocketsvg/PocketSVG
@@ -44,4 +41,8 @@
 - BUG: settings arent loading in properly when selecting a watch from chooser ( seems to take two times )
 - get textures working for hands
 - enable swiping controls on the watch face ( L/R for prev/next , up for send to watch )
+- clean up layout / UI for settings 
+- move save to top action
+- hide revert button ( not needed )
+- add more buttons for random ( color, face )
 

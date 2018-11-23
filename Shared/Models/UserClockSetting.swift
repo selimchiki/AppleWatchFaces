@@ -45,7 +45,7 @@ class UserClockSetting: NSObject {
                     let clockDecoratorThemesSerializedArray = jsonObj["decorators"].array
                     for clockThemeSerialized in clockDecoratorThemesSerializedArray! {
                         let newTheme = ClockDecoratorTheme.init(jsonObj: clockThemeSerialized)
-                        print("got decorator title", clockThemeSerialized["title"], "minuteHandMovement ", newTheme.minuteHandMovement)
+                        //print("got decorator title", clockThemeSerialized["title"], "minuteHandMovement ", newTheme.minuteHandMovement)
                         sharedDecoratorThemeSettings.append( newTheme )
                     }
                     
@@ -66,13 +66,13 @@ class UserClockSetting: NSObject {
     
         let path = self.ArchiveURL.path
             do {
-                print("JSON file path = \(path)")
+                print("loading JSON file path = \(path)")
                 
                 //let data = try NSData(contentsOfFile: path, options: NSDataReadingOptions.DataReadingMappedIfSafe)
                 let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: Data.ReadingOptions.mappedIfSafe)
                 let jsonObj = try! JSON(data: jsonData)
                 if jsonObj != JSON.null {
-                    print("LOADED !!! jsonData:\(jsonObj)")
+                    //print("LOADED !!! jsonData:\(jsonObj)")
                     clockSettingsSerializedArray = jsonObj["clockSettings"].array!
                     shouldLoadDefaults = false
                 } else {
@@ -112,7 +112,7 @@ class UserClockSetting: NSObject {
         for clockSettingSerialized in clockSettingsSerializedArray {
             //print("got title", clockSettingSerialized["title"])
             let newClockSetting = ClockSetting.init(jsonObj: clockSettingSerialized)
-            debugPrint("n:" + newClockSetting.title + " " + newClockSetting.uniqueID)
+            //debugPrint("n:" + newClockSetting.title + " " + newClockSetting.uniqueID)
             sharedClockSettings.append( newClockSetting )
         }
         

@@ -50,7 +50,7 @@ extension UIImage {
     func save(imageName: String ) -> Bool {
         // image has not been created yet: create it, store it, return it
         let imageUrl = UIImage.getImageURL(imageName: imageName)
-        debugPrint("attempting save image: "+imageUrl.absoluteString)
+        //debugPrint("attempting save image: "+imageUrl.absoluteString)
         return ((try? self.jpegData(compressionQuality: 0.75)?.write(to: imageUrl )) != nil)
         //return ((try? self.pngData()?.write(to: imageUrl )) != nil)
     }
