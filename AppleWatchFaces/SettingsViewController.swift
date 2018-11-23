@@ -176,6 +176,11 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let add = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveClock))
+        //let play = UIBarButtonItem(title: "Play", style: .plain, target: self, action: #selector(playTapped))
+        
+        navigationItem.rightBarButtonItems = [add]
+        
         SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
         
         self.errorMessageLabel.alpha = 0.0
