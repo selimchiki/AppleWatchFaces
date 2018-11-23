@@ -20,40 +20,73 @@ class WatchSettingsTableViewController: UITableViewController {
     
     static let settingsTableSectionReloadNotificationName = Notification.Name("settingsTableSectionReload")
     
+    //current selected group
+    var currentGroupIndex = 0
+    
     //header text,
     let sectionsData = [
-        ["title":"Face Background Type",   "cellID":"faceBackgroundTypeTableViewCell"],
-        ["title":"Face Background Color",   "cellID":"faceBackgroundColorsTableViewCell"],
-        ["title":"Main Background Color",   "cellID":"mainBackgroundColorsTableViewCell"],
-        ["title":"Second Hand",             "cellID":"secondHandSettingsTableViewCell"],
-        ["title":"Second Hand Color",       "cellID":"secondHandColorsTableViewCell"],
-        ["title":"Minute Hand",             "cellID":"minuteHandSettingsTableViewCell"],
-        ["title":"Minute Hand Color",       "cellID":"minuteHandColorTableViewCell"],
-        ["title":"Hour Hand",               "cellID":"hourHandSettingsTableViewCell"],
-        ["title":"Hour Hand Color",         "cellID":"hourHandColorTableViewCell"],
+        [
+            ["title":"Face Background Type",   "cellID":"faceBackgroundTypeTableViewCell"],
+            ["title":"Face Background Color",   "cellID":"faceBackgroundColorsTableViewCell"],
+            ["title":"Main Background Color",   "cellID":"mainBackgroundColorsTableViewCell"]
+        ],
+        [
+            ["title":"Second Hand",             "cellID":"secondHandSettingsTableViewCell"],
+            ["title":"Second Hand Color",       "cellID":"secondHandColorsTableViewCell"],
+            ["title":"Minute Hand",             "cellID":"minuteHandSettingsTableViewCell"],
+            ["title":"Minute Hand Color",       "cellID":"minuteHandColorTableViewCell"],
+            ["title":"Hour Hand",               "cellID":"hourHandSettingsTableViewCell"],
+            ["title":"Hour Hand Color",         "cellID":"hourHandColorTableViewCell"]
+        ],
+        [
+            ["title":"Indicators Main Color",   "cellID":"ringMainColorsTableViewCell"],
+            ["title":"Indicators Secondary Color",   "cellID":"ringSecondaryColorsTableViewCell"]
+        ]
     ]
     
     func valueForHeader( section: Int) -> String {
         var settingText = ""
-        switch section {
-            case 0: settingText = FaceBackgroundNode.descriptionForType(SettingsViewController.currentClockSetting.faceBackgroundType)
-            case 1: settingText = SettingsViewController.currentClockSetting.clockFaceMaterialName
-            case 2: settingText = SettingsViewController.currentClockSetting.clockCasingMaterialName
-            case 3: settingText = SecondHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandType)!)
-            case 4: settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandMaterialName ?? ""
-            case 5: settingText = MinuteHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandType)!)
-            case 6: settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandMaterialName ?? ""
-            case 7: settingText = HourHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandType)!)
-            case 8: settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandMaterialName ?? ""
+        
+        //base this off of the cellID so the data can be dynamic / grouped
+        let cellID = sectionsData[currentGroupIndex][section]["cellID"]
+        
+        switch cellID {
+            case "faceBackgroundTypeTableViewCell":
+                settingText = FaceBackgroundNode.descriptionForType(SettingsViewController.currentClockSetting.faceBackgroundType)
+            case "faceBackgroundColorsTableViewCell":
+                settingText = SettingsViewController.currentClockSetting.clockFaceMaterialName
+            case "mainBackgroundColorsTableViewCell":
+                settingText = SettingsViewController.currentClockSetting.clockCasingMaterialName
+            case "secondHandSettingsTableViewCell":
+                settingText = SecondHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandType)!)
+            case "secondHandColorsTableViewCell":
+                settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandMaterialName ?? ""
+            case "minuteHandSettingsTableViewCell":
+                settingText = MinuteHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandType)!)
+            case "minuteHandColorTableViewCell":
+                settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandMaterialName ?? ""
+            case "hourHandSettingsTableViewCell":
+                settingText = HourHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandType)!)
+            case "hourHandColorTableViewCell":
+                settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandMaterialName ?? ""
+            case "ringMainColorsTableViewCell":
+                settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.ringMaterials[0] ?? ""
+            case "ringSecondaryColorsTableViewCell":
+                settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.ringMaterials[1] ?? ""
         
             default: settingText = ""
         }
         return settingText
     }
     
+    func reloadAfterGroupChange() {
+        //TODO: try to animated this with reloadSections
+        self.tableView.reloadData()
+    }
+    
     func selectCurrentSettings(animated: Bool) {
         //loop through the cells and tell them to select their collectionView current item
-        for sectionNum in 0 ... sectionsData.count {
+        for sectionNum in 0 ... sectionsData[currentGroupIndex].count {
             let indexPath = IndexPath.init(row: 0, section: sectionNum)
             
             //tell the header to update it value
@@ -71,7 +104,7 @@ class WatchSettingsTableViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return sectionsData.count
+        return sectionsData[currentGroupIndex].count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -96,11 +129,11 @@ class WatchSettingsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
-        return sectionsData[section]["title"]
+        return sectionsData[currentGroupIndex][section]["title"]
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellId = sectionsData[indexPath.section]["cellID"]!
+        let cellId = sectionsData[currentGroupIndex][indexPath.section]["cellID"]!
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         return cell

@@ -54,6 +54,7 @@ class ClockFaceSetting: NSObject {
     var minuteHandMovement:MinuteHandMovements
     var shouldShowRomanNumeralText: Bool
     
+    var ringMaterials: [String]
     var ringSettings: [ClockRingSetting]
     
     //tweaks
@@ -70,6 +71,7 @@ class ClockFaceSetting: NSObject {
         secondHandMovement: SecondHandMovements,
         shouldShowRomanNumeralText: Bool,
         
+        ringMaterials: [String],
         ringSettings: [ClockRingSetting]
         )
     {
@@ -85,6 +87,10 @@ class ClockFaceSetting: NSObject {
         self.secondHandMovement = secondHandMovement
         self.shouldShowRomanNumeralText = shouldShowRomanNumeralText
         
+        self.hourHandMaterialName = hourHandMaterialName
+        self.minuteHandMaterialName = minuteHandMaterialName
+        
+        self.ringMaterials = ringMaterials
         self.ringSettings = ringSettings
     
         super.init()
@@ -104,6 +110,7 @@ class ClockFaceSetting: NSObject {
             secondHandMovement: SecondHandMovements.SecondHandMovementStepOver,
             shouldShowRomanNumeralText: false,
             
+            ringMaterials: [ "#FFFFFFFF","#FFFFFFFF" ],
             ringSettings: [ ClockRingSetting.defaults() ]
         )
     }
@@ -123,6 +130,7 @@ class ClockFaceSetting: NSObject {
             secondHandMovement: SecondHandMovements.random(),
             shouldShowRomanNumeralText: false,
         
+            ringMaterials: [ "#FFFFFFFF","#FFFFFFFF" ],
             ringSettings: [ ClockRingSetting.defaults() ]
         )
     }
@@ -140,6 +148,13 @@ class ClockFaceSetting: NSObject {
                 let newRingSetting = ClockRingSetting.init(jsonObj: ringSettingSerialized)
                 ringSettings.append( newRingSetting )
                 }
+        }
+        
+        var ringMaterialsTemp = [String]()
+        if let ringMaterialsSerializedArray = jsonObj["ringMaterials"].array {
+            for ringMaterialsSerialized in ringMaterialsSerializedArray {
+                ringMaterialsTemp.append( ringMaterialsSerialized.stringValue )
+            }
         }
         
         var minuteHandMovement = MinuteHandMovements.MinuteHandMovementStep
@@ -160,6 +175,7 @@ class ClockFaceSetting: NSObject {
             secondHandMovement: SecondHandMovements(rawValue: jsonObj["secondHandMovement"].stringValue)!,
             shouldShowRomanNumeralText: jsonObj[ "shouldShowRomanNumeralText" ].boolValue ,
             
+            ringMaterials : ringMaterialsTemp,
             ringSettings : ringSettings
         )
     }
@@ -179,6 +195,8 @@ class ClockFaceSetting: NSObject {
         serializedDict[ "secondHandMovement" ] = self.secondHandMovement.rawValue as AnyObject
         serializedDict[ "shouldShowRomanNumeralText" ] = NSNumber.init(value: self.shouldShowRomanNumeralText as Bool)
         
+        serializedDict[ "ringMaterials" ] = self.ringMaterials as AnyObject
+
         var ringSettingsArray = [NSDictionary]()
         for ringSetting in self.ringSettings {
             ringSettingsArray.append ( ringSetting.serializedSettings() )

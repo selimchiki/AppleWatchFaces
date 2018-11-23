@@ -10,6 +10,10 @@
                 "hourHandType" : "HourHandTypeRounded",
                 "hourHandMaterialName" : "#00ad00ff",
                 "secondHandType" : "SecondHandTypeRail",
+                "ringMaterials" : [
+                    "#00ad00ff",
+                    ""
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeShapeNode",
@@ -58,6 +62,10 @@
                 "hourHandType" : "HourHandTypeFatBoxy",
                 "hourHandMaterialName" : "#FFFFFFFF",
                 "secondHandType" : "SecondHandTypeBlocky",
+                "ringMaterials" : [
+                    "",
+                    ""
+                ],
                 "ringSettings" : [
                     
                 ],
@@ -79,6 +87,10 @@
                 "hourHandType" : "HourHandTypeSwiss",
                 "hourHandMaterialName" : "#000000FF",
                 "secondHandType" : "SecondHandTypeSwiss",
+                "ringMaterials" : [
+                    "#000000FF",
+                    ""
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -145,6 +157,10 @@
                 "hourHandType" : "HourHandTypeBoxy",
                 "hourHandMaterialName" : "#C7F464",
                 "secondHandType" : "SecondHandTypeRail",
+                "ringMaterials" : [
+                    "#FF6B6B",
+                    "#d1ffa3ff"
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -212,7 +228,7 @@
                         "ringWidth" : "0.075",
                         "ringPatternTotal" : "6",
                         "indicatorType" : "FaceIndicatorTypeTube",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#d1ffa3ff",
                         "ringPattern" : [
                             1,
@@ -240,6 +256,10 @@
                 "hourHandType" : "HourHandTypeSwiss",
                 "hourHandMaterialName" : "#45ADA8",
                 "secondHandType" : "SecondHandTypeRail",
+                "ringMaterials" : [
+                    "#594F4F",
+                    "#547980"
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -356,6 +376,11 @@
                 "hourHandType" : "HourHandTypeSwiss",
                 "hourHandMaterialName" : "#ff7f00ff",
                 "secondHandType" : "SecondHandTypeRail",
+                "ringMaterials" : [
+                    "#c6c6c6ff",
+                    "#ffffffff",
+                    "#ffaa56ff"
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -411,7 +436,7 @@
                         "ringWidth" : "0.075",
                         "ringPatternTotal" : "12",
                         "indicatorType" : "FaceIndicatorTypeBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#ffffffff",
                         "ringPattern" : [
                             0,
@@ -441,7 +466,7 @@
                         "ringWidth" : "0.23",
                         "ringPatternTotal" : "12",
                         "indicatorType" : "FaceIndicatorTypeBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 2,
                         "ringMaterialName" : "#ffaa56ff",
                         "ringPattern" : [
                             1,
@@ -470,6 +495,10 @@
                 "hourHandType" : "HourHandTypeSquaredHole",
                 "hourHandMaterialName" : "#DB97CA",
                 "secondHandType" : "SecondHandTypeSquaredHole",
+                "ringMaterials" : [
+                    "#4F6B8B",
+                    "#000000ff"
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -491,7 +520,7 @@
                         "ringWidth" : "0.0",
                         "ringPatternTotal" : "60",
                         "indicatorType" : "FaceIndicatorTypeBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#000000ff",
                         "ringPattern" : [
                             0,
@@ -523,7 +552,7 @@
                         "ringWidth" : "0.075",
                         "ringPatternTotal" : "60",
                         "indicatorType" : "FaceIndicatorTypeBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#000000FF",
                         "ringPattern" : [
                             1
@@ -537,7 +566,7 @@
                         "ringWidth" : "0.2",
                         "ringPatternTotal" : "12",
                         "indicatorType" : "FaceIndicatorTypeBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#000000ff",
                         "ringPattern" : [
                             1
@@ -564,6 +593,10 @@
                 "hourHandType" : "HourHandTypeRounded",
                 "hourHandMaterialName" : "#000000FF",
                 "secondHandType" : "SecondHandTypePointy",
+                "ringMaterials" : [
+                    "#000000FF",
+                    ""
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -628,6 +661,10 @@
                 "hourHandType" : "HourHandTypeCutout",
                 "hourHandMaterialName" : "#000000ff",
                 "secondHandType" : "SecondHandTypeRail",
+                "ringMaterials" : [
+                    "#000000FF",
+                    ""
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -722,6 +759,11 @@
                 "hourHandType" : "HourHandTypeSquaredHole",
                 "hourHandMaterialName" : "#ffffffff",
                 "secondHandType" : "SecondHandTypeSquaredHole",
+                "ringMaterials" : [
+                    "#ffff00ff",
+                    "#e2e2e2ff",
+                    "#ffffffff"
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -757,7 +799,7 @@
                         "ringWidth" : "0.0",
                         "ringPatternTotal" : "12",
                         "indicatorType" : "FaceIndicatorTypeBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#e2e2e2ff",
                         "ringPattern" : [
                             0,
@@ -803,7 +845,7 @@
                         "ringWidth" : "0.0",
                         "ringPatternTotal" : "60",
                         "indicatorType" : "FaceIndicatorTypeFatBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 2,
                         "ringMaterialName" : "#ffffffff",
                         "ringPattern" : [
                             0,
@@ -821,7 +863,7 @@
                         "ringWidth" : "0.09",
                         "ringPatternTotal" : "12",
                         "indicatorType" : "FaceIndicatorTypeFatBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#ffff00ff",
                         "ringPattern" : [
                             1
@@ -848,6 +890,10 @@
                 "hourHandType" : "HourHandTypeBoxy",
                 "hourHandMaterialName" : "#333333FF",
                 "secondHandType" : "SecondHandTypeBlocky",
+                "ringMaterials" : [
+                    "#1c1c1cff",
+                    "#000000FF"
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -883,7 +929,7 @@
                         "ringWidth" : "0.075",
                         "ringPatternTotal" : "60",
                         "indicatorType" : "FaceIndicatorTypeBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#000000FF",
                         "ringPattern" : [
                             0,
@@ -901,7 +947,7 @@
                         "ringWidth" : "0.15",
                         "ringPatternTotal" : "60",
                         "indicatorType" : "FaceIndicatorTypeBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#000000FF",
                         "ringPattern" : [
                             1
@@ -915,7 +961,7 @@
                         "ringWidth" : "0.18",
                         "ringPatternTotal" : "12",
                         "indicatorType" : "FaceIndicatorTypeBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#000000FF",
                         "ringPattern" : [
                             1
@@ -942,6 +988,10 @@
                 "hourHandType" : "HourHandTypeCutout",
                 "hourHandMaterialName" : "glassTexture",
                 "secondHandType" : "SecondHandTypeRail",
+                "ringMaterials" : [
+                    "#1c1c1cff",
+                    ""
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -1032,6 +1082,11 @@
                 "hourHandType" : "HourHandTypeRounded",
                 "hourHandMaterialName" : "#000000ff",
                 "secondHandType" : "SecondHandTypePointy",
+                "ringMaterials" : [
+                    "#2b2bffff",
+                    "#0000ffff",
+                    "#a00000ff"
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -1081,7 +1136,7 @@
                         "ringWidth" : "0.16",
                         "ringPatternTotal" : "60",
                         "indicatorType" : "FaceIndicatorTypeSphere",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#0000ffff",
                         "ringPattern" : [
                             1
@@ -1095,7 +1150,7 @@
                         "ringWidth" : "0.175",
                         "ringPatternTotal" : "12",
                         "indicatorType" : "FaceIndicatorTypeBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 2,
                         "ringMaterialName" : "#a00000ff",
                         "ringPattern" : [
                             1
@@ -1109,7 +1164,7 @@
                         "ringWidth" : "0.1",
                         "ringPatternTotal" : "12",
                         "indicatorType" : "FaceIndicatorTypeSphere",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#0000ffff",
                         "ringPattern" : [
                             1
@@ -1150,6 +1205,10 @@
                 "hourHandType" : "HourHandTypeSquaredHole",
                 "hourHandMaterialName" : "#79BD9A",
                 "secondHandType" : "SecondHandTypeSquaredHole",
+                "ringMaterials" : [
+                    "#0B486B",
+                    ""
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -1244,6 +1303,10 @@
                 "hourHandType" : "HourHandTypeSquaredHole",
                 "hourHandMaterialName" : "#000000ff",
                 "secondHandType" : "SecondHandTypeSquaredHole",
+                "ringMaterials" : [
+                    "#000000FF",
+                    "#00ad00ff"
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -1297,7 +1360,7 @@
                         "ringWidth" : "0.165",
                         "ringPatternTotal" : "12",
                         "indicatorType" : "FaceIndicatorTypeSphere",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#00ad00ff",
                         "ringPattern" : [
                             1
@@ -1338,6 +1401,10 @@
                 "hourHandType" : "HourHandTypeSwiss",
                 "hourHandMaterialName" : "#000000FF",
                 "secondHandType" : "SecondHandTypeBlocky",
+                "ringMaterials" : [
+                    "#000000FF",
+                    ""
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeShapeNode",
@@ -1402,6 +1469,10 @@
                 "hourHandType" : "HourHandTypeSwiss",
                 "hourHandMaterialName" : "#000000FF",
                 "secondHandType" : "SecondHandTypeRail",
+                "ringMaterials" : [
+                    "#000000FF",
+                    ""
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeShapeNode",
@@ -1468,6 +1539,10 @@
                 "hourHandType" : "HourHandTypeSquaredHole",
                 "hourHandMaterialName" : "#F38630",
                 "secondHandType" : "SecondHandTypeSquaredHole",
+                "ringMaterials" : [
+                    "#F38630",
+                    "#d10000ff"
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -1535,7 +1610,7 @@
                         "ringWidth" : "0.2",
                         "ringPatternTotal" : "12",
                         "indicatorType" : "FaceIndicatorTypeBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#d10000ff",
                         "ringPattern" : [
                             1
@@ -1562,6 +1637,10 @@
                 "hourHandType" : "HourHandTypeRoman",
                 "hourHandMaterialName" : "#000000FF",
                 "secondHandType" : "SecondHandTypeRoman",
+                "ringMaterials" : [
+                    "#000000FF",
+                    ""
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -1642,6 +1721,10 @@
                 "hourHandType" : "HourHandTypeRoman",
                 "hourHandMaterialName" : "#000000FF",
                 "secondHandType" : "SecondHandTypeRail",
+                "ringMaterials" : [
+                    "#000000FF",
+                    ""
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -1820,6 +1903,10 @@
                 "hourHandType" : "HourHandTypeBoxy",
                 "hourHandMaterialName" : "#ffffffff",
                 "secondHandType" : "SecondHandNodeTypeNone",
+                "ringMaterials" : [
+                    "#ffffffff",
+                    "#d8fff8ff"
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -1873,7 +1960,7 @@
                         "ringWidth" : "0.19",
                         "ringPatternTotal" : "12",
                         "indicatorType" : "FaceIndicatorTypeBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#d8fff8ff",
                         "ringPattern" : [
                             1
@@ -1900,6 +1987,10 @@
                 "hourHandType" : "HourHandTypeSwiss",
                 "hourHandMaterialName" : "#333333FF",
                 "secondHandType" : "SecondHandTypePointy",
+                "ringMaterials" : [
+                    "#000000FF",
+                    ""
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -1980,6 +2071,11 @@
                 "hourHandType" : "HourHandTypeSphere",
                 "hourHandMaterialName" : "#007c3eff",
                 "secondHandType" : "SecondHandTypeSphere",
+                "ringMaterials" : [
+                    "#d10000ff",
+                    "#568effff",
+                    "#00a854ff"
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -2015,7 +2111,7 @@
                         "ringWidth" : "0.19",
                         "ringPatternTotal" : "60",
                         "indicatorType" : "FaceIndicatorTypeMediumBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 1,
                         "ringMaterialName" : "#568effff",
                         "ringPattern" : [
                             1
@@ -2029,7 +2125,7 @@
                         "ringWidth" : "0.19",
                         "ringPatternTotal" : "12",
                         "indicatorType" : "FaceIndicatorTypeBox",
-                        "ringMaterialDesiredThemeColorIndex" : 0,
+                        "ringMaterialDesiredThemeColorIndex" : 2,
                         "ringMaterialName" : "#00a854ff",
                         "ringPattern" : [
                             1
@@ -2056,6 +2152,10 @@
                 "hourHandType" : "HourHandTypeBoxy",
                 "hourHandMaterialName" : "#000000FF",
                 "secondHandType" : "SecondHandTypeBlocky",
+                "ringMaterials" : [
+                    "#000000FF",
+                    ""
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -2150,6 +2250,10 @@
                 "hourHandType" : "HourHandTypeSwiss",
                 "hourHandMaterialName" : "#333333FF",
                 "secondHandType" : "SecondHandTypeRail",
+                "ringMaterials" : [
+                    "#000000FF",
+                    ""
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -2244,6 +2348,10 @@
                 "hourHandType" : "HourHandTypeRounded",
                 "hourHandMaterialName" : "#000000FF",
                 "secondHandType" : "SecondHandTypePointy",
+                "ringMaterials" : [
+                    "#000000FF",
+                    ""
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",
@@ -2380,6 +2488,10 @@
                 "hourHandType" : "HourHandTypeBoxy",
                 "hourHandMaterialName" : "#FFFFFFFF",
                 "secondHandType" : "SecondHandTypeRail",
+                "ringMaterials" : [
+                    "#FFFFFFFF",
+                    ""
+                ],
                 "ringSettings" : [
                     {
                         "ringType" : "RingTypeSpacer",

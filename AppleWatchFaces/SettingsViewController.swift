@@ -77,6 +77,14 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         }
     }
     
+    @IBAction func groupChangeAction(sender: UISegmentedControl) {
+        
+        if watchSettingsTableViewController != nil {
+            watchSettingsTableViewController?.currentGroupIndex = sender.selectedSegmentIndex
+            watchSettingsTableViewController?.reloadAfterGroupChange()
+        }
+    }
+    
     @IBAction func sendSettingAction(sender: UIButton) {
         //debugPrint("sendSetting tapped")
         if let validSession = session, let jsonData = SettingsViewController.currentClockSetting.toJSONData() {
@@ -176,10 +184,9 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let add = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveClock))
+        let saveBarButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveClock))
         //let play = UIBarButtonItem(title: "Play", style: .plain, target: self, action: #selector(playTapped))
-        
-        navigationItem.rightBarButtonItems = [add]
+        navigationItem.rightBarButtonItems = [saveBarButton]
         
         SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
         
