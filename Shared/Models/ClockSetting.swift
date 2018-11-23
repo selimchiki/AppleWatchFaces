@@ -178,7 +178,7 @@ class ClockSetting: NSObject {
             self.applyColorTheme(UserClockSetting.randomColorTheme())
         }
     
-        self.setTitleForRandomClock()
+        //self.setTitleForRandomClock()
     }
     
     static func random() -> ClockSetting {

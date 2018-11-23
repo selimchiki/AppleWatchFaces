@@ -59,6 +59,8 @@ class WatchFaceNode: SKShapeNode {
                 var material = ""
                 if (desiredMaterialIndex<=clockFaceSettings.ringMaterials.count-1) {
                     material = clockFaceSettings.ringMaterials[desiredMaterialIndex]
+                } else {
+                    material = clockFaceSettings.ringMaterials[clockFaceSettings.ringMaterials.count-1]
                 }
                 
                 generateRingNode(

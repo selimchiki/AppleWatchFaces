@@ -122,6 +122,12 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         }
     }
     
+    @IBAction func randomColorTheme() {
+        SettingsViewController.currentClockSetting.randomize(newColors: true, newBackground: false, newFace: false)
+        redrawPreviewClock()
+        redrawSettingsTable()
+    }
+    
     @IBAction func nextClock() {
         currentClockIndex = currentClockIndex + 1
         if (UserClockSetting.sharedClockSettings.count <= currentClockIndex) {

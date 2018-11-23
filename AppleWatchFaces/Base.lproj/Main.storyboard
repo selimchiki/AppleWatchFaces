@@ -290,7 +290,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="prevClock" destination="BYZ-38-t0r" eventType="touchUpInside" id="L7E-wV-wDA"/>
+                                    <action selector="randomColorTheme" destination="BYZ-38-t0r" eventType="touchUpInside" id="kuu-2g-S6k"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaP-cM-mRw" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
@@ -310,9 +310,6 @@
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="nextClock" destination="BYZ-38-t0r" eventType="touchUpInside" id="uDI-jl-8dc"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randomize:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xou-WS-SQ6">
                                 <rect key="frame" x="204" y="169" width="171" height="20"/>
