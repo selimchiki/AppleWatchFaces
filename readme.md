@@ -1,7 +1,9 @@
 
 ## TO DO:
 
-- enable swiping controls on the watch face ( L/R for prev/next , up for send to watch )
+- clean up layout / UI for settings 
+    - move save to top action
+    - hide revert button ( not needed )
 - add more buttons for random ( color, face )
 - get ring settings / editor working
 - refactor AppUISettings
@@ -41,3 +43,5 @@
 - copy thumbs from bundle to docs folder for loading in the main view, but do this only once ( save in preferences )
 - BUG: settings arent loading in properly when selecting a watch from chooser ( seems to take two times )
 - get textures working for hands
+- enable swiping controls on the watch face ( L/R for prev/next , up for send to watch )
+

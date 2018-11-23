@@ -68,6 +68,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     {
         if segue.destination is WatchPreviewViewController {
             let vc = segue.destination as? WatchPreviewViewController
+            vc!.settingsViewController = self
             watchPreviewViewController = vc
         }
         if segue.destination is WatchSettingsTableViewController {

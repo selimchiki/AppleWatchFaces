@@ -260,7 +260,7 @@
                                 <color key="textColor" red="1" green="0.12852664389999999" blue="0.067248547749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33s-up-Wg3" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33s-up-Wg3" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
                                 <rect key="frame" x="208" y="197" width="65" height="30"/>
                                 <state key="normal" title="-"/>
                                 <userDefinedRuntimeAttributes>
@@ -275,7 +275,7 @@
                                     <action selector="prevClock" destination="BYZ-38-t0r" eventType="touchUpInside" id="L7E-wV-wDA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaP-cM-mRw" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaP-cM-mRw" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
                                 <rect key="frame" x="294" y="197" width="65" height="30"/>
                                 <state key="normal" title="+"/>
                                 <userDefinedRuntimeAttributes>
@@ -380,6 +380,7 @@
                             <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q5a-mZ-USQ">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                             </skView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
