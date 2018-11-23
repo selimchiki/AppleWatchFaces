@@ -54,12 +54,19 @@ class WatchFaceNode: SKShapeNode {
             var currentDistance = Float(1.0)
             //loop through ring settings and render rings from outside to inside
             for ringSetting in clockFaceSettings.ringSettings {
+                
+                let desiredMaterialIndex = ringSetting.ringMaterialDesiredThemeColorIndex
+                var material = ""
+                if (desiredMaterialIndex<=clockFaceSettings.ringMaterials.count-1) {
+                    material = clockFaceSettings.ringMaterials[desiredMaterialIndex]
+                }
+                
                 generateRingNode(
                     self,
                     patternTotal: ringSetting.ringPatternTotal,
                     patternArray: ringSetting.ringPattern,
                     ringType: ringSetting.ringType,
-                    material: ringSetting.ringMaterialName,
+                    material: material,
                     currentDistance: currentDistance,
                     clockFaceSettings: clockFaceSettings,
                     ringSettings: ringSetting,
@@ -71,7 +78,7 @@ class WatchFaceNode: SKShapeNode {
                     patternTotal: ringSetting.ringPatternTotal,
                     patternArray: ringSetting.ringPattern,
                     ringType: ringSetting.ringType,
-                    material: ringSetting.ringMaterialName,
+                    material: material,
                     currentDistance: currentDistance,
                     clockFaceSettings: clockFaceSettings,
                     ringSettings: ringSetting,

@@ -22,18 +22,7 @@ class ClockFaceSetting: NSObject {
         self.secondHandMovement = theme.secondHandMovement
         self.shouldShowRomanNumeralText = theme.shouldShowRomanNumeralText
         
-        //get material from first ring
-        var ringMaterialName = "#FF0000"
-        
-        if (self.ringSettings.count > 0 ) {
-            ringMaterialName = self.ringSettings[0].ringMaterialName
-        }
         self.ringSettings = theme.ringSettings
-        
-        //override new materials
-        for ringSetting in self.ringSettings {
-            ringSetting.ringMaterialName = ringMaterialName
-        }
     }
     
     //model object to hold instances of a clock face settings

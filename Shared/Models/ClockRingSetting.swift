@@ -94,8 +94,7 @@ class ClockRingSetting: NSObject {
     //MARK: vars
     
     var ringType: RingTypes
-    
-    var ringMaterialName: String
+
     var ringMaterialDesiredThemeColorIndex: Int = 0
     
     var ringWidth: Float
@@ -111,7 +110,6 @@ class ClockRingSetting: NSObject {
     //MARK: init
     
     init(ringType: RingTypes,
-        ringMaterialName: String,
         ringMaterialDesiredThemeColorIndex: Int,
         
         ringWidth: Float,
@@ -126,8 +124,7 @@ class ClockRingSetting: NSObject {
         )
     {
         self.ringType = ringType
-        
-        self.ringMaterialName = ringMaterialName
+
         self.ringMaterialDesiredThemeColorIndex = ringMaterialDesiredThemeColorIndex
         self.ringWidth = ringWidth
         self.ringPattern = ringPattern
@@ -146,7 +143,6 @@ class ClockRingSetting: NSObject {
     static func defaults() -> ClockRingSetting {
         return ClockRingSetting.init(
             ringType: RingTypes.RingTypeShapeNode,
-            ringMaterialName: "#000000FF",
             ringMaterialDesiredThemeColorIndex: 0,
             ringWidth: 0.075,
             ringPattern: [1],
@@ -174,7 +170,6 @@ class ClockRingSetting: NSObject {
         self.init(
             ringType: RingTypes(rawValue: jsonObj["ringType"].stringValue)!,
             
-            ringMaterialName: jsonObj["ringMaterialName"].stringValue,
             ringMaterialDesiredThemeColorIndex : ringMaterialDesiredThemeColorIndex,
             
             ringWidth : Float( jsonObj[ "ringWidth" ].floatValue ),
@@ -193,8 +188,7 @@ class ClockRingSetting: NSObject {
         var serializedDict = [String:AnyObject]()
         
         serializedDict[ "ringType" ] = self.ringType.rawValue as AnyObject
-        
-        serializedDict[ "ringMaterialName" ] = self.ringMaterialName as AnyObject
+
         serializedDict[ "ringMaterialDesiredThemeColorIndex" ] = self.ringMaterialDesiredThemeColorIndex as AnyObject
         
         serializedDict[ "ringWidth" ] = self.ringWidth.description as AnyObject

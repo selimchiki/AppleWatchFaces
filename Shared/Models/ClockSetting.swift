@@ -26,15 +26,7 @@ class ClockSetting: NSObject {
         self.clockFaceSettings?.minuteHandMaterialName = theme.minuteHandMaterialName
         self.clockFaceSettings?.secondHandMaterialName = theme.secondHandMaterialName
         
-        for ringSetting in (self.clockFaceSettings?.ringSettings)! {
-            let desiredIndex = ringSetting.ringMaterialDesiredThemeColorIndex
-            if theme.ringMaterials.indices.contains(desiredIndex) {
-                ringSetting.ringMaterialName = theme.ringMaterials[desiredIndex]
-            } else {
-                ringSetting.ringMaterialName = theme.ringMaterials[0]
-            }
-        }
-        
+        self.clockFaceSettings?.ringMaterials = theme.ringMaterials
     }
     
     func applyDecoratorTheme ( _ theme: ClockDecoratorTheme ) {
