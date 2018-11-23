@@ -1,19 +1,19 @@
 
 ## TO DO:
 
--push app to hockeyapp for beta testing
-
--enable saving thumbnails when saving a watch
--copy thumbs from bundle to docs folder for loading in the main view, but do this only once ( save in preferences )
-
--enable swiping controls on the watch face ( L/R for prev/next , up for send to watch )
+- enable swiping controls on the watch face ( L/R for prev/next , up for send to watch )
+- add more buttons for random ( color, face )
+- get ring settings / editor working
+- refactor AppUISettings
 
 - switch to SVG files for shapes : https://github.com/mchoe/SwiftSVG or https://github.com/pocketsvg/PocketSVG
-- get ring settings / editor working
+- push app to hockeyapp for beta testing
+- make new target that regenerates all the default thumbnails?
 
 ## IDEAS:
 - show name of current face on watch when first starting ( then fade it out )
 - better highlighting of the parts ( zoomed in outline )
+- tinting colors for textures?
 
 ## COMPLETED
 - switch to sending JSONData for watch comms
@@ -37,4 +37,7 @@
 - make watch face chooser on main view TV + CV to allow for more settings 
 - test on larger watch in simulator
 - anti aliasing shapes!
-
+- enable saving thumbnails when saving a watch
+- copy thumbs from bundle to docs folder for loading in the main view, but do this only once ( save in preferences )
+- BUG: settings arent loading in properly when selecting a watch from chooser ( seems to take two times )
+- get textures working for hands

@@ -31,21 +31,21 @@ class WatchFaceNode: SKShapeNode {
             self.addChild(backgroundShapeNode)
             
             let secondHandFillColor = SKColor.init(hexString: clockFaceSettings.secondHandMaterialName)
-            let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType, fillColor: secondHandFillColor, strokeColor: secondHandFillColor, lineWidth: 1.0)
+            let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType, material: clockFaceSettings.secondHandMaterialName, strokeColor: secondHandFillColor, lineWidth: 1.0)
             secHandNode.name = "secondHand"
             secHandNode.zPosition = 4
             
             self.addChild(secHandNode)
             
-            let minuteHandFillColor = SKColor.init(hexString: clockFaceSettings.minuteHandMaterialName)
-            let minHandNode = MinuteHandNode.init(minuteHandType: clockFaceSettings.minuteHandType, fillColor: minuteHandFillColor, strokeColor: minuteHandFillColor, lineWidth: 1.0)
+            let minuteHandStrokeColor = SKColor.init(hexString: clockFaceSettings.minuteHandMaterialName)
+            let minHandNode = MinuteHandNode.init(minuteHandType: clockFaceSettings.minuteHandType, material: clockFaceSettings.minuteHandMaterialName, strokeColor: minuteHandStrokeColor, lineWidth: 1.0)
             minHandNode.name = "minuteHand"
             minHandNode.zPosition = 3
             
             self.addChild(minHandNode)
             
             let hourHandFillColor = SKColor.init(hexString: clockFaceSettings.hourHandMaterialName)
-            let hourHandNode = HourHandNode.init(hourHandType: clockFaceSettings.hourHandType, fillColor: hourHandFillColor, strokeColor: hourHandFillColor, lineWidth: 1.0)
+            let hourHandNode = HourHandNode.init(hourHandType: clockFaceSettings.hourHandType, material: clockFaceSettings.hourHandMaterialName, strokeColor: hourHandFillColor, lineWidth: 1.0)
             hourHandNode.name = "hourHand"
             hourHandNode.zPosition = 3
             

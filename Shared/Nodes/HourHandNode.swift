@@ -57,16 +57,16 @@ class HourHandNode: SKSpriteNode {
     }
     
     convenience init(hourHandType: HourHandTypes) {
-        self.init(hourHandType: hourHandType, fillColor: SKColor.white)
+        self.init(hourHandType: hourHandType, material: "#ffffffff")
     }
     
-    convenience init(hourHandType: HourHandTypes, fillColor: SKColor) {
-        self.init(hourHandType: hourHandType, fillColor: fillColor, strokeColor: SKColor.clear, lineWidth: 2.0)
+    convenience init(hourHandType: HourHandTypes, material: String) {
+        self.init(hourHandType: hourHandType, material: material, strokeColor: SKColor.clear, lineWidth: 2.0)
     }
     
-    init(hourHandType: HourHandTypes, fillColor: SKColor, strokeColor: SKColor, lineWidth: CGFloat) {
+    init(hourHandType: HourHandTypes, material: String, strokeColor: SKColor, lineWidth: CGFloat) {
 
-        super.init(texture: nil, color: fillColor, size: CGSize())
+        super.init(texture: nil, color: SKColor.clear, size: CGSize())
         
         self.name = "hourHand"
         
@@ -75,7 +75,7 @@ class HourHandNode: SKSpriteNode {
             let shape = SKShapeNode.init(circleOfRadius: 5)
             shape.position = CGPoint.init(x: 0, y: 53.0)
             
-            shape.fillColor = fillColor
+            shape.setMaterial(material: material)
             shape.strokeColor = strokeColor
             shape.lineWidth = lineWidth
             
@@ -100,7 +100,7 @@ class HourHandNode: SKSpriteNode {
             bezierPath.flatness = 0.01
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = fillColor
+            shape.setMaterial(material: material)
             shape.strokeColor = strokeColor
             shape.lineWidth = lineWidth
             
@@ -113,7 +113,7 @@ class HourHandNode: SKSpriteNode {
             let rectanglePath = UIBezierPath(rect: CGRect(x: -1.5, y: -11, width: 3, height: 60))
             
             let shape = SKShapeNode.init(path: rectanglePath.cgPath)
-            shape.fillColor = fillColor
+            shape.setMaterial(material: material)
             shape.strokeColor = strokeColor
             shape.lineWidth = lineWidth
             
@@ -125,7 +125,7 @@ class HourHandNode: SKSpriteNode {
             let rectanglePath = UIBezierPath(rect: CGRect(x: -3, y: -15, width: 6, height: 65))
             
             let shape = SKShapeNode.init(path: rectanglePath.cgPath)
-            shape.fillColor = fillColor
+            shape.setMaterial(material: material)
             shape.strokeColor = strokeColor
             shape.lineWidth = lineWidth
             
@@ -150,7 +150,7 @@ class HourHandNode: SKSpriteNode {
             bezierPath.close()
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = fillColor
+            shape.setMaterial(material: material)
             shape.strokeColor = strokeColor
             shape.lineWidth = lineWidth
             
@@ -168,7 +168,7 @@ class HourHandNode: SKSpriteNode {
             bezierPath.close()
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = fillColor
+            shape.setMaterial(material: material)
             shape.strokeColor = strokeColor
             shape.lineWidth = lineWidth
             
@@ -192,7 +192,7 @@ class HourHandNode: SKSpriteNode {
             bezierPath.flatness = 0.01
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = fillColor
+            shape.setMaterial(material: material)
             shape.strokeColor = strokeColor
             shape.lineWidth = lineWidth
             
@@ -337,7 +337,7 @@ class HourHandNode: SKSpriteNode {
             
             let shape = SKShapeNode.init(path: hourHandPath.cgPath)
             shape.setScale(0.35)
-            shape.fillColor = fillColor
+            shape.setMaterial(material: material)
             shape.strokeColor = strokeColor
             shape.lineWidth = lineWidth
             

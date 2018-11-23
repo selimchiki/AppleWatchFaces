@@ -56,7 +56,11 @@ class FaceBackgroundNode: SKSpriteNode {
         return typeKeysArray
     }
     
-    init(backgroundType: FaceBackgroundTypes, material: String) {
+    convenience init(backgroundType: FaceBackgroundTypes, material: String) {
+        self.init(backgroundType: backgroundType, material: material, strokeColor: SKColor.clear, lineWidth: 1.0)
+    }
+    
+    init(backgroundType: FaceBackgroundTypes, material: String, strokeColor: SKColor, lineWidth: CGFloat ) {
         
         super.init(texture: nil, color: SKColor.clear, size: CGSize.init())
         
@@ -71,10 +75,12 @@ class FaceBackgroundNode: SKSpriteNode {
             bezierPath.addLine(to: CGPoint(x: boundsPosition, y: -boundsPosition))
             bezierPath.close()
             
-            let shapeNode = SKShapeNode.init(path: bezierPath.cgPath)
-            shapeNode.setMaterial(material: material)
+            let shape = SKShapeNode.init(path: bezierPath.cgPath)
+            shape.setMaterial(material: material)
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
-            self.addChild(shapeNode)
+            self.addChild(shape)
         }
         
         if (backgroundType == FaceBackgroundTypes.FaceBackgroundTypeVerticalSplit) {
@@ -86,10 +92,12 @@ class FaceBackgroundNode: SKSpriteNode {
             bezierPath.addLine(to: CGPoint(x: 0, y: -boundsPosition))
             bezierPath.close()
             
-            let shapeNode = SKShapeNode.init(path: bezierPath.cgPath)
-            shapeNode.setMaterial(material: material)
+            let shape = SKShapeNode.init(path: bezierPath.cgPath)
+            shape.setMaterial(material: material)
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
-            self.addChild(shapeNode)
+            self.addChild(shape)
         }
         
         if (backgroundType == FaceBackgroundTypes.FaceBackgroundTypeHorizontalSplit) {
@@ -101,27 +109,34 @@ class FaceBackgroundNode: SKSpriteNode {
             bezierPath.addLine(to: CGPoint(x: -boundsPosition, y: 0))
             bezierPath.close()
             
-            let shapeNode = SKShapeNode.init(path: bezierPath.cgPath)
-            shapeNode.setMaterial(material: material)
+            let shape = SKShapeNode.init(path: bezierPath.cgPath)
+            shape.setMaterial(material: material)
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
-            self.addChild(shapeNode)
+            self.addChild(shape)
         }
         
         if (backgroundType == FaceBackgroundTypes.FaceBackgroundTypeFilled) {
             let w = CGFloat( CGFloat(4.0) )
             let h = CGFloat( CGFloat(4.0) )
-            let shapeNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: w * sizeMultiplier, height: h * sizeMultiplier))
-            shapeNode.setMaterial(material: material)
-            shapeNode.position = CGPoint.init(x: -(w * sizeMultiplier)/2, y: -(h * sizeMultiplier)/2)
-            self.addChild(shapeNode)
+            let shape = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: w * sizeMultiplier, height: h * sizeMultiplier))
+            shape.setMaterial(material: material)
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
+            
+            shape.position = CGPoint.init(x: -(w * sizeMultiplier)/2, y: -(h * sizeMultiplier)/2)
+            self.addChild(shape)
         }
         
         if (backgroundType == FaceBackgroundTypes.FaceBackgroundTypeCircle) {
             let r = CGFloat(1.04)
-            let shapeNode = SKShapeNode.init(circleOfRadius: r * sizeMultiplier)
-            shapeNode.setMaterial(material: material)
+            let shape = SKShapeNode.init(circleOfRadius: r * sizeMultiplier)
+            shape.setMaterial(material: material)
+            shape.strokeColor = strokeColor
+            shape.lineWidth = lineWidth
             
-            self.addChild(shapeNode)
+            self.addChild(shape)
         }
         
         

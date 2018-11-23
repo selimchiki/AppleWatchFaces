@@ -161,8 +161,6 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        redrawSettingsTable()
-        
         if WCSession.isSupported() {
             session = WCSession.default
             session?.delegate = self
@@ -170,13 +168,14 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         }
         
         //get current selected clock
-        SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
+        redrawSettingsTable()
         redrawPreviewClock()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
         
         self.errorMessageLabel.alpha = 0.0
         

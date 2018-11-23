@@ -82,19 +82,19 @@ class SecondHandSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UIC
             
             cell.secondHandType = SecondHandTypes.userSelectableValues[indexPath.row]
             
-            let scaleMultiplier:CGFloat = 0.005
+            let scaleMultiplier:CGFloat = 0.008
             
             let handNode = SecondHandNode.init(secondHandType: SecondHandTypes.userSelectableValues[indexPath.row])
             handNode.setScale(scaleMultiplier)
-            handNode.position = CGPoint.init(x: scene.size.width/2, y: scene.size.width/10)
+            handNode.position = CGPoint.init(x: scene.size.width/2, y: scene.size.width/7)
             scene.addChild(handNode)
             
             let highlightColor = SKColor.init(hexString: AppUISettings.settingHighlightColor)
             let highlightLineWidth = AppUISettings.settingLineWidthBeforeScale
-            let selectedHandNode = SecondHandNode.init(secondHandType: SecondHandTypes.userSelectableValues[indexPath.row], fillColor: SKColor.clear, strokeColor: highlightColor, lineWidth:highlightLineWidth)
+            let selectedHandNode = SecondHandNode.init(secondHandType: SecondHandTypes.userSelectableValues[indexPath.row], material: "#ff0000ff", strokeColor: highlightColor, lineWidth:highlightLineWidth)
             selectedHandNode.name = "selectedNode"
             selectedHandNode.setScale(scaleMultiplier)
-            selectedHandNode.position = CGPoint.init(x: scene.size.width/2, y: scene.size.width/10)
+            selectedHandNode.position = CGPoint.init(x: scene.size.width/2, y: scene.size.width/7)
             
             selectedHandNode.isHidden = !cell.isSelected
 

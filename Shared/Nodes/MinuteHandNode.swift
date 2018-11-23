@@ -69,24 +69,23 @@ class MinuteHandNode: SKSpriteNode {
     }
     
     convenience init(minuteHandType: MinuteHandTypes) {
-        self.init(minuteHandType: minuteHandType, fillColor: SKColor.white)
+        self.init(minuteHandType: minuteHandType, material: "#ffffffff")
     }
     
-    convenience init(minuteHandType: MinuteHandTypes, fillColor: SKColor) {
-        self.init(minuteHandType: minuteHandType, fillColor: fillColor, strokeColor: SKColor.clear, lineWidth: 2.0)
+    convenience init(minuteHandType: MinuteHandTypes, material: String) {
+        self.init(minuteHandType: minuteHandType, material: material, strokeColor: SKColor.clear, lineWidth: 2.0)
     }
     
-    init(minuteHandType: MinuteHandTypes, fillColor: SKColor, strokeColor: SKColor, lineWidth: CGFloat) {
+    init(minuteHandType: MinuteHandTypes, material: String, strokeColor: SKColor, lineWidth: CGFloat) {
     
-        super.init(texture: nil, color: fillColor, size: CGSize())
+        super.init(texture: nil, color: SKColor.white, size: CGSize())
         self.name = "minuteHand"
         
         if (minuteHandType == MinuteHandTypes.MinuteHandTypeSphere) {
             
             let shape = SKShapeNode.init(circleOfRadius: 5)
             shape.position = CGPoint.init(x: 0, y: 70.0)
-            
-            shape.fillColor = fillColor
+            shape.setMaterial(material: material)
             shape.strokeColor = strokeColor
             shape.lineWidth = lineWidth
             
@@ -112,7 +111,7 @@ class MinuteHandNode: SKSpriteNode {
             bezierPath.flatness = 0.1
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = fillColor
+            shape.setMaterial(material: material)
             shape.strokeColor = strokeColor
             shape.lineWidth = lineWidth
             
@@ -139,7 +138,7 @@ class MinuteHandNode: SKSpriteNode {
             bezierPath.flatness = 0.1
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = fillColor
+            shape.setMaterial(material: material)
             shape.strokeColor = strokeColor
             shape.lineWidth = lineWidth
             
@@ -167,7 +166,7 @@ class MinuteHandNode: SKSpriteNode {
             bezierPath.flatness = 0.1
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = fillColor
+            shape.setMaterial(material: material)
             shape.strokeColor = strokeColor
             shape.lineWidth = lineWidth
             
@@ -185,7 +184,7 @@ class MinuteHandNode: SKSpriteNode {
             minuteHandPath.close()
             
             let shape = SKShapeNode.init(path: minuteHandPath.cgPath)
-            shape.fillColor = fillColor
+            shape.setMaterial(material: material)
             shape.strokeColor = strokeColor
             shape.lineWidth = lineWidth
             
@@ -209,7 +208,7 @@ class MinuteHandNode: SKSpriteNode {
             bezierPath.flatness = 0.1
             
             let shape = SKShapeNode.init(path: bezierPath.cgPath)
-            shape.fillColor = fillColor
+            shape.setMaterial(material: material)
             shape.strokeColor = strokeColor
             shape.lineWidth = lineWidth
             
@@ -402,7 +401,7 @@ class MinuteHandNode: SKSpriteNode {
             
             let shape = SKShapeNode.init(path: minuteHandPath.cgPath)
             shape.setScale(0.35)
-            shape.fillColor = fillColor
+            shape.setMaterial(material: material)
             shape.strokeColor = strokeColor
             shape.lineWidth = lineWidth
             

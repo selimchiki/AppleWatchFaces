@@ -12,7 +12,6 @@ extension SKShapeNode {
     func setMaterial( material: String ) {
         if AppUISettings.materialIsColor(materialName: material) {
             self.fillColor = SKColor.init(hexString: material)
-            self.strokeColor = SKColor.init(hexString: material)
         } else {
             if let image = UIImage.init(named: material) {
                 self.fillTexture = SKTexture.init(image: image)

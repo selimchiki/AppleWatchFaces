@@ -80,15 +80,16 @@ class FaceBackgroundSettingsTableViewCell: WatchSettingsSelectableTableViewCell,
             
             cell.faceBackgroundType = FaceBackgroundTypes.userSelectableValues[indexPath.row]
             
-            let scaleMultiplier:CGFloat = 0.0025
+            let scaleMultiplier:CGFloat = 0.0020
             
-            let handNode = FaceBackgroundNode.init(backgroundType: FaceBackgroundTypes.userSelectableValues[indexPath.row], material: "#FF000000FF")
+            let handNode = FaceBackgroundNode.init(backgroundType: FaceBackgroundTypes.userSelectableValues[indexPath.row], material: "#ffffffff")
             handNode.setScale(scaleMultiplier)
             handNode.position = CGPoint.init(x: scene.size.width/2, y: scene.size.width/2)
             scene.addChild(handNode)
             
-            //let highlightLineWidth = AppUISettings.settingLineWidthBeforeScale
-            let selectedHandNode = FaceBackgroundNode.init(backgroundType: FaceBackgroundTypes.userSelectableValues[indexPath.row], material: AppUISettings.settingHighlightColor)
+            let highlightLineWidth = AppUISettings.settingLineWidthBeforeScale * 4.0
+            let strokeColor = SKColor.init(hexString: AppUISettings.settingHighlightColor)
+            let selectedHandNode = FaceBackgroundNode.init(backgroundType: FaceBackgroundTypes.userSelectableValues[indexPath.row], material: "#ffffffff", strokeColor: strokeColor, lineWidth: highlightLineWidth)
             
             selectedHandNode.name = "selectedNode"
             selectedHandNode.setScale(scaleMultiplier)
