@@ -64,6 +64,16 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         showError(errorMessage: "Watch session deactivated.")
     }
     
+    override func willMove(toParent parent: UIViewController?) {
+        super.willMove(toParent: parent)
+        
+        if parent == nil {
+            if let vc = self.navigationController?.viewControllers.first as? FaceChooserViewController {
+                vc.faceListReloadType = .onlyvisible
+            }
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.destination is WatchPreviewViewController {
@@ -75,6 +85,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
             let vc = segue.destination as? WatchSettingsTableViewController
             watchSettingsTableViewController = vc
         }
+        
     }
     
     @IBAction func groupChangeAction(sender: UISegmentedControl) {
@@ -174,7 +185,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         redrawPreviewClock()
         redrawSettingsTable()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         if WCSession.isSupported() {
             session = WCSession.default

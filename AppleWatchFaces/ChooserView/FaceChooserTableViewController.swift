@@ -52,6 +52,13 @@ class FaceChooserTableViewController: UITableViewController {
         return cell
     }
     
+    func reloadAllThumbs() {
+        //may have new items, lets reload them
+        if let fCv = faceChooserCollectionView {
+            fCv.reloadData()
+        }
+    }
+    
     func reloadVisibleThumbs() {
         //may have new items, lets reload them
         if let fCv = faceChooserCollectionView {
@@ -60,7 +67,7 @@ class FaceChooserTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        reloadVisibleThumbs()
+        //reloadVisibleThumbs()
     }
     
 }

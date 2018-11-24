@@ -10,9 +10,14 @@ import UIKit
 
 class FaceChooserEditTableViewController: UITableViewController {
     
+    var faceChooserViewController: FaceChooserViewController?
+    
     @IBAction func exit() {
+        if let fcVC = self.faceChooserViewController {
+            fcVC.faceListReloadType = .full
+        }
         self.dismiss(animated: true) {
-            //
+            
         }
     }
     

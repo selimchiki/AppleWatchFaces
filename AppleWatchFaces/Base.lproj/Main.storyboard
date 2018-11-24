@@ -89,7 +89,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="WYT-la-yHS">
                             <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="ymT-0p-Xy0" kind="presentation" id="4zM-Rp-hye"/>
+                                <segue destination="ymT-0p-Xy0" kind="presentation" identifier="chooseFacesEditSegueID" id="4zM-Rp-hye"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

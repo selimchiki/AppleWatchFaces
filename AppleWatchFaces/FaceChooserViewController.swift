@@ -9,11 +9,16 @@
 import UIKit
 import WatchConnectivity
 
+enum FaceListReloadType: String {
+    case none, onlyvisible, full
+}
+
 class FaceChooserViewController: UIViewController, WCSessionDelegate {
     
     var session: WCSession?
     @IBOutlet var errorMessageLabel: UILabel!
     var faceChooserTableViewController:FaceChooserTableViewController?
+    var faceListReloadType : FaceListReloadType = .none
     
     @IBAction func sendAllSettingsAction(sender: UIButton) {
         //debugPrint("sendAllSettingsAction tapped")
@@ -38,7 +43,7 @@ class FaceChooserViewController: UIViewController, WCSessionDelegate {
         AppUISettings.copyFolders()
     
         if let faceChooserTableVC  = faceChooserTableViewController  {
-            faceChooserTableVC.reloadVisibleThumbs()
+            faceChooserTableVC.reloadAllThumbs() // may have deleted or insterted, so reloadData
         }
     }
     
@@ -99,7 +104,19 @@ class FaceChooserViewController: UIViewController, WCSessionDelegate {
             session?.delegate = self
             session?.activate()
         }
+        
+        if faceListReloadType == .full {
+            if let faceChooserTableVC  = faceChooserTableViewController  {
+                faceChooserTableVC.reloadAllThumbs()
+            }
+        }
+        if faceListReloadType == .onlyvisible {
+            if let faceChooserTableVC  = faceChooserTableViewController  {
+                faceChooserTableVC.reloadVisibleThumbs()
+            }
+        }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -112,6 +129,15 @@ class FaceChooserViewController: UIViewController, WCSessionDelegate {
             let vc = segue.destination as? FaceChooserTableViewController
             faceChooserTableViewController = vc
         }
+        
+        if segue.identifier == "chooseFacesEditSegueID" {
+            if let nc = segue.destination as? UINavigationController {
+                if let vc = nc.viewControllers.first as? FaceChooserEditTableViewController {
+                    vc.faceChooserViewController = self
+                }
+            }
+        }
+        
     }
 
 }
