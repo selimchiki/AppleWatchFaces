@@ -86,6 +86,12 @@
                         <viewLayoutGuide key="safeArea" id="vUG-c0-AEw"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Faces" id="u2g-6W-vb9">
+                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="Sgt-YO-ljZ">
+                            <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="newFaceSegueID" id="k1T-5T-jKT"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="WYT-la-yHS">
                             <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -282,7 +288,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ra1-dY-OJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="40.799999999999997" y="129.98500749625188"/>
+            <point key="canvasLocation" x="26" y="131"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1130,4 +1136,7 @@
     <resources>
         <image name="watchFrame" width="437" height="462"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bWw-bL-6IE"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -138,6 +138,21 @@ class FaceChooserViewController: UIViewController, WCSessionDelegate {
             }
         }
         
+        if segue.identifier == "newFaceSegueID" {
+            if segue.destination is SettingsViewController {
+                //add a new item into the shared settings
+                let newClockSetting = ClockSetting.defaults()
+                UserClockSetting.sharedClockSettings.insert(newClockSetting, at: 0)
+                //reload this tableView so it wont crash later trying to only show visible
+                if let faceChooserTableVC  = faceChooserTableViewController  {
+                    faceChooserTableVC.reloadAllThumbs()
+                }
+                //ensure it shows the first one ( our new one )
+                let vc = segue.destination as? SettingsViewController
+                vc?.currentClockIndex = 0
+            }
+        }
+        
     }
 
 }
