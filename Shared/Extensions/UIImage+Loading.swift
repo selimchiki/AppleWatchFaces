@@ -54,4 +54,17 @@ extension UIImage {
         return ((try? self.jpegData(compressionQuality: 0.75)?.write(to: imageUrl )) != nil)
         //return ((try? self.pngData()?.write(to: imageUrl )) != nil)
     }
+    
+    static func delete(imageName: String ) -> Bool {
+        //debugPrint("looking getImagePath: " + getImagePath(imageName: imageName))
+        let fileManager = FileManager.default
+        // check if the image is stored already
+        let url = getImageURL(imageName: imageName)
+        if fileManager.fileExists(atPath: url.path ) {
+            try? fileManager.removeItem(at: url)
+            return true
+        } else {
+            return false
+        }
+    }
 }

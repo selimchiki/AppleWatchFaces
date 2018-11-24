@@ -53,14 +53,22 @@ class FaceChooserEditTableViewController: UITableViewController {
         let object = UserClockSetting.sharedClockSettings[sourceRow]
         UserClockSetting.sharedClockSettings.remove(at: sourceRow)
         UserClockSetting.sharedClockSettings.insert(object, at: destRow)
+        //save new result to disk
+        UserClockSetting.saveToFile()
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let sourceRow = indexPath.row;
-            UserClockSetting.sharedClockSettings.remove(at: sourceRow)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            setTitleWithCount()
+            let trashedSetting = UserClockSetting.sharedClockSettings[sourceRow]
+            //delete thumbnail
+            if UIImage.delete(imageName:  trashedSetting.uniqueID) {
+                UserClockSetting.sharedClockSettings.remove(at: sourceRow)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                setTitleWithCount()
+                //save new result to disk
+                UserClockSetting.saveToFile()
+            }
         }
     }
     
