@@ -63,7 +63,7 @@ class AppUISettings: NSObject {
         do{
             try filemgr.createDirectory(atPath: newDir,withIntermediateDirectories: true, attributes: nil)
         } catch {
-            //print("Error: \(error.localizedDescription)")
+            print("Error: \(error.localizedDescription)")
         }
     }
     
@@ -83,15 +83,15 @@ class AppUISettings: NSObject {
         
         do {
             let filelist = try fileManagerIs.contentsOfDirectory(atPath: pathFromBundle)
-            try fileManagerIs.copyItem(atPath: pathFromBundle, toPath: pathDestDocs)
+            try? fileManagerIs.copyItem(atPath: pathFromBundle, toPath: pathDestDocs)
             
             for filename in filelist {
                 if URL.init(string: filename)?.pathExtension == "jpg"  {
-                    try fileManagerIs.copyItem(atPath: "\(pathFromBundle)/\(filename)", toPath: "\(pathDestDocs)/\(filename)")
+                    try? fileManagerIs.copyItem(atPath: "\(pathFromBundle)/\(filename)", toPath: "\(pathDestDocs)/\(filename)")
                 }
             }
         } catch {
-            //print("\nError\n")
+            print("\nError\n")
         }
     }
 
