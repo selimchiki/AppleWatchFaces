@@ -1,7 +1,7 @@
 
 ## TO DO:
 
-- add edit table modal for chooser to be able to reorder, delete and add faces
+- show title & allow editing of titles in settings ( tap on it fo a popup )
 - get ring settings / editor working ( modal on top might be best ?)
 - refactor AppUISettings
 
@@ -45,4 +45,4 @@
 - move save to top action
 - hide revert button ( not needed )
 - add more buttons for random ( color, face )
-
+- add edit table modal for chooser to be able to reorder, delete and add faces

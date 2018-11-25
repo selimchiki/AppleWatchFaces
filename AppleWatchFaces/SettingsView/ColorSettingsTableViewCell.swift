@@ -20,7 +20,7 @@ class ColorSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UICollec
     }
     
     func colorListVersion( unfilteredColor: String ) -> String {
-        debugPrint("unnfiltered:" + unfilteredColor)
+        //debugPrint("unnfiltered:" + unfilteredColor)
         //TODO: add #
         let colorListVersion = unfilteredColor.lowercased()
         //keep only first 6 chars
@@ -29,7 +29,7 @@ class ColorSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UICollec
         //should be
         //#d8fff8ff
         
-        debugPrint("filtered:" + colorListVersionSubString)
+        //debugPrint("filtered:" + colorListVersionSubString)
         
         return colorListVersionSubString
     }

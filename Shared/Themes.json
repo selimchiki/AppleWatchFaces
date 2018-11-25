@@ -731,6 +731,7 @@
                     {
                     "title" : "Energizer",
                     
+                    "faceBackgroundType" : "FaceBackgroundTypeDiagonalSplit",
                     "secondHandType" : "SecondHandTypeSquaredHole",
                     "shouldShowRomanNumeralText" : false,
                     "minuteHandType" : "MinuteHandTypeSquaredHole",

@@ -17,7 +17,7 @@ class FaceBackgroundColorSettingTableViewCell: ColorSettingsTableViewCell {
     
     // called after a new setting should be selected ( IE a new design is loaded )
     override func chooseSetting( animated: Bool ) {
-        debugPrint("** FaceBackgroundColorSettingTableViewCell called **" + SettingsViewController.currentClockSetting.clockFaceMaterialName)
+        //debugPrint("** FaceBackgroundColorSettingTableViewCell called **" + SettingsViewController.currentClockSetting.clockFaceMaterialName)
     
         let filteredColor = colorListVersion(unfilteredColor: SettingsViewController.currentClockSetting.clockFaceMaterialName)
         if let materialColorIndex = colorList.firstIndex(of: filteredColor) {

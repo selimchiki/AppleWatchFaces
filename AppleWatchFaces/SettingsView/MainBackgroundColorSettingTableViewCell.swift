@@ -18,7 +18,7 @@ class MainBackgroundColorSettingTableViewCell: ColorSettingsTableViewCell {
     
     // called after a new setting should be selected ( IE a new design is loaded )
     override func chooseSetting( animated: Bool ) {
-        debugPrint("** MainBackgroundColorSettingTableViewCell called **" + SettingsViewController.currentClockSetting.clockCasingMaterialName)
+        //debugPrint("** MainBackgroundColorSettingTableViewCell called **" + SettingsViewController.currentClockSetting.clockCasingMaterialName)
         
         let filteredColor = colorListVersion(unfilteredColor: SettingsViewController.currentClockSetting.clockCasingMaterialName)
         if let materialColorIndex = colorList.firstIndex(of: filteredColor) {

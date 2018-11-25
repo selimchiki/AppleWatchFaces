@@ -163,7 +163,7 @@ class ClockSetting: NSObject {
             clockCasingMaterialName: "#FF0000FF",
             
             clockFaceSettings: ClockFaceSetting.defaults(),
-            title: ""
+            title: "Untitled"
         )
     }
     
@@ -172,6 +172,8 @@ class ClockSetting: NSObject {
             self.faceBackgroundType = FaceBackgroundTypes.random()
         }
         if (newFace) {
+            let newFace = UserClockSetting.randomDecoratorTheme()
+            //debugPrint("rando face theme: " + newFace.title)
             self.applyDecoratorTheme(UserClockSetting.randomDecoratorTheme())
         }
         if (newColors) {
