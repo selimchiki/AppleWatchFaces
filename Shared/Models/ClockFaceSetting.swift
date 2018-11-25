@@ -10,6 +10,7 @@
 import SceneKit
 import SpriteKit
 
+//model object to hold instances of a clock face settings
 class ClockFaceSetting: NSObject {
     
     func applyDecoratorTheme( _ theme: ClockDecoratorTheme) {
@@ -24,8 +25,6 @@ class ClockFaceSetting: NSObject {
         
         self.ringSettings = theme.ringSettings
     }
-    
-    //model object to hold instances of a clock face settings
     
     //NOTE: ANY CHANGES HERE PROBABLY NEED TO BE MADE IN DECORATOR THEMES
     

@@ -32,6 +32,7 @@ class ClockSetting: NSObject {
     func applyDecoratorTheme ( _ theme: ClockDecoratorTheme ) {
         print("using face theme: ", theme.title)
         self.decoratorThemeTitle = theme.title
+        self.faceBackgroundType = theme.faceBackgroundType
         
         self.clockFaceSettings?.applyDecoratorTheme( theme )
     }
@@ -172,8 +173,6 @@ class ClockSetting: NSObject {
             self.faceBackgroundType = FaceBackgroundTypes.random()
         }
         if (newFace) {
-            let newFace = UserClockSetting.randomDecoratorTheme()
-            //debugPrint("rando face theme: " + newFace.title)
             self.applyDecoratorTheme(UserClockSetting.randomDecoratorTheme())
         }
         if (newColors) {

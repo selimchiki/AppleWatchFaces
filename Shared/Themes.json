@@ -5,6 +5,7 @@
                 
                     "title" : "Retro Diner",
                     
+                    "faceBackgroundType" : "FaceBackgroundTypeFilled",
                     "minuteHandType" : "MinuteHandTypeFatBoxy",
                     "hourHandType" : "HourHandTypeBoxy",
                     "secondHandType" : "SecondHandTypeBlocky",
@@ -90,6 +91,7 @@
                     
             "title" : "Plane Jain",
  
+            "faceBackgroundType" : "FaceBackgroundTypeFilled",
             "minuteHandType" : "MinuteHandTypeSwiss",
             "hourHandType" : "HourHandTypeSwiss",
             "secondHandType" : "SecondHandTypeRail",
@@ -155,6 +157,7 @@
             
             "title" : "Less Plane Jain",
             
+            "faceBackgroundType" : "FaceBackgroundTypeFilled",
             "minuteHandType" : "MinuteHandTypeSwiss",
             "hourHandType" : "HourHandTypeSwiss",
             "secondHandType" : "SecondHandTypeRail",
@@ -246,7 +249,8 @@
             },
         {
             "title" : "Outside Hours",
-                    
+        
+            "faceBackgroundType" : "FaceBackgroundTypeCircle",
             "secondHandType" : "SecondHandTypeRail",
             "shouldShowRomanNumeralText" : false,
             "minuteHandType" : "MinuteHandTypeSwiss",
@@ -313,6 +317,7 @@
         {
             "title" : "Biggy Smalls",
 
+            "faceBackgroundType" : "FaceBackgroundTypeFilled",
             "secondHandType" : "SecondHandTypeSwiss",
             "secondHandMovement": "SecondHandMovementOscillate",
             "minuteHandMovement": "MinuteHandMovementSmooth",
@@ -380,8 +385,8 @@
         {
             "title" : "Decorative Lines",
             
+            "faceBackgroundType" : "FaceBackgroundTypeFilled",
             "minuteHandType" : "MinuteHandTypeSwiss",
-           
             "hourHandType" : "HourHandTypeSwiss",
             "secondHandType" : "SecondHandTypeRail",
             "secondHandMovement": "SecondHandMovementSmooth",
@@ -472,6 +477,7 @@
         {
             "title" : "Roman Numerals",
             
+            "faceBackgroundType" : "FaceBackgroundTypeFilled",
             "minuteHandType" : "MinuteHandTypeRoman",
             "hourHandType" : "HourHandTypeRoman",
             "secondHandType" : "SecondHandTypeRoman",
@@ -535,6 +541,8 @@
         },
         {
             "title" : "All Numbers",
+            
+            "faceBackgroundType" : "FaceBackgroundTypeFilled",
             "minuteHandType" : "MinuteHandTypeRounded",
             "secondHandMovement": "SecondHandMovementStepOver",
             "minuteHandMovement": "MinuteHandMovementStep",
@@ -599,6 +607,7 @@
         {
             "title" : "High Tech",
             
+            "faceBackgroundType" : "FaceBackgroundTypeDiagonalSplit",
             "secondHandType" : "SecondHandTypeRail",
             "shouldShowRomanNumeralText" : false,
             "minuteHandType" : "MinuteHandTypeBoxy",
@@ -664,6 +673,7 @@
             {
                     "title" : "High Tech Fancy",
                     
+                    "faceBackgroundType" : "FaceBackgroundTypeFilled",
                     "secondHandType" : "SecondHandTypeRail",
                     "shouldShowRomanNumeralText" : false,
                     "minuteHandType" : "MinuteHandTypeBoxy",
@@ -824,6 +834,7 @@
                     {
                     "title" : "Spectacle",
 
+                    "faceBackgroundType" : "FaceBackgroundTypeFilled",
                     "minuteHandType" : "MinuteHandTypeSwiss",
                     "shouldShowRomanNumeralText" : false,
                     "secondHandMovement" : "SecondHandMovementStepOver",
@@ -908,6 +919,8 @@
                     
                     {
                     "title" : "Old Times",
+                    
+                    "faceBackgroundType" : "FaceBackgroundTypeFilled",
                     "hourHandType" : "HourHandTypeSquaredHole",
                     "secondHandMovement" : "SecondHandMovementSmooth",
                     "minuteHandMovement": "MinuteHandMovementSmooth",
@@ -988,6 +1001,8 @@
                     },
                     {
                     "title" : "Old Times 2",
+                    
+                    "faceBackgroundType" : "FaceBackgroundTypeFilled",
                     "hourHandType" : "HourHandTypeSquaredHole",
                     "secondHandMovement" : "SecondHandMovementSmooth",
                     "minuteHandMovement": "MinuteHandMovementSmooth",
@@ -1069,8 +1084,10 @@
                     },
                 {
                     "title" : "Light X2",
-                    "hourHandType" : "HourHandTypeBoxy",
                     
+                    "faceBackgroundType" : "FaceBackgroundTypeDiagonalSplit",
+                    
+                    "hourHandType" : "HourHandTypeBoxy",
                     "secondHandMovement" : "SecondHandMovementStepOver",
                     "minuteHandMovement": "MinuteHandMovementSmooth",
                     "shouldShowRomanNumeralText" : false,
@@ -1152,6 +1169,8 @@
                     
                     {
                     "title" : "Retro House",
+                    
+                    "faceBackgroundType" : "FaceBackgroundTypeFilled",
                     "hourHandType" : "HourHandTypeSquaredHole",
                     "secondHandMovement" : "SecondHandMovementSmooth",
                     "minuteHandMovement": "MinuteHandMovementSmooth",
@@ -1426,7 +1445,7 @@
         "minuteHandMaterialName" : "#91ffecff",
         "secondHandMaterialName" : "#00d8b4ff",
         
-        "ringMaterials" : [ "#00d8b4ff" , "#91ffecff" ]
+        "ringMaterials" : [ "#00d8b4ff" , "#91ffecff", "#6dffb6ff" ]
     },
     {
         "title" : "Blue White",

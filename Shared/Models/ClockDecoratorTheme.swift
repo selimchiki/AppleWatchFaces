@@ -15,6 +15,8 @@ class ClockDecoratorTheme: NSObject {
     
     var title:String
     
+    var faceBackgroundType:FaceBackgroundTypes
+    
     // types
     var hourHandType:HourHandTypes
     var minuteHandType:MinuteHandTypes
@@ -31,8 +33,9 @@ class ClockDecoratorTheme: NSObject {
     //NOTE: ANY CHANGES HERE NEED TO BE MADE IN CLOCKFACESETTINGS
     
     init(jsonObj: JSON ) {
-        
         self.title = jsonObj["title"].stringValue
+        
+        self.faceBackgroundType = FaceBackgroundTypes(rawValue: jsonObj["faceBackgroundType"].stringValue)!
         self.hourHandType = HourHandTypes(rawValue: jsonObj["hourHandType"].stringValue)!
         self.minuteHandType = MinuteHandTypes(rawValue: jsonObj["minuteHandType"].stringValue)!
         self.secondHandType = SecondHandTypes(rawValue: jsonObj["secondHandType"].stringValue)!
