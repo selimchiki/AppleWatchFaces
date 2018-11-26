@@ -98,7 +98,7 @@ class ClockFaceSetting: NSObject {
             secondHandMovement: SecondHandMovements.SecondHandMovementStepOver,
             shouldShowRomanNumeralText: false,
             
-            ringMaterials: [ "#FFFFFFFF","#FFFFFFFF" ],
+            ringMaterials: [ "#FFFFFFFF","#FFFFFFFF","#FFFFFFFF" ],
             ringSettings: [ ClockRingSetting.defaults() ]
         )
     }
@@ -118,7 +118,7 @@ class ClockFaceSetting: NSObject {
             secondHandMovement: SecondHandMovements.random(),
             shouldShowRomanNumeralText: false,
         
-            ringMaterials: [ "#FFFFFFFF","#FFFFFFFF" ],
+            ringMaterials: [ "#FFFFFFFF","#FFFFFFFF","#FFFFFFFF" ],
             ringSettings: [ ClockRingSetting.defaults() ]
         )
     }

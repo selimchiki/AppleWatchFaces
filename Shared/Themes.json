@@ -80,6 +80,7 @@
                                          ],
                         "ringPatternTotal" : "12",
                         "ringType" : "RingTypeTextNode",
+                        "ringMaterialDesiredThemeColorIndex": 2,
                         "indicatorType" : "FaceIndicatorTypeBox",
                         "ringMaterialName" : "#0B486B",
                         "textType" : "NumberTextTypeIronLounge",
@@ -218,7 +219,7 @@
                               "textSize" : "0.2"
                               },
                               {
-                              "ringMaterialDesiredThemeColorIndex": 1,
+                              "ringMaterialDesiredThemeColorIndex": 2,
                               "ringType" : "RingTypeTextNode",
                               "ringMaterialName" : "#000000FF",
                               "ringPattern" : [1,0,0],
@@ -233,6 +234,7 @@
                               },
                               {
                               "ringType" : "RingTypeTextNode",
+                              "ringMaterialDesiredThemeColorIndex": 1,
                               "ringMaterialName" : "#000000FF",
                               "ringPattern" : [0,1,1],
                               "ringWidth" : "0.0",
@@ -272,6 +274,7 @@
                                       },
                                       {
                                       "ringType" : "RingTypeTextNode",
+                                      "ringMaterialDesiredThemeColorIndex": 2,
                                       "ringMaterialName" : "#000000FF",
                                       "ringPattern" : [1],
                                       "ringWidth" : "0.21",
@@ -367,6 +370,7 @@
                               },
                               {
                               "ringType" : "RingTypeTextNode",
+                              "ringMaterialDesiredThemeColorIndex": 2,
                               "ringMaterialName" : "#000000FF",
                               "ringPattern" : [1,0,0],
                               "ringWidth" : "0.33",
@@ -444,7 +448,7 @@
                                       "textSize" : "0.2"
                                       },
                                       {
-                                          "ringMaterialDesiredThemeColorIndex": 1,
+                                          "ringMaterialDesiredThemeColorIndex": 2,
                                           "ringType" : "RingTypeTextNode",
                                           "ringMaterialName" : "#000000FF",
                                           "ringPattern" : [1,0,0],
@@ -590,6 +594,7 @@
                                       },
                                       {
                                       "ringType" : "RingTypeTextNode",
+                                      "ringMaterialDesiredThemeColorIndex": 2,
                                       "ringMaterialName" : "#00ad00ff",
                                       "ringPattern" : [1],
                                       "ringWidth" : "0.2",
@@ -723,6 +728,7 @@
                                       },
                                       {
                                       "ringType" : "RingTypeTextRotatingNode",
+                                      "ringMaterialDesiredThemeColorIndex": 2,
                                       "ringMaterialName" : "#d8fff8ff",
                                       "ringPattern" : [1],
                                       "ringWidth" : "0.19",
@@ -767,13 +773,14 @@
                                       "ringPattern" : [0,1,1],
                                       "ringPatternTotal" : "12",
                                       "ringType" : "RingTypeTextNode",
+                                      "ringMaterialDesiredThemeColorIndex": 1,
                                       "indicatorType" : "FaceIndicatorTypeBox",
                                       "ringMaterialName" : "#e2e2e2ff",
                                       "textType" : "NumberTextTypeModernInteger",
                                       "textSize" : "0.35"
                                       },
                                       {
-                                      "ringMaterialDesiredThemeColorIndex": 1,
+                                      "ringMaterialDesiredThemeColorIndex": 2,
                                       "ringWidth" : "0.2",
                                       "indicatorSize" : "0.06",
                                       "ringPattern" : [1,0,0],
@@ -900,7 +907,7 @@
                                       "textSize" : "0.2"
                                       },
                                       {
-                                      "ringMaterialDesiredThemeColorIndex": 1,
+                                      "ringMaterialDesiredThemeColorIndex": 2,
                                       "ringWidth" : "0.23",
                                       "indicatorSize" : "0.33",
                                       "ringPattern" : [1,0,0],
@@ -1075,6 +1082,7 @@
                                                        ],
                                       "ringPatternTotal" : "12",
                                       "ringType" : "RingTypeTextNode",
+                                      "ringMaterialDesiredThemeColorIndex": 2,
                                       "indicatorType" : "FaceIndicatorTypeBox",
                                       "ringMaterialName" : "#000000FF",
                                       "textType" : "NumberTextTypeHelvicaNeueBold",
@@ -1153,6 +1161,7 @@
                                   },
                                   {
                                   "ringType" : "RingTypeTextRotatingNode",
+                                  "ringMaterialDesiredThemeColorIndex": 2,
                                   "ringMaterialName" : "#000000FF",
                                   "textSize" : "0.35",
                                   "ringPattern" : [
@@ -1207,6 +1216,7 @@
                              },
                              {
                              "indicatorType" : "FaceIndicatorTypeBox",
+                             "ringMaterialDesiredThemeColorIndex": 0,
                              "indicatorSize" : "0.07",
                              "ringWidth" : "0.0",
                              "ringMaterialName" : "#F38630",
@@ -1233,7 +1243,8 @@
                              "ringPattern" : [
                                               1
                                               ],
-                             "ringType" : "RingTypeShapeNode"
+                             "ringType" : "RingTypeShapeNode",
+                             "ringMaterialDesiredThemeColorIndex": 1
                              },
                              {
                              "indicatorType" : "FaceIndicatorTypeSphere",
@@ -1259,7 +1270,8 @@
                              "ringPattern" : [
                                               1
                                               ],
-                             "ringType" : "RingTypeTextNode"
+                             "ringType" : "RingTypeTextNode",
+                             "ringMaterialDesiredThemeColorIndex": 2
                              }
                          ]
                     }
@@ -1275,7 +1287,7 @@
                 "minuteHandMaterialName" : "#C58D66",
                 "secondHandMaterialName" : "#46261D",
                 
-                "ringMaterials" : [ "#3B2A22", "#D2765D" ]
+                "ringMaterials" : [ "#3B2A22", "#D2765D", "" ]
         },
         {
                 "title" : "Barbie",
@@ -1287,7 +1299,7 @@
                 "minuteHandMaterialName" : "#9792C5",
                 "secondHandMaterialName" : "#38BB88",
                 
-                "ringMaterials" : [ "#87236F", "#9792C5" ]
+                "ringMaterials" : [ "#87236F", "#9792C5", "#87236F" ]
         },
         {
                 "title" : "80s Neon",
@@ -1299,7 +1311,7 @@
                 "minuteHandMaterialName" : "#561865",
                 "secondHandMaterialName" : "#F43C73",
                 
-                "ringMaterials" : [ "#160203", "#561865" ]
+                "ringMaterials" : [ "#160203", "#561865", "" ]
         },
         {
                 "title" : "Custard Pie",
@@ -1311,7 +1323,7 @@
                 "minuteHandMaterialName" : "#4F6B8B",
                 "secondHandMaterialName" : "#377243",
                 
-                "ringMaterials" : [ "#4F6B8B", "#377243" ]
+                "ringMaterials" : [ "#4F6B8B", "#377243", "#DB97CA" ]
         },
         {
                 "title" : "Kale",
@@ -1323,7 +1335,7 @@
                 "minuteHandMaterialName" : "#939791",
                 "secondHandMaterialName" : "#ECF827",
                 
-                "ringMaterials" : [ "#F8F6FC", "#939791" ]
+                "ringMaterials" : [ "#F8F6FC", "#939791", "#D3D584" ]
         },
         {
                 "title" : "Checkered Sweater",
@@ -1335,7 +1347,7 @@
                 "minuteHandMaterialName" : "#20322F",
                 "secondHandMaterialName" : "#CCAA62",
                 
-                "ringMaterials" : [ "#20322F", "#283E31" ]
+                "ringMaterials" : [ "#20322F", "#283E31", "#383838" ]
         },
                 
         {
@@ -1348,7 +1360,7 @@
             "minuteHandMaterialName" : "#45ADA8",
             "secondHandMaterialName" : "#547980",
             
-            "ringMaterials" : [ "#594F4F", "#547980" ]
+            "ringMaterials" : [ "#594F4F", "#547980", "#00332a" ]
         },
         {
             "title" : "Cheery",
@@ -1360,7 +1372,7 @@
             "minuteHandMaterialName" : "#C7F464",
             "secondHandMaterialName" : "#033649",
             
-            "ringMaterials" : [ "#FF6B6B", "#C7F464" ]
+            "ringMaterials" : [ "#FF6B6B", "#C7F464", "#FF6B6B" ]
         },
         {
             "title" : "Terra",
@@ -1372,7 +1384,7 @@
             "minuteHandMaterialName" : "#036564",
             "secondHandMaterialName" : "#033649",
             
-            "ringMaterials" : [ "#033649", "#036564" ]
+            "ringMaterials" : [ "#033649", "#036564", "#336600" ]
         },
         {
             "title" : "SkyBlue",
@@ -1384,19 +1396,19 @@
             "minuteHandMaterialName" : "#3B8686",
             "secondHandMaterialName" : "#0B486B",
             
-            "ringMaterials" : [ "#0B486B", "#3B8686" ]
+            "ringMaterials" : [ "#0B486B", "#3B8686", "#00967dff" ]
         },
         {
             "title" : "Metallica",
             
-            "clockCasingMaterialName" : "metalTexture",
+            "clockCasingMaterialName" : "copper.jpg",
             "clockFaceMaterialName" : "#c6c6c6ff",
             
             "hourHandMaterialName" : "#333333FF",
             "minuteHandMaterialName" : "#333333FF",
             "secondHandMaterialName" : "#A00000FF",
             
-            "ringMaterials" : [ "#000000FF", "#333333FF" ]
+            "ringMaterials" : [ "#000000FF", "#333333FF", "" ]
         },
                 
     {
@@ -1409,7 +1421,7 @@
         "minuteHandMaterialName" : "#000000FF",
         "secondHandMaterialName" : "#FF0000FF",
      
-        "ringMaterials" : [ "#000000FF", "#000000FF" ]
+        "ringMaterials" : [ "#000000FF", "#000000FF", "" ]
     },
      {
          "title" : "Darkness",
@@ -1421,7 +1433,7 @@
          "minuteHandMaterialName" : "#FFFFFFFF",
          "secondHandMaterialName" : "#FF0000FF",
          
-         "ringMaterials" : [ "#FFFFFFFF", "#DDDDDDFF"  ]
+         "ringMaterials" : [ "#FFFFFFFF", "#DDDDDDFF", "#c6c6c6"  ]
      },
     {
         "title" : "Blood and Tears",
@@ -1433,7 +1445,7 @@
         "minuteHandMaterialName" : "#ffaa56ff",
         "secondHandMaterialName" : "#707070ff",
         
-        "ringMaterials" : [ "#FFFFFFFF", "#707070ff" ]
+        "ringMaterials" : [ "#FFFFFFFF", "#707070ff", "#ffaa56ff" ]
     },
     {
         "title" : "Aqua Dreams",
@@ -1457,7 +1469,7 @@
         "minuteHandMaterialName" : "#FFFFFFFF",
         "secondHandMaterialName" : "#a05000ff",
         
-        "ringMaterials" : [ "#FFFFFFFF",  "#BBBBFFFF" ]
+        "ringMaterials" : [ "#FFFFFFFF",  "#BBBBFFFF", "#d8f2ffff" ]
     },
     {
         "title" : "Yellow Glow",
@@ -1469,31 +1481,31 @@
         "minuteHandMaterialName" : "#333333FF",
         "secondHandMaterialName" : "#000000ff",
         
-        "ringMaterials" : [ "#000000FF", "#333333FF" ]
+        "ringMaterials" : [ "#000000FF", "#333333FF", "#383838" ]
     },
     {
         "title" : "Wood+Stone",
         
-        "clockCasingMaterialName" : "woodTexture",
-        "clockFaceMaterialName" : "ironTexture",
+        "clockCasingMaterialName" : "light-wood.jpg",
+        "clockFaceMaterialName" : "copper.jpg",
         
         "hourHandMaterialName" : "#FFFFFFFF",
         "minuteHandMaterialName" : "#FFFFFFFF",
-        "secondHandMaterialName" : "woodTexture",
+        "secondHandMaterialName" : "light-wood.jpg",
         
-        "ringMaterials" : [ "#FFFFFFFF", "woodTexture" ]
+        "ringMaterials" : [ "#FFFFFFFF", "#ffeaadff", "#e2e2e2ff" ]
     },
     {
         "title" : "Cobalt Wood",
         
-        "clockCasingMaterialName" : "wood2Texture",
-        "clockFaceMaterialName" : "#001133ff",
+        "clockCasingMaterialName" : "#001133ff",
+        "clockFaceMaterialName" : "light-wood.jpg",
         
         "hourHandMaterialName" : "#FFFFFFFF",
         "minuteHandMaterialName" : "#FFFFFFFF",
         "secondHandMaterialName" : "#ff8282ff",
         
-        "ringMaterials" : [ "#FFFFFFFF", "wood2Texture"  ]
+        "ringMaterials" : [ "#FFFFFFFF", "#e2e2e2ff", "#664c00ff"  ]
     },
     {
         "title" : "Light Coffee",
@@ -1505,7 +1517,7 @@
         "minuteHandMaterialName" : "#a3e0ffff",
         "secondHandMaterialName" : "#00a9ffff",
         
-        "ringMaterials" : [ "#d8f2ffff", "#a3e0ffff" ]
+        "ringMaterials" : [ "#d8f2ffff", "#a3e0ffff", "#997200ff" ]
     },
     {
         "title" : "Neon Green",
@@ -1517,7 +1529,7 @@
         "minuteHandMaterialName" : "#00ad00ff",
         "secondHandMaterialName" : "#00ff00ff",
         
-        "ringMaterials" : [ "#00ad00ff", "#00ff00ff" ]
+        "ringMaterials" : [ "#00ad00ff", "#00ff00ff", "#00ff00ff" ]
     },
     {
         "title" : "Fire Watch",
@@ -1529,7 +1541,7 @@
         "minuteHandMaterialName" : "#ff7f00ff",
         "secondHandMaterialName" : "#FFD700FF",
         
-        "ringMaterials" : [ "#c6c6c6ff" , "#ffffffff" ]
+        "ringMaterials" : [ "#c6c6c6ff" , "#ffffffff", "#008ed6ff" ]
     },
     {
         "title" : "Retro Diner",
@@ -1541,7 +1553,7 @@
         "minuteHandMaterialName" : "#ff82c0ff",
         "secondHandMaterialName" : "#FFD700FF",
         
-        "ringMaterials" : [ "#e2e2e2ff", "#ff82c0ff" ]
+        "ringMaterials" : [ "#e2e2e2ff", "#ff82c0ff", "#00b799ff" ]
     }
     ]
 }

@@ -15,6 +15,7 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#00ad00ff",
+                    "",
                     ""
                 ],
                 "ringSettings" : [
@@ -65,6 +66,7 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "",
+                    "",
                     ""
                 ],
                 "ringSettings" : [
@@ -90,6 +92,7 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
+                    "",
                     ""
                 ],
                 "ringSettings" : [
@@ -157,7 +160,8 @@
                 "shouldShowRomanNumeralText" : true,
                 "ringMaterials" : [
                     "#FF6B6B",
-                    "#d1ffa3ff"
+                    "#d1ffa3ff",
+                    ""
                 ],
                 "ringSettings" : [
                     {
@@ -251,7 +255,8 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#594F4F",
-                    "#547980"
+                    "#547980",
+                    ""
                 ],
                 "ringSettings" : [
                     {
@@ -478,7 +483,8 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#4F6B8B",
-                    "#000000ff"
+                    "#000000ff",
+                    ""
                 ],
                 "ringSettings" : [
                     {
@@ -571,6 +577,7 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
+                    "",
                     ""
                 ],
                 "ringSettings" : [
@@ -636,6 +643,7 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
+                    "",
                     ""
                 ],
                 "ringSettings" : [
@@ -853,7 +861,8 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#1c1c1cff",
-                    "#000000FF"
+                    "#000000FF",
+                    ""
                 ],
                 "ringSettings" : [
                     {
@@ -946,6 +955,7 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#1c1c1cff",
+                    "",
                     ""
                 ],
                 "ringSettings" : [
@@ -1151,6 +1161,7 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#0B486B",
+                    "",
                     ""
                 ],
                 "ringSettings" : [
@@ -1244,7 +1255,8 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
-                    "#00ad00ff"
+                    "#00ad00ff",
+                    ""
                 ],
                 "ringSettings" : [
                     {
@@ -1337,6 +1349,7 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
+                    "",
                     ""
                 ],
                 "ringSettings" : [
@@ -1402,6 +1415,7 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
+                    "",
                     ""
                 ],
                 "ringSettings" : [
@@ -1469,7 +1483,8 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#F38630",
-                    "#d10000ff"
+                    "#d10000ff",
+                    ""
                 ],
                 "ringSettings" : [
                     {
@@ -1562,6 +1577,7 @@
                 "shouldShowRomanNumeralText" : true,
                 "ringMaterials" : [
                     "#000000FF",
+                    "",
                     ""
                 ],
                 "ringSettings" : [
@@ -1642,6 +1658,7 @@
                 "shouldShowRomanNumeralText" : true,
                 "ringMaterials" : [
                     "#000000FF",
+                    "",
                     ""
                 ],
                 "ringSettings" : [
@@ -1813,7 +1830,8 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#ffffffff",
-                    "#d8fff8ff"
+                    "#d8fff8ff",
+                    ""
                 ],
                 "ringSettings" : [
                     {
@@ -1893,6 +1911,7 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
+                    "",
                     ""
                 ],
                 "ringSettings" : [
@@ -2050,6 +2069,7 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
+                    "",
                     ""
                 ],
                 "ringSettings" : [
@@ -2143,6 +2163,7 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
+                    "",
                     ""
                 ],
                 "ringSettings" : [
@@ -2236,6 +2257,7 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
+                    "",
                     ""
                 ],
                 "ringSettings" : [
@@ -2368,6 +2390,7 @@
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#FFFFFFFF",
+                    "",
                     ""
                 ],
                 "ringSettings" : [

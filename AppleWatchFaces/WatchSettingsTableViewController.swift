@@ -40,7 +40,8 @@ class WatchSettingsTableViewController: UITableViewController {
         ],
         [
             ["title":"Indicators Main Color",   "cellID":"ringMainColorsTableViewCell"],
-            ["title":"Indicators Secondary Color",   "cellID":"ringSecondaryColorsTableViewCell"]
+            ["title":"Indicators Secondary Color",   "cellID":"ringSecondaryColorsTableViewCell"],
+            ["title":"Indicators Highlight Color",   "cellID":"ringThirdColorsTableViewCell"]
         ]
     ]
     
@@ -73,6 +74,13 @@ class WatchSettingsTableViewController: UITableViewController {
                 settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.ringMaterials[0] ?? ""
             case "ringSecondaryColorsTableViewCell":
                 settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.ringMaterials[1] ?? ""
+            case "ringThirdColorsTableViewCell":
+                if let clockFaceSettings = SettingsViewController.currentClockSetting.clockFaceSettings {
+                    if clockFaceSettings.ringMaterials.count>2 {
+                    settingText = clockFaceSettings.ringMaterials[2]
+                    }
+                    
+            }
         
             default: settingText = ""
         }

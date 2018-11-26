@@ -1,6 +1,7 @@
 
 ## TO DO:
 
+- add third color to ring materials
 - show title & allow editing of titles in settings ( tap on it fo a popup )
 - get ring settings / editor working ( modal on top might be best ?)
 - refactor AppUISettings
