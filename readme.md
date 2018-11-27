@@ -47,3 +47,4 @@
 - add more buttons for random ( color, face )
 - add edit table modal for chooser to be able to reorder, delete and add faces
 - add third color to ring materials
+- add watch frame to chooser edit view
