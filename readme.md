@@ -10,8 +10,9 @@
 - make new target that regenerates all the default thumbnails?
 
 ## IDEAS:
-- skin/see thru / tattoo watch
+- skin-see thru / tattoo watch
 - show name of current face on watch when first starting ( then fade it out )
+- !! save json data into JPEG for import / export over social  https://stackoverflow.com/questions/40175160/exif-data-read-and-write
 - better highlighting of the parts ( zoomed in outline )
 - tinting colors for textures?
 

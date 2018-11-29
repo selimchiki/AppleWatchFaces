@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-    <string>#ffffffff</string>
+	<string>#ffffffff</string>
 	<string>#e2e2e2ff</string>
 	<string>#c6c6c6ff</string>
 	<string>#aaaaaaff</string>
@@ -162,13 +162,14 @@
 	<string>#005884ff</string>
 	<string>#003d5bff</string>
 	<string>#002133ff</string>
-    <string>vinylAlbum.jpg</string>
-    <string>watchGears.jpg</string>
-    <string>brass.jpg</string>
-    <string>copper.jpg</string>
-    <string>kork.jpg</string>
-    <string>light-wood.jpg</string>
-    <string>wallpaper70s.jpg</string>
-    <string>wallpaperFlower.jpg</string>
+	<string>vinylAlbum.jpg</string>
+	<string>watchGears.jpg</string>
+	<string>brass.jpg</string>
+	<string>copper.jpg</string>
+	<string>kork.jpg</string>
+	<string>light-wood.jpg</string>
+	<string>wallpaper70s.jpg</string>
+	<string>wallpaperFlower.jpg</string>
+	<string>wrist.jpg</string>
 </array>
 </plist>

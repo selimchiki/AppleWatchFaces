@@ -19,6 +19,8 @@
 		310BA1C621AF736400A146B7 /* TitleSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BA1C521AF736400A146B7 /* TitleSettingsTableViewCell.swift */; };
 		310BA1C821AFAADB00A146B7 /* ColorThemeSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BA1C721AFAADB00A146B7 /* ColorThemeSettingsTableViewCell.swift */; };
 		310BA1CA21AFAF9200A146B7 /* ColorThemeSettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BA1C921AFAF9200A146B7 /* ColorThemeSettingCollectionViewCell.swift */; };
+		310BA1CC21AFBDE300A146B7 /* wrist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 310BA1CB21AFBDE300A146B7 /* wrist.jpg */; };
+		310BA1CD21AFBDE300A146B7 /* wrist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 310BA1CB21AFBDE300A146B7 /* wrist.jpg */; };
 		312D4C05218BCBF0008504D2 /* ClockDecoratorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */; };
 		312D4C08218BCDDB008504D2 /* HourHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C07218BCDDB008504D2 /* HourHandNode.swift */; };
 		314A010A21960409009BCE3C /* UserClockSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A010921960409009BCE3C /* UserClockSetting.swift */; };
@@ -223,6 +225,7 @@
 		310BA1C521AF736400A146B7 /* TitleSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		310BA1C721AFAADB00A146B7 /* ColorThemeSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		310BA1C921AFAF9200A146B7 /* ColorThemeSettingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeSettingCollectionViewCell.swift; sourceTree = "<group>"; };
+		310BA1CB21AFBDE300A146B7 /* wrist.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wrist.jpg; sourceTree = "<group>"; };
 		312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockDecoratorTheme.swift; sourceTree = "<group>"; };
 		312D4C07218BCDDB008504D2 /* HourHandNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourHandNode.swift; sourceTree = "<group>"; };
 		314A010921960409009BCE3C /* UserClockSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClockSetting.swift; sourceTree = "<group>"; };
@@ -580,6 +583,7 @@
 		31F4F1B9219A57CA0050177A /* Materials */ = {
 			isa = PBXGroup;
 			children = (
+				310BA1CB21AFBDE300A146B7 /* wrist.jpg */,
 				31F4F1CC219A5F1C0050177A /* vinylAlbum.jpg */,
 				31F4F1CB219A5F1B0050177A /* watchGears.jpg */,
 				31F4F1BD219A5C310050177A /* brass.jpg */,
@@ -757,6 +761,7 @@
 				31C05E1221A73D3A0021AEAB /* FFD5E9F5-5144-4E77-89B0-2FC073E11F1C.jpg in Resources */,
 				31C05DFD21A73D3A0021AEAB /* 89DE21B8-DC67-4272-879A-ABA27FB7EAF1.jpg in Resources */,
 				31A5F80E21968223000F1677 /* CONERIASCRIPT.TTF in Resources */,
+				310BA1CC21AFBDE300A146B7 /* wrist.jpg in Resources */,
 				31F4F1CD219A5F1C0050177A /* watchGears.jpg in Resources */,
 				31C05DFC21A73D3A0021AEAB /* BE8F5A1E-17EC-4626-9CFC-78BC3ED21D8A.jpg in Resources */,
 				31A5F80A21968223000F1677 /* IRONLOUNGE.TTF in Resources */,
@@ -794,6 +799,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31A5F80D21968223000F1677 /* ROMAN-TRAJAN-PRO.TTF in Resources */,
+				310BA1CD21AFBDE300A146B7 /* wrist.jpg in Resources */,
 				31A5F80321968223000F1677 /* RATIONALINT.TTF in Resources */,
 				31F4F1D7219A6B030050177A /* wallpaperFlower.jpg in Resources */,
 				31F4F1D0219A6B030050177A /* vinylAlbum.jpg in Resources */,
