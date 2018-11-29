@@ -330,32 +330,11 @@
                                     <segue destination="g3k-ac-9zQ" kind="embed" id="9MD-Q2-0lQ"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-m7-d7p" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="208" y="27" width="151" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="151" id="1pP-sA-sHw"/>
-                                    <constraint firstAttribute="height" constant="30" id="T1C-r3-7Gf"/>
-                                </constraints>
-                                <state key="normal" title="Send to Watch">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBorderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="sendSettingActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bL5-J1-OEN"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiH-q3-0ff">
-                                <rect key="frame" x="208" y="65" width="151" height="86"/>
+                                <rect key="frame" x="208" y="98" width="151" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="151" id="KyR-sL-9Zk"/>
-                                    <constraint firstAttribute="height" constant="86" id="VW1-Lb-Yks"/>
+                                    <constraint firstAttribute="height" constant="53" id="VW1-Lb-Yks"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="1" green="0.12852664389999999" blue="0.067248547749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -419,6 +398,7 @@
                                     <constraint firstAttribute="height" constant="27" id="0Nd-YK-VRl"/>
                                 </constraints>
                                 <segments>
+                                    <segment title="Main"/>
                                     <segment title="Background"/>
                                     <segment title="Hands"/>
                                     <segment title="Indicators"/>
@@ -428,6 +408,27 @@
                                     <action selector="groupChangeActionWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="LJy-AJ-JPp"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-m7-d7p" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
+                                <rect key="frame" x="208" y="58" width="151" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="1pP-sA-sHw"/>
+                                    <constraint firstAttribute="height" constant="30" id="T1C-r3-7Gf"/>
+                                </constraints>
+                                <state key="normal" title="Send to Watch">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBorderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendSettingActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bL5-J1-OEN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -436,7 +437,7 @@
                             <constraint firstItem="Xou-WS-SQ6" firstAttribute="leading" secondItem="Sam-R2-V8l" secondAttribute="trailing" constant="2" id="9sv-J1-x3L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QiH-q3-0ff" secondAttribute="trailing" constant="16" id="Bbb-3r-6Vo"/>
                             <constraint firstItem="FaP-cM-mRw" firstAttribute="leading" secondItem="33s-up-Wg3" secondAttribute="trailing" constant="21" id="H5l-d5-nEH"/>
-                            <constraint firstItem="QiH-q3-0ff" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="bottom" constant="8" id="New-TF-SvM"/>
+                            <constraint firstItem="QiH-q3-0ff" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="bottom" constant="10" id="New-TF-SvM"/>
                             <constraint firstItem="Xou-WS-SQ6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="P8T-DQ-4G7"/>
                             <constraint firstItem="L09-xH-or1" firstAttribute="leading" secondItem="Sam-R2-V8l" secondAttribute="leading" id="Qli-WK-oiv"/>
                             <constraint firstItem="33s-up-Wg3" firstAttribute="top" secondItem="Xou-WS-SQ6" secondAttribute="bottom" constant="8" id="R5u-dh-qu0"/>
@@ -446,7 +447,7 @@
                             <constraint firstItem="DN7-J7-N45" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="UBL-Mt-9PI"/>
                             <constraint firstItem="NJL-vA-esZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Yf7-0g-3ZD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NJL-vA-esZ" secondAttribute="trailing" constant="16" id="Yw2-KS-k6M"/>
-                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="aQb-L4-zXI"/>
+                            <constraint firstItem="Mqq-m7-d7p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="aQb-L4-zXI"/>
                             <constraint firstItem="FaP-cM-mRw" firstAttribute="top" secondItem="Xou-WS-SQ6" secondAttribute="bottom" constant="8" id="cdc-Vu-S04"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mqq-m7-d7p" secondAttribute="trailing" constant="16" id="fxl-lf-QhP"/>
                             <constraint firstItem="Sam-R2-V8l" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-7" id="m8Q-pC-5q0"/>
@@ -500,8 +501,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="faceBackgroundTypeTableViewCell" rowHeight="100" id="qNf-Pq-wHy" customClass="FaceBackgroundSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="titleSettingsTableViewCellID" id="27q-xI-4Wk" customClass="TitleSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="27q-xI-4Wk" id="be8-mh-0wp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Untitled" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="C7u-4i-J1U">
+                                            <rect key="frame" x="16" y="35" width="343" height="30"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="C7u-4i-J1U" firstAttribute="centerY" secondItem="be8-mh-0wp" secondAttribute="centerY" id="Ayk-QQ-hIi"/>
+                                        <constraint firstItem="C7u-4i-J1U" firstAttribute="trailing" secondItem="be8-mh-0wp" secondAttribute="trailingMargin" id="LRb-Qe-AIY"/>
+                                        <constraint firstItem="C7u-4i-J1U" firstAttribute="leading" secondItem="be8-mh-0wp" secondAttribute="leadingMargin" id="t2a-WR-c5e"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleTextView" destination="C7u-4i-J1U" id="o6e-Mr-4zm"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="faceBackgroundTypeTableViewCell" rowHeight="100" id="qNf-Pq-wHy" customClass="FaceBackgroundSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="128" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qNf-Pq-wHy" id="0Ba-g6-ijl">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -557,7 +583,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="faceBackgroundColorsTableViewCell" rowHeight="100" id="0u0-0a-aMy" customClass="FaceBackgroundColorSettingTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="128" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="228" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0u0-0a-aMy" id="aqJ-lb-pZm">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -610,7 +636,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainBackgroundColorsTableViewCell" rowHeight="100" id="W8G-Id-OVv" customClass="MainBackgroundColorSettingTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="228" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="328" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W8G-Id-OVv" id="L8Q-dL-rrf">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -663,7 +689,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondHandSettingsTableViewCell" rowHeight="100" id="zGU-j9-Y07" customClass="SecondHandSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="328" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="428" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zGU-j9-Y07" id="rXn-ye-gOH">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -719,7 +745,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondHandColorsTableViewCell" rowHeight="100" id="Cw2-1l-ieM" customClass="SecondHandColorSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="428" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="528" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cw2-1l-ieM" id="OfW-Hz-WYS">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -772,7 +798,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="minuteHandSettingsTableViewCell" rowHeight="100" id="j9t-aJ-bZY" customClass="MinuteHandSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="528" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="628" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j9t-aJ-bZY" id="cbT-jL-8we">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -828,10 +854,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="minuteHandColorTableViewCell" rowHeight="100" id="s4M-Qx-GZL" customClass="MinuteHandColorSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="628" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="728" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s4M-Qx-GZL" id="Gyl-og-gLv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-DC-r6Z">
@@ -881,7 +907,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hourHandSettingsTableViewCell" rowHeight="100" id="wsc-L4-sN6" customClass="HourHandSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="728" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="828" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wsc-L4-sN6" id="qUK-oX-fRy">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
@@ -937,7 +963,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hourHandColorTableViewCell" rowHeight="100" id="umM-ic-tGC" customClass="HourHandColorSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="828" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="928" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="umM-ic-tGC" id="LVA-43-tHd">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
@@ -990,7 +1016,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ringMainColorsTableViewCell" rowHeight="100" id="2W9-zy-BRk" customClass="IndicatorsMainColorSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="928" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="1028" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2W9-zy-BRk" id="ArF-B8-UqI">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
@@ -1043,7 +1069,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ringSecondaryColorsTableViewCell" rowHeight="100" id="cBF-K6-ajO" customClass="IndicatorsSecondaryColorSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1028" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="1128" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cBF-K6-ajO" id="tLF-Cw-Xf3">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
@@ -1096,7 +1122,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ringThirdColorsTableViewCell" rowHeight="100" id="4pw-fi-3fU" customClass="IndicatorsThirdColorSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1128" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="1228" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4pw-fi-3fU" id="oYN-9G-2EQ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
@@ -1158,7 +1184,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xF8-QY-zte" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="809" y="877"/>
+            <point key="canvasLocation" x="808.79999999999995" y="876.61169415292363"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RgW-Ug-Ui4">

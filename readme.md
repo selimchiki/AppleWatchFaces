@@ -10,6 +10,7 @@
 - make new target that regenerates all the default thumbnails?
 
 ## IDEAS:
+- skin/see thru / tattoo watch
 - show name of current face on watch when first starting ( then fade it out )
 - better highlighting of the parts ( zoomed in outline )
 - tinting colors for textures?

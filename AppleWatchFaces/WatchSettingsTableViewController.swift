@@ -26,6 +26,9 @@ class WatchSettingsTableViewController: UITableViewController {
     //header text,
     let sectionsData = [
         [
+            ["title":"Title",   "cellID":"titleSettingsTableViewCellID"]
+        ],
+        [
             ["title":"Face Background Type",   "cellID":"faceBackgroundTypeTableViewCell"],
             ["title":"Face Background Color",   "cellID":"faceBackgroundColorsTableViewCell"],
             ["title":"Main Background Color",   "cellID":"mainBackgroundColorsTableViewCell"]
@@ -52,6 +55,8 @@ class WatchSettingsTableViewController: UITableViewController {
         let cellID = sectionsData[currentGroupIndex][section]["cellID"]
         
         switch cellID {
+            case "titleSettingsTableViewCellID":
+                settingText = SettingsViewController.currentClockSetting.title
             case "faceBackgroundTypeTableViewCell":
                 settingText = FaceBackgroundNode.descriptionForType(SettingsViewController.currentClockSetting.faceBackgroundType)
             case "faceBackgroundColorsTableViewCell":
@@ -88,8 +93,8 @@ class WatchSettingsTableViewController: UITableViewController {
     }
     
     func reloadAfterGroupChange() {
-        //TODO: try to animated this with reloadSections
         self.tableView.reloadData()
+        selectCurrentSettings(animated: false)
     }
     
     func selectCurrentSettings(animated: Bool) {

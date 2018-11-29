@@ -16,6 +16,7 @@
 		3109D1E121A88F3F00561F13 /* IndicatorsThirdColorSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3109D1E021A88F3F00561F13 /* IndicatorsThirdColorSettingsTableViewCell.swift */; };
 		3109D1E321A9A2C600561F13 /* FaceChooserEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3109D1E221A9A2C600561F13 /* FaceChooserEditTableViewController.swift */; };
 		3109D1E521A9A37B00561F13 /* FaceChooserEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3109D1E421A9A37B00561F13 /* FaceChooserEditTableViewCell.swift */; };
+		310BA1C621AF736400A146B7 /* TitleSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BA1C521AF736400A146B7 /* TitleSettingsTableViewCell.swift */; };
 		312D4C05218BCBF0008504D2 /* ClockDecoratorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */; };
 		312D4C08218BCDDB008504D2 /* HourHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C07218BCDDB008504D2 /* HourHandNode.swift */; };
 		314A010A21960409009BCE3C /* UserClockSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A010921960409009BCE3C /* UserClockSetting.swift */; };
@@ -217,6 +218,7 @@
 		3109D1E021A88F3F00561F13 /* IndicatorsThirdColorSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsThirdColorSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		3109D1E221A9A2C600561F13 /* FaceChooserEditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceChooserEditTableViewController.swift; sourceTree = "<group>"; };
 		3109D1E421A9A37B00561F13 /* FaceChooserEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceChooserEditTableViewCell.swift; sourceTree = "<group>"; };
+		310BA1C521AF736400A146B7 /* TitleSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockDecoratorTheme.swift; sourceTree = "<group>"; };
 		312D4C07218BCDDB008504D2 /* HourHandNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourHandNode.swift; sourceTree = "<group>"; };
 		314A010921960409009BCE3C /* UserClockSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClockSetting.swift; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 				3109D1DC21A872DF00561F13 /* IndicatorsMainColorSettingsTableViewCell.swift */,
 				3109D1DE21A8806B00561F13 /* IndicatorsSecondaryColorSettingsTableViewCell.swift */,
 				3109D1E021A88F3F00561F13 /* IndicatorsThirdColorSettingsTableViewCell.swift */,
+				310BA1C521AF736400A146B7 /* TitleSettingsTableViewCell.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -835,6 +838,7 @@
 				31EF99A421A2072C00BB54E7 /* FaceChooserCollectionViewCell.swift in Sources */,
 				31BC68EA21931F1400DD8CD6 /* ColorSettingsTableViewCell.swift in Sources */,
 				31B5E8CD218BD26B00DE6429 /* MinuteHandNode.swift in Sources */,
+				310BA1C621AF736400A146B7 /* TitleSettingsTableViewCell.swift in Sources */,
 				318808D3217815E600585AB1 /* SettingsViewController.swift in Sources */,
 				31F8ABAB2187E8DB0014E2ED /* WatchSettingsTableViewController.swift in Sources */,
 				31F56F9D21857A2000455FC6 /* SecondHandNode.swift in Sources */,

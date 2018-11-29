@@ -16,6 +16,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     var session: WCSession?
     var watchPreviewViewController:WatchPreviewViewController?
     var watchSettingsTableViewController:WatchSettingsTableViewController?
+    
     static var currentClockSetting: ClockSetting = ClockSetting.defaults()
     var currentClockIndex = 0
     
