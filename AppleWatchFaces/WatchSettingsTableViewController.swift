@@ -129,8 +129,9 @@ class WatchSettingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        //TODO: grow this into more dynamic cell heights if needed
         let cellID = sectionsData[currentGroupIndex][indexPath.section]["cellID"]
-        debugPrint("cellID" + cellID!)
         if cellID  == "titleSettingsTableViewCellID" {
             return 66.0
         } else {
