@@ -21,6 +21,8 @@
 		310BA1CA21AFAF9200A146B7 /* ColorThemeSettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BA1C921AFAF9200A146B7 /* ColorThemeSettingCollectionViewCell.swift */; };
 		310BA1CC21AFBDE300A146B7 /* wrist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 310BA1CB21AFBDE300A146B7 /* wrist.jpg */; };
 		310BA1CD21AFBDE300A146B7 /* wrist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 310BA1CB21AFBDE300A146B7 /* wrist.jpg */; };
+		310BA1D121B08F1A00A146B7 /* DecoratorThemeSettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BA1CF21B08F1A00A146B7 /* DecoratorThemeSettingCollectionViewCell.swift */; };
+		310BA1D221B08F1A00A146B7 /* DecoratorThemeSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310BA1D021B08F1A00A146B7 /* DecoratorThemeSettingsTableViewCell.swift */; };
 		312D4C05218BCBF0008504D2 /* ClockDecoratorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */; };
 		312D4C08218BCDDB008504D2 /* HourHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C07218BCDDB008504D2 /* HourHandNode.swift */; };
 		314A010A21960409009BCE3C /* UserClockSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A010921960409009BCE3C /* UserClockSetting.swift */; };
@@ -226,6 +228,8 @@
 		310BA1C721AFAADB00A146B7 /* ColorThemeSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		310BA1C921AFAF9200A146B7 /* ColorThemeSettingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeSettingCollectionViewCell.swift; sourceTree = "<group>"; };
 		310BA1CB21AFBDE300A146B7 /* wrist.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wrist.jpg; sourceTree = "<group>"; };
+		310BA1CF21B08F1A00A146B7 /* DecoratorThemeSettingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoratorThemeSettingCollectionViewCell.swift; sourceTree = "<group>"; };
+		310BA1D021B08F1A00A146B7 /* DecoratorThemeSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoratorThemeSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockDecoratorTheme.swift; sourceTree = "<group>"; };
 		312D4C07218BCDDB008504D2 /* HourHandNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourHandNode.swift; sourceTree = "<group>"; };
 		314A010921960409009BCE3C /* UserClockSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClockSetting.swift; sourceTree = "<group>"; };
@@ -564,6 +568,8 @@
 				310BA1C521AF736400A146B7 /* TitleSettingsTableViewCell.swift */,
 				310BA1C721AFAADB00A146B7 /* ColorThemeSettingsTableViewCell.swift */,
 				310BA1C921AFAF9200A146B7 /* ColorThemeSettingCollectionViewCell.swift */,
+				310BA1CF21B08F1A00A146B7 /* DecoratorThemeSettingCollectionViewCell.swift */,
+				310BA1D021B08F1A00A146B7 /* DecoratorThemeSettingsTableViewCell.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -866,6 +872,7 @@
 				31EF999621A0B6B700BB54E7 /* SKShapeNode.swift in Sources */,
 				31EF99A221A205F200BB54E7 /* FaceChooserTableViewCell.swift in Sources */,
 				31B5E8EA218CF6E400DE6429 /* HourHandSettingCollectionViewCell.swift in Sources */,
+				310BA1D221B08F1A00A146B7 /* DecoratorThemeSettingsTableViewCell.swift in Sources */,
 				31B3F8CE218F4A0700AD22A5 /* ColorSettingCollectionViewCell.swift in Sources */,
 				31EF999921A0BF3D00BB54E7 /* FaceBackgroundSettingsTableViewCell.swift in Sources */,
 				31B5E8E4218CEF9000DE6429 /* MinuteHandSettingsTableViewCell.swift in Sources */,
@@ -883,6 +890,7 @@
 				318808D1217815E600585AB1 /* AppDelegate.swift in Sources */,
 				31B5E8E6218CEFF100DE6429 /* MinuteHandSettingCollectionViewCell.swift in Sources */,
 				31B3F8CC218F2F1F00AD22A5 /* SettingsTableHeaderViewCell.swift in Sources */,
+				310BA1D121B08F1A00A146B7 /* DecoratorThemeSettingCollectionViewCell.swift in Sources */,
 				31F56FA421857FC100455FC6 /* WatchPreviewViewController.swift in Sources */,
 				31B5E8E9218CF6E400DE6429 /* HourHandSettingsTableViewCell.swift in Sources */,
 				31EF999321A0AF4F00BB54E7 /* FaceBackgroundNode.swift in Sources */,

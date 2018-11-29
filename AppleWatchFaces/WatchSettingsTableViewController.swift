@@ -27,7 +27,8 @@ class WatchSettingsTableViewController: UITableViewController {
     let sectionsData = [
         [
             ["title":"Title",   "cellID":"titleSettingsTableViewCellID"],
-            ["title":"Color Theme",   "cellID":"colorThemeSettingsTableViewCellID"]
+            ["title":"Color Theme",   "cellID":"colorThemeSettingsTableViewCellID"],
+            ["title":"Items Theme Theme",   "cellID":"decoratorThemeSettingsTableViewCellID"]
         ],
         [
             ["title":"Face Background Type",   "cellID":"faceBackgroundTypeTableViewCell"],
@@ -60,7 +61,9 @@ class WatchSettingsTableViewController: UITableViewController {
         case "titleSettingsTableViewCellID":
             settingText = SettingsViewController.currentClockSetting.title
         case "colorThemeSettingsTableViewCellID":
-        settingText = SettingsViewController.currentClockSetting.themeTitle
+            settingText = SettingsViewController.currentClockSetting.themeTitle
+        case "decoratorThemeSettingsTableViewCellID":
+            settingText = SettingsViewController.currentClockSetting.decoratorThemeTitle
         
         case "faceBackgroundTypeTableViewCell":
             settingText = FaceBackgroundNode.descriptionForType(SettingsViewController.currentClockSetting.faceBackgroundType)
@@ -123,6 +126,16 @@ class WatchSettingsTableViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sectionsData[currentGroupIndex].count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let cellID = sectionsData[currentGroupIndex][indexPath.section]["cellID"]
+        debugPrint("cellID" + cellID!)
+        if cellID  == "titleSettingsTableViewCellID" {
+            return 66.0
+        } else {
+            return 100.0
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

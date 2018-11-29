@@ -1,10 +1,11 @@
 
 ## TO DO:
 
-- show title & allow editing of titles in settings ( tap on it fo a popup )
+- add decorator themes to main selector table
+- crash when sending to watch 5 times -- https://stackoverflow.com/questions/52860566/error-when-running-xcode-simulator-framework-cuithemestore-no-theme-regist
 - get ring settings / editor working ( modal on top might be best ?)
-- refactor AppUISettings
 
+- refactor AppUISettings
 - switch to SVG files for shapes : https://github.com/mchoe/SwiftSVG or https://github.com/pocketsvg/PocketSVG
 - push app to hockeyapp for beta testing
 - make new target that regenerates all the default thumbnails?
@@ -50,3 +51,5 @@
 - add edit table modal for chooser to be able to reorder, delete and add faces
 - add third color to ring materials
 - add watch frame to chooser edit view
+- show title & allow editing of titles in settings ( tap on it fo a popup )
+- clean up title table cell ( tighten height )
