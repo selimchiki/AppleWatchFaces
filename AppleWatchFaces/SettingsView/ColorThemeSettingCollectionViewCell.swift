@@ -16,16 +16,11 @@ class ColorThemeSettingCollectionViewCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-//            if let scene = skView.scene, let selectedNode = scene.childNode(withName: "selectedNode") {
-//                
-//                if self.isSelected {
-//                    selectedNode.isHidden = false
-//                }
-//                else {
-//                    selectedNode.isHidden = true
-//                }
-//                
-//            }
+            if self.isSelected {
+                title.textColor = UIColor.init(hexString: AppUISettings.settingHighlightColor)
+            } else {
+                title.textColor = UIColor.init(hexString: "#FFFFFFFF")
+            }
             
         }
     }

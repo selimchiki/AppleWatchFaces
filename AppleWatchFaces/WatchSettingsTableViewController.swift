@@ -56,35 +56,39 @@ class WatchSettingsTableViewController: UITableViewController {
         let cellID = sectionsData[currentGroupIndex][section]["cellID"]
         
         switch cellID {
-            case "titleSettingsTableViewCellID":
-                settingText = SettingsViewController.currentClockSetting.title
-            case "faceBackgroundTypeTableViewCell":
-                settingText = FaceBackgroundNode.descriptionForType(SettingsViewController.currentClockSetting.faceBackgroundType)
-            case "faceBackgroundColorsTableViewCell":
-                settingText = SettingsViewController.currentClockSetting.clockFaceMaterialName
-            case "mainBackgroundColorsTableViewCell":
-                settingText = SettingsViewController.currentClockSetting.clockCasingMaterialName
-            case "secondHandSettingsTableViewCell":
-                settingText = SecondHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandType)!)
-            case "secondHandColorsTableViewCell":
-                settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandMaterialName ?? ""
-            case "minuteHandSettingsTableViewCell":
-                settingText = MinuteHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandType)!)
-            case "minuteHandColorTableViewCell":
-                settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandMaterialName ?? ""
-            case "hourHandSettingsTableViewCell":
-                settingText = HourHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandType)!)
-            case "hourHandColorTableViewCell":
-                settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandMaterialName ?? ""
-            case "ringMainColorsTableViewCell":
-                settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.ringMaterials[0] ?? ""
-            case "ringSecondaryColorsTableViewCell":
-                settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.ringMaterials[1] ?? ""
-            case "ringThirdColorsTableViewCell":
-                if let clockFaceSettings = SettingsViewController.currentClockSetting.clockFaceSettings {
-                    if clockFaceSettings.ringMaterials.count>2 {
-                    settingText = clockFaceSettings.ringMaterials[2]
-                    }
+            
+        case "titleSettingsTableViewCellID":
+            settingText = SettingsViewController.currentClockSetting.title
+        case "colorThemeSettingsTableViewCellID":
+        settingText = SettingsViewController.currentClockSetting.themeTitle
+        
+        case "faceBackgroundTypeTableViewCell":
+            settingText = FaceBackgroundNode.descriptionForType(SettingsViewController.currentClockSetting.faceBackgroundType)
+        case "faceBackgroundColorsTableViewCell":
+            settingText = SettingsViewController.currentClockSetting.clockFaceMaterialName
+        case "mainBackgroundColorsTableViewCell":
+            settingText = SettingsViewController.currentClockSetting.clockCasingMaterialName
+        case "secondHandSettingsTableViewCell":
+            settingText = SecondHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandType)!)
+        case "secondHandColorsTableViewCell":
+            settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandMaterialName ?? ""
+        case "minuteHandSettingsTableViewCell":
+            settingText = MinuteHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandType)!)
+        case "minuteHandColorTableViewCell":
+            settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandMaterialName ?? ""
+        case "hourHandSettingsTableViewCell":
+            settingText = HourHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandType)!)
+        case "hourHandColorTableViewCell":
+            settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandMaterialName ?? ""
+        case "ringMainColorsTableViewCell":
+            settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.ringMaterials[0] ?? ""
+        case "ringSecondaryColorsTableViewCell":
+            settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.ringMaterials[1] ?? ""
+        case "ringThirdColorsTableViewCell":
+            if let clockFaceSettings = SettingsViewController.currentClockSetting.clockFaceSettings {
+                if clockFaceSettings.ringMaterials.count>2 {
+                settingText = clockFaceSettings.ringMaterials[2]
+                }
                     
             }
         

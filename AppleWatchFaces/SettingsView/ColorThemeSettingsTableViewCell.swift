@@ -29,6 +29,7 @@ class ColorThemeSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UIC
         
         //update the value
         SettingsViewController.currentClockSetting.applyColorTheme(colorTheme)
+        SettingsViewController.currentClockSetting.themeTitle = colorTheme.title
         
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
         NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"colorTheme"])
