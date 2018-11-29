@@ -26,7 +26,8 @@ class WatchSettingsTableViewController: UITableViewController {
     //header text,
     let sectionsData = [
         [
-            ["title":"Title",   "cellID":"titleSettingsTableViewCellID"]
+            ["title":"Title",   "cellID":"titleSettingsTableViewCellID"],
+            ["title":"Color Theme",   "cellID":"colorThemeSettingsTableViewCellID"]
         ],
         [
             ["title":"Face Background Type",   "cellID":"faceBackgroundTypeTableViewCell"],
