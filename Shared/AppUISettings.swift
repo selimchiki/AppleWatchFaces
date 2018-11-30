@@ -38,6 +38,11 @@ class AppUISettings: NSObject {
         return false
     }
     
+    //time settings used when generating thumbnail screen shots
+    static let screenShotSeconds:CGFloat = 13
+    static let screenShotHour:CGFloat = 12
+    static let screenShotMinutes:CGFloat = 10
+    
     //some other DRY settings
     static let thumbnailFolder = "thumbs"
     

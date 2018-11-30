@@ -19,6 +19,8 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     
     static var currentClockSetting: ClockSetting = ClockSetting.defaults()
     var currentClockIndex = 0
+    var timerClockIndex = 0
+    var timer = Timer()
     
     static let settingsChangedNotificationName = Notification.Name("settingsChanged")
     
@@ -168,16 +170,11 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         redrawSettingsTable()
     }
     
-    @IBAction func saveClock() {
-        //just save this clock
-        UserClockSetting.sharedClockSettings[currentClockIndex] = SettingsViewController.currentClockSetting
-        UserClockSetting.saveToFile() //remove this to reset to defaults each time app loads
-        self.showMessage( message: SettingsViewController.currentClockSetting.title + " saved.")
-        
+    func makeThumb( fileName: String ) {
         //make thumbnail
         if let watchVC = watchPreviewViewController {
             
-            if watchVC.makeThumb( imageName: SettingsViewController.currentClockSetting.uniqueID ) {
+            if watchVC.makeThumb( imageName: fileName ) {
                 self.showMessage( message: "Screenshot successful.")
             } else {
                 self.showError(errorMessage: "Problem creating screenshot.")
@@ -186,11 +183,93 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         }
     }
     
+    @IBAction func saveClock() {
+        //just save this clock
+        UserClockSetting.sharedClockSettings[currentClockIndex] = SettingsViewController.currentClockSetting
+        UserClockSetting.saveToFile() //remove this to reset to defaults each time app loads
+        self.showMessage( message: SettingsViewController.currentClockSetting.title + " saved.")
+        
+        makeThumb(fileName: SettingsViewController.currentClockSetting.uniqueID)
+    }
+    
     @IBAction func revertClock() {
         //just revert this clock
         SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
         redrawPreviewClock()
         redrawSettingsTable()
+    }
+    
+    @IBAction func generateThumbs(sender: UIButton) {
+    
+        if watchPreviewViewController != nil {
+            watchPreviewViewController?.stopTimeForScreenShot()
+            self.showMessage( message: "starting screenshots, check log for folder name")
+      
+            // start the timer
+            timer = Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(screenshotThumbActionFromTimer), userInfo: nil, repeats: true)
+        }
+    }
+    
+    func generateColorThemeThumbs() {
+        SettingsViewController.currentClockSetting = ClockSetting.defaults()
+        if let firstSetting = UserClockSetting.sharedDecoratorThemeSettings.first {
+            SettingsViewController.currentClockSetting.applyDecoratorTheme(firstSetting)
+        }
+        self.redrawPreviewClock()
+        
+        timerClockIndex = 0
+        
+        // start the timer
+        timer = Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(screenshotColorThemeActionFromTimer), userInfo: nil, repeats: true)
+    }
+    
+    // called every time interval from the timer
+    @objc func screenshotThumbActionFromTimer() {
+    
+        if (timerClockIndex < UserClockSetting.sharedClockSettings.count) {
+            
+            let setting = UserClockSetting.sharedClockSettings[timerClockIndex]
+            SettingsViewController.currentClockSetting = setting
+            self.redrawPreviewClock()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100), execute: {
+                self.makeThumb(fileName: setting.uniqueID)
+            })
+            
+        } else {
+            timer.invalidate()
+            
+            self.watchPreviewViewController?.resumeTime()
+            self.showMessage( message: "finished screenshots.")
+            
+            //start the color theme shots
+            generateColorThemeThumbs()
+        }
+        
+        timerClockIndex += 1
+    }
+    
+    // called every time interval from the timer
+    @objc func screenshotColorThemeActionFromTimer() {
+        
+        if (timerClockIndex < UserClockSetting.sharedColorThemeSettings.count) {
+            
+            let colorTheme = UserClockSetting.sharedColorThemeSettings[timerClockIndex]
+            SettingsViewController.currentClockSetting.applyColorTheme(colorTheme)
+            self.redrawPreviewClock()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100), execute: {
+                self.makeThumb(fileName: colorTheme.filename() )
+            })
+            
+        } else {
+            timer.invalidate()
+            
+            self.watchPreviewViewController?.resumeTime()
+            self.showMessage( message: "finished screenshots.")
+        }
+        
+        timerClockIndex += 1
     }
 
     override func viewDidAppear(_ animated: Bool) {

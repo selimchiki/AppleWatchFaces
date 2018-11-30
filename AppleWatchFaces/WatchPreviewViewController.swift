@@ -14,6 +14,18 @@ class WatchPreviewViewController: UIViewController {
     var settingsViewController:SettingsViewController?
     @IBOutlet var skView: SKView!
     
+    func stopTimeForScreenShot() {
+        if let watchScene = skView.scene as? SKWatchScene {
+            watchScene.stopTimeForScreenShot()
+        }
+    }
+    
+    func resumeTime() {
+        if let watchScene = skView.scene as? SKWatchScene {
+            watchScene.resumeTime()
+        }
+    }
+    
     func makeThumb( imageName:String ) -> Bool {
         //let newView = skView.snapshotView(afterScreenUpdates: true)
         if let newImage = skView?.snapshot {

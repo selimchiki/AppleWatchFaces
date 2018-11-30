@@ -10,7 +10,7 @@ import SpriteKit
 
 class SKWatchScene: SKScene {
     private var spinnyNode : SKShapeNode?
-    
+    var shouldKeepTime:Bool = true
     static let sizeMulitplier:CGFloat = 100.0 //in pixels 
     
     func redraw(clockSetting: ClockSetting) {
@@ -21,7 +21,20 @@ class SKWatchScene: SKScene {
         if let oldNode = self.childNode(withName: "watchFaceNode") {
             oldNode.removeFromParent()
         }
+        
+        if !shouldKeepTime { newWatchFaceNode.setToScreenShotTime() }
         self.addChild(newWatchFaceNode)
+    }
+    
+    func stopTimeForScreenShot() {
+        shouldKeepTime = false
+        if let watchFaceNode = self.childNode(withName: "watchFaceNode") as? WatchFaceNode {
+            watchFaceNode.setToScreenShotTime()
+        }
+    }
+    
+    func resumeTime() {
+        shouldKeepTime = true
     }
     
     override func sceneDidLoad() {
@@ -29,6 +42,10 @@ class SKWatchScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
+        
+        //allow for no time update
+        if !shouldKeepTime { return }
+        
         if let watchFaceNode = self.childNode(withName: "watchFaceNode") as? WatchFaceNode {
             watchFaceNode.setToTime()
         }

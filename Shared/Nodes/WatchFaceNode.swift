@@ -218,6 +218,18 @@ class WatchFaceNode: SKShapeNode {
         
     }
     
+    func positionHands( sec: CGFloat, min: CGFloat, hour: CGFloat ) {
+        if let secondHand = self.childNode(withName: "secondHand") {
+            secondHand.zRotation = -1 * deg2rad(sec * 6)
+        }
+        if let minuteHand = self.childNode(withName: "minuteHand") {
+            minuteHand.zRotation = -1 * deg2rad(min * 6)
+        }
+        if let hourHand = self.childNode(withName: "hourHand") {
+            hourHand.zRotation = -1 * deg2rad(hour * 30 + min/2)
+        }
+    }
+    
     func setToTime() {
         // Called before each frame is rendered
         let date = Date()
@@ -227,15 +239,11 @@ class WatchFaceNode: SKShapeNode {
         let minutes = CGFloat(calendar.component(.minute, from: date))
         let seconds = CGFloat(calendar.component(.second, from: date))
         
-        if let secondHand = self.childNode(withName: "secondHand") {
-            secondHand.zRotation = -1 * deg2rad(seconds * 6)
-        }
-        if let minuteHand = self.childNode(withName: "minuteHand") {
-            minuteHand.zRotation = -1 * deg2rad(minutes * 6)
-        }
-        if let hourHand = self.childNode(withName: "hourHand") {
-            hourHand.zRotation = -1 * deg2rad(hour * 30 + minutes/2)
-        }
+        positionHands(sec: seconds, min: minutes, hour: hour)
+    }
+    
+    func setToScreenShotTime() {
+        positionHands(sec: AppUISettings.screenShotSeconds, min: AppUISettings.screenShotMinutes, hour: AppUISettings.screenShotHour)
     }
     
     required init?(coder aDecoder: NSCoder) {
