@@ -40,6 +40,9 @@ class FaceChooserEditTableViewController: UITableViewController {
         //debugPrint("U: " + clockSetting.title + " " + clockSetting.uniqueID)
         if let newImage = UIImage.getImageFor(imageName: clockSetting.uniqueID) {
             cell.thumbImageView.image = newImage
+            cell.thumbImageView.layer.cornerRadius = AppUISettings.watchFrameCornerRadius / 2
+            cell.thumbImageView.layer.borderColor = AppUISettings.watchFrameBorderColor
+            cell.thumbImageView.layer.borderWidth = AppUISettings.watchFrameBorderWidth / 2 
         } else {
             cell.thumbImageView.image = nil
         }

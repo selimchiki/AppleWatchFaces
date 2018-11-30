@@ -25,6 +25,11 @@ class AppUISettings: NSObject {
     //corner radius for thumbnails in settings
     static let cornerRadiusForSettingsThumbs:CGFloat = 16.0
     
+    //corner and border settings for "watch frame"
+    static let watchFrameCornerRadius:CGFloat = 28.0
+    static let watchFrameBorderWidth:CGFloat = 4.0
+    static let watchFrameBorderColor = SKColor.darkGray.cgColor
+
     static let materialFiles = ["vinylAlbum.jpg", "watchGears.jpg", "brass.jpg", "copper.jpg","kork.jpg", "light-wood.jpg",
                                 "wallpaper70s.jpg","wallpaperFlower.jpg","watchGears.jpg"]
     

@@ -28,6 +28,9 @@ class FaceChooserTableViewCell: FaceChooserSelectableTableViewCell, UICollection
         //debugPrint("U: " + clockSetting.title + " " + clockSetting.uniqueID)
         if let newImage = UIImage.getImageFor(imageName: clockSetting.uniqueID) {
             cell.imageView.image = newImage
+            cell.imageView.layer.cornerRadius = AppUISettings.watchFrameCornerRadius
+            cell.imageView.layer.borderColor = AppUISettings.watchFrameBorderColor
+            cell.imageView.layer.borderWidth = AppUISettings.watchFrameBorderWidth
         } else {
             cell.imageView.image = nil
         }

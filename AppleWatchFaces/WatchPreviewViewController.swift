@@ -69,7 +69,7 @@ class WatchPreviewViewController: UIViewController {
         
         skView.layer.cornerRadius = 28.0
         skView.layer.borderWidth = 4.0
-        skView.layer.borderColor = SKColor.lightGray.cgColor
+        skView.layer.borderColor = SKColor.darkGray.cgColor
         
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(WatchPreviewViewController.respondToSwipeGesture(gesture:) ))
         swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
