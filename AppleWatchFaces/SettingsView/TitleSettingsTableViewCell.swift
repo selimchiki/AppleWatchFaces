@@ -8,15 +8,24 @@
 
 import UIKit
 
-class TitleSettingsTableViewCell: UITableViewCell, UITextFieldDelegate {
+class TitleSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UITextFieldDelegate {
 
     @IBOutlet var titleTextView:UITextField!
+    
+    // called after a new setting should be selected ( IE a new design is loaded )
+    override func chooseSetting( animated: Bool ) {
+        //TODO: select the theme based on title?
+        titleTextView.text = SettingsViewController.currentClockSetting.title
+    }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         //hello!
         let newTitle = textField.text ?? ""
         debugPrint("did end editing title:" + newTitle)
         SettingsViewController.currentClockSetting.title = newTitle
+        
+        NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
+        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"clockFaceSettings.title"])
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
