@@ -28,7 +28,7 @@ class WatchSettingsTableViewController: UITableViewController {
         [
             ["title":"Title",   "cellID":"titleSettingsTableViewCellID"],
             ["title":"Color Theme",   "cellID":"colorThemeSettingsTableViewCellID"],
-            ["title":"Items Theme Theme",   "cellID":"decoratorThemeSettingsTableViewCellID"]
+            ["title":"Items Theme",   "cellID":"decoratorThemeSettingsTableViewCellID"]
         ],
         [
             ["title":"Face Background Type",   "cellID":"faceBackgroundTypeTableViewCell"],
