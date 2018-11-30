@@ -12,6 +12,7 @@ import WatchConnectivity
 class SettingsViewController: UIViewController, WCSessionDelegate {
     
     @IBOutlet var errorMessageLabel: UILabel!
+    @IBOutlet var generateThumbsButton: UIButton!
     
     var session: WCSession?
     var watchPreviewViewController:WatchPreviewViewController?
@@ -170,11 +171,15 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         redrawSettingsTable()
     }
     
-    func makeThumb( fileName: String ) {
+    func makeThumb( fileName: String) {
+        makeThumb(fileName: fileName, cornerCrop: false)
+    }
+    
+    func makeThumb( fileName: String, cornerCrop: Bool ) {
         //make thumbnail
         if let watchVC = watchPreviewViewController {
             
-            if watchVC.makeThumb( imageName: fileName ) {
+            if watchVC.makeThumb( imageName: fileName, cornerCrop: cornerCrop ) {
                 self.showMessage( message: "Screenshot successful.")
             } else {
                 self.showError(errorMessage: "Problem creating screenshot.")
@@ -223,6 +228,19 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         timer = Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(screenshotColorThemeActionFromTimer), userInfo: nil, repeats: true)
     }
     
+    func generateDecoratorThemeThumbs() {
+        SettingsViewController.currentClockSetting = ClockSetting.defaults()
+        if let firstSetting = UserClockSetting.sharedColorThemeSettings.first {
+            SettingsViewController.currentClockSetting.applyColorTheme(firstSetting)
+        }
+        self.redrawPreviewClock()
+        
+        timerClockIndex = 0
+        
+        // start the timer
+        timer = Timer.scheduledTimer(timeInterval: 0.25, target: self, selector: #selector(screenshotDecoratorThemeActionFromTimer), userInfo: nil, repeats: true)
+    }
+    
     // called every time interval from the timer
     @objc func screenshotThumbActionFromTimer() {
     
@@ -236,17 +254,18 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
                 self.makeThumb(fileName: setting.uniqueID)
             })
             
+            timerClockIndex += 1
+            
         } else {
             timer.invalidate()
             
-            self.watchPreviewViewController?.resumeTime()
             self.showMessage( message: "finished screenshots.")
             
             //start the color theme shots
             generateColorThemeThumbs()
         }
         
-        timerClockIndex += 1
+        
     }
     
     // called every time interval from the timer
@@ -259,17 +278,38 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
             self.redrawPreviewClock()
             
             DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100), execute: {
-                self.makeThumb(fileName: colorTheme.filename() )
+                self.makeThumb(fileName: colorTheme.filename(), cornerCrop:true )
             })
+            timerClockIndex += 1
+        } else {
+            timer.invalidate()
             
+            self.showMessage( message: "finished color theme screenshots.")
+            
+            //start the color theme shots
+            generateDecoratorThemeThumbs()
+        }
+    }
+    
+    // called every time interval from the timer
+    @objc func screenshotDecoratorThemeActionFromTimer() {
+        
+        if (timerClockIndex < UserClockSetting.sharedDecoratorThemeSettings.count) {
+            
+            let decoratorTheme = UserClockSetting.sharedDecoratorThemeSettings[timerClockIndex]
+            SettingsViewController.currentClockSetting.applyDecoratorTheme(decoratorTheme)
+            self.redrawPreviewClock()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100), execute: {
+                self.makeThumb(fileName: decoratorTheme.filename(), cornerCrop:true )
+            })
+            timerClockIndex += 1
         } else {
             timer.invalidate()
             
             self.watchPreviewViewController?.resumeTime()
-            self.showMessage( message: "finished screenshots.")
+            self.showMessage( message: "finished decorator theme screenshots.")
         }
-        
-        timerClockIndex += 1
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -286,6 +326,11 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //show gen thumbs button in simulator
+        #if (arch(i386) || arch(x86_64))
+            self.generateThumbsButton.isHidden = false
+        #endif
         
         let saveBarButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveClock))
         //let play = UIBarButtonItem(title: "Play", style: .plain, target: self, action: #selector(playTapped))

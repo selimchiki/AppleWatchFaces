@@ -47,12 +47,24 @@ extension UIImage {
         }
     }
     
-    func save(imageName: String ) -> Bool {
+    func save(imageName: String) -> Bool {
+        return save(imageName: imageName, cornerCrop: false)
+    }
+    
+    func save(imageName: String, cornerCrop: Bool ) -> Bool {
         // image has not been created yet: create it, store it, return it
         let imageUrl = UIImage.getImageURL(imageName: imageName)
-        //debugPrint("attempting save image: "+imageUrl.absoluteString)
+        
+        if (cornerCrop) {
+            if let cgImage = self.cgImage {
+                let toRect = CGRect.init(x: 200, y: 80, width: 200, height: 200)
+                let croppedCGImage: CGImage = cgImage.cropping(to: toRect)!
+                let croppedImage = UIImage(cgImage: croppedCGImage)
+                return ((try? croppedImage.jpegData(compressionQuality: 0.75)?.write(to: imageUrl )) != nil)
+            }
+        }
         return ((try? self.jpegData(compressionQuality: 0.75)?.write(to: imageUrl )) != nil)
-        //return ((try? self.pngData()?.write(to: imageUrl )) != nil)
+        
     }
     
     static func delete(imageName: String ) -> Bool {

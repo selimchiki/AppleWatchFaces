@@ -1275,6 +1275,30 @@
     ],
     "colors" : [
         {
+            "title" : "Plain Jane",
+            
+            "clockCasingMaterialName" : "#777777FF",
+            "clockFaceMaterialName" : "#FFFFFFFF",
+            
+            "hourHandMaterialName" : "#000000FF",
+            "minuteHandMaterialName" : "#000000FF",
+            "secondHandMaterialName" : "#FF0000FF",
+            
+            "ringMaterials" : [ "#000000FF", "#000000FF", "" ]
+        },
+        {
+            "title" : "SkyBlue",
+            
+            "clockCasingMaterialName" : "#CFF09E",
+            "clockFaceMaterialName" : "#A8DBA8",
+            
+            "hourHandMaterialName" : "#79BD9A",
+            "minuteHandMaterialName" : "#3B8686",
+            "secondHandMaterialName" : "#0B486B",
+            
+            "ringMaterials" : [ "#0B486B", "#3B8686", "#00967dff" ]
+        },
+        {
                 "title" : "Flesh Tones",
                 
                 "clockFaceMaterialName" : "#FEE0BC",
@@ -1384,18 +1408,6 @@
             "ringMaterials" : [ "#033649", "#036564", "#336600" ]
         },
         {
-            "title" : "SkyBlue",
-            
-            "clockCasingMaterialName" : "#CFF09E",
-            "clockFaceMaterialName" : "#A8DBA8",
-            
-            "hourHandMaterialName" : "#79BD9A",
-            "minuteHandMaterialName" : "#3B8686",
-            "secondHandMaterialName" : "#0B486B",
-            
-            "ringMaterials" : [ "#0B486B", "#3B8686", "#00967dff" ]
-        },
-        {
             "title" : "Metallica",
             
             "clockCasingMaterialName" : "copper.jpg",
@@ -1407,19 +1419,6 @@
             
             "ringMaterials" : [ "#000000FF", "#333333FF", "" ]
         },
-                
-    {
-        "title" : "Plain Jane",
-     
-        "clockCasingMaterialName" : "#777777FF",
-        "clockFaceMaterialName" : "#FFFFFFFF",
-     
-        "hourHandMaterialName" : "#000000FF",
-        "minuteHandMaterialName" : "#000000FF",
-        "secondHandMaterialName" : "#FF0000FF",
-     
-        "ringMaterials" : [ "#000000FF", "#000000FF", "" ]
-    },
      {
          "title" : "Darkness",
          

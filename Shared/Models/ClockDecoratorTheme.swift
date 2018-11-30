@@ -60,5 +60,10 @@ class ClockDecoratorTheme: NSObject {
         
         super.init()
     }
+    
+    func filename()->String {
+        let newName = self.title.components(separatedBy: CharacterSet.alphanumerics.inverted).joined().lowercased()
+        return "decoratorTheme-" + newName
+    }
 
 }

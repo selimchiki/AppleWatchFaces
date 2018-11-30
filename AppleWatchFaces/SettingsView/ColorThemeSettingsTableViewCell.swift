@@ -43,7 +43,7 @@ class ColorThemeSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UIC
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "settingsColorThemeCell", for: indexPath) as! ColorThemeSettingCollectionViewCell
         
         let theme = UserClockSetting.sharedColorThemeSettings[indexPath.row]
-        
+        cell.thumbnail.image = UIImage.init(named: theme.filename() + ".jpg")
         cell.title.text = theme.title
         
         return cell
