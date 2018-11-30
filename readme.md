@@ -1,12 +1,12 @@
 
 ## TO DO:
 
-- make new button ( debug only )  that regenerates all the default thumbnails
-
 - crash when sending to watch 5 times -- https://stackoverflow.com/questions/52860566/error-when-running-xcode-simulator-framework-cuithemestore-no-theme-regist
 - get ring settings / editor working ( modal on top might be best ?)
+- !! save json data into JPEG for import / export over social  https://stackoverflow.com/questions/40175160/exif-data-read-and-write
 
 - refactor AppUISettings
+- rename KKInterfaceController
 - switch to SVG files for shapes : https://github.com/mchoe/SwiftSVG or https://github.com/pocketsvg/PocketSVG
 - push app to hockeyapp for beta testing
 
@@ -54,3 +54,4 @@
 - show title & allow editing of titles in settings ( tap on it fo a popup )
 - clean up title table cell ( tighten height )
 - add decorator themes to main selector table
+- make new button ( debug only )  that regenerates all the default thumbnails

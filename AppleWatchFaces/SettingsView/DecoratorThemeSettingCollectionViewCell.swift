@@ -18,8 +18,11 @@ class DecoratorThemeSettingCollectionViewCell: UICollectionViewCell {
         didSet {
             if self.isSelected {
                 title.textColor = UIColor.init(hexString: AppUISettings.settingHighlightColor)
+                thumbnail.layer.borderWidth = AppUISettings.settingLineWidthBeforeScale
+                thumbnail.layer.borderColor = UIColor.init(hexString: AppUISettings.settingHighlightColor ).cgColor
             } else {
                 title.textColor = UIColor.init(hexString: "#FFFFFFFF")
+                thumbnail.layer.borderWidth = 0.0
             }
             
         }

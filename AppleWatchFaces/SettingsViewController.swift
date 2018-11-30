@@ -332,10 +332,6 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
             self.generateThumbsButton.isHidden = false
         #endif
         
-        let saveBarButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveClock))
-        //let play = UIBarButtonItem(title: "Play", style: .plain, target: self, action: #selector(playTapped))
-        navigationItem.rightBarButtonItems = [saveBarButton]
-        
         SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
         
         self.errorMessageLabel.alpha = 0.0

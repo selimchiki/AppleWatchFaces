@@ -26,27 +26,27 @@ class WatchSettingsTableViewController: UITableViewController {
     //header text,
     let sectionsData = [
         [
-            ["title":"Title",   "cellID":"titleSettingsTableViewCellID"],
-            ["title":"Color Theme",   "cellID":"colorThemeSettingsTableViewCellID"],
-            ["title":"Items Theme",   "cellID":"decoratorThemeSettingsTableViewCellID"]
+            ["title":"Title",                       "rowHeight":"66.0", "cellID":"titleSettingsTableViewCellID"],
+            ["title":"Color Theme",                 "rowHeight":"130.0", "cellID":"colorThemeSettingsTableViewCellID"],
+            ["title":"Items Theme",                 "rowHeight":"130.0","cellID":"decoratorThemeSettingsTableViewCellID"]
         ],
         [
-            ["title":"Face Background Type",   "cellID":"faceBackgroundTypeTableViewCell"],
-            ["title":"Face Background Color",   "cellID":"faceBackgroundColorsTableViewCell"],
-            ["title":"Main Background Color",   "cellID":"mainBackgroundColorsTableViewCell"]
+            ["title":"Face Background Type",        "rowHeight":"100.0","cellID":"faceBackgroundTypeTableViewCell"],
+            ["title":"Face Background Color",       "rowHeight":"100.0","cellID":"faceBackgroundColorsTableViewCell"],
+            ["title":"Main Background Color",       "rowHeight":"100.0","cellID":"mainBackgroundColorsTableViewCell"]
         ],
         [
-            ["title":"Second Hand",             "cellID":"secondHandSettingsTableViewCell"],
-            ["title":"Second Hand Color",       "cellID":"secondHandColorsTableViewCell"],
-            ["title":"Minute Hand",             "cellID":"minuteHandSettingsTableViewCell"],
-            ["title":"Minute Hand Color",       "cellID":"minuteHandColorTableViewCell"],
-            ["title":"Hour Hand",               "cellID":"hourHandSettingsTableViewCell"],
-            ["title":"Hour Hand Color",         "cellID":"hourHandColorTableViewCell"]
+            ["title":"Second Hand",                 "rowHeight":"100.0","cellID":"secondHandSettingsTableViewCell"],
+            ["title":"Second Hand Color",           "rowHeight":"100.0","cellID":"secondHandColorsTableViewCell"],
+            ["title":"Minute Hand",                 "rowHeight":"100.0","cellID":"minuteHandSettingsTableViewCell"],
+            ["title":"Minute Hand Color",           "rowHeight":"100.0","cellID":"minuteHandColorTableViewCell"],
+            ["title":"Hour Hand",                   "rowHeight":"100.0","cellID":"hourHandSettingsTableViewCell"],
+            ["title":"Hour Hand Color",             "rowHeight":"100.0","cellID":"hourHandColorTableViewCell"]
         ],
         [
-            ["title":"Indicators Main Color",   "cellID":"ringMainColorsTableViewCell"],
-            ["title":"Indicators Secondary Color",   "cellID":"ringSecondaryColorsTableViewCell"],
-            ["title":"Indicators Highlight Color",   "cellID":"ringThirdColorsTableViewCell"]
+            ["title":"Indicators Main Color",       "rowHeight":"100.0","cellID":"ringMainColorsTableViewCell"],
+            ["title":"Indicators Secondary Color",  "rowHeight":"100.0","cellID":"ringSecondaryColorsTableViewCell"],
+            ["title":"Indicators Highlight Color",  "rowHeight":"100.0","cellID":"ringThirdColorsTableViewCell"]
         ]
     ]
     
@@ -129,14 +129,9 @@ class WatchSettingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        //TODO: grow this into more dynamic cell heights if needed
-        let cellID = sectionsData[currentGroupIndex][indexPath.section]["cellID"]
-        if cellID  == "titleSettingsTableViewCellID" {
-            return 66.0
-        } else {
-            return 100.0
-        }
+        let rowHeight = sectionsData[currentGroupIndex][indexPath.section]["rowHeight"]!
+        let doubleVal = Double.init(rowHeight)
+        return CGFloat( doubleVal ?? 100.0 )
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -20,7 +20,10 @@ class AppUISettings: NSObject {
     static let settingHighlightColor:String = "#38ff9b"
 
     //line width for settings SKNodes strokes ( before scaling )
-    static let settingLineWidthBeforeScale:CGFloat = 4.0
+    static let settingLineWidthBeforeScale:CGFloat = 3.0
+    
+    //corner radius for thumbnails in settings
+    static let cornerRadiusForSettingsThumbs:CGFloat = 16.0
     
     static let materialFiles = ["vinylAlbum.jpg", "watchGears.jpg", "brass.jpg", "copper.jpg","kork.jpg", "light-wood.jpg",
                                 "wallpaper70s.jpg","wallpaperFlower.jpg","watchGears.jpg"]

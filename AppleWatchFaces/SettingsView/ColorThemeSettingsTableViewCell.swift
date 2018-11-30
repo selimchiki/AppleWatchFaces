@@ -44,6 +44,7 @@ class ColorThemeSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UIC
         
         let theme = UserClockSetting.sharedColorThemeSettings[indexPath.row]
         cell.thumbnail.image = UIImage.init(named: theme.filename() + ".jpg")
+        cell.thumbnail.layer.cornerRadius = AppUISettings.cornerRadiusForSettingsThumbs
         cell.title.text = theme.title
         
         return cell
