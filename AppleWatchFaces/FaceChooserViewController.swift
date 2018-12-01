@@ -25,7 +25,7 @@ class FaceChooserViewController: UIViewController, WCSessionDelegate {
         if let validSession = session {
             self.showMessage(message: "Sending ...")
             let fileManager = FileManager.default
-            if fileManager.fileExists(atPath: UserClockSetting.ArchiveURL.absoluteString) {
+            if fileManager.fileExists(atPath: UserClockSetting.ArchiveURL.path) {
                 validSession.transferFile(UserClockSetting.ArchiveURL, metadata: ["type":"settingsFile"])
             } else {
                 self.showError(errorMessage: "No changes to send")
