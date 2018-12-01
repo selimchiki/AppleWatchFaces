@@ -9,6 +9,7 @@
 - rename KKInterfaceController
 - switch to SVG files for shapes : https://github.com/mchoe/SwiftSVG or https://github.com/pocketsvg/PocketSVG
 - push app to hockeyapp for beta testing
+- test with other screen sizes - fix layouts
 
 ## IDEAS:
 - skin-see thru / tattoo watch

@@ -90,7 +90,7 @@ class SecondHandSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UIC
             scene.addChild(handNode)
             
             let highlightColor = SKColor.init(hexString: AppUISettings.settingHighlightColor)
-            let highlightLineWidth = AppUISettings.settingLineWidthBeforeScale
+            let highlightLineWidth = AppUISettings.settingLineWidthBeforeScale * 1.3
             let selectedHandNode = SecondHandNode.init(secondHandType: SecondHandTypes.userSelectableValues[indexPath.row], material: "#ff0000ff", strokeColor: highlightColor, lineWidth:highlightLineWidth)
             selectedHandNode.name = "selectedNode"
             selectedHandNode.setScale(scaleMultiplier)

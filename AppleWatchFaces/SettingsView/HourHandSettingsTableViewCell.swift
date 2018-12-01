@@ -84,7 +84,7 @@ class HourHandSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UICol
             scene.addChild(handNode)
             
             let highlightColor = SKColor.init(hexString: AppUISettings.settingHighlightColor)
-            let highlightLineWidth = AppUISettings.settingLineWidthBeforeScale
+            let highlightLineWidth = AppUISettings.settingLineWidthBeforeScale * 1.3
             let selectedHandNode = HourHandNode.init(hourHandType: HourHandTypes.userSelectableValues[indexPath.row], material: "#ffffff00", strokeColor: highlightColor, lineWidth:highlightLineWidth)
             selectedHandNode.name = "selectedNode"
             selectedHandNode.setScale(scaleMultiplier)
