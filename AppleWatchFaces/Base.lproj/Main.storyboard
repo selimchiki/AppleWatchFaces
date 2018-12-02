@@ -944,7 +944,7 @@
                                 <rect key="frame" x="0.0" y="954" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s4M-Qx-GZL" id="Gyl-og-gLv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-DC-r6Z">
@@ -997,7 +997,7 @@
                                 <rect key="frame" x="0.0" y="1054" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wsc-L4-sN6" id="qUK-oX-fRy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vdC-I5-V82">
@@ -1053,7 +1053,7 @@
                                 <rect key="frame" x="0.0" y="1154" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="umM-ic-tGC" id="LVA-43-tHd">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j2G-5R-fUd">
@@ -1106,7 +1106,7 @@
                                 <rect key="frame" x="0.0" y="1254" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2W9-zy-BRk" id="ArF-B8-UqI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pAw-f4-CvD">
@@ -1159,7 +1159,7 @@
                                 <rect key="frame" x="0.0" y="1354" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cBF-K6-ajO" id="tLF-Cw-Xf3">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eNl-dd-BHb">
@@ -1212,7 +1212,7 @@
                                 <rect key="frame" x="0.0" y="1454" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4pw-fi-3fU" id="oYN-9G-2EQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T3v-Wq-Ir2">
@@ -1261,6 +1261,38 @@
                                     <outlet property="indicatorsThirdColorSettingsTableViewCell" destination="T3v-Wq-Ir2" id="aHq-Kt-5eB"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ringEditorTableViewCellID" id="r2U-qH-aGk" customClass="DecoratorRingsSettingsTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="1554" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r2U-qH-aGk" id="GOX-gB-X5I">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xD-dJ-wGk">
+                                            <rect key="frame" x="8" y="40" width="218" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Wy-e6-zdB">
+                                            <rect key="frame" x="329" y="35" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Edit">
+                                                <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="oSu-2t-sjk" kind="show" id="PZ7-cQ-0S2"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="decoratorRingsButton" destination="2Wy-e6-zdB" id="hJW-ar-Qo2"/>
+                                    <outlet property="decoratorRingsLabel" destination="8xD-dJ-wGk" id="aue-WG-grz"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="g3k-ac-9zQ" id="Jhm-Rm-kAp"/>
@@ -1272,6 +1304,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xF8-QY-zte" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="808.79999999999995" y="876.61169415292363"/>
+        </scene>
+        <!--Decorator Preview Controller-->
+        <scene sceneID="IUC-Si-C5c">
+            <objects>
+                <viewController id="oSu-2t-sjk" customClass="DecoratorPreviewController" customModule="AppleWatchFaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OU3-Kj-jK3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwg-b7-jF7">
+                                <rect key="frame" x="0.0" y="269" width="375" height="398"/>
+                                <connections>
+                                    <segue destination="EUI-x1-eg0" kind="embed" id="p58-Km-11o"/>
+                                </connections>
+                            </containerView>
+                            <skView clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6BS-VO-ogg">
+                                <rect key="frame" x="16" y="44" width="160" height="200"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="YoY-DJ-7PW"/>
+                                </constraints>
+                            </skView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bwg-b7-jF7" firstAttribute="bottom" secondItem="dJe-Bh-v4c" secondAttribute="bottom" id="0xy-MV-AnC"/>
+                            <constraint firstAttribute="trailing" secondItem="bwg-b7-jF7" secondAttribute="trailing" id="E2L-14-PhX"/>
+                            <constraint firstItem="6BS-VO-ogg" firstAttribute="top" secondItem="dJe-Bh-v4c" secondAttribute="top" constant="24" id="EUQ-n9-hBH"/>
+                            <constraint firstItem="bwg-b7-jF7" firstAttribute="top" secondItem="6BS-VO-ogg" secondAttribute="bottom" constant="25" id="Jgh-e4-907"/>
+                            <constraint firstItem="dJe-Bh-v4c" firstAttribute="trailing" secondItem="6BS-VO-ogg" secondAttribute="trailing" constant="199" id="VBw-7L-zOK"/>
+                            <constraint firstItem="6BS-VO-ogg" firstAttribute="leading" secondItem="OU3-Kj-jK3" secondAttribute="leadingMargin" id="WbU-sY-UrQ"/>
+                            <constraint firstItem="bwg-b7-jF7" firstAttribute="leading" secondItem="OU3-Kj-jK3" secondAttribute="leading" id="fBa-M1-YKM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dJe-Bh-v4c"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nCQ-SV-1vw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524" y="871.21439280359823"/>
+        </scene>
+        <!--Decorators Table View Controller-->
+        <scene sceneID="DS4-hW-4jg">
+            <objects>
+                <tableViewController id="EUI-x1-eg0" customClass="DecoratorsTableViewController" customModule="AppleWatchFaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="akV-Jf-6SN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="398"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="decoratorEditorID" id="yxo-ub-EIA" customClass="DecoratorTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yxo-ub-EIA" id="1ky-DF-bhh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Custom Part" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OS-Yp-XUS">
+                                            <rect key="frame" x="16" y="11" width="290" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="4OS-Yp-XUS" id="swv-9y-BlN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EUI-x1-eg0" id="BBg-sA-Ra6"/>
+                            <outlet property="delegate" destination="EUI-x1-eg0" id="uag-UY-AGG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zM8-di-lTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2320.8000000000002" y="870.76461769115451"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RgW-Ug-Ui4">

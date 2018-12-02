@@ -44,9 +44,11 @@ class WatchSettingsTableViewController: UITableViewController {
             ["title":"Hour Hand Color",             "rowHeight":"100.0","cellID":"hourHandColorTableViewCell"]
         ],
         [
+            ["title":"Indicator Parts",             "rowHeight":"100.0","cellID":"ringEditorTableViewCellID"],
             ["title":"Indicators Main Color",       "rowHeight":"100.0","cellID":"ringMainColorsTableViewCell"],
             ["title":"Indicators Secondary Color",  "rowHeight":"100.0","cellID":"ringSecondaryColorsTableViewCell"],
             ["title":"Indicators Highlight Color",  "rowHeight":"100.0","cellID":"ringThirdColorsTableViewCell"]
+            
         ]
     ]
     
@@ -94,7 +96,9 @@ class WatchSettingsTableViewController: UITableViewController {
                 }
                     
             }
-        
+        case "ringEditorTableViewCellID":
+            settingText = String( SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings.count )
+            
             default: settingText = ""
         }
         return settingText
@@ -161,9 +165,18 @@ class WatchSettingsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellId = sectionsData[currentGroupIndex][indexPath.section]["cellID"]!
+        if cellId == "ringEditorTableViewCellID" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! DecoratorRingsSettingsTableViewCell
+            
+            let ringNum = String( SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings.count )
+            cell.decoratorRingsLabel.text = ringNum + " parts make up this face"
+            
+            return cell
+        } else {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+            return cell
+        }
     }
     
     @objc func onNotification(notification:Notification)
