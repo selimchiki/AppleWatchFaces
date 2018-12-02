@@ -10,8 +10,13 @@ import UIKit
 
 class DecoratorsTableViewController: UITableViewController {
 
+    var decoratorPreviewController: DecoratorPreviewController?
+    
     func redrawPreview() {
         //tell clock previe to redraw!
+        if let dPreviewVC = decoratorPreviewController {
+            dPreviewVC.redraw(clockSetting: SettingsViewController.currentClockSetting)
+        }
     }
     
     override func viewDidLoad() {
@@ -24,33 +29,33 @@ class DecoratorsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
+        return SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "decoratorEditorID", for: indexPath) as! DecoratorTableViewCell
 
         if let clockSettings = SettingsViewController.currentClockSetting.clockFaceSettings {
-            let ringSetting = clockSettings.ringSettings[indexPath.section]
-            cell.titleLabel.text = ringSetting.ringType.rawValue
+            let ringSetting = clockSettings.ringSettings[indexPath.row]
+            cell.rowIndex = indexPath.row
+            cell.setupUIForClockRingSetting()
         }
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let sourceRow = sourceIndexPath.section;
-        let destRow = destinationIndexPath.section;
+        let sourceRow = sourceIndexPath.row;
+        let destRow = destinationIndexPath.row;
         
-        if let clockSettings = SettingsViewController.currentClockSetting.clockFaceSettings {
-            let object = clockSettings.ringSettings[sourceRow]
-            clockSettings.ringSettings.remove(at: sourceRow)
-            clockSettings.ringSettings.insert(object, at: destRow)
+        if nil != SettingsViewController.currentClockSetting.clockFaceSettings {
+            let object = SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings[sourceRow]
+            SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings.remove(at: sourceRow)
+            SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings.insert(object, at: destRow)
         }
         
         redrawPreview()
@@ -59,15 +64,21 @@ class DecoratorsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
-            if let clockSettings = SettingsViewController.currentClockSetting.clockFaceSettings {
-                let sourceRow = indexPath.section;
+            if nil != SettingsViewController.currentClockSetting.clockFaceSettings {
+                let sourceRow = indexPath.row;
                 //let trashedSetting = clockSettings.ringSettings[sourceRow]
-                clockSettings.ringSettings.remove(at: sourceRow)
-                tableView.deleteSections([sourceRow], with: .fade)
+                SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings.remove(at: sourceRow)
+                tableView.deleteRows(at: [indexPath], with: .none)
+                
+                redrawPreview()
             }
         
         }
     }
     
-
+    func valueForHeader( section: Int) -> String {
+        let ringSetting = SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings[ section ]
+        return ringSetting.ringType.rawValue
+    }
+    
 }

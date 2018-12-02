@@ -1320,25 +1320,28 @@
                                 </connections>
                             </containerView>
                             <skView clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6BS-VO-ogg">
-                                <rect key="frame" x="16" y="44" width="160" height="200"/>
+                                <rect key="frame" x="16" y="26" width="160" height="200"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="YoY-DJ-7PW"/>
                                 </constraints>
                             </skView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bwg-b7-jF7" firstAttribute="bottom" secondItem="dJe-Bh-v4c" secondAttribute="bottom" id="0xy-MV-AnC"/>
                             <constraint firstAttribute="trailing" secondItem="bwg-b7-jF7" secondAttribute="trailing" id="E2L-14-PhX"/>
-                            <constraint firstItem="6BS-VO-ogg" firstAttribute="top" secondItem="dJe-Bh-v4c" secondAttribute="top" constant="24" id="EUQ-n9-hBH"/>
-                            <constraint firstItem="bwg-b7-jF7" firstAttribute="top" secondItem="6BS-VO-ogg" secondAttribute="bottom" constant="25" id="Jgh-e4-907"/>
+                            <constraint firstItem="6BS-VO-ogg" firstAttribute="top" secondItem="dJe-Bh-v4c" secondAttribute="top" constant="6" id="EUQ-n9-hBH"/>
+                            <constraint firstItem="bwg-b7-jF7" firstAttribute="top" secondItem="6BS-VO-ogg" secondAttribute="bottom" constant="43" id="Jgh-e4-907"/>
                             <constraint firstItem="dJe-Bh-v4c" firstAttribute="trailing" secondItem="6BS-VO-ogg" secondAttribute="trailing" constant="199" id="VBw-7L-zOK"/>
                             <constraint firstItem="6BS-VO-ogg" firstAttribute="leading" secondItem="OU3-Kj-jK3" secondAttribute="leadingMargin" id="WbU-sY-UrQ"/>
                             <constraint firstItem="bwg-b7-jF7" firstAttribute="leading" secondItem="OU3-Kj-jK3" secondAttribute="leading" id="fBa-M1-YKM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dJe-Bh-v4c"/>
                     </view>
+                    <connections>
+                        <outlet property="skView" destination="6BS-VO-ogg" id="xUr-gr-sYS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCQ-SV-1vw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1348,29 +1351,56 @@
         <scene sceneID="DS4-hW-4jg">
             <objects>
                 <tableViewController id="EUI-x1-eg0" customClass="DecoratorsTableViewController" customModule="AppleWatchFaces" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="akV-Jf-6SN">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="akV-Jf-6SN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="398"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="decoratorEditorID" id="yxo-ub-EIA" customClass="DecoratorTableViewCell" customModule="AppleWatchFaces" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yxo-ub-EIA" id="1ky-DF-bhh">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Custom Part" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OS-Yp-XUS">
-                                            <rect key="frame" x="16" y="11" width="290" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Custom Part" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OS-Yp-XUS">
+                                            <rect key="frame" x="16" y="11" width="271" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dRF-vU-4ui">
+                                            <rect key="frame" x="14" y="59" width="345" height="31"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="aVZ-S7-gas"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="sliderValueDidChangeWithSender:" destination="yxo-ub-EIA" eventType="valueChanged" id="2mV-Ld-e7p"/>
+                                            </connections>
+                                        </slider>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAk-Cm-ggd">
+                                            <rect key="frame" x="270" y="6" width="89" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="89" id="sGK-Bp-PJT"/>
+                                            </constraints>
+                                            <state key="normal" title="edit"/>
+                                        </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dRF-vU-4ui" firstAttribute="top" secondItem="dAk-Cm-ggd" secondAttribute="bottom" constant="23" id="JmP-Zx-Y5B"/>
+                                        <constraint firstItem="dRF-vU-4ui" firstAttribute="leading" secondItem="4OS-Yp-XUS" secondAttribute="leading" id="Kct-Dt-eDd"/>
+                                        <constraint firstItem="dRF-vU-4ui" firstAttribute="bottom" secondItem="1ky-DF-bhh" secondAttribute="bottomMargin" id="LMi-Vh-2RN"/>
+                                        <constraint firstItem="dAk-Cm-ggd" firstAttribute="centerY" secondItem="4OS-Yp-XUS" secondAttribute="centerY" id="MtT-CK-sI0"/>
+                                        <constraint firstItem="dAk-Cm-ggd" firstAttribute="trailing" secondItem="1ky-DF-bhh" secondAttribute="trailingMargin" id="mX4-Ah-24s"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dRF-vU-4ui" secondAttribute="trailing" constant="2" id="x4r-12-2vJ"/>
+                                        <constraint firstItem="dRF-vU-4ui" firstAttribute="leading" secondItem="1ky-DF-bhh" secondAttribute="leadingMargin" id="yDJ-rj-xx5"/>
+                                        <constraint firstItem="dRF-vU-4ui" firstAttribute="top" secondItem="4OS-Yp-XUS" secondAttribute="bottom" constant="27" id="z1s-cV-npb"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="titleLabel" destination="4OS-Yp-XUS" id="swv-9y-BlN"/>
+                                    <outlet property="valueSlider" destination="dRF-vU-4ui" id="hVd-MP-5Nr"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -218,6 +218,18 @@ class WatchFaceNode: SKShapeNode {
         
     }
     
+    func hideHands() {
+        if let secondHand = self.childNode(withName: "secondHand") {
+            secondHand.isHidden = true
+        }
+        if let minuteHand = self.childNode(withName: "minuteHand") {
+            minuteHand.isHidden = true
+        }
+        if let hourHand = self.childNode(withName: "hourHand") {
+            hourHand.isHidden = true
+        }
+    }
+    
     func positionHands( sec: CGFloat, min: CGFloat, hour: CGFloat ) {
         if let secondHand = self.childNode(withName: "secondHand") {
             secondHand.zRotation = -1 * deg2rad(sec * 6)
