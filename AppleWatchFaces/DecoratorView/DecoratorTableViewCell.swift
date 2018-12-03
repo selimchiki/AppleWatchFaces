@@ -9,35 +9,11 @@
 import UIKit
 
 class DecoratorTableViewCell: UITableViewCell {
-
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var valueSlider: UISlider!
     
     var rowIndex:Int=0
-    
-    func myClockRingSetting()->ClockRingSetting {
-        return (SettingsViewController.currentClockSetting.clockFaceSettings?.ringSettings[rowIndex])!
-    }
-    
-    @IBAction func sliderValueDidChange(sender: UISlider ) {
-        debugPrint("slider value:" + String( sender.value ) )
-        let clockRingSetting = myClockRingSetting()
-        clockRingSetting.textSize = sender.value
-        NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsChangedNotificationName, object: nil,
-                                        userInfo:["settingType":"sliderValue" ])
-    }
-    
+
     func setupUIForClockRingSetting() {
-        let clockRingSetting = myClockRingSetting()
-        
-        self.titleLabel.text = clockRingSetting.ringType.rawValue
-        
-        if clockRingSetting.ringType == .RingTypeTextNode || clockRingSetting.ringType == .RingTypeTextRotatingNode {
-            valueSlider.minimumValue = AppUISettings.ringSettigsSliderTextMin
-            valueSlider.maximumValue = AppUISettings.ringSettigsSliderTextMax
-            
-            valueSlider.value = clockRingSetting.textSize
-        }
+        //to be implemented by subClasses
     }
     
     override func awakeFromNib() {

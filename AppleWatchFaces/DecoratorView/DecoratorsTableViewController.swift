@@ -36,15 +36,47 @@ class DecoratorsTableViewController: UITableViewController {
         return SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "decoratorEditorID", for: indexPath) as! DecoratorTableViewCell
-
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if let clockSettings = SettingsViewController.currentClockSetting.clockFaceSettings {
             let ringSetting = clockSettings.ringSettings[indexPath.row]
-            cell.rowIndex = indexPath.row
-            cell.setupUIForClockRingSetting()
+            
+            if (ringSetting.ringType == .RingTypeTextNode || ringSetting.ringType == .RingTypeTextRotatingNode) {
+                return 230.0
+            }
         }
-
+        return 100.0
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        var cell = DecoratorTableViewCell()
+        
+        if let clockSettings = SettingsViewController.currentClockSetting.clockFaceSettings {
+            let ringSetting = clockSettings.ringSettings[indexPath.row]
+        
+            if (ringSetting.ringType == .RingTypeSpacer) {
+                cell = tableView.dequeueReusableCell(withIdentifier: "decoratorEditorSpacerID", for: indexPath) as! DecoratorSpacerTableViewCell
+                
+                cell.rowIndex = indexPath.row
+                cell.setupUIForClockRingSetting()
+                
+            }
+        
+            if (ringSetting.ringType == .RingTypeShapeNode) {
+                
+                cell = tableView.dequeueReusableCell(withIdentifier: "decoratorEditorShapeID", for: indexPath) as! DecoratorShapeTableViewCell
+                cell.rowIndex = indexPath.row
+                cell.setupUIForClockRingSetting()
+            }
+            
+            if (ringSetting.ringType == .RingTypeTextNode || ringSetting.ringType == .RingTypeTextRotatingNode) {
+                
+                cell = tableView.dequeueReusableCell(withIdentifier: "decoratorEditorTextID", for: indexPath) as! DecoratorTextTableViewCell
+                cell.rowIndex = indexPath.row
+                cell.setupUIForClockRingSetting()
+            }
+        }
+        
+        
         return cell
     }
     

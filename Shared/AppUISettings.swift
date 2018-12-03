@@ -54,7 +54,7 @@ class AppUISettings: NSObject {
     
     //ring sliders
     static let ringSettigsSliderTextMin:Float = 0
-    static let ringSettigsSliderTextMax:Float = 3.0
+    static let ringSettigsSliderTextMax:Float = 1.5
     
     //some other DRY settings
     static let thumbnailFolder = "thumbs"

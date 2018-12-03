@@ -14,7 +14,10 @@
 		3107B5CF21B3FCFA005BD26D /* DecoratorRingsSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107B5CE21B3FCFA005BD26D /* DecoratorRingsSettingsTableViewCell.swift */; };
 		3107B5D121B4023B005BD26D /* DecoratorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107B5D021B4023B005BD26D /* DecoratorsTableViewController.swift */; };
 		3107B5D321B40480005BD26D /* DecoratorPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107B5D221B40480005BD26D /* DecoratorPreviewController.swift */; };
-		3107B5D621B406C8005BD26D /* DecoratorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107B5D521B406C8005BD26D /* DecoratorTableViewCell.swift */; };
+		3107B5D621B406C8005BD26D /* DecoratorSpacerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107B5D521B406C8005BD26D /* DecoratorSpacerTableViewCell.swift */; };
+		3107B5D821B47437005BD26D /* DecotatorShapeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107B5D721B47437005BD26D /* DecotatorShapeTableViewCell.swift */; };
+		3107B5DA21B47634005BD26D /* DecoratorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107B5D921B47634005BD26D /* DecoratorTableViewCell.swift */; };
+		3107B5DC21B47857005BD26D /* DecotatorTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107B5DB21B47857005BD26D /* DecotatorTextTableViewCell.swift */; };
 		3109D1DD21A872DF00561F13 /* IndicatorsMainColorSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3109D1DC21A872DF00561F13 /* IndicatorsMainColorSettingsTableViewCell.swift */; };
 		3109D1DF21A8806B00561F13 /* IndicatorsSecondaryColorSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3109D1DE21A8806B00561F13 /* IndicatorsSecondaryColorSettingsTableViewCell.swift */; };
 		3109D1E121A88F3F00561F13 /* IndicatorsThirdColorSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3109D1E021A88F3F00561F13 /* IndicatorsThirdColorSettingsTableViewCell.swift */; };
@@ -265,7 +268,10 @@
 		3107B5CE21B3FCFA005BD26D /* DecoratorRingsSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoratorRingsSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		3107B5D021B4023B005BD26D /* DecoratorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoratorsTableViewController.swift; sourceTree = "<group>"; };
 		3107B5D221B40480005BD26D /* DecoratorPreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoratorPreviewController.swift; sourceTree = "<group>"; };
-		3107B5D521B406C8005BD26D /* DecoratorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoratorTableViewCell.swift; sourceTree = "<group>"; };
+		3107B5D521B406C8005BD26D /* DecoratorSpacerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoratorSpacerTableViewCell.swift; sourceTree = "<group>"; };
+		3107B5D721B47437005BD26D /* DecotatorShapeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecotatorShapeTableViewCell.swift; sourceTree = "<group>"; };
+		3107B5D921B47634005BD26D /* DecoratorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoratorTableViewCell.swift; sourceTree = "<group>"; };
+		3107B5DB21B47857005BD26D /* DecotatorTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecotatorTextTableViewCell.swift; sourceTree = "<group>"; };
 		3109D1DC21A872DF00561F13 /* IndicatorsMainColorSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsMainColorSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		3109D1DE21A8806B00561F13 /* IndicatorsSecondaryColorSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsSecondaryColorSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		3109D1E021A88F3F00561F13 /* IndicatorsThirdColorSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsThirdColorSettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -455,8 +461,11 @@
 			isa = PBXGroup;
 			children = (
 				3107B5D221B40480005BD26D /* DecoratorPreviewController.swift */,
+				3107B5DB21B47857005BD26D /* DecotatorTextTableViewCell.swift */,
 				3107B5D021B4023B005BD26D /* DecoratorsTableViewController.swift */,
-				3107B5D521B406C8005BD26D /* DecoratorTableViewCell.swift */,
+				3107B5D921B47634005BD26D /* DecoratorTableViewCell.swift */,
+				3107B5D521B406C8005BD26D /* DecoratorSpacerTableViewCell.swift */,
+				3107B5D721B47437005BD26D /* DecotatorShapeTableViewCell.swift */,
 			);
 			path = DecoratorView;
 			sourceTree = "<group>";
@@ -1030,6 +1039,7 @@
 				31BC68F02193DFEE00DD8CD6 /* FaceBackgroundColorSettingTableViewCell.swift in Sources */,
 				31B5E8D3218BD63E00DE6429 /* FaceIndicatorNode.swift in Sources */,
 				3109D1E321A9A2C600561F13 /* FaceChooserEditTableViewController.swift in Sources */,
+				3107B5DC21B47857005BD26D /* DecotatorTextTableViewCell.swift in Sources */,
 				31EF99A421A2072C00BB54E7 /* FaceChooserCollectionViewCell.swift in Sources */,
 				31BC68EA21931F1400DD8CD6 /* ColorSettingsTableViewCell.swift in Sources */,
 				31B5E8CD218BD26B00DE6429 /* MinuteHandNode.swift in Sources */,
@@ -1041,10 +1051,11 @@
 				31F4F1D9219D08890050177A /* FaceChooserViewController.swift in Sources */,
 				31F8ABCD2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift in Sources */,
 				31B3F8D0218F4BAE00AD22A5 /* SecondHandColorSettingsTableViewCell.swift in Sources */,
-				3107B5D621B406C8005BD26D /* DecoratorTableViewCell.swift in Sources */,
+				3107B5D621B406C8005BD26D /* DecoratorSpacerTableViewCell.swift in Sources */,
 				31EF999F21A2045B00BB54E7 /* FaceChooserTableViewController.swift in Sources */,
 				31E5BC4E21A3A0F700C1B35E /* UIImage+Loading.swift in Sources */,
 				31EF999B21A0BF9E00BB54E7 /* FaceBackgroundSettingCollectionViewCell.swift in Sources */,
+				3107B5D821B47437005BD26D /* DecotatorShapeTableViewCell.swift in Sources */,
 				314A011021962FF4009BCE3C /* WatchFaceNode.swift in Sources */,
 				31EF999621A0B6B700BB54E7 /* SKShapeNode.swift in Sources */,
 				31EF99A221A205F200BB54E7 /* FaceChooserTableViewCell.swift in Sources */,
@@ -1069,6 +1080,7 @@
 				31B5E8E6218CEFF100DE6429 /* MinuteHandSettingCollectionViewCell.swift in Sources */,
 				31B3F8CC218F2F1F00AD22A5 /* SettingsTableHeaderViewCell.swift in Sources */,
 				3107B5CF21B3FCFA005BD26D /* DecoratorRingsSettingsTableViewCell.swift in Sources */,
+				3107B5DA21B47634005BD26D /* DecoratorTableViewCell.swift in Sources */,
 				310BA1D121B08F1A00A146B7 /* DecoratorThemeSettingCollectionViewCell.swift in Sources */,
 				31F56FA421857FC100455FC6 /* WatchPreviewViewController.swift in Sources */,
 				3107B5D321B40480005BD26D /* DecoratorPreviewController.swift in Sources */,
