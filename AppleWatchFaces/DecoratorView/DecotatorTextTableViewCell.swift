@@ -58,7 +58,7 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
             //debugPrint("new value:" + String( roundedValue ) )
             clockRingSetting.textSize = roundedValue
             NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsChangedNotificationName, object: nil,
-                                            userInfo:["settingType":"sliderValue" ])
+                                            userInfo:["settingType":"textSize" ])
         }
         
         

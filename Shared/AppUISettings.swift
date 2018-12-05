@@ -52,9 +52,19 @@ class AppUISettings: NSObject {
     static let screenShotHour:CGFloat = 12
     static let screenShotMinutes:CGFloat = 7
     
-    //ring sliders
+
+    //ring text slider
     static let ringSettigsSliderTextMin:Float = 0
     static let ringSettigsSliderTextMax:Float = 1.5
+
+    //ring shape sliders
+    static let ringSettigsSliderShapeMin:Float = 0
+    static let ringSettigsSliderShapeMax:Float = 1.5
+    
+    //ring spacer slider
+    static let ringSettigsSliderSpacerMin:Float = 0
+    static let ringSettigsSliderSpacerMax:Float = 1.5
+    
     
     //some other DRY settings
     static let thumbnailFolder = "thumbs"

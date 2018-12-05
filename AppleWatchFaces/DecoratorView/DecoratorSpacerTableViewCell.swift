@@ -18,11 +18,15 @@ class DecoratorSpacerTableViewCell: DecoratorTableViewCell {
     }
     
     @IBAction func sliderValueDidChange(sender: UISlider ) {
-        debugPrint("slider value:" + String( sender.value ) )
+        //debugPrint("slider value:" + String( sender.value ) )
         let clockRingSetting = myClockRingSetting()
-        clockRingSetting.textSize = sender.value
-        NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsChangedNotificationName, object: nil,
-                                        userInfo:["settingType":"sliderValue" ])
+        
+        let roundedValue = Float(round(100*sender.value)/100)
+        if roundedValue != clockRingSetting.ringWidth {
+            clockRingSetting.ringWidth = sender.value
+            NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsChangedNotificationName, object: nil,
+                                        userInfo:["settingType":"ringWidth" ])
+        }
     }
     
     override func setupUIForClockRingSetting() {
@@ -32,12 +36,11 @@ class DecoratorSpacerTableViewCell: DecoratorTableViewCell {
         
         self.titleLabel.text = ClockRingSetting.descriptionForRingType(clockRingSetting.ringType)
         
-        if clockRingSetting.ringType == .RingTypeTextNode || clockRingSetting.ringType == .RingTypeTextRotatingNode {
-            valueSlider.minimumValue = AppUISettings.ringSettigsSliderTextMin
-            valueSlider.maximumValue = AppUISettings.ringSettigsSliderTextMax
+        valueSlider.minimumValue = AppUISettings.ringSettigsSliderSpacerMin
+        valueSlider.maximumValue = AppUISettings.ringSettigsSliderSpacerMax
             
-            valueSlider.value = clockRingSetting.textSize
-        }
+        valueSlider.value = clockRingSetting.ringWidth
+        
     }
     
     override func awakeFromNib() {

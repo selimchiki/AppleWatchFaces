@@ -12,18 +12,32 @@ class DecoratorShapeTableViewCell: DecoratorTableViewCell {
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var shapeTypeTitleLabel: UILabel!
+    @IBOutlet var materialSegment: UISegmentedControl!
     @IBOutlet var valueSlider: UISlider!
     
     func myClockRingSetting()->ClockRingSetting {
         return (SettingsViewController.currentClockSetting.clockFaceSettings?.ringSettings[rowIndex])!
     }
     
-    @IBAction func sliderValueDidChange(sender: UISlider ) {
-        debugPrint("slider value:" + String( sender.value ) )
+    @IBAction func segmentDidChange(sender: UISegmentedControl ) {
+        //debugPrint("segment value:" + String( sender.selectedSegmentIndex ) )
         let clockRingSetting = myClockRingSetting()
-        clockRingSetting.textSize = sender.value
+        clockRingSetting.ringMaterialDesiredThemeColorIndex = sender.selectedSegmentIndex
         NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsChangedNotificationName, object: nil,
-                                        userInfo:["settingType":"sliderValue" ])
+                                        userInfo:["settingType":"ringMaterialDesiredThemeColorIndex" ])
+    }
+    
+    @IBAction func sliderValueDidChange(sender: UISlider ) {
+        //debugPrint("slider value:" + String( sender.value ) )
+        let clockRingSetting = myClockRingSetting()
+
+        let roundedValue = Float(round(100*sender.value)/100)
+        if roundedValue != clockRingSetting.indicatorSize {
+            
+            clockRingSetting.indicatorSize = sender.value
+            NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsChangedNotificationName, object: nil,
+                                        userInfo:["settingType":"indicatorSize" ])
+        }
     }
     
     override func setupUIForClockRingSetting() {
@@ -32,13 +46,13 @@ class DecoratorShapeTableViewCell: DecoratorTableViewCell {
         let clockRingSetting = myClockRingSetting()
         
         self.titleLabel.text = ClockRingSetting.descriptionForRingType(clockRingSetting.ringType)
+        self.shapeTypeTitleLabel.text = FaceIndicatorNode.descriptionForType(clockRingSetting.indicatorType)
+        self.materialSegment.selectedSegmentIndex = clockRingSetting.ringMaterialDesiredThemeColorIndex
         
-        if clockRingSetting.ringType == .RingTypeTextNode || clockRingSetting.ringType == .RingTypeTextRotatingNode {
-            valueSlider.minimumValue = AppUISettings.ringSettigsSliderTextMin
-            valueSlider.maximumValue = AppUISettings.ringSettigsSliderTextMax
+        valueSlider.minimumValue = AppUISettings.ringSettigsSliderShapeMin
+        valueSlider.maximumValue = AppUISettings.ringSettigsSliderShapeMax
             
-            valueSlider.value = clockRingSetting.textSize
-        }
+        valueSlider.value = clockRingSetting.indicatorSize
     }
     
     override func awakeFromNib() {

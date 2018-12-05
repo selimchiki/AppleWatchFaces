@@ -43,6 +43,10 @@ class DecoratorsTableViewController: UITableViewController {
             if (ringSetting.ringType == .RingTypeTextNode || ringSetting.ringType == .RingTypeTextRotatingNode) {
                 return 230.0
             }
+            
+            if (ringSetting.ringType == .RingTypeShapeNode) {
+                return 150.0
+            }
         }
         return 100.0
     }
