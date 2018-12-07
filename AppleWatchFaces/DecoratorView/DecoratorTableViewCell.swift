@@ -10,11 +10,25 @@ import UIKit
 
 class DecoratorTableViewCell: UITableViewCell {
     
-    var rowIndex:Int=0
+    //var rowIndex:Int=0
+    var parentTableview : UITableView?
+    
+    func myClockRingSetting()->ClockRingSetting {
+        if let tableView = parentTableview, let indexPath = tableView.indexPath(for: self) {
+            return (SettingsViewController.currentClockSetting.clockFaceSettings?.ringSettings[indexPath.row])!
+        } else {
+            debugPrint("** CANT GET index for tableCell, might be out of view?")
+            return ClockRingSetting.defaults()
+        }
+    }
 
-    func setupUIForClockRingSetting() {
+    func setupUIForClockRingSetting( clockRingSetting: ClockRingSetting ) {
         //to be implemented by subClasses
     }
+    
+//    override func didMoveToSuperview() {
+//        self.setupUIForClockRingSetting()
+//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

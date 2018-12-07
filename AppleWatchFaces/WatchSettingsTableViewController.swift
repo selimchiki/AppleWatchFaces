@@ -132,6 +132,15 @@ class WatchSettingsTableViewController: UITableViewController {
         return sectionsData[currentGroupIndex].count
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellId = sectionsData[currentGroupIndex][indexPath.section]["cellID"]!
+        if cellId == "ringEditorTableViewCellID" {
+            //call segue
+            self.performSegue(withIdentifier: "callDecoratorPreviewSegueID", sender: nil)
+            //
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let rowHeight = sectionsData[currentGroupIndex][indexPath.section]["rowHeight"]!
         let doubleVal = Double.init(rowHeight)

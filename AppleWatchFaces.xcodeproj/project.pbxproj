@@ -461,9 +461,9 @@
 			isa = PBXGroup;
 			children = (
 				3107B5D221B40480005BD26D /* DecoratorPreviewController.swift */,
-				3107B5DB21B47857005BD26D /* DecotatorTextTableViewCell.swift */,
 				3107B5D021B4023B005BD26D /* DecoratorsTableViewController.swift */,
 				3107B5D921B47634005BD26D /* DecoratorTableViewCell.swift */,
+				3107B5DB21B47857005BD26D /* DecotatorTextTableViewCell.swift */,
 				3107B5D521B406C8005BD26D /* DecoratorSpacerTableViewCell.swift */,
 				3107B5D721B47437005BD26D /* DecotatorShapeTableViewCell.swift */,
 			);

@@ -16,11 +16,7 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
     @IBOutlet var rotatingSwitch: UISwitch!
     @IBOutlet var materialSegment: UISegmentedControl!
     @IBOutlet var totalNumbersSegment: UISegmentedControl!
-    
-    func myClockRingSetting()->ClockRingSetting {
-        return (SettingsViewController.currentClockSetting.clockFaceSettings?.ringSettings[rowIndex])!
-    }
-    
+      
     @IBAction func totalSegmentDidChange(sender: UISegmentedControl ) {
         let clockRingSetting = myClockRingSetting()
         clockRingSetting.ringPatternTotal = Int(ClockRingSetting.ringTotalOptions()[sender.selectedSegmentIndex])!
@@ -65,18 +61,15 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
         
     }
     
-    override func setupUIForClockRingSetting() {
-        super.setupUIForClockRingSetting()
-        
-        let clockRingSetting = myClockRingSetting()
-        
+    override func setupUIForClockRingSetting( clockRingSetting: ClockRingSetting ) {
+        super.setupUIForClockRingSetting(clockRingSetting: clockRingSetting)
+                
         self.titleLabel.text = ClockRingSetting.descriptionForRingType(clockRingSetting.ringType)
         self.fontTitleLabel.text =  NumberTextNode.descriptionForType(clockRingSetting.textType)
         self.materialSegment.selectedSegmentIndex = clockRingSetting.ringMaterialDesiredThemeColorIndex
         
         //TODO: set total to proper index
         //self.totalNumbersSegment.selectedSegmentIndex = ClockRingSetting.ringTotalOptions()
-        
         
         if clockRingSetting.ringType == .RingTypeTextRotatingNode {
             self.rotatingSwitch.isOn = true

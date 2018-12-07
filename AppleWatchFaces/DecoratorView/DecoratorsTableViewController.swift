@@ -62,31 +62,23 @@ class DecoratorsTableViewController: UITableViewController {
         
         if let clockSettings = SettingsViewController.currentClockSetting.clockFaceSettings {
             let ringSetting = clockSettings.ringSettings[indexPath.row]
-        
+            
             if (ringSetting.ringType == .RingTypeSpacer) {
                 cell = tableView.dequeueReusableCell(withIdentifier: "decoratorEditorSpacerID", for: indexPath) as! DecoratorSpacerTableViewCell
-                
-                cell.rowIndex = indexPath.row
-                cell.setupUIForClockRingSetting()
-                
             }
         
             if (ringSetting.ringType == .RingTypeShapeNode) {
-                
                 cell = tableView.dequeueReusableCell(withIdentifier: "decoratorEditorShapeID", for: indexPath) as! DecoratorShapeTableViewCell
-                cell.rowIndex = indexPath.row
-                cell.setupUIForClockRingSetting()
             }
             
             if (ringSetting.ringType == .RingTypeTextNode || ringSetting.ringType == .RingTypeTextRotatingNode) {
-                
                 cell = tableView.dequeueReusableCell(withIdentifier: "decoratorEditorTextID", for: indexPath) as! DecoratorTextTableViewCell
-                cell.rowIndex = indexPath.row
-                cell.setupUIForClockRingSetting()
             }
+            
+            cell.setupUIForClockRingSetting(clockRingSetting: ringSetting)
         }
         
-        
+        cell.parentTableview = self.tableView
         return cell
     }
     
@@ -100,13 +92,13 @@ class DecoratorsTableViewController: UITableViewController {
             SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings.insert(object, at: destRow)
         }
         
-        //swap rowindexes
-        if let sourceCell = tableView.cellForRow(at: sourceIndexPath) as? DecoratorTableViewCell {
-            sourceCell.rowIndex = destRow
-        }
-        if let destCell = tableView.cellForRow(at: destinationIndexPath) as? DecoratorTableViewCell {
-            destCell.rowIndex = sourceRow
-        }
+//        //swap rowindexes
+//        if let sourceCell = tableView.cellForRow(at: sourceIndexPath) as? DecoratorTableViewCell {
+//            sourceCell.rowIndex = destRow
+//        }
+//        if let destCell = tableView.cellForRow(at: destinationIndexPath) as? DecoratorTableViewCell {
+//            destCell.rowIndex = sourceRow
+//        }
         
         redrawPreview()
     }
@@ -119,7 +111,7 @@ class DecoratorsTableViewController: UITableViewController {
                 //let trashedSetting = clockSettings.ringSettings[sourceRow]
                 SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings.remove(at: sourceRow)
                 tableView.deleteRows(at: [indexPath], with: .none)
-                
+                            
                 redrawPreview()
             }
         

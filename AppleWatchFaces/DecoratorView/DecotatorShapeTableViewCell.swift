@@ -15,10 +15,6 @@ class DecoratorShapeTableViewCell: DecoratorTableViewCell {
     @IBOutlet var materialSegment: UISegmentedControl!
     @IBOutlet var valueSlider: UISlider!
     
-    func myClockRingSetting()->ClockRingSetting {
-        return (SettingsViewController.currentClockSetting.clockFaceSettings?.ringSettings[rowIndex])!
-    }
-    
     @IBAction func segmentDidChange(sender: UISegmentedControl ) {
         //debugPrint("segment value:" + String( sender.selectedSegmentIndex ) )
         let clockRingSetting = myClockRingSetting()
@@ -28,7 +24,7 @@ class DecoratorShapeTableViewCell: DecoratorTableViewCell {
     }
     
     @IBAction func sliderValueDidChange(sender: UISlider ) {
-        //debugPrint("slider value:" + String( sender.value ) )
+        debugPrint("slider value:" + String( sender.value ) )
         let clockRingSetting = myClockRingSetting()
 
         let roundedValue = Float(round(100*sender.value)/100)
@@ -40,10 +36,8 @@ class DecoratorShapeTableViewCell: DecoratorTableViewCell {
         }
     }
     
-    override func setupUIForClockRingSetting() {
-        super.setupUIForClockRingSetting()
-        
-        let clockRingSetting = myClockRingSetting()
+    override func setupUIForClockRingSetting( clockRingSetting: ClockRingSetting ) {
+        super.setupUIForClockRingSetting(clockRingSetting: clockRingSetting)
         
         self.titleLabel.text = ClockRingSetting.descriptionForRingType(clockRingSetting.ringType)
         self.shapeTypeTitleLabel.text = FaceIndicatorNode.descriptionForType(clockRingSetting.indicatorType)

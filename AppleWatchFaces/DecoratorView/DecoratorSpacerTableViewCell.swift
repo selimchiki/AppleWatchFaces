@@ -13,10 +13,6 @@ class DecoratorSpacerTableViewCell: DecoratorTableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var valueSlider: UISlider!
     
-    func myClockRingSetting()->ClockRingSetting {
-        return (SettingsViewController.currentClockSetting.clockFaceSettings?.ringSettings[rowIndex])!
-    }
-    
     @IBAction func sliderValueDidChange(sender: UISlider ) {
         //debugPrint("slider value:" + String( sender.value ) )
         let clockRingSetting = myClockRingSetting()
@@ -29,11 +25,9 @@ class DecoratorSpacerTableViewCell: DecoratorTableViewCell {
         }
     }
     
-    override func setupUIForClockRingSetting() {
-        super.setupUIForClockRingSetting()
-        
-        let clockRingSetting = myClockRingSetting()
-        
+    override func setupUIForClockRingSetting( clockRingSetting: ClockRingSetting ) {
+        super.setupUIForClockRingSetting(clockRingSetting: clockRingSetting)
+    
         self.titleLabel.text = ClockRingSetting.descriptionForRingType(clockRingSetting.ringType)
         
         valueSlider.minimumValue = AppUISettings.ringSettigsSliderSpacerMin
