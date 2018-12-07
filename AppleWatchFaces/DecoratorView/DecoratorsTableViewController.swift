@@ -12,6 +12,12 @@ class DecoratorsTableViewController: UITableViewController {
 
     var decoratorPreviewController: DecoratorPreviewController?
     
+    func addNewItem( ringType: RingTypes) {
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [IndexPath(row: SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings.count-1, section: 0)], with: .automatic)
+        self.tableView.endUpdates()
+    }
+    
     func redrawPreview() {
         //tell clock previe to redraw!
         if let dPreviewVC = decoratorPreviewController {
@@ -92,6 +98,14 @@ class DecoratorsTableViewController: UITableViewController {
             let object = SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings[sourceRow]
             SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings.remove(at: sourceRow)
             SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings.insert(object, at: destRow)
+        }
+        
+        //swap rowindexes
+        if let sourceCell = tableView.cellForRow(at: sourceIndexPath) as? DecoratorTableViewCell {
+            sourceCell.rowIndex = destRow
+        }
+        if let destCell = tableView.cellForRow(at: destinationIndexPath) as? DecoratorTableViewCell {
+            destCell.rowIndex = sourceRow
         }
         
         redrawPreview()

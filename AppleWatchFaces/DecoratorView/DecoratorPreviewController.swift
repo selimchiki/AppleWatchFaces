@@ -12,6 +12,7 @@ import SpriteKit
 class DecoratorPreviewController: UIViewController {
 
     @IBOutlet var skView: SKView!
+    var decoratorsTableViewController: DecoratorsTableViewController?
     static let ringSettingsChangedNotificationName = Notification.Name("ringSettingsChanged")
     
     func redraw(clockSetting: ClockSetting) {
@@ -46,10 +47,45 @@ class DecoratorPreviewController: UIViewController {
         redraw(clockSetting: SettingsViewController.currentClockSetting)
     }
     
+    func addNewItem( ringType: RingTypes) {
+        
+        let newItem = ClockRingSetting.defaults()
+        newItem.ringType = ringType
+        SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings.append(newItem)
+        redraw(clockSetting: SettingsViewController.currentClockSetting)
+        
+        if let dtVC = decoratorsTableViewController {
+            dtVC.addNewItem(ringType: ringType)
+        }
+        
+    }
+    
+    @objc func newItem() {
+        let optionMenu = UIAlertController(title: nil, message: "New Indicator Item", preferredStyle: .actionSheet)
+        
+        for ringType in RingTypes.userSelectableValues {
+            let newActionDescription = ClockRingSetting.descriptionForRingType(ringType)
+            let newAction = UIAlertAction(title: newActionDescription, style: .default, handler: { action in
+                self.addNewItem(ringType: ringType)
+            } )
+            optionMenu.addAction(newAction)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        optionMenu.addAction(cancelAction)
+        
+        self.present(optionMenu, animated: true, completion: nil)
+        
+//        decoratorsTableViewController.newItem()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let createButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonItem.SystemItem.compose, target: self, action: #selector(newItem))
+        self.navigationItem.rightBarButtonItems = [createButton]
+        
+        //round the preview watch SKView
         skView.layer.cornerRadius = 28.0
         skView.layer.borderWidth = 4.0
         skView.layer.borderColor = SKColor.darkGray.cgColor
@@ -69,8 +105,8 @@ class DecoratorPreviewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.destination is DecoratorsTableViewController {
-            let vc = segue.destination as? DecoratorsTableViewController
-            vc!.decoratorPreviewController = self
+            decoratorsTableViewController = segue.destination as? DecoratorsTableViewController
+            decoratorsTableViewController!.decoratorPreviewController = self
         }
         
     }
