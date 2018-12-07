@@ -28,7 +28,7 @@ class DecoratorsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.isEditing = true
+        //self.tableView.isEditing = true
     }
 
     // MARK: - Table view data source

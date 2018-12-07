@@ -12,12 +12,13 @@ import SpriteKit
 class DecoratorPreviewController: UIViewController {
 
     @IBOutlet var skView: SKView!
+    var editBarButton: UIBarButtonItem = UIBarButtonItem()
     var decoratorsTableViewController: DecoratorsTableViewController?
     static let ringSettingsChangedNotificationName = Notification.Name("ringSettingsChanged")
     
     func redraw(clockSetting: ClockSetting) {
         
-        self.title = "Editing " + String( clockSetting.clockFaceSettings!.ringSettings.count ) + " parts"
+        self.title = String( clockSetting.clockFaceSettings!.ringSettings.count ) + " parts"
         
         let newWatchFaceNode = WatchFaceNode.init(clockSetting: clockSetting, size: CGSize.init(width: 100, height: 100) )
         
@@ -83,7 +84,10 @@ class DecoratorPreviewController: UIViewController {
         super.viewDidLoad()
 
         let createButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonItem.SystemItem.compose, target: self, action: #selector(newItem))
-        self.navigationItem.rightBarButtonItems = [createButton]
+        
+        if let dtVC = decoratorsTableViewController {
+            self.navigationItem.rightBarButtonItems = [dtVC.editButtonItem, createButton]
+        }
         
         //round the preview watch SKView
         skView.layer.cornerRadius = 28.0
