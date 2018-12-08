@@ -2,11 +2,13 @@
 ## TO DO:
 
 - get ring settings / editor working
+    - bug when rendering text items < 12 ( IE 6 or 4 showg wrong numbers )
+    - scoll to new item ( esp. important for long list )
     - UX for patterns ?
     
-  - draw rings visually horizontally like the chooser view with new and edit buttons, edit just shows quick tableView for editing  
-    
 - fix the need for always having a spacer as first item ( better top level scale / drawing ) 
+
+- implement some of the smooth animations for second / minute hand
 
 - crash when sending to watch 5 times -- https://stackoverflow.com/questions/52860566/error-when-running-xcode-simulator-framework-cuithemestore-no-theme-regist
 - !! save json data into JPEG for import / export over social  https://stackoverflow.com/questions/40175160/exif-data-read-and-write

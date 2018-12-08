@@ -14,7 +14,9 @@ class DecoratorPreviewController: UIViewController {
     @IBOutlet var skView: SKView!
     var editBarButton: UIBarButtonItem = UIBarButtonItem()
     var decoratorsTableViewController: DecoratorsTableViewController?
+    
     static let ringSettingsChangedNotificationName = Notification.Name("ringSettingsChanged")
+    static let ringSettingsEditDetailNotificationName = Notification.Name("ringSettingsEditDetail")
     
     func redraw(clockSetting: ClockSetting) {
         
@@ -36,7 +38,7 @@ class DecoratorPreviewController: UIViewController {
         
     }
     
-    @objc func onNotification(notification:Notification)
+    @objc func onSettingChangedNotification(notification:Notification)
     {
         //update values
         if let data = notification.userInfo as? [String: String] {
@@ -46,6 +48,30 @@ class DecoratorPreviewController: UIViewController {
         }
         
         redraw(clockSetting: SettingsViewController.currentClockSetting)
+    }
+    
+    @objc func onSettingEditDetailNotification(notification:Notification)
+    {
+        
+        if let settingType = notification.userInfo?["settingType"] as? String, settingType == "textType", let decoratorTextTableViewCell = notification.userInfo?["decoratorTextTableViewCell"] as? DecoratorTextTableViewCell  {
+            
+                let optionMenu = UIAlertController(title: nil, message: "Choose Font", preferredStyle: .actionSheet)
+                optionMenu.view.tintColor = UIColor.black
+                
+                for textType in NumberTextTypes.userSelectableValues {
+                    let newAction = UIAlertAction(title: NumberTextNode.descriptionForType(textType), style: .default, handler: { action in
+                        decoratorTextTableViewCell.fontChosen(textType: textType)
+                    } )
+                    optionMenu.addAction(newAction)
+                }
+                
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+                optionMenu.addAction(cancelAction)
+                
+                self.present(optionMenu, animated: true, completion: nil)
+        }
+        
+        
     }
     
     func addNewItem( ringType: RingTypes) {
@@ -63,6 +89,7 @@ class DecoratorPreviewController: UIViewController {
     
     @objc func newItem() {
         let optionMenu = UIAlertController(title: nil, message: "New Indicator Item", preferredStyle: .actionSheet)
+        optionMenu.view.tintColor = UIColor.black
         
         for ringType in RingTypes.userSelectableValues {
             let newActionDescription = ClockRingSetting.descriptionForRingType(ringType)
@@ -102,7 +129,8 @@ class DecoratorPreviewController: UIViewController {
         
         redraw(clockSetting: SettingsViewController.currentClockSetting)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(onNotification(notification:)), name: DecoratorPreviewController.ringSettingsChangedNotificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onSettingChangedNotification(notification:)), name: DecoratorPreviewController.ringSettingsChangedNotificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onSettingEditDetailNotification(notification:)), name: DecoratorPreviewController.ringSettingsEditDetailNotificationName, object: nil)
     }
     
     

@@ -32,6 +32,21 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
         self.valueSlider.isHidden = false
         self.rotatingSwitch.isHidden = false
     }
+    
+    func fontChosen( textType: NumberTextTypes ) {
+        //debugPrint("fontChosen" + NumberTextNode.descriptionForType(textType))
+        
+        let clockRingSetting = myClockRingSetting()
+        clockRingSetting.textType = textType
+        self.fontTitleLabel.text =  NumberTextNode.descriptionForType(clockRingSetting.textType)
+        NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsChangedNotificationName, object: nil,
+                                        userInfo:["settingType":"textType" ])
+    }
+    
+    @IBAction func editType(sender: UIButton ) {
+        NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsEditDetailNotificationName, object: nil,
+                                        userInfo:["settingType":"textType", "decoratorTextTableViewCell":self ])
+    }
       
     @IBAction func totalSegmentDidChange(sender: UISegmentedControl ) {
         let clockRingSetting = myClockRingSetting()
@@ -53,10 +68,12 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
         //debugPrint("switch value:" + String( sender.isOn ) )
         let clockRingSetting = myClockRingSetting()
         if sender.isOn {
-            clockRingSetting.ringType = .RingTypeTextNode
-        } else {
             clockRingSetting.ringType = .RingTypeTextRotatingNode
+        } else {
+            clockRingSetting.ringType = .RingTypeTextNode
+            
         }
+        self.titleLabel.text = ClockRingSetting.descriptionForRingType(clockRingSetting.ringType)
         NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsChangedNotificationName, object: nil,
                                         userInfo:["settingType":"textType" ])
     }

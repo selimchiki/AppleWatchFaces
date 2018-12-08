@@ -1546,6 +1546,9 @@
                                                 <constraint firstAttribute="width" constant="89" id="iTo-Z4-XR7"/>
                                             </constraints>
                                             <state key="normal" title="edit"/>
+                                            <connections>
+                                                <action selector="editTypeWithSender:" destination="H70-Tl-87l" eventType="touchUpInside" id="ng0-Vj-jh4"/>
+                                            </connections>
                                         </button>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SMC-Dj-gCZ">
                                             <rect key="frame" x="309" y="74" width="51" height="31"/>
