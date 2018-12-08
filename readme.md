@@ -3,7 +3,6 @@
 
 - get ring settings / editor working
     - UX for patterns ?
-    - draw simpler version of cells in edit mode
     
   - draw rings visually horizontally like the chooser view with new and edit buttons, edit just shows quick tableView for editing  
     

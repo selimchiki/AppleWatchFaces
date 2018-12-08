@@ -43,15 +43,23 @@ class DecoratorsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if let clockSettings = SettingsViewController.currentClockSetting.clockFaceSettings {
-            let ringSetting = clockSettings.ringSettings[indexPath.row]
-            
-            if (ringSetting.ringType == .RingTypeTextNode || ringSetting.ringType == .RingTypeTextRotatingNode) {
-                return 230.0
-            }
-            
-            if (ringSetting.ringType == .RingTypeShapeNode) {
-                return 150.0
+        if tableView.isEditing {
+            return 38.0
+        } else {
+            if let clockSettings = SettingsViewController.currentClockSetting.clockFaceSettings {
+                let ringSetting = clockSettings.ringSettings[indexPath.row]
+                
+                if (ringSetting.ringType == .RingTypeTextNode || ringSetting.ringType == .RingTypeTextRotatingNode) {
+                    return 230.0
+                }
+                
+                if (ringSetting.ringType == .RingTypeShapeNode) {
+                    return 180.0
+                }
+                
+                if (ringSetting.ringType == .RingTypeSpacer) {
+                    return 80.0
+                }
             }
         }
         return 100.0

@@ -13,6 +13,14 @@ class DecoratorSpacerTableViewCell: DecoratorTableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var valueSlider: UISlider!
     
+    override func transitionToEditMode() {
+        self.valueSlider.isHidden = true
+    }
+    
+    override func transitionToNormalMode() {
+        self.valueSlider.isHidden = false
+    }
+    
     @IBAction func sliderValueDidChange(sender: UISlider ) {
         //debugPrint("slider value:" + String( sender.value ) )
         let clockRingSetting = myClockRingSetting()

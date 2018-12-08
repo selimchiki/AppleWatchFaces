@@ -13,6 +13,27 @@ class DecoratorTableViewCell: UITableViewCell {
     //var rowIndex:Int=0
     var parentTableview : UITableView?
     
+    func transitionToEditMode() {
+        // to be overriden by children
+    }
+    func transitionToNormalMode() {
+        // to be overriden by children
+    }
+    
+    override func willTransition(to state: UITableViewCell.StateMask) {
+        
+    }
+    override func didTransition(to state: UITableViewCell.StateMask) {
+        if state.contains(UITableViewCell.StateMask.showingEditControl) {
+            debugPrint("moving to edit mode!")
+            transitionToEditMode()
+            self.parentTableview?.reloadSections(IndexSet.init(integer: 0), with: UITableView.RowAnimation.automatic)
+        } else {
+            transitionToNormalMode()
+            self.parentTableview?.reloadSections(IndexSet.init(integer: 0), with: UITableView.RowAnimation.automatic)
+        }
+    }
+    
     func myClockRingSetting()->ClockRingSetting {
         if let tableView = parentTableview, let indexPath = tableView.indexPath(for: self) {
             return (SettingsViewController.currentClockSetting.clockFaceSettings?.ringSettings[indexPath.row])!

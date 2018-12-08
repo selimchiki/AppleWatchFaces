@@ -13,7 +13,22 @@ class DecoratorShapeTableViewCell: DecoratorTableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var shapeTypeTitleLabel: UILabel!
     @IBOutlet var materialSegment: UISegmentedControl!
+    @IBOutlet var totalNumbersSegment: UISegmentedControl!
     @IBOutlet var valueSlider: UISlider!
+    
+    override func transitionToEditMode() {
+        self.shapeTypeTitleLabel.isHidden = true
+        self.materialSegment.isHidden = true
+        self.totalNumbersSegment.isHidden = true
+        self.valueSlider.isHidden = true
+    }
+    
+    override func transitionToNormalMode() {
+        self.shapeTypeTitleLabel.isHidden = false
+        self.materialSegment.isHidden = false
+        self.totalNumbersSegment.isHidden = false
+        self.valueSlider.isHidden = false
+    }
     
     @IBAction func segmentDidChange(sender: UISegmentedControl ) {
         //debugPrint("segment value:" + String( sender.selectedSegmentIndex ) )

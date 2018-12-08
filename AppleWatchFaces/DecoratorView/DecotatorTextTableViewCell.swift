@@ -16,6 +16,22 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
     @IBOutlet var rotatingSwitch: UISwitch!
     @IBOutlet var materialSegment: UISegmentedControl!
     @IBOutlet var totalNumbersSegment: UISegmentedControl!
+    
+    override func transitionToEditMode() {
+        self.fontTitleLabel.isHidden = true
+        self.materialSegment.isHidden = true
+        self.totalNumbersSegment.isHidden = true
+        self.valueSlider.isHidden = true
+        self.rotatingSwitch.isHidden = true
+    }
+    
+    override func transitionToNormalMode() {
+        self.fontTitleLabel.isHidden = false
+        self.materialSegment.isHidden = false
+        self.totalNumbersSegment.isHidden = false
+        self.valueSlider.isHidden = false
+        self.rotatingSwitch.isHidden = false
+    }
       
     @IBAction func totalSegmentDidChange(sender: UISegmentedControl ) {
         let clockRingSetting = myClockRingSetting()
@@ -56,9 +72,7 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
             NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsChangedNotificationName, object: nil,
                                             userInfo:["settingType":"textSize" ])
         }
-        
-        
-        
+    
     }
     
     override func setupUIForClockRingSetting( clockRingSetting: ClockRingSetting ) {
