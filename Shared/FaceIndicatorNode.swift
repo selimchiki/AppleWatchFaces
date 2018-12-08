@@ -28,7 +28,7 @@ class FaceIndicatorNode: SKSpriteNode {
         var typeDescription = ""
         
         if (nodeType == FaceIndicatorTypes.FaceIndicatorTypeTube)  { typeDescription = "Tube" }
-        if (nodeType == FaceIndicatorTypes.FaceIndicatorTypeSphere)  { typeDescription = "Sphere" }
+        if (nodeType == FaceIndicatorTypes.FaceIndicatorTypeSphere)  { typeDescription = "Circle" }
         if (nodeType == FaceIndicatorTypes.FaceIndicatorTypeBox)  { typeDescription = "Thin Box" }
         if (nodeType == FaceIndicatorTypes.FaceIndicatorTypeMediumBox )  { typeDescription = "Medium Box" }
         if (nodeType == FaceIndicatorTypes.FaceIndicatorTypeFatBox)  { typeDescription = "Fat Box" }
@@ -108,7 +108,7 @@ class FaceIndicatorNode: SKSpriteNode {
             let w = CGFloat( size * Float(0.1) )
             let h = CGFloat( size * Float(0.6) )
             //let l = CGFloat( size * Float(0.1) )
-            let cham = CGFloat( size * Float(0.05) )
+            let cham = CGFloat( size * Float(0.15) )
             let shapeNode = SKShapeNode.init(rect: CGRect.init(x: 0, y: 0, width: w * sizeMultiplier, height: h * sizeMultiplier), cornerRadius: cham * sizeMultiplier)
             shapeNode.fillColor = fillColor
             shapeNode.strokeColor = fillColor

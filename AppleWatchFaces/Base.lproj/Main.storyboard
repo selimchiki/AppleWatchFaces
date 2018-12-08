@@ -1423,6 +1423,9 @@
                                             <state key="normal" title="edit">
                                                 <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="editShapeWithSender:" destination="P1M-Tj-lbH" eventType="touchUpInside" id="AlH-rn-mdW"/>
+                                            </connections>
                                         </button>
                                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IO4-Vm-jxL">
                                             <rect key="frame" x="16" y="141" width="343" height="29"/>
@@ -1469,11 +1472,13 @@
                                                 <segment title="60"/>
                                                 <segment title="24"/>
                                                 <segment title="12"/>
-                                                <segment title="6"/>
                                                 <segment title="4"/>
                                                 <segment title="2"/>
                                             </segments>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="totalSegmentDidChangeWithSender:" destination="P1M-Tj-lbH" eventType="valueChanged" id="m0u-Ji-xHf"/>
+                                            </connections>
                                         </segmentedControl>
                                     </subviews>
                                     <constraints>

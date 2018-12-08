@@ -99,7 +99,6 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
         self.fontTitleLabel.text =  NumberTextNode.descriptionForType(clockRingSetting.textType)
         self.materialSegment.selectedSegmentIndex = clockRingSetting.ringMaterialDesiredThemeColorIndex
         
-        //TODO: set total to proper index
         let totalString = String(clockRingSetting.ringPatternTotal)
         if let segmentIndex = ClockRingSetting.ringTotalOptions().index(of: totalString) {
             self.totalNumbersSegment.selectedSegmentIndex = segmentIndex

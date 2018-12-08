@@ -30,6 +30,30 @@ class DecoratorShapeTableViewCell: DecoratorTableViewCell {
         self.valueSlider.isHidden = false
     }
     
+    func shapeChosen( shapeType: FaceIndicatorTypes ) {
+        //debugPrint("fontChosen" + NumberTextNode.descriptionForType(textType))
+        
+        let clockRingSetting = myClockRingSetting()
+        clockRingSetting.indicatorType = shapeType
+        self.shapeTypeTitleLabel.text = FaceIndicatorNode.descriptionForType(shapeType)
+        
+        NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsChangedNotificationName, object: nil,
+                                        userInfo:["settingType":"indicatorType" ])
+    }
+    
+    @IBAction func editShape(sender: UIButton ) {
+        NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsEditDetailNotificationName, object: nil,
+                                        userInfo:["settingType":"indicatorType", "decoratorShapeTableViewCell":self ])
+    }
+    
+    @IBAction func totalSegmentDidChange(sender: UISegmentedControl ) {
+        let clockRingSetting = myClockRingSetting()
+        clockRingSetting.ringPatternTotal = Int(ClockRingSetting.ringTotalOptions()[sender.selectedSegmentIndex])!
+        clockRingSetting.ringPattern = [1] // all on for now
+        NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsChangedNotificationName, object: nil,
+                                        userInfo:["settingType":"ringPatternTotal" ])
+    }
+    
     @IBAction func segmentDidChange(sender: UISegmentedControl ) {
         //debugPrint("segment value:" + String( sender.selectedSegmentIndex ) )
         let clockRingSetting = myClockRingSetting()
@@ -57,6 +81,11 @@ class DecoratorShapeTableViewCell: DecoratorTableViewCell {
         self.titleLabel.text = ClockRingSetting.descriptionForRingType(clockRingSetting.ringType)
         self.shapeTypeTitleLabel.text = FaceIndicatorNode.descriptionForType(clockRingSetting.indicatorType)
         self.materialSegment.selectedSegmentIndex = clockRingSetting.ringMaterialDesiredThemeColorIndex
+        
+        let totalString = String(clockRingSetting.ringPatternTotal)
+        if let segmentIndex = ClockRingSetting.ringTotalOptions().index(of: totalString) {
+            self.totalNumbersSegment.selectedSegmentIndex = segmentIndex
+        }
         
         valueSlider.minimumValue = AppUISettings.ringSettigsSliderShapeMin
         valueSlider.maximumValue = AppUISettings.ringSettigsSliderShapeMax

@@ -53,6 +53,27 @@ class DecoratorPreviewController: UIViewController {
     @objc func onSettingEditDetailNotification(notification:Notification)
     {
         
+        
+        
+        if let settingType = notification.userInfo?["settingType"] as? String, settingType == "indicatorType", let decoratorShapeTableViewCell = notification.userInfo?["decoratorShapeTableViewCell"] as? DecoratorShapeTableViewCell  {
+            
+            let optionMenu = UIAlertController(title: nil, message: "Choose Shape", preferredStyle: .actionSheet)
+            optionMenu.view.tintColor = UIColor.black
+            
+            for shapeType in FaceIndicatorTypes.userSelectableValues {
+                let newAction = UIAlertAction(title: FaceIndicatorNode.descriptionForType(shapeType), style: .default, handler: { action in
+                    decoratorShapeTableViewCell.shapeChosen(shapeType: shapeType)
+                } )
+                optionMenu.addAction(newAction)
+            }
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            optionMenu.addAction(cancelAction)
+            
+            self.present(optionMenu, animated: true, completion: nil)
+            
+        }
+        
         if let settingType = notification.userInfo?["settingType"] as? String, settingType == "textType", let decoratorTextTableViewCell = notification.userInfo?["decoratorTextTableViewCell"] as? DecoratorTextTableViewCell  {
             
                 let optionMenu = UIAlertController(title: nil, message: "Choose Font", preferredStyle: .actionSheet)
