@@ -128,6 +128,11 @@ class WatchFaceNode: SKShapeNode {
             var numberToRender = outerRingIndex
             if numberToRender == 0 { numberToRender = patternTotal }
             
+            //force small totals to show as 12s
+            if patternTotal < 12 {
+                numberToRender = numberToRender * ( 12 / patternTotal )
+            }
+            
             if (renderNumbers && ringType == RingTypes.RingTypeTextRotatingNode) {
                 newNode  = NumberTextNode.init(
                     numberTextType: ringSettings.textType,

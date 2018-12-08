@@ -100,7 +100,10 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
         self.materialSegment.selectedSegmentIndex = clockRingSetting.ringMaterialDesiredThemeColorIndex
         
         //TODO: set total to proper index
-        //self.totalNumbersSegment.selectedSegmentIndex = ClockRingSetting.ringTotalOptions()
+        let totalString = String(clockRingSetting.ringPatternTotal)
+        if let segmentIndex = ClockRingSetting.ringTotalOptions().index(of: totalString) {
+            self.totalNumbersSegment.selectedSegmentIndex = segmentIndex
+        }
         
         if clockRingSetting.ringType == .RingTypeTextRotatingNode {
             self.rotatingSwitch.isOn = true

@@ -19,7 +19,7 @@ enum RingTypes: String {
 class ClockRingSetting: NSObject {
     
     static func ringTotalOptions() -> [String] {
-        return [ "60", "24", "12", "6", "4", "2" ]
+        return [ "60", "24", "12", "4", "2" ]
     }
     
     static func ringPatterns() -> [String:NSArray] {
