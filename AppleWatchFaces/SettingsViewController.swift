@@ -126,7 +126,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         //tell preview to reload
         if watchPreviewViewController != nil {
             watchPreviewViewController?.redraw()
-            self.showMessage( message: SettingsViewController.currentClockSetting.title)
+            //self.showMessage( message: SettingsViewController.currentClockSetting.title)
         }
     }
     
@@ -180,7 +180,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         if let watchVC = watchPreviewViewController {
             
             if watchVC.makeThumb( imageName: fileName, cornerCrop: cornerCrop ) {
-                self.showMessage( message: "Screenshot successful.")
+                //self.showMessage( message: "Screenshot successful.")
             } else {
                 self.showError(errorMessage: "Problem creating screenshot.")
             }
