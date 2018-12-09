@@ -303,7 +303,7 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L09-xH-or1">
-                                <rect key="frame" x="0.0" y="319" width="375" height="355"/>
+                                <rect key="frame" x="0.0" y="319" width="375" height="348"/>
                                 <connections>
                                     <segue destination="g3k-ac-9zQ" kind="embed" id="9MD-Q2-0lQ"/>
                                 </connections>
@@ -391,7 +391,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kok-Ex-gcC" secondAttribute="trailing" constant="14" id="XaG-wd-We6"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="aQb-L4-zXI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mqq-m7-d7p" secondAttribute="trailing" constant="16" id="fxl-lf-QhP"/>
-                            <constraint firstAttribute="bottom" secondItem="L09-xH-or1" secondAttribute="bottom" constant="-7" id="sIa-d8-XUb"/>
+                            <constraint firstAttribute="bottom" secondItem="L09-xH-or1" secondAttribute="bottom" id="sIa-d8-XUb"/>
                             <constraint firstItem="L09-xH-or1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="viL-1J-OB2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
