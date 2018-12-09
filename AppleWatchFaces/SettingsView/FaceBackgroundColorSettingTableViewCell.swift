@@ -35,7 +35,8 @@ class FaceBackgroundColorSettingTableViewCell: ColorSettingsTableViewCell {
         //update the value
         SettingsViewController.currentClockSetting.clockFaceMaterialName = newColor
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
-        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"clockFaceMaterialName"])
+        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil,
+                                        userInfo:["cellId": self.cellId , "settingType":"clockFaceMaterialName"])
     }
     
 }

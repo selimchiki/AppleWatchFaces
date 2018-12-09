@@ -32,7 +32,8 @@ class DecoratorThemeSettingsTableViewCell: WatchSettingsSelectableTableViewCell,
         SettingsViewController.currentClockSetting.decoratorThemeTitle = theme.title
         
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
-        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"decoratorTheme"])
+        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil,
+                                        userInfo:["cellId": self.cellId , "settingType":"decoratorTheme"])
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

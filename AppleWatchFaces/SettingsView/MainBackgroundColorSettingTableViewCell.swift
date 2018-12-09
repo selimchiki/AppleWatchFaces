@@ -36,7 +36,8 @@ class MainBackgroundColorSettingTableViewCell: ColorSettingsTableViewCell {
         //update the value
         SettingsViewController.currentClockSetting.clockCasingMaterialName = newColor
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
-        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"clockCasingMaterialName"])
+        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil,
+                                        userInfo:["cellId": self.cellId , "settingType":"clockCasingMaterialName"])
     }
     
 }

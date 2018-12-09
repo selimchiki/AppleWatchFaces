@@ -51,7 +51,8 @@ class HourHandSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UICol
         //update the value
         SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandType = hourHandType
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
-        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"hourHandType"])
+        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil,
+                                        userInfo:["cellId": self.cellId , "settingType":"hourHandType"])
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -11,6 +11,9 @@ import Foundation
 
 //used in the subclassed cells to override calling selection
 class WatchSettingsSelectableTableViewCell:UITableViewCell {
+    
+    var cellId: String = ""
+    
     func chooseSetting( animated: Bool ) {
         debugPrint("** generic chooseSetting called, not overridden **")
     }
@@ -190,10 +193,12 @@ class WatchSettingsTableViewController: UITableViewController {
             
             let ringNum = String( SettingsViewController.currentClockSetting.clockFaceSettings!.ringSettings.count )
             cell.decoratorRingsLabel.text = ringNum + " parts make up this face"
+            cell.cellId = cellId //important for updating the proper header cell values later!
             
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! WatchSettingsSelectableTableViewCell
+            cell.cellId = cellId //important for updating the proper header cell values later!
             cell.chooseSetting(animated: true)
             return cell
         }
@@ -201,9 +206,25 @@ class WatchSettingsTableViewController: UITableViewController {
     
     @objc func onNotification(notification:Notification)
     {
-        //TODO: tell correct section to reload, type sent along
-        debugPrint("tableView full reload!!")
-        self.tableView.reloadData()
+        
+        func updateHeaderSection( section: Int ) {
+            if let sectionHeader = self.tableView.headerView(forSection: section) as? SettingsTableHeaderViewCell {
+                sectionHeader.settingLabel.text = valueForHeader( section: section)
+            }
+        }
+        
+        if let data = notification.userInfo as? [String: String], let cellID = data["cellId"] {
+            for (index,row) in sectionsData[currentGroupIndex].enumerated() {
+                if row["cellID"] == cellID {
+                    //debugPrint("header reload, index" + String(index) )
+                    updateHeaderSection( section:index )
+                }
+            }
+        } else {
+            debugPrint("!!! tableView full reload!!, need to send along cellId to be able to reload on header / values... WatchSettingsTableViewController")
+            self.tableView.reloadData()
+        }
+        
     }
     
     override func viewDidLoad() {

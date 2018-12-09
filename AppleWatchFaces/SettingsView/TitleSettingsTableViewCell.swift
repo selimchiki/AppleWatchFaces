@@ -29,7 +29,8 @@ class TitleSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UITextFi
         SettingsViewController.currentClockSetting.title = newTitle
         
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
-        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"clockFaceSettings.title"])
+        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil,
+                                        userInfo:["cellId": self.cellId , "settingType":"clockFaceSettings.title"])
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

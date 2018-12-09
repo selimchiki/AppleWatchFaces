@@ -52,7 +52,8 @@ class SecondHandSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UIC
         //update the value
         SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandType = secondHandType
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil) //userInfo:["data": 42, "isImportant": true]
-        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"secondHandType"])
+        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil,
+                                        userInfo:["cellId": self.cellId , "settingType":"secondHandType"])
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

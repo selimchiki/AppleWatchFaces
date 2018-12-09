@@ -28,7 +28,8 @@ class HandOptionsSettingTableViewCell : WatchSettingsSelectableTableViewCell, UI
         clockFaceSettings.shouldShowHandOutlines = sender.isOn
         
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
-        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"shouldShowHandOutlines"])
+        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil,
+                                        userInfo:["cellId": self.cellId , "settingType":"shouldShowHandOutlines"])
     }
     
 //    override func awakeFromNib() {

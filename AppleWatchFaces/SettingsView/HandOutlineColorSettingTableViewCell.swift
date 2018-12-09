@@ -34,7 +34,8 @@ class HandOutlineColorSettingTableViewCell: ColorSettingsTableViewCell {
         //update the value
         SettingsViewController.currentClockSetting.clockFaceSettings?.handOutlineMaterialName = newColor
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
-        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"handOutlineMaterialName"])
+        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil,
+                                        userInfo:["cellId": self.cellId , "settingType":"handOutlineMaterialName"])
     }
         
 }

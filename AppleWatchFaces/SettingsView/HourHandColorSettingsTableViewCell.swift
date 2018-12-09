@@ -36,7 +36,8 @@ class HourHandColorSettingsTableViewCell: ColorSettingsTableViewCell {
         //update the value
         SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandMaterialName = newColor
         NotificationCenter.default.post(name: SettingsViewController.settingsChangedNotificationName, object: nil, userInfo:nil)
-        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil, userInfo:["settingType":"hourHandMaterialName"])
+        NotificationCenter.default.post(name: WatchSettingsTableViewController.settingsTableSectionReloadNotificationName, object: nil,
+                                        userInfo:["cellId": self.cellId , "settingType":"hourHandMaterialName"])
     }
     
 }
