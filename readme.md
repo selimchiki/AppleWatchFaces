@@ -2,6 +2,8 @@
 ## TO DO:
 
 - get ring settings / editor working
+    - select cell when editing any of the items
+    - show selected cell in preview ( as a dotted line ring? )
     - scoll to new item ( esp. important for long list )
     - UX for patterns ?
 

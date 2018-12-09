@@ -130,24 +130,29 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         }
     }
     
+    func redrawSettingsTableAfterGroupChange() {
+        if watchSettingsTableViewController != nil {
+            watchSettingsTableViewController?.reloadAfterGroupChange()
+        }
+    }
+    
     func redrawSettingsTable() {
         //tell the settings table to reload
         if watchSettingsTableViewController != nil {
-            watchSettingsTableViewController?.reloadAfterGroupChange()
-            //selectCurrentSettings(animated: true)
+            watchSettingsTableViewController?.selectCurrentSettings(animated: true)
         }
     }
     
     @IBAction func randomColorTheme() {
         SettingsViewController.currentClockSetting.randomize(newColors: true, newBackground: false, newFace: false)
         redrawPreviewClock()
-        redrawSettingsTable()
+        redrawSettingsTableAfterGroupChange()
     }
     
     @IBAction func randomFaceTheme() {
         SettingsViewController.currentClockSetting.randomize(newColors: false, newBackground: false, newFace: true)
         redrawPreviewClock()
-        redrawSettingsTable()
+        redrawSettingsTableAfterGroupChange()
     }
     
     @IBAction func nextClock() {
@@ -158,7 +163,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         
         SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
         redrawPreviewClock()
-        redrawSettingsTable()
+        redrawSettingsTableAfterGroupChange()
     }
     
     @IBAction func prevClock() {
@@ -169,7 +174,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         
         SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
         redrawPreviewClock()
-        redrawSettingsTable()
+        redrawSettingsTableAfterGroupChange()
     }
     
     func makeThumb( fileName: String) {
@@ -202,7 +207,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         //just revert this clock
         SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!
         redrawPreviewClock()
-        redrawSettingsTable()
+        redrawSettingsTableAfterGroupChange()
     }
     
     @IBAction func generateThumbs(sender: UIButton) {
@@ -321,7 +326,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         }
         
         //get current selected clock
-        redrawSettingsTable()
+        redrawSettingsTableAfterGroupChange()
         redrawPreviewClock()
     }
     
