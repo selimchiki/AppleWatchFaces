@@ -26,7 +26,7 @@ class DecoratorPreviewController: UIViewController {
         
         //TODO: figure out whay this is needed
         newWatchFaceNode.position = CGPoint.init(x: 0.5, y: 0.5)
-        newWatchFaceNode.setScale(0.00375)
+        newWatchFaceNode.setScale(0.0035)
         newWatchFaceNode.hideHands()
         
         if let scene = skView.scene {
@@ -52,8 +52,6 @@ class DecoratorPreviewController: UIViewController {
     
     @objc func onSettingEditDetailNotification(notification:Notification)
     {
-        
-        
         
         if let settingType = notification.userInfo?["settingType"] as? String, settingType == "indicatorType", let decoratorShapeTableViewCell = notification.userInfo?["decoratorShapeTableViewCell"] as? DecoratorShapeTableViewCell  {
             

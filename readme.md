@@ -2,21 +2,20 @@
 ## TO DO:
 
 - get ring settings / editor working
-    - bug when rendering text items < 12 ( IE 6 or 4 showg wrong numbers )
     - scoll to new item ( esp. important for long list )
     - UX for patterns ?
-    
-- fix the need for always having a spacer as first item ( better top level scale / drawing ) 
 
+- outline for hands / switch / color ?
 - implement some of the smooth animations for second / minute hand
+- fix default the indicators to work better for watch
 
 - crash when sending to watch 5 times -- https://stackoverflow.com/questions/52860566/error-when-running-xcode-simulator-framework-cuithemestore-no-theme-regist
 - !! save json data into JPEG for import / export over social  https://stackoverflow.com/questions/40175160/exif-data-read-and-write
+- switch to SVG files for shapes : https://github.com/mchoe/SwiftSVG or https://github.com/pocketsvg/PocketSVG
+- push app to hockeyapp for beta testing
 
 - refactor AppUISettings
 - rename KKInterfaceController
-- switch to SVG files for shapes : https://github.com/mchoe/SwiftSVG or https://github.com/pocketsvg/PocketSVG
-- push app to hockeyapp for beta testing
 - test with other screen sizes - fix layouts
 
 ## IDEAS:
@@ -64,3 +63,5 @@
 - clean up title table cell ( tighten height )
 - add decorator themes to main selector table
 - make new button ( debug only )  that regenerates all the default thumbnails
+- bug when rendering text items < 12 ( IE 6 or 4 showg wrong numbers )
+- fix the need for always having a spacer as first item ( better top level scale / drawing ) 
