@@ -10,7 +10,7 @@ import SpriteKit
 
 class UserClockSetting: NSObject {
     
-    static var fileName = "userClockSettingsV01.json" //change this if significant schema changes are made and users will lose their data, but wont crash.  Otherwise, make migration code
+    static var fileName = "userClockSettingsV02.json" //change this if significant schema changes are made and users will lose their data, but wont crash.  Otherwise, make migration code
     
     static var sharedClockSettings = [ClockSetting]()
     static var sharedColorThemeSettings = [ClockColorTheme]()

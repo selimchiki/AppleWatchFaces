@@ -36,6 +36,7 @@ class WatchSettingsTableViewController: UITableViewController {
             ["title":"Main Background Color",       "rowHeight":"100.0","cellID":"mainBackgroundColorsTableViewCell"]
         ],
         [
+            ["title":"Hand Display",                "rowHeight":"66.0","cellID":"handsOptionsSettingsTableViewCellID"],
             ["title":"Second Hand",                 "rowHeight":"100.0","cellID":"secondHandSettingsTableViewCell"],
             ["title":"Second Hand Color",           "rowHeight":"100.0","cellID":"secondHandColorsTableViewCell"],
             ["title":"Minute Hand",                 "rowHeight":"100.0","cellID":"minuteHandSettingsTableViewCell"],
@@ -73,6 +74,13 @@ class WatchSettingsTableViewController: UITableViewController {
             settingText = SettingsViewController.currentClockSetting.clockFaceMaterialName
         case "mainBackgroundColorsTableViewCell":
             settingText = SettingsViewController.currentClockSetting.clockCasingMaterialName
+        case "handsOptionsSettingsTableViewCellID":
+            let shouldShowHandOutlines = SettingsViewController.currentClockSetting.clockFaceSettings?.shouldShowHandOutlines
+            if (shouldShowHandOutlines == true) {
+                settingText = "show outlines"
+            } else {
+                settingText = "no outlines"
+            }
         case "secondHandSettingsTableViewCell":
             settingText = SecondHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandType)!)
         case "secondHandColorsTableViewCell":

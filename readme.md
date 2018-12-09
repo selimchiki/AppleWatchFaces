@@ -5,7 +5,7 @@
     - scoll to new item ( esp. important for long list )
     - UX for patterns ?
 
-- outline for hands / switch / color ?
+- add option for hand outline color
 - implement some of the smooth animations for second / minute hand
 - fix default the indicators to work better for watch
 
@@ -65,3 +65,5 @@
 - make new button ( debug only )  that regenerates all the default thumbnails
 - bug when rendering text items < 12 ( IE 6 or 4 showg wrong numbers )
 - fix the need for always having a spacer as first item ( better top level scale / drawing ) 
+- add option to show hand outlines
+
