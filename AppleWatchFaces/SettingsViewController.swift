@@ -133,7 +133,8 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     func redrawSettingsTable() {
         //tell the settings table to reload
         if watchSettingsTableViewController != nil {
-            watchSettingsTableViewController?.selectCurrentSettings(animated: true)
+            watchSettingsTableViewController?.reloadAfterGroupChange()
+            //selectCurrentSettings(animated: true)
         }
     }
     

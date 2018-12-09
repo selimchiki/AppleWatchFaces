@@ -194,7 +194,8 @@ class WatchSettingsTableViewController: UITableViewController {
             return cell
         } else {
         
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! WatchSettingsSelectableTableViewCell
+            cell.chooseSetting(animated: true)
             return cell
         }
     }
