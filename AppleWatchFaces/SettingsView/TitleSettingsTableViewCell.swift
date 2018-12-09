@@ -18,6 +18,10 @@ class TitleSettingsTableViewCell: WatchSettingsSelectableTableViewCell, UITextFi
         titleTextView.text = SettingsViewController.currentClockSetting.title
     }
     
+    @IBAction func toggleSwitchButtonAction( sender: UIButton ) {
+        titleTextView.becomeFirstResponder()
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         //hello!
         let newTitle = textField.text ?? ""

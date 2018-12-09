@@ -18,6 +18,11 @@ class HandOptionsSettingTableViewCell : WatchSettingsSelectableTableViewCell, UI
         shouldShowHandOutlines.isOn = clockFaceSettings.shouldShowHandOutlines
     }
     
+    @IBAction func toggleSwitchButtonAction( sender: UIButton ) {
+        shouldShowHandOutlines.isOn = !shouldShowHandOutlines.isOn
+        self.switchValueDidChange(sender: shouldShowHandOutlines)
+    }
+    
     @IBAction func switchValueDidChange( sender: UISwitch ) {
         guard let clockFaceSettings = SettingsViewController.currentClockSetting.clockFaceSettings else { return }
         clockFaceSettings.shouldShowHandOutlines = sender.isOn
