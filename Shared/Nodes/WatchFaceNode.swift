@@ -37,15 +37,22 @@ class WatchFaceNode: SKShapeNode {
             
             self.addChild(secHandNode)
             
-            let minuteHandStrokeColor = SKColor.init(hexString: clockFaceSettings.minuteHandMaterialName)
+            var minuteHandStrokeColor = SKColor.init(hexString: clockFaceSettings.minuteHandMaterialName)
+            if (clockFaceSettings.shouldShowHandOutlines) {
+                minuteHandStrokeColor = SKColor.init(hexString: clockFaceSettings.handOutlineMaterialName)
+            }
             let minHandNode = MinuteHandNode.init(minuteHandType: clockFaceSettings.minuteHandType, material: clockFaceSettings.minuteHandMaterialName, strokeColor: minuteHandStrokeColor, lineWidth: 1.0)
             minHandNode.name = "minuteHand"
             minHandNode.zPosition = 3
             
             self.addChild(minHandNode)
             
-            let hourHandFillColor = SKColor.init(hexString: clockFaceSettings.hourHandMaterialName)
-            let hourHandNode = HourHandNode.init(hourHandType: clockFaceSettings.hourHandType, material: clockFaceSettings.hourHandMaterialName, strokeColor: hourHandFillColor, lineWidth: 1.0)
+            var hourHandStrokeColor = SKColor.init(hexString: clockFaceSettings.hourHandMaterialName)
+            if (clockFaceSettings.shouldShowHandOutlines) {
+                hourHandStrokeColor = SKColor.init(hexString: clockFaceSettings.handOutlineMaterialName)
+            }
+        
+            let hourHandNode = HourHandNode.init(hourHandType: clockFaceSettings.hourHandType, material: clockFaceSettings.hourHandMaterialName, strokeColor: hourHandStrokeColor, lineWidth: 1.0)
             hourHandNode.name = "hourHand"
             hourHandNode.zPosition = 3
             

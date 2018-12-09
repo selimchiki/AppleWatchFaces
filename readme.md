@@ -5,6 +5,7 @@
     - scoll to new item ( esp. important for long list )
     - UX for patterns ?
 
+- draw hand outlines ( white initially )
 - add option for hand outline color
 - implement some of the smooth animations for second / minute hand
 - fix default the indicators to work better for watch

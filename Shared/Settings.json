@@ -12,6 +12,7 @@
                 "minuteHandMovement" : "MinuteHandMovementSmooth",
                 "secondHandMovement" : "SecondHandMovementStepOver",
                 "minuteHandMaterialName" : "#00ad00ff",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#00ad00ff",
@@ -63,6 +64,8 @@
                 "minuteHandMovement" : "MinuteHandMovementSmooth",
                 "secondHandMovement" : "SecondHandMovementStepOver",
                 "minuteHandMaterialName" : "#FFFFFFFF",
+                "handOutlineMaterialName" : "#000000ff",
+                "shouldShowHandOutlines": true,
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "",
@@ -89,7 +92,10 @@
                 "minuteHandMovement" : "MinuteHandMovementStep",
                 "secondHandMovement" : "SecondHandMovementStep",
                 "minuteHandMaterialName" : "#000000FF",
+                "handOutlineMaterialName" : "#ffffffff",
+                "shouldShowHandOutlines": false,
                 "shouldShowRomanNumeralText" : false,
+                
                 "ringMaterials" : [
                     "#000000FF",
                     "",
@@ -157,6 +163,7 @@
                 "minuteHandMovement" : "MinuteHandMovementSmooth",
                 "secondHandMovement" : "SecondHandMovementOscillate",
                 "minuteHandMaterialName" : "#C7F464",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : true,
                 "ringMaterials" : [
                     "#FF6B6B",
@@ -252,6 +259,7 @@
                 "minuteHandMovement" : "MinuteHandMovementStep",
                 "secondHandMovement" : "SecondHandMovementStepOver",
                 "minuteHandMaterialName" : "#45ADA8",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#594F4F",
@@ -367,6 +375,7 @@
                 "minuteHandMovement" : "MinuteHandMovementStep",
                 "secondHandMovement" : "SecondHandMovementStepOver",
                 "minuteHandMaterialName" : "#ff7f00ff",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#c6c6c6ff",
@@ -480,6 +489,7 @@
                 "minuteHandMovement" : "MinuteHandMovementSmooth",
                 "secondHandMovement" : "SecondHandMovementSmooth",
                 "minuteHandMaterialName" : "#4F6B8B",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#4F6B8B",
@@ -574,6 +584,7 @@
                 "minuteHandMovement" : "MinuteHandMovementSmooth",
                 "secondHandMovement" : "SecondHandMovementOscillate",
                 "minuteHandMaterialName" : "#000000FF",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
@@ -640,6 +651,7 @@
                 "minuteHandMovement" : "MinuteHandMovementSmooth",
                 "secondHandMovement" : "SecondHandMovementSmooth",
                 "minuteHandMaterialName" : "#BBBBBBFF",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
@@ -734,6 +746,7 @@
                 "minuteHandMovement" : "MinuteHandMovementSmooth",
                 "secondHandMovement" : "SecondHandMovementStep",
                 "minuteHandMaterialName" : "#ffffffff",
+                "handOutlineMaterialName" : "#000000ff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#ffff00ff",
@@ -858,6 +871,7 @@
                 "minuteHandMovement" : "MinuteHandMovementStep",
                 "secondHandMovement" : "SecondHandMovementStepOver",
                 "minuteHandMaterialName" : "#333333FF",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#1c1c1cff",
@@ -947,11 +961,12 @@
             "clockFaceSettings" : {
                 "minuteHandType" : "MinuteHandTypeFatBoxy",
                 "secondHandType" : "SecondHandTypeRail",
-                "hourHandMaterialName" : "glassTexture",
+                "hourHandMaterialName" : "#000000ff",
                 "secondHandMaterialName" : "#ffaa56ff",
                 "minuteHandMovement" : "MinuteHandMovementSmooth",
                 "secondHandMovement" : "SecondHandMovementOscillate",
-                "minuteHandMaterialName" : "glassTexture",
+                "minuteHandMaterialName" : "#000000ff",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#1c1c1cff",
@@ -1042,6 +1057,7 @@
                 "minuteHandMovement" : "MinuteHandMovementStep",
                 "secondHandMovement" : "SecondHandMovementStepOver",
                 "minuteHandMaterialName" : "#000000ff",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#2b2bffff",
@@ -1158,6 +1174,7 @@
                 "minuteHandMovement" : "MinuteHandMovementSmooth",
                 "secondHandMovement" : "SecondHandMovementSmooth",
                 "minuteHandMaterialName" : "#3B8686",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#0B486B",
@@ -1252,6 +1269,7 @@
                 "minuteHandMovement" : "MinuteHandMovementSmooth",
                 "secondHandMovement" : "SecondHandMovementSmooth",
                 "minuteHandMaterialName" : "#000000ff",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
@@ -1335,6 +1353,8 @@
             "clockFaceMaterialName" : "#ffeaadff"
         },
         {
+            "title" : "Blue Bell",
+            "clockFaceMaterialName" : "#FFFFFFFF",
             "faceBackgroundType" : "FaceBackgroundTypeDiagonalSplit",
             "clockCasingMaterialName" : "#00a9ffff",
             "uniqueID" : "8C3B5FB8-2B41-4A60-95AE-B9DF6ACC1AF8",
@@ -1346,6 +1366,8 @@
                 "minuteHandMovement" : "MinuteHandMovementStep",
                 "secondHandMovement" : "SecondHandMovementOscillate",
                 "minuteHandMaterialName" : "#000000FF",
+                "handOutlineMaterialName" : "#ffffffff",
+                "shouldShowHandOutlines": true,
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
@@ -1396,9 +1418,8 @@
                     }
                 ],
                 "hourHandType" : "HourHandTypeSwiss"
-            },
-            "title" : "Blue Bell",
-            "clockFaceMaterialName" : "#FFFFFFFF"
+            }
+            
         },
         {
             "faceBackgroundType" : "FaceBackgroundTypeDiagonalSplit",
@@ -1412,6 +1433,8 @@
                 "minuteHandMovement" : "MinuteHandMovementSmooth",
                 "secondHandMovement" : "SecondHandMovementStepOver",
                 "minuteHandMaterialName" : "#000000FF",
+                "handOutlineMaterialName" : "#ffffffff",
+                "shouldShowHandOutlines": false,
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
@@ -1480,6 +1503,7 @@
                 "minuteHandMovement" : "MinuteHandMovementSmooth",
                 "secondHandMovement" : "SecondHandMovementSmooth",
                 "minuteHandMaterialName" : "#F38630",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#F38630",
@@ -1574,6 +1598,7 @@
                 "minuteHandMovement" : "MinuteHandMovementStep",
                 "secondHandMovement" : "SecondHandMovementStepOver",
                 "minuteHandMaterialName" : "#000000FF",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : true,
                 "ringMaterials" : [
                     "#000000FF",
@@ -1655,6 +1680,7 @@
                 "minuteHandMovement" : "MinuteHandMovementStep",
                 "secondHandMovement" : "SecondHandMovementStepOver",
                 "minuteHandMaterialName" : "#000000FF",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : true,
                 "ringMaterials" : [
                     "#000000FF",
@@ -1816,6 +1842,8 @@
             "clockFaceMaterialName" : "#FFFFFFFF"
         },
         {
+            "title" : "Orange Loft",
+            "clockFaceMaterialName" : "#a82a00ff",
             "faceBackgroundType" : "FaceBackgroundTypeCircle",
             "clockCasingMaterialName" : "#000000ff",
             "uniqueID" : "A838242D-062F-45C6-B638-9CD0278B6560",
@@ -1827,6 +1855,8 @@
                 "minuteHandMovement" : "MinuteHandMovementSmooth",
                 "secondHandMovement" : "SecondHandMovementStepOver",
                 "minuteHandMaterialName" : "#ffffffff",
+                "handOutlineMaterialName" : "#000000ff",
+                "shouldShowHandOutlines" : true,
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#ffffffff",
@@ -1892,9 +1922,8 @@
                     }
                 ],
                 "hourHandType" : "HourHandTypeBoxy"
-            },
-            "title" : "orange loft",
-            "clockFaceMaterialName" : "#a82a00ff"
+            }
+            
         },
         {
             "faceBackgroundType" : "FaceBackgroundTypeCircle",
@@ -1908,6 +1937,8 @@
                 "minuteHandMovement" : "MinuteHandMovementStep",
                 "secondHandMovement" : "SecondHandMovementStepOver",
                 "minuteHandMaterialName" : "#333333FF",
+                "handOutlineMaterialName" : "#ffffffff",
+                "shouldShowHandOutlines" : false,
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
@@ -1989,6 +2020,7 @@
                 "minuteHandMovement" : "MinuteHandMovementSmooth",
                 "secondHandMovement" : "SecondHandMovementSmooth",
                 "minuteHandMaterialName" : "#0044ccff",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#d10000ff",
@@ -2066,7 +2098,9 @@
                 "minuteHandMovement" : "MinuteHandMovementSmooth",
                 "secondHandMovement" : "SecondHandMovementStepOver",
                 "minuteHandMaterialName" : "#000000FF",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
+                "shouldShowHandOutlines": true,
                 "ringMaterials" : [
                     "#000000FF",
                     "",
@@ -2160,6 +2194,7 @@
                 "minuteHandMovement" : "MinuteHandMovementStep",
                 "secondHandMovement" : "SecondHandMovementStep",
                 "minuteHandMaterialName" : "#333333FF",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
@@ -2254,6 +2289,7 @@
                 "minuteHandMovement" : "MinuteHandMovementStep",
                 "secondHandMovement" : "SecondHandMovementStepOver",
                 "minuteHandMaterialName" : "#000000FF",
+                "handOutlineMaterialName" : "#ffffffff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#000000FF",
@@ -2387,6 +2423,7 @@
                 "minuteHandMovement" : "MinuteHandMovementStep",
                 "secondHandMovement" : "SecondHandMovementOscillate",
                 "minuteHandMaterialName" : "#FFFFFFFF",
+                "handOutlineMaterialName" : "#000000ff",
                 "shouldShowRomanNumeralText" : false,
                 "ringMaterials" : [
                     "#FFFFFFFF",
