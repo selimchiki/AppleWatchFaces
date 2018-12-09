@@ -42,7 +42,8 @@ class WatchSettingsTableViewController: UITableViewController {
             ["title":"Minute Hand",                 "rowHeight":"100.0","cellID":"minuteHandSettingsTableViewCell"],
             ["title":"Minute Hand Color",           "rowHeight":"100.0","cellID":"minuteHandColorTableViewCell"],
             ["title":"Hour Hand",                   "rowHeight":"100.0","cellID":"hourHandSettingsTableViewCell"],
-            ["title":"Hour Hand Color",             "rowHeight":"100.0","cellID":"hourHandColorTableViewCell"]
+            ["title":"Hour Hand Color",             "rowHeight":"100.0","cellID":"hourHandColorTableViewCell"],
+            ["title":"Hand Outline Color",          "rowHeight":"100.0","cellID":"handOutlineColorTableViewCell"]
         ],
         [
             ["title":"Indicator Parts",             "rowHeight":"100.0","cellID":"ringEditorTableViewCellID"],
@@ -93,6 +94,8 @@ class WatchSettingsTableViewController: UITableViewController {
             settingText = HourHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandType)!)
         case "hourHandColorTableViewCell":
             settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandMaterialName ?? ""
+        case "handOutlineColorTableViewCell":
+            settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.handOutlineMaterialName ?? ""
         case "ringMainColorsTableViewCell":
             settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.ringMaterials[0] ?? ""
         case "ringSecondaryColorsTableViewCell":

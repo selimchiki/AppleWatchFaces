@@ -70,6 +70,7 @@
 		310BA21F21B0F90D00A146B7 /* decoratorTheme-planejain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 310BA20F21B0F90D00A146B7 /* decoratorTheme-planejain.jpg */; };
 		310BA22021B0F90D00A146B7 /* decoratorTheme-romannumerals.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 310BA21021B0F90D00A146B7 /* decoratorTheme-romannumerals.jpg */; };
 		310D4A4F21BD6BD600082A62 /* HandOptionsSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310D4A4E21BD6BD600082A62 /* HandOptionsSettingTableViewCell.swift */; };
+		310D4A5121BD90D100082A62 /* HandOutlineColorSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310D4A5021BD90D100082A62 /* HandOutlineColorSettingTableViewCell.swift */; };
 		312D4C05218BCBF0008504D2 /* ClockDecoratorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */; };
 		312D4C08218BCDDB008504D2 /* HourHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C07218BCDDB008504D2 /* HourHandNode.swift */; };
 		314A010A21960409009BCE3C /* UserClockSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A010921960409009BCE3C /* UserClockSetting.swift */; };
@@ -324,6 +325,7 @@
 		310BA20F21B0F90D00A146B7 /* decoratorTheme-planejain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "decoratorTheme-planejain.jpg"; sourceTree = "<group>"; };
 		310BA21021B0F90D00A146B7 /* decoratorTheme-romannumerals.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "decoratorTheme-romannumerals.jpg"; sourceTree = "<group>"; };
 		310D4A4E21BD6BD600082A62 /* HandOptionsSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandOptionsSettingTableViewCell.swift; sourceTree = "<group>"; };
+		310D4A5021BD90D100082A62 /* HandOutlineColorSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandOutlineColorSettingTableViewCell.swift; sourceTree = "<group>"; };
 		312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockDecoratorTheme.swift; sourceTree = "<group>"; };
 		312D4C07218BCDDB008504D2 /* HourHandNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourHandNode.swift; sourceTree = "<group>"; };
 		314A010921960409009BCE3C /* UserClockSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClockSetting.swift; sourceTree = "<group>"; };
@@ -719,6 +721,7 @@
 				310BA1CF21B08F1A00A146B7 /* DecoratorThemeSettingCollectionViewCell.swift */,
 				310BA1D021B08F1A00A146B7 /* DecoratorThemeSettingsTableViewCell.swift */,
 				310D4A4E21BD6BD600082A62 /* HandOptionsSettingTableViewCell.swift */,
+				310D4A5021BD90D100082A62 /* HandOutlineColorSettingTableViewCell.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -1048,6 +1051,7 @@
 				31B5E8CD218BD26B00DE6429 /* MinuteHandNode.swift in Sources */,
 				310BA1C621AF736400A146B7 /* TitleSettingsTableViewCell.swift in Sources */,
 				318808D3217815E600585AB1 /* SettingsViewController.swift in Sources */,
+				310D4A5121BD90D100082A62 /* HandOutlineColorSettingTableViewCell.swift in Sources */,
 				31F8ABAB2187E8DB0014E2ED /* WatchSettingsTableViewController.swift in Sources */,
 				31F56F9D21857A2000455FC6 /* SecondHandNode.swift in Sources */,
 				31B5E8D2218BD63E00DE6429 /* NumberTextNode.swift in Sources */,

@@ -54,7 +54,7 @@ class WatchFaceNode: SKShapeNode {
         
             let hourHandNode = HourHandNode.init(hourHandType: clockFaceSettings.hourHandType, material: clockFaceSettings.hourHandMaterialName, strokeColor: hourHandStrokeColor, lineWidth: 1.0)
             hourHandNode.name = "hourHand"
-            hourHandNode.zPosition = 3
+            hourHandNode.zPosition = 2
             
             self.addChild(hourHandNode)
         
