@@ -355,14 +355,8 @@
                                     <action selector="sendSettingActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bL5-J1-OEN"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kok-Ex-gcC" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kok-Ex-gcC" customClass="RoundedButton" customModule="AppleWatchFaces" customModuleProvider="target">
                                 <rect key="frame" x="184" y="243" width="177" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="29x-7o-DSA"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="151" id="byr-GT-gSe"/>
-                                    <constraint firstAttribute="height" constant="28" id="fAu-kP-aTK"/>
-                                    <constraint firstAttribute="width" constant="177" id="nHS-Sv-O7h"/>
-                                </constraints>
                                 <state key="normal" title="Generate Thumbs!">
                                     <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -387,12 +381,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QiH-q3-0ff" secondAttribute="trailing" constant="16" id="Bbb-3r-6Vo"/>
                             <constraint firstItem="L09-xH-or1" firstAttribute="top" secondItem="NJL-vA-esZ" secondAttribute="bottom" constant="9" id="Bmr-bh-T63"/>
                             <constraint firstItem="NJL-vA-esZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="I51-gu-qPh"/>
+                            <constraint firstItem="kok-Ex-gcC" firstAttribute="leading" secondItem="QiH-q3-0ff" secondAttribute="leading" id="NOU-im-RI4"/>
                             <constraint firstItem="QiH-q3-0ff" firstAttribute="top" secondItem="Mqq-m7-d7p" secondAttribute="bottom" constant="8" id="New-TF-SvM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NJL-vA-esZ" secondAttribute="trailing" constant="16" id="QKo-M4-KnQ"/>
+                            <constraint firstItem="kok-Ex-gcC" firstAttribute="bottom" secondItem="DN7-J7-N45" secondAttribute="bottom" id="SYA-RR-ut9"/>
                             <constraint firstItem="DN7-J7-N45" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="TLv-9L-Qto"/>
                             <constraint firstItem="DN7-J7-N45" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UBL-Mt-9PI"/>
+                            <constraint firstItem="kok-Ex-gcC" firstAttribute="top" secondItem="QiH-q3-0ff" secondAttribute="bottom" constant="83" id="UDZ-ss-Fet"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kok-Ex-gcC" secondAttribute="trailing" constant="14" id="XaG-wd-We6"/>
                             <constraint firstItem="Mqq-m7-d7p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="aQb-L4-zXI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kok-Ex-gcC" secondAttribute="trailing" constant="14" id="cfn-8p-cfo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mqq-m7-d7p" secondAttribute="trailing" constant="16" id="fxl-lf-QhP"/>
                             <constraint firstAttribute="bottom" secondItem="L09-xH-or1" secondAttribute="bottom" constant="-7" id="sIa-d8-XUb"/>
                             <constraint firstItem="L09-xH-or1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="viL-1J-OB2"/>
