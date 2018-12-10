@@ -11,93 +11,100 @@ import SpriteKit
 
 class WatchFaceNode: SKShapeNode {
     
+    var secondHandMovement: SecondHandMovements = .SecondHandMovementStep
+    var minuteHandMovement: MinuteHandMovements = .MinuteHandMovementStep
+    
     init(clockSetting: ClockSetting, size: CGSize) {
         super.init()
         
         self.name = "watchFaceNode"
         
-        if let clockFaceSettings = clockSetting.clockFaceSettings {
-            
-            let backgroundNode = FaceBackgroundNode.init(backgroundType: FaceBackgroundTypes.FaceBackgroundTypeFilled , material: clockSetting.clockCasingMaterialName)
-            backgroundNode.name = "background"
-            backgroundNode.zPosition = 0
-            
-            self.addChild(backgroundNode)
-            
-            let backgroundShapeNode = FaceBackgroundNode.init(backgroundType: clockSetting.faceBackgroundType , material: clockSetting.clockFaceMaterialName)
-            backgroundShapeNode.name = "backgroundShape"
-            backgroundShapeNode.zPosition = 1
-            
-            self.addChild(backgroundShapeNode)
-            
-            let secondHandFillColor = SKColor.init(hexString: clockFaceSettings.secondHandMaterialName)
-            let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType, material: clockFaceSettings.secondHandMaterialName, strokeColor: secondHandFillColor, lineWidth: 1.0)
-            secHandNode.name = "secondHand"
-            secHandNode.zPosition = 4
-            
-            self.addChild(secHandNode)
-            
-            var minuteHandStrokeColor = SKColor.init(hexString: clockFaceSettings.minuteHandMaterialName)
-            if (clockFaceSettings.shouldShowHandOutlines) {
-                minuteHandStrokeColor = SKColor.init(hexString: clockFaceSettings.handOutlineMaterialName)
-            }
-            let minHandNode = MinuteHandNode.init(minuteHandType: clockFaceSettings.minuteHandType, material: clockFaceSettings.minuteHandMaterialName, strokeColor: minuteHandStrokeColor, lineWidth: 1.0)
-            minHandNode.name = "minuteHand"
-            minHandNode.zPosition = 3
-            
-            self.addChild(minHandNode)
-            
-            var hourHandStrokeColor = SKColor.init(hexString: clockFaceSettings.hourHandMaterialName)
-            if (clockFaceSettings.shouldShowHandOutlines) {
-                hourHandStrokeColor = SKColor.init(hexString: clockFaceSettings.handOutlineMaterialName)
-            }
+        //nothing to without these settings
+        guard let clockFaceSettings = clockSetting.clockFaceSettings else { return }
         
-            let hourHandNode = HourHandNode.init(hourHandType: clockFaceSettings.hourHandType, material: clockFaceSettings.hourHandMaterialName, strokeColor: hourHandStrokeColor, lineWidth: 1.0)
-            hourHandNode.name = "hourHand"
-            hourHandNode.zPosition = 2
-            
-            self.addChild(hourHandNode)
+        debugPrint("secondhandMovement:" + clockFaceSettings.secondHandMovement.rawValue)
+        debugPrint("minuteHandMovement:" + clockFaceSettings.minuteHandMovement.rawValue)
+        self.secondHandMovement = clockFaceSettings.secondHandMovement
+        self.minuteHandMovement = clockFaceSettings.minuteHandMovement
         
-            var currentDistance = Float(1.0)
-            //loop through ring settings and render rings from outside to inside
-            for ringSetting in clockFaceSettings.ringSettings {
-                
-                let desiredMaterialIndex = ringSetting.ringMaterialDesiredThemeColorIndex
-                var material = ""
-                if (desiredMaterialIndex<=clockFaceSettings.ringMaterials.count-1) {
-                    material = clockFaceSettings.ringMaterials[desiredMaterialIndex]
-                } else {
-                    material = clockFaceSettings.ringMaterials[clockFaceSettings.ringMaterials.count-1]
-                }
-                
-                generateRingNode(
-                    self,
-                    patternTotal: ringSetting.ringPatternTotal,
-                    patternArray: ringSetting.ringPattern,
-                    ringType: ringSetting.ringType,
-                    material: material,
-                    currentDistance: currentDistance,
-                    clockFaceSettings: clockFaceSettings,
-                    ringSettings: ringSetting,
-                    renderNumbers: true,
-                    renderShapes: true)
-                
-                generateTextRingNode(
-                    self,
-                    patternTotal: ringSetting.ringPatternTotal,
-                    patternArray: ringSetting.ringPattern,
-                    ringType: ringSetting.ringType,
-                    material: material,
-                    currentDistance: currentDistance,
-                    clockFaceSettings: clockFaceSettings,
-                    ringSettings: ringSetting,
-                    renderNumbers: true,
-                    renderShapes: true)
-                
-                //move it closer to center
-                currentDistance = currentDistance - ringSetting.ringWidth
+        let backgroundNode = FaceBackgroundNode.init(backgroundType: FaceBackgroundTypes.FaceBackgroundTypeFilled , material: clockSetting.clockCasingMaterialName)
+        backgroundNode.name = "background"
+        backgroundNode.zPosition = 0
+        
+        self.addChild(backgroundNode)
+        
+        let backgroundShapeNode = FaceBackgroundNode.init(backgroundType: clockSetting.faceBackgroundType , material: clockSetting.clockFaceMaterialName)
+        backgroundShapeNode.name = "backgroundShape"
+        backgroundShapeNode.zPosition = 1
+        
+        self.addChild(backgroundShapeNode)
+        
+        let secondHandFillColor = SKColor.init(hexString: clockFaceSettings.secondHandMaterialName)
+        let secHandNode = SecondHandNode.init(secondHandType: clockFaceSettings.secondHandType, material: clockFaceSettings.secondHandMaterialName, strokeColor: secondHandFillColor, lineWidth: 1.0)
+        secHandNode.name = "secondHand"
+        secHandNode.zPosition = 4
+        
+        self.addChild(secHandNode)
+        
+        var minuteHandStrokeColor = SKColor.init(hexString: clockFaceSettings.minuteHandMaterialName)
+        if (clockFaceSettings.shouldShowHandOutlines) {
+            minuteHandStrokeColor = SKColor.init(hexString: clockFaceSettings.handOutlineMaterialName)
+        }
+        let minHandNode = MinuteHandNode.init(minuteHandType: clockFaceSettings.minuteHandType, material: clockFaceSettings.minuteHandMaterialName, strokeColor: minuteHandStrokeColor, lineWidth: 1.0)
+        minHandNode.name = "minuteHand"
+        minHandNode.zPosition = 3
+        
+        self.addChild(minHandNode)
+        
+        var hourHandStrokeColor = SKColor.init(hexString: clockFaceSettings.hourHandMaterialName)
+        if (clockFaceSettings.shouldShowHandOutlines) {
+            hourHandStrokeColor = SKColor.init(hexString: clockFaceSettings.handOutlineMaterialName)
+        }
+    
+        let hourHandNode = HourHandNode.init(hourHandType: clockFaceSettings.hourHandType, material: clockFaceSettings.hourHandMaterialName, strokeColor: hourHandStrokeColor, lineWidth: 1.0)
+        hourHandNode.name = "hourHand"
+        hourHandNode.zPosition = 2
+        
+        self.addChild(hourHandNode)
+    
+        var currentDistance = Float(1.0)
+        //loop through ring settings and render rings from outside to inside
+        for ringSetting in clockFaceSettings.ringSettings {
+            
+            let desiredMaterialIndex = ringSetting.ringMaterialDesiredThemeColorIndex
+            var material = ""
+            if (desiredMaterialIndex<=clockFaceSettings.ringMaterials.count-1) {
+                material = clockFaceSettings.ringMaterials[desiredMaterialIndex]
+            } else {
+                material = clockFaceSettings.ringMaterials[clockFaceSettings.ringMaterials.count-1]
             }
             
+            generateRingNode(
+                self,
+                patternTotal: ringSetting.ringPatternTotal,
+                patternArray: ringSetting.ringPattern,
+                ringType: ringSetting.ringType,
+                material: material,
+                currentDistance: currentDistance,
+                clockFaceSettings: clockFaceSettings,
+                ringSettings: ringSetting,
+                renderNumbers: true,
+                renderShapes: true)
+            
+            generateTextRingNode(
+                self,
+                patternTotal: ringSetting.ringPatternTotal,
+                patternArray: ringSetting.ringPattern,
+                ringType: ringSetting.ringType,
+                material: material,
+                currentDistance: currentDistance,
+                clockFaceSettings: clockFaceSettings,
+                ringSettings: ringSetting,
+                renderNumbers: true,
+                renderShapes: true)
+            
+            //move it closer to center
+            currentDistance = currentDistance - ringSetting.ringWidth
         }
 
     }
@@ -243,11 +250,65 @@ class WatchFaceNode: SKShapeNode {
     }
     
     func positionHands( sec: CGFloat, min: CGFloat, hour: CGFloat ) {
+        positionHands(sec: sec, min: min, hour: hour, force: false)
+    }
+    
+    func positionHands( sec: CGFloat, min: CGFloat, hour: CGFloat, force: Bool ) {
         if let secondHand = self.childNode(withName: "secondHand") {
-            secondHand.zRotation = -1 * deg2rad(sec * 6)
+            let newZAngle = -1 * deg2rad(sec * 6)
+            
+            //movement jump each second
+            if (secondHandMovement == .SecondHandMovementStep || force) {
+                secondHand.zRotation = newZAngle
+            }
+            
+            //movment smoothly rotate each second
+            if (secondHandMovement == .SecondHandMovementSmooth && !force) {
+                //debugPrint("smooth sec:" + sec.description + " zAngle: " +  secondHand.zRotation.description + " newAngle:" + newZAngle.description )
+                secondHand.removeAllActions()
+                if sec == 0 { secondHand.zRotation = deg2rad(6) } //fix to keep it from spinning back around
+                
+                let smoothSecondAction = SKAction.rotate(toAngle: newZAngle, duration: 0.99)
+                secondHand.run(smoothSecondAction)
+            }
+            
+            //movement to oscillate
+            if (secondHandMovement == .SecondHandMovementOscillate && !force) {
+                let stepUnderValue = CGFloat(0.05)
+                let duration = 0.99
+            
+                secondHand.removeAllActions()
+                if sec == 0 { secondHand.zRotation = deg2rad(6) } //fix to keep it from spinning back around
+                
+                let rotSecondAction1 = SKAction.rotate(toAngle: newZAngle+stepUnderValue, duration: duration/2)
+                rotSecondAction1.timingMode = .easeIn
+                let rotSecondAction2 = SKAction.rotate(toAngle: newZAngle, duration: duration/2)
+                rotSecondAction2.timingMode = .easeOut
+                
+                secondHand.run( SKAction.sequence( [ rotSecondAction1, rotSecondAction2 ]) )
+            }
+            
+            //movement to step over
+            if (secondHandMovement == .SecondHandMovementStepOver && !force) {
+                let stepOverValue = CGFloat(0.030)
+                let duration = 0.5
+                
+                secondHand.removeAllActions()
+                if sec == 0 { secondHand.zRotation = deg2rad(6) } //fix to keep it from spinning back around
+                
+                let rotSecondAction1 = SKAction.rotate(toAngle: newZAngle-stepOverValue, duration: duration/5)
+                let rotSecondAction2 = SKAction.rotate(toAngle: newZAngle, duration: duration/2)
+    
+                secondHand.run( SKAction.sequence( [ rotSecondAction1, rotSecondAction2 ]) )
+            }
         }
         if let minuteHand = self.childNode(withName: "minuteHand") {
-            minuteHand.zRotation = -1 * deg2rad(min * 6)
+            if (minuteHandMovement == .MinuteHandMovementStep) {
+                minuteHand.zRotation = -1 * deg2rad(min * 6)
+            }
+            if (minuteHandMovement == .MinuteHandMovementSmooth) {
+                minuteHand.zRotation = -1 * deg2rad((min + sec/60) * 6)
+            }
         }
         if let hourHand = self.childNode(withName: "hourHand") {
             hourHand.zRotation = -1 * deg2rad(hour * 30 + min/2)
@@ -255,6 +316,10 @@ class WatchFaceNode: SKShapeNode {
     }
     
     func setToTime() {
+        setToTime( force: false)
+    }
+    
+    func setToTime( force: Bool ) {
         // Called before each frame is rendered
         let date = Date()
         let calendar = Calendar.current
@@ -263,10 +328,11 @@ class WatchFaceNode: SKShapeNode {
         let minutes = CGFloat(calendar.component(.minute, from: date))
         let seconds = CGFloat(calendar.component(.second, from: date))
         
-        positionHands(sec: seconds, min: minutes, hour: hour)
+        positionHands(sec: seconds, min: minutes, hour: hour, force: force)
     }
     
     func setToScreenShotTime() {
+        self.secondHandMovement = .SecondHandMovementStep
         positionHands(sec: AppUISettings.screenShotSeconds, min: AppUISettings.screenShotMinutes, hour: AppUISettings.screenShotHour)
     }
     

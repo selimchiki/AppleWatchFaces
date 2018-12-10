@@ -255,7 +255,7 @@
                 "minuteHandType" : "MinuteHandTypeSwiss",
                 "secondHandType" : "SecondHandTypeRail",
                 "hourHandMaterialName" : "#45ADA8",
-                "secondHandMaterialName" : "#547980",
+                "secondHandMaterialName" : "#b6ff6bff",
                 "minuteHandMovement" : "MinuteHandMovementStep",
                 "secondHandMovement" : "SecondHandMovementStepOver",
                 "minuteHandMaterialName" : "#45ADA8",

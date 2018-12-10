@@ -7,9 +7,6 @@
     - scoll to new item ( esp. important for long list )
     - UX for patterns ?
 
-- draw hand outlines ( white initially )
-- add option for hand outline color
-- implement some of the smooth animations for second / minute hand
 - fix default the indicators to work better for watch
 
 - crash when sending to watch 5 times -- https://stackoverflow.com/questions/52860566/error-when-running-xcode-simulator-framework-cuithemestore-no-theme-regist
@@ -69,4 +66,7 @@
 - bug when rendering text items < 12 ( IE 6 or 4 showg wrong numbers )
 - fix the need for always having a spacer as first item ( better top level scale / drawing ) 
 - add option to show hand outlines
+- draw hand outlines ( white initially )
+- add option for hand outline color
+- implement some of the smooth animations for second / minute hand
 
