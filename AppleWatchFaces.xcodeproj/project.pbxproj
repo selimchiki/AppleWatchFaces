@@ -71,6 +71,8 @@
 		310BA22021B0F90D00A146B7 /* decoratorTheme-romannumerals.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 310BA21021B0F90D00A146B7 /* decoratorTheme-romannumerals.jpg */; };
 		310D4A4F21BD6BD600082A62 /* HandOptionsSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310D4A4E21BD6BD600082A62 /* HandOptionsSettingTableViewCell.swift */; };
 		310D4A5121BD90D100082A62 /* HandOutlineColorSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310D4A5021BD90D100082A62 /* HandOutlineColorSettingTableViewCell.swift */; };
+		310D4A5521BE130100082A62 /* ED7929C5-3717-4DF9-A99E-2119BF36FA0C.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 310D4A5421BE130100082A62 /* ED7929C5-3717-4DF9-A99E-2119BF36FA0C.jpg */; };
+		310D4A5721BE187200082A62 /* 7A470717-7375-46BA-9C45-FAA721BA432E.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 310D4A5621BE187100082A62 /* 7A470717-7375-46BA-9C45-FAA721BA432E.jpg */; };
 		312D4C05218BCBF0008504D2 /* ClockDecoratorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */; };
 		312D4C08218BCDDB008504D2 /* HourHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C07218BCDDB008504D2 /* HourHandNode.swift */; };
 		314A010A21960409009BCE3C /* UserClockSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A010921960409009BCE3C /* UserClockSetting.swift */; };
@@ -326,6 +328,8 @@
 		310BA21021B0F90D00A146B7 /* decoratorTheme-romannumerals.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "decoratorTheme-romannumerals.jpg"; sourceTree = "<group>"; };
 		310D4A4E21BD6BD600082A62 /* HandOptionsSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandOptionsSettingTableViewCell.swift; sourceTree = "<group>"; };
 		310D4A5021BD90D100082A62 /* HandOutlineColorSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandOutlineColorSettingTableViewCell.swift; sourceTree = "<group>"; };
+		310D4A5421BE130100082A62 /* ED7929C5-3717-4DF9-A99E-2119BF36FA0C.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ED7929C5-3717-4DF9-A99E-2119BF36FA0C.jpg"; sourceTree = "<group>"; };
+		310D4A5621BE187100082A62 /* 7A470717-7375-46BA-9C45-FAA721BA432E.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "7A470717-7375-46BA-9C45-FAA721BA432E.jpg"; sourceTree = "<group>"; };
 		312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockDecoratorTheme.swift; sourceTree = "<group>"; };
 		312D4C07218BCDDB008504D2 /* HourHandNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourHandNode.swift; sourceTree = "<group>"; };
 		314A010921960409009BCE3C /* UserClockSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClockSetting.swift; sourceTree = "<group>"; };
@@ -660,6 +664,8 @@
 				310BA1E721B0EA6D00A146B7 /* colorTheme-terra.jpg */,
 				310BA1DC21B0EA6B00A146B7 /* colorTheme-woodstone.jpg */,
 				310BA1DD21B0EA6B00A146B7 /* colorTheme-yellowglow.jpg */,
+				310D4A5621BE187100082A62 /* 7A470717-7375-46BA-9C45-FAA721BA432E.jpg */,
+				310D4A5421BE130100082A62 /* ED7929C5-3717-4DF9-A99E-2119BF36FA0C.jpg */,
 				31C05DF421A73D3A0021AEAB /* 1B150806-6EC7-4C39-93BB-BD47C1BC4F83.jpg */,
 				31C05DEE21A73D390021AEAB /* 2ACC867D-83A8-4C10-B023-8F97E0AD2A3C.jpg */,
 				31C05DE021A73D380021AEAB /* 4ADDB454-4DA8-42ED-90FC-B1BDD7E2A926.jpg */,
@@ -925,6 +931,7 @@
 				310BA1F521B0EA6D00A146B7 /* colorTheme-checkeredsweater.jpg in Resources */,
 				310BA21C21B0F90D00A146B7 /* decoratorTheme-allnumbers.jpg in Resources */,
 				310BA1EE21B0EA6D00A146B7 /* colorTheme-barbie.jpg in Resources */,
+				310D4A5721BE187200082A62 /* 7A470717-7375-46BA-9C45-FAA721BA432E.jpg in Resources */,
 				31F4F1C0219A5C3D0050177A /* copper.jpg in Resources */,
 				318808DB217815E700585AB1 /* LaunchScreen.storyboard in Resources */,
 				310BA1F121B0EA6D00A146B7 /* colorTheme-darkness.jpg in Resources */,
@@ -938,6 +945,7 @@
 				31C05DFD21A73D3A0021AEAB /* 89DE21B8-DC67-4272-879A-ABA27FB7EAF1.jpg in Resources */,
 				31A5F80E21968223000F1677 /* CONERIASCRIPT.TTF in Resources */,
 				310BA21721B0F90D00A146B7 /* decoratorTheme-hightech.jpg in Resources */,
+				310D4A5521BE130100082A62 /* ED7929C5-3717-4DF9-A99E-2119BF36FA0C.jpg in Resources */,
 				310BA1EC21B0EA6D00A146B7 /* colorTheme-80sneon.jpg in Resources */,
 				310BA1F621B0EA6D00A146B7 /* colorTheme-metallica.jpg in Resources */,
 				310BA1CC21AFBDE300A146B7 /* wrist.jpg in Resources */,

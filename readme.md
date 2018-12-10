@@ -7,6 +7,7 @@
     - scoll to new item ( esp. important for long list )
     - UX for patterns ?
 
+- allow editing of hand movments ( need thumbnails ? )
 - fix default the indicators to work better for watch
 
 - crash when sending to watch 5 times -- https://stackoverflow.com/questions/52860566/error-when-running-xcode-simulator-framework-cuithemestore-no-theme-regist
