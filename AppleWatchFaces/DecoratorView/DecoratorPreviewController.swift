@@ -132,6 +132,8 @@ class DecoratorPreviewController: UIViewController {
         let createButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonItem.SystemItem.compose, target: self, action: #selector(newItem))
         
         if let dtVC = decoratorsTableViewController {
+            dtVC.editButtonItem.tintColor = UIColor.orange
+            createButton.tintColor = UIColor.orange
             self.navigationItem.rightBarButtonItems = [dtVC.editButtonItem, createButton]
         }
         
