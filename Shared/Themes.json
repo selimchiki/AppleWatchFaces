@@ -1302,7 +1302,7 @@
                 "title" : "Flesh Tones",
                 
                 "clockFaceMaterialName" : "#FEE0BC",
-                "clockCasingMaterialName" : "#3B2A22",
+                "clockCasingMaterialName" : "#664c00ff",
                 
                 "hourHandMaterialName" : "#D2765D",
                 "minuteHandMaterialName" : "#C58D66",
@@ -1314,7 +1314,7 @@
                 "title" : "Barbie",
                 
                 "clockFaceMaterialName" : "#DCC28C",
-                "clockCasingMaterialName" : "#9792C5",
+                "clockCasingMaterialName" : "#a3ffd1ff",
                 
                 "hourHandMaterialName" : "#87236F",
                 "minuteHandMaterialName" : "#9792C5",
@@ -1350,7 +1350,7 @@
                 "title" : "Kale",
                 
                 "clockFaceMaterialName" : "#253625",
-                "clockCasingMaterialName" : "#D3D584",
+                "clockCasingMaterialName" : "#545400ff",
                 
                 "hourHandMaterialName" : "#F8F6FC",
                 "minuteHandMaterialName" : "#939791",
@@ -1398,7 +1398,7 @@
         {
             "title" : "Terra",
             
-            "clockCasingMaterialName" : "#031634",
+            "clockCasingMaterialName" : "#ffebd8ff",
             "clockFaceMaterialName" : "#E8DDCB",
             
             "hourHandMaterialName" : "#036564",
@@ -1446,7 +1446,7 @@
     {
         "title" : "Aqua Dreams",
         
-        "clockCasingMaterialName" : "#a3ffd1ff",
+        "clockCasingMaterialName" : "#00332aff",
         "clockFaceMaterialName" : "#000000ff",
         
         "hourHandMaterialName" : "#91ffecff",
@@ -1470,7 +1470,7 @@
     {
         "title" : "Yellow Glow",
         
-        "clockCasingMaterialName" : "#383838ff",
+        "clockCasingMaterialName" : "#757500ff",
         "clockFaceMaterialName" : "#ffff00ff",
         
         "hourHandMaterialName" : "#333333FF",
@@ -1489,7 +1489,7 @@
         "minuteHandMaterialName" : "#FFFFFFFF",
         "secondHandMaterialName" : "light-wood.jpg",
         
-        "ringMaterials" : [ "#FFFFFFFF", "#ffeaadff", "#e2e2e2ff" ]
+        "ringMaterials" : [ "#000000ff", "#332600ff", "#997200ff" ]
     },
     {
         "title" : "Cobalt Wood",
@@ -1506,7 +1506,7 @@
     {
         "title" : "Light Coffee",
         
-        "clockCasingMaterialName" : "#997200ff",
+        "clockCasingMaterialName" : "#332600ff",
         "clockFaceMaterialName" : "#3f1f00ff",
         
         "hourHandMaterialName" : "#a3e0ffff",
