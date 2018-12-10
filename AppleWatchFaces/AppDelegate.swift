@@ -14,11 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        // Set up and activate your session early here!
-        //WatchSessionManager.sharedManager.startSession()
-        
         //printFonts()
         
         //TODO: do this only once on initial launch ( save a pref to skip it )
