@@ -161,7 +161,7 @@ class ClockSetting: NSObject {
             clockFaceMaterialName: "#000000FF",
             faceBackgroundType: FaceBackgroundTypes.FaceBackgroundTypeFilled,
             
-            clockCasingMaterialName: "#FF0000FF",
+            clockCasingMaterialName: "#1c1c1cff",
             
             clockFaceSettings: ClockFaceSetting.defaults(),
             title: "Untitled"

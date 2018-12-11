@@ -96,18 +96,18 @@ class ClockFaceSetting: NSObject {
             secondHandMaterialName: "#FF0000FF",
             hourHandMaterialName: "#FFFFFFFF",
             minuteHandMaterialName: "#FFFFFFFF",
-            handOutlineMaterialName: "#FFFFFFFF",
+            handOutlineMaterialName: "#8e8e8eff",
             
             hourHandType: HourHandTypes.HourHandTypeSwiss,
             minuteHandType: MinuteHandTypes.MinuteHandTypeSwiss,
             secondHandType: SecondHandTypes.SecondHandTypeRail,
             
-            minuteHandMovement: MinuteHandMovements.MinuteHandMovementStep,
-            secondHandMovement: SecondHandMovements.SecondHandMovementStep,
+            minuteHandMovement: MinuteHandMovements.MinuteHandMovementStep, //lowest power impact
+            secondHandMovement: SecondHandMovements.SecondHandMovementStep, //lowest power impact
             shouldShowRomanNumeralText: false,
             shouldShowHandOutlines: false,
             
-            ringMaterials: [ "#FFFFFFFF","#FFFFFFFF","#FFFFFFFF" ],
+            ringMaterials: [ "#FFFFFFFF","#e2e2e2ff","#c6c6c6ff" ],
             ringSettings: [ ClockRingSetting.defaults() ]
         )
     }
@@ -118,7 +118,7 @@ class ClockFaceSetting: NSObject {
             secondHandMaterialName: "#FF0000FF",
             hourHandMaterialName: "#000000FF",
             minuteHandMaterialName: "#000000FF",
-            handOutlineMaterialName: "#FFFFFFFF",
+            handOutlineMaterialName: "#8e8e8eff",
             
             hourHandType: HourHandTypes.HourHandTypeSwiss,
             minuteHandType: MinuteHandTypes.MinuteHandTypeSwiss,
@@ -129,7 +129,7 @@ class ClockFaceSetting: NSObject {
             shouldShowRomanNumeralText: false,
             shouldShowHandOutlines: false,
         
-            ringMaterials: [ "#FFFFFFFF","#FFFFFFFF","#FFFFFFFF" ],
+            ringMaterials: [ "#FFFFFFFF","#e2e2e2ff","#c6c6c6ff" ],
             ringSettings: [ ClockRingSetting.defaults() ]
         )
     }
