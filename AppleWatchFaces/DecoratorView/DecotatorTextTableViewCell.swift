@@ -44,11 +44,15 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
     }
     
     @IBAction func editType(sender: UIButton ) {
+        self.selectThisCell()
+        
         NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsEditDetailNotificationName, object: nil,
                                         userInfo:["settingType":"textType", "decoratorTextTableViewCell":self ])
     }
       
     @IBAction func totalSegmentDidChange(sender: UISegmentedControl ) {
+        self.selectThisCell()
+        
         let clockRingSetting = myClockRingSetting()
         clockRingSetting.ringPatternTotal = Int(ClockRingSetting.ringTotalOptions()[sender.selectedSegmentIndex])!
         clockRingSetting.ringPattern = [1] // all on for now
@@ -57,6 +61,8 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
     }
     
     @IBAction func segmentDidChange(sender: UISegmentedControl ) {
+        self.selectThisCell()
+        
         //debugPrint("segment value:" + String( sender.selectedSegmentIndex ) )
         let clockRingSetting = myClockRingSetting()
         clockRingSetting.ringMaterialDesiredThemeColorIndex = sender.selectedSegmentIndex
@@ -65,6 +71,8 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
     }
     
     @IBAction func switchDidChange(sender: UISwitch ) {
+        self.selectThisCell()
+        
         //debugPrint("switch value:" + String( sender.isOn ) )
         let clockRingSetting = myClockRingSetting()
         if sender.isOn {
@@ -79,6 +87,8 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
     }
     
     @IBAction func sliderValueDidChange(sender: UISlider ) {
+        self.selectThisCell()
+        
         //debugPrint("slider value:" + String( sender.value ) )
         let clockRingSetting = myClockRingSetting()
         
@@ -121,12 +131,6 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
 }

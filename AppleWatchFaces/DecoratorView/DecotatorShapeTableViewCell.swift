@@ -42,11 +42,15 @@ class DecoratorShapeTableViewCell: DecoratorTableViewCell {
     }
     
     @IBAction func editShape(sender: UIButton ) {
+        self.selectThisCell()
+        
         NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsEditDetailNotificationName, object: nil,
                                         userInfo:["settingType":"indicatorType", "decoratorShapeTableViewCell":self ])
     }
     
     @IBAction func totalSegmentDidChange(sender: UISegmentedControl ) {
+        self.selectThisCell()
+        
         let clockRingSetting = myClockRingSetting()
         clockRingSetting.ringPatternTotal = Int(ClockRingSetting.ringTotalOptions()[sender.selectedSegmentIndex])!
         clockRingSetting.ringPattern = [1] // all on for now
@@ -55,6 +59,8 @@ class DecoratorShapeTableViewCell: DecoratorTableViewCell {
     }
     
     @IBAction func segmentDidChange(sender: UISegmentedControl ) {
+        self.selectThisCell()
+        
         //debugPrint("segment value:" + String( sender.selectedSegmentIndex ) )
         let clockRingSetting = myClockRingSetting()
         clockRingSetting.ringMaterialDesiredThemeColorIndex = sender.selectedSegmentIndex
@@ -63,6 +69,8 @@ class DecoratorShapeTableViewCell: DecoratorTableViewCell {
     }
     
     @IBAction func sliderValueDidChange(sender: UISlider ) {
+        self.selectThisCell()
+        
         debugPrint("slider value:" + String( sender.value ) )
         let clockRingSetting = myClockRingSetting()
 
@@ -96,12 +104,6 @@ class DecoratorShapeTableViewCell: DecoratorTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
 }

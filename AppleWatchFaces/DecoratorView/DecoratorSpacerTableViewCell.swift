@@ -22,6 +22,8 @@ class DecoratorSpacerTableViewCell: DecoratorTableViewCell {
     }
     
     @IBAction func sliderValueDidChange(sender: UISlider ) {
+        self.selectThisCell()
+        
         //debugPrint("slider value:" + String( sender.value ) )
         let clockRingSetting = myClockRingSetting()
         
@@ -48,12 +50,6 @@ class DecoratorSpacerTableViewCell: DecoratorTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

@@ -28,6 +28,9 @@ class DecoratorsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //important only select one at a time
+        self.tableView.allowsMultipleSelection = false
+        
         //self.tableView.isEditing = true
     }
 

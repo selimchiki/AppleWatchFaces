@@ -55,11 +55,34 @@ class DecoratorTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func selectThisCell() {
+        if let tableView = parentTableview, let indexPath = tableView.indexPath(for: self) {
+            
+            if let selectedPath = tableView.indexPathForSelectedRow {
+                if selectedPath == indexPath { return } //already selected -- exit early
+            }
+            
+            tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.none)
+            
+        }
+    }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+        //dont change color
+        self.contentView.backgroundColor = self.backgroundColor
+        
+        if selected {
+            self.layer.cornerRadius = 2.0
+            self.layer.borderWidth = 2.0
+            self.layer.borderColor = UIColor.init(hexString: AppUISettings.settingHighlightColor).cgColor
+        } else {
+            self.layer.cornerRadius = 0.0
+            self.layer.borderWidth = 0.0
+        }
     }
 
 }
