@@ -146,12 +146,12 @@ class ClockRingSetting: NSObject {
             ringMaterialDesiredThemeColorIndex: 0,
             ringWidth: 0.075,
             ringPattern: [1],
-            ringPatternTotal: 60,
+            ringPatternTotal: 12,
             
             indicatorType: FaceIndicatorTypes.FaceIndicatorTypeBox,
             indicatorSize: 0.15,
             
-            textType:  NumberTextTypes.NumberTextTypeDINPro,
+            textType:  NumberTextTypes.NumberTextTypeHelvica,
             textSize: 0.2)
     }
     

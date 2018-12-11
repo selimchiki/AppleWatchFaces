@@ -103,7 +103,7 @@ class ClockFaceSetting: NSObject {
             secondHandType: SecondHandTypes.SecondHandTypeRail,
             
             minuteHandMovement: MinuteHandMovements.MinuteHandMovementStep,
-            secondHandMovement: SecondHandMovements.SecondHandMovementStepOver,
+            secondHandMovement: SecondHandMovements.SecondHandMovementStep,
             shouldShowRomanNumeralText: false,
             shouldShowHandOutlines: false,
             
