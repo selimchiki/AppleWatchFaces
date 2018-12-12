@@ -18,6 +18,39 @@ class DecoratorPreviewController: UIViewController {
     static let ringSettingsChangedNotificationName = Notification.Name("ringSettingsChanged")
     static let ringSettingsEditDetailNotificationName = Notification.Name("ringSettingsEditDetail")
     
+    func highlightRing( ringNumber: Int) {
+        guard let scene = skView.scene else { return }
+        guard let watchFaceNode = scene.childNode(withName: "watchFaceNode") else { return }
+    
+        var ringChildren:[SKNode] = []
+        for childnode in watchFaceNode.children {
+            
+            if childnode.name == "ringNode" || childnode.name == "textRingNode" {
+                debugPrint("ringNode!" + (childnode.name ?? "") )
+                ringChildren.append(childnode)
+            }
+        }
+        
+        guard let ringNode = ringChildren[safe: ringNumber] else { return }
+        
+        for childNode in ringNode.children {
+            let bloomUpAction = SKAction.scale(to: 1.5, duration: 0.25)
+            bloomUpAction.timingMode = .easeIn
+            let bloomDownAction = SKAction.scale(to: 1.0, duration: 0.125)
+            bloomUpAction.timingMode = .easeOut
+            let combinedAction = SKAction.sequence([bloomUpAction, bloomDownAction])
+            
+            if ringNode.name == "ringNode" {
+                if let indicatorNode = childNode.childNode(withName: "indicatorNode" ) {
+                    indicatorNode.run(combinedAction)
+                }
+            } else {
+                childNode.run(combinedAction)
+            }
+        }
+        
+    }
+    
     func redraw(clockSetting: ClockSetting) {
         
         self.title = String( clockSetting.clockFaceSettings!.ringSettings.count ) + " parts"

@@ -33,9 +33,14 @@ class DecoratorsTableViewController: UITableViewController {
         
         //self.tableView.isEditing = true
     }
-
-    // MARK: - Table view data source
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let dPreviewVC = decoratorPreviewController {
+            dPreviewVC.highlightRing(ringNumber: indexPath.row)
+        }
+        
+    }
+    
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         if !tableView.isEditing {
             return .none

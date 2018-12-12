@@ -64,7 +64,6 @@ class DecoratorTableViewCell: UITableViewCell {
             }
             
             tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.none)
-            
         }
     }
     

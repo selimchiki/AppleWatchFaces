@@ -1,25 +1,29 @@
 
 ## TO DO:
+- ring cells less / more with edit mode on by default
 
 - get ring settings / editor working
-    - select cell when editing any of the items
-    - show selected cell in preview ( as a dotted line ring? )
-    - scoll to new item ( esp. important for long list )
+    - show selected cell in preview ( just bloom effect current item )
+    - scroll to new item ( esp. important for long list )
     - UX for patterns ?
 
 - allow editing of hand movments ( need thumbnails ? )
-- fix default the indicators to work better for watch
 
+- undo / redo in editor ( save prev state each time )
 - crash when sending to watch 5 times -- https://stackoverflow.com/questions/52860566/error-when-running-xcode-simulator-framework-cuithemestore-no-theme-regist
 - !! save json data into JPEG for import / export over social  https://stackoverflow.com/questions/40175160/exif-data-read-and-write
 - switch to SVG files for shapes : https://github.com/mchoe/SwiftSVG or https://github.com/pocketsvg/PocketSVG
 - push app to hockeyapp for beta testing
 
+## REFACTORS:
+- guard lets instead of if lets
 - refactor AppUISettings
 - rename KKInterfaceController
 - test with other screen sizes - fix layouts
 
 ## IDEAS:
+- options for main screen
+    - screen saver mode where it switches face on each new watch rise
 - skin-see thru / tattoo watch
 - show name of current face on watch when first starting ( then fade it out )
 - !! save json data into JPEG for import / export over social  https://stackoverflow.com/questions/40175160/exif-data-read-and-write
@@ -70,4 +74,6 @@
 - draw hand outlines ( white initially )
 - add option for hand outline color
 - implement some of the smooth animations for second / minute hand
+- fix default the indicators to work better for watch
+- ring editor: select cell when editing any of the items
 

@@ -79,29 +79,31 @@ class WatchFaceNode: SKShapeNode {
                 material = clockFaceSettings.ringMaterials[clockFaceSettings.ringMaterials.count-1]
             }
             
-            generateRingNode(
-                self,
-                patternTotal: ringSetting.ringPatternTotal,
-                patternArray: ringSetting.ringPattern,
-                ringType: ringSetting.ringType,
-                material: material,
-                currentDistance: currentDistance,
-                clockFaceSettings: clockFaceSettings,
-                ringSettings: ringSetting,
-                renderNumbers: true,
-                renderShapes: true)
-            
-            generateTextRingNode(
-                self,
-                patternTotal: ringSetting.ringPatternTotal,
-                patternArray: ringSetting.ringPattern,
-                ringType: ringSetting.ringType,
-                material: material,
-                currentDistance: currentDistance,
-                clockFaceSettings: clockFaceSettings,
-                ringSettings: ringSetting,
-                renderNumbers: true,
-                renderShapes: true)
+            if (ringSetting.ringType == RingTypes.RingTypeTextRotatingNode || ringSetting.ringType == RingTypes.RingTypeTextNode) {
+                generateTextRingNode(
+                    self,
+                    patternTotal: ringSetting.ringPatternTotal,
+                    patternArray: ringSetting.ringPattern,
+                    ringType: ringSetting.ringType,
+                    material: material,
+                    currentDistance: currentDistance,
+                    clockFaceSettings: clockFaceSettings,
+                    ringSettings: ringSetting,
+                    renderNumbers: true,
+                    renderShapes: true)
+            } else {
+                generateRingNode(
+                    self,
+                    patternTotal: ringSetting.ringPatternTotal,
+                    patternArray: ringSetting.ringPattern,
+                    ringType: ringSetting.ringType,
+                    material: material,
+                    currentDistance: currentDistance,
+                    clockFaceSettings: clockFaceSettings,
+                    ringSettings: ringSetting,
+                    renderNumbers: true,
+                    renderShapes: true)
+            }
             
             //move it closer to center
             currentDistance = currentDistance - ringSetting.ringWidth
@@ -116,6 +118,10 @@ class WatchFaceNode: SKShapeNode {
         
         var patternCounter = 0
         let sizeMultiplier:CGFloat = CGFloat(SKWatchScene.sizeMulitplier)
+        
+        let ringNode = SKNode()
+        ringNode.name = "textRingNode"
+        clockFaceNode.addChild(ringNode)
         
         generateLoop: for outerRingIndex in 0...(patternTotal-1) {
             //dont draw when pattern == 0
@@ -183,12 +189,15 @@ class WatchFaceNode: SKShapeNode {
             //newNode.geometry?.firstMaterial? = material
             newNode.position = CGPoint.init(x: xpos*sizeMultiplier, y: ypos*sizeMultiplier)
             newNode.zPosition = 1
-            clockFaceNode.addChild(newNode)
+            ringNode.addChild(newNode)
         }
     }
     
-    func generateRingNode( _ clockFaceNode: SKShapeNode, patternTotal: Int, patternArray: [Int], ringType: RingTypes, material: String, currentDistance: Float, clockFaceSettings: ClockFaceSetting,
-                           ringSettings: ClockRingSetting, renderNumbers: Bool, renderShapes: Bool ) {
+    func generateRingNode( _ clockFaceNode: SKShapeNode, patternTotal: Int, patternArray: [Int], ringType: RingTypes, material: String, currentDistance: Float, clockFaceSettings: ClockFaceSetting, ringSettings: ClockRingSetting, renderNumbers: Bool, renderShapes: Bool ) {
+        
+        let ringNode = SKNode()
+        ringNode.name = "ringNode"
+        clockFaceNode.addChild(ringNode)
         
         //just exit for spacer
         if (ringType == RingTypes.RingTypeSpacer) { return }
@@ -214,6 +223,7 @@ class WatchFaceNode: SKShapeNode {
             
             let outerRingNode =
                 FaceIndicatorNode.init(indicatorType:  ringSettings.indicatorType, size: ringSettings.indicatorSize, fillColor: SKColor.init(hexString: material))
+            outerRingNode.name = "indicatorNode"
             
             let angleDiv = patternTotal
             let angleOffset = -1.0 * Float(Double.pi*2) / Float(angleDiv)  * Float(outerRingIndex) + Float(Double.pi/2)
@@ -231,7 +241,7 @@ class WatchFaceNode: SKShapeNode {
             
             outerRingParentNode.addChild(outerRingNode)
             outerRingParentNode.zPosition = 1
-            clockFaceNode.addChild(outerRingParentNode)
+            ringNode.addChild(outerRingParentNode)
         }
         
         
