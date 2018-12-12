@@ -74,14 +74,14 @@ class DecoratorTableViewCell: UITableViewCell {
         //dont change color
         self.contentView.backgroundColor = self.backgroundColor
         
-        if selected {
-            self.layer.cornerRadius = 2.0
-            self.layer.borderWidth = 2.0
-            self.layer.borderColor = UIColor.init(hexString: AppUISettings.settingHighlightColor).cgColor
-        } else {
-            self.layer.cornerRadius = 0.0
-            self.layer.borderWidth = 0.0
-        }
+//        if selected {
+//            self.layer.cornerRadius = 2.0
+//            self.layer.borderWidth = 2.0
+//            self.layer.borderColor = UIColor.init(hexString: AppUISettings.settingHighlightColor).cgColor
+//        } else {
+//            self.layer.cornerRadius = 0.0
+//            self.layer.borderWidth = 0.0
+//        }
     }
 
 }

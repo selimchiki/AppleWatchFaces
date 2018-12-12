@@ -66,7 +66,7 @@ class ClockRingSetting: NSObject {
         
         if (nodeType == RingTypes.RingTypeShapeNode)  { typeDescription = "Shape" }
         if (nodeType == RingTypes.RingTypeTextNode)  { typeDescription = "Number Text" }
-        if (nodeType == RingTypes.RingTypeTextRotatingNode)  { typeDescription = "Rotating Number Text" }
+        if (nodeType == RingTypes.RingTypeTextRotatingNode)  { typeDescription = "Number Text" }
         if (nodeType == RingTypes.RingTypeCircle )  { typeDescription = "Circle Shape" }
         if (nodeType == RingTypes.RingTypeSpacer )  { typeDescription = "Empty Space" }
         

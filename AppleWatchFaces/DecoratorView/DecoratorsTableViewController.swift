@@ -66,11 +66,11 @@ class DecoratorsTableViewController: UITableViewController {
                 let ringSetting = clockSettings.ringSettings[indexPath.row]
                 
                 if (ringSetting.ringType == .RingTypeTextNode || ringSetting.ringType == .RingTypeTextRotatingNode) {
-                    return 230.0
+                    return 195.0
                 }
                 
                 if (ringSetting.ringType == .RingTypeShapeNode) {
-                    return 180.0
+                    return 160.0
                 }
                 
                 if (ringSetting.ringType == .RingTypeSpacer) {

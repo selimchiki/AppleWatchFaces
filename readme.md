@@ -1,9 +1,9 @@
 
 ## TO DO:
+
 - ring cells less / more with edit mode on by default
 
 - get ring settings / editor working
-    - show selected cell in preview ( just bloom effect current item )
     - scroll to new item ( esp. important for long list )
     - UX for patterns ?
 
@@ -76,4 +76,5 @@
 - implement some of the smooth animations for second / minute hand
 - fix default the indicators to work better for watch
 - ring editor: select cell when editing any of the items
+- ring editor: show selected cell in preview ( just bloom effect current item )
 

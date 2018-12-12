@@ -11,14 +11,12 @@ import UIKit
 class DecoratorTextTableViewCell: DecoratorTableViewCell {
     
     @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var fontTitleLabel: UILabel!
     @IBOutlet var valueSlider: UISlider!
     @IBOutlet var rotatingSwitch: UISwitch!
     @IBOutlet var materialSegment: UISegmentedControl!
     @IBOutlet var totalNumbersSegment: UISegmentedControl!
     
     override func transitionToEditMode() {
-        self.fontTitleLabel.isHidden = true
         self.materialSegment.isHidden = true
         self.totalNumbersSegment.isHidden = true
         self.valueSlider.isHidden = true
@@ -26,7 +24,6 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
     }
     
     override func transitionToNormalMode() {
-        self.fontTitleLabel.isHidden = false
         self.materialSegment.isHidden = false
         self.totalNumbersSegment.isHidden = false
         self.valueSlider.isHidden = false
@@ -38,7 +35,8 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
         
         let clockRingSetting = myClockRingSetting()
         clockRingSetting.textType = textType
-        self.fontTitleLabel.text =  NumberTextNode.descriptionForType(clockRingSetting.textType)
+        self.titleLabel.text = titleText( clockRingSetting: clockRingSetting )
+        
         NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsChangedNotificationName, object: nil,
                                         userInfo:["settingType":"textType" ])
     }
@@ -102,11 +100,14 @@ class DecoratorTextTableViewCell: DecoratorTableViewCell {
     
     }
     
+    func titleText( clockRingSetting: ClockRingSetting ) -> String {
+        return ClockRingSetting.descriptionForRingType(clockRingSetting.ringType) + " : " + NumberTextNode.descriptionForType(clockRingSetting.textType)
+    }
+    
     override func setupUIForClockRingSetting( clockRingSetting: ClockRingSetting ) {
         super.setupUIForClockRingSetting(clockRingSetting: clockRingSetting)
                 
-        self.titleLabel.text = ClockRingSetting.descriptionForRingType(clockRingSetting.ringType)
-        self.fontTitleLabel.text =  NumberTextNode.descriptionForType(clockRingSetting.textType)
+        self.titleLabel.text = titleText( clockRingSetting: clockRingSetting )
         self.materialSegment.selectedSegmentIndex = clockRingSetting.ringMaterialDesiredThemeColorIndex
         
         let totalString = String(clockRingSetting.ringPatternTotal)

@@ -11,20 +11,17 @@ import UIKit
 class DecoratorShapeTableViewCell: DecoratorTableViewCell {
     
     @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var shapeTypeTitleLabel: UILabel!
     @IBOutlet var materialSegment: UISegmentedControl!
     @IBOutlet var totalNumbersSegment: UISegmentedControl!
     @IBOutlet var valueSlider: UISlider!
     
     override func transitionToEditMode() {
-        self.shapeTypeTitleLabel.isHidden = true
         self.materialSegment.isHidden = true
         self.totalNumbersSegment.isHidden = true
         self.valueSlider.isHidden = true
     }
     
     override func transitionToNormalMode() {
-        self.shapeTypeTitleLabel.isHidden = false
         self.materialSegment.isHidden = false
         self.totalNumbersSegment.isHidden = false
         self.valueSlider.isHidden = false
@@ -35,7 +32,7 @@ class DecoratorShapeTableViewCell: DecoratorTableViewCell {
         
         let clockRingSetting = myClockRingSetting()
         clockRingSetting.indicatorType = shapeType
-        self.shapeTypeTitleLabel.text = FaceIndicatorNode.descriptionForType(shapeType)
+        self.titleLabel.text = titleText(clockRingSetting: clockRingSetting)
         
         NotificationCenter.default.post(name: DecoratorPreviewController.ringSettingsChangedNotificationName, object: nil,
                                         userInfo:["settingType":"indicatorType" ])
@@ -83,11 +80,14 @@ class DecoratorShapeTableViewCell: DecoratorTableViewCell {
         }
     }
     
+    func titleText( clockRingSetting: ClockRingSetting ) -> String {
+        return ClockRingSetting.descriptionForRingType(clockRingSetting.ringType) + " : " + FaceIndicatorNode.descriptionForType(clockRingSetting.indicatorType)
+    }
+    
     override func setupUIForClockRingSetting( clockRingSetting: ClockRingSetting ) {
         super.setupUIForClockRingSetting(clockRingSetting: clockRingSetting)
         
-        self.titleLabel.text = ClockRingSetting.descriptionForRingType(clockRingSetting.ringType)
-        self.shapeTypeTitleLabel.text = FaceIndicatorNode.descriptionForType(clockRingSetting.indicatorType)
+        self.titleLabel.text = titleText(clockRingSetting: clockRingSetting)
         self.materialSegment.selectedSegmentIndex = clockRingSetting.ringMaterialDesiredThemeColorIndex
         
         let totalString = String(clockRingSetting.ringPatternTotal)

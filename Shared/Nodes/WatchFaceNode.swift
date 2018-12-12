@@ -22,8 +22,8 @@ class WatchFaceNode: SKShapeNode {
         //nothing to without these settings
         guard let clockFaceSettings = clockSetting.clockFaceSettings else { return }
         
-        debugPrint("secondhandMovement:" + clockFaceSettings.secondHandMovement.rawValue)
-        debugPrint("minuteHandMovement:" + clockFaceSettings.minuteHandMovement.rawValue)
+        //debugPrint("secondhandMovement:" + clockFaceSettings.secondHandMovement.rawValue)
+        //debugPrint("minuteHandMovement:" + clockFaceSettings.minuteHandMovement.rawValue)
         self.secondHandMovement = clockFaceSettings.secondHandMovement
         self.minuteHandMovement = clockFaceSettings.minuteHandMovement
         
