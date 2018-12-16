@@ -11,31 +11,31 @@
 
 **Typical reponse from Apple if you submit an iOS app that has a wach face:**
 
-    Guideline 4.2.4 - Design - Minimum Functionality
+  Guideline 4.2.4 - Design - Minimum Functionality
 
-    We continued to notice that your Apple Watch app is primarily a clock app with time-telling functionality, which provides a lower quality user experience than Apple users expect. Specifically, users must launch the app or swipe through glances to see the time.
+  We continued to notice that your Apple Watch app is primarily a clock app with time-telling functionality, which provides a lower quality user experience than Apple users expect. Specifically, users must launch the app or swipe through glances to see the time.
 
-    The native clock app already allows users to customize how time is displayed on their devices and offers the best possible time-telling experience. Users are able to switch colors, add more functionality and complications on a watch face such as an alarm, the weather, stocks, activity rings, moon phases, or sunrises and sunsets. Users also have the ability to tap on certain complications to get more information from their corresponding apps.
+  The native clock app already allows users to customize how time is displayed on their devices and offers the best possible time-telling experience. Users are able to switch colors, add more functionality and complications on a watch face such as an alarm, the weather, stocks, activity rings, moon phases, or sunrises and sunsets. Users also have the ability to tap on certain complications to get more information from their corresponding apps.
 
-    We encourage you to review your Apple Watch app concept and incorporate different content and features that are in compliance with the [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/), as well as the [watchOS Human Interface Guidelines](https://developer.apple.com/watchos/human-interface-guidelines/). If you want to show the time in your Apple Watch app, you may use the specialized Date Labels to display time-related values on Apple Watch.
+  We encourage you to review your Apple Watch app concept and incorporate different content and features that are in compliance with the [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/), as well as the [watchOS Human Interface Guidelines](https://developer.apple.com/watchos/human-interface-guidelines/). If you want to show the time in your Apple Watch app, you may use the specialized Date Labels to display time-related values on Apple Watch.
 
 2. **Can I join your testFlght and help you beta test?**
 
-    No. Apple also will block developers from *external* beta testing because of the H.I.G. ( see FAQ 1 ). If you have a large developer team ( which I do not ), then you might be able to do an *internal* beta test on testflight.
+  No. Apple also will block developers from *external* beta testing because of the H.I.G. ( see FAQ 1 ). If you have a large developer team ( which I do not ), then you might be able to do an *internal* beta test on testflight.
 
 3. **How do I get this on my phone / watch?**
 
-    Follow the installation instructions below to compile from the source and you can *side load* this application on to your phone and watch.
+  Follow the installation instructions below to compile from the source and you can *side load* this application on to your phone and watch.
 
 4. **How can I create my own watch hands / background shapes?**
 
-    Currently the watch hands are using UIKit paths, but the plan is to switch these out for loaded SVG files ina folder and load them up when the app starts. This should better allow for designers and non-developers to easily add shapes into the project. 
+  Currently the watch hands are using UIKit paths, but the plan is to switch these out for loaded SVG files in a folder and load them up when the app starts. This should better allow for designers and non-developers to easily add shapes into the project. 
 
 5. **How can I create my add my own images for use as a background in the watch faces ?**
 
-    1. Crop the image to a square at approximately 512x512 pixels ( 72 ppi )
-    2. Drop it into the **/Shared/Resources/Materials** folder
-    in the folder
+  1. Crop the image to a square at approximately 512x512 pixels ( 72 ppi )
+  2. Drop it into the **/Shared/Resources/Materials** folder
+in the folder
 
 ## Installation / Side Load
 
@@ -57,7 +57,7 @@
   1. *important note:* Bundle identifiers for watch extensions are really specific.  `face` uses `com.mikehill.applewatchfaces.watchkit`  & `face (notifications)` uses `com.mikehill.applewatchfaces.watchkit.extension`
   1. Select the `face` scheme in the top left corner with your devices selected and run.
 
-    If you are still having issues, please check out a [sideloading tutorial](http://osxdaily.com/2016/01/12/howto-sideload-apps-iphone-ipad-xcode/) on OSXDaily 
+  If you are still having issues, please check out a [sideloading tutorial](http://osxdaily.com/2016/01/12/howto-sideload-apps-iphone-ipad-xcode/) on OSXDaily 
 
 ## Usage
 
@@ -69,7 +69,6 @@
   1. On the indicators view you can edit the shapes and numbers that make up the face backgrounds.  The designs are rendered on the watch as shapes like circle or squares and text numbers that are *rings* from the outside to the inside of the watch face.  By editing the list of shapes and text items and *empty space* items, you can change the design of the items in the face and see in the preview watch on the top.
 
 1. Watch App:
-  
   1. Set your watch to wake on last activity
   
     Open the Settings app  on your Apple Watch.
