@@ -357,6 +357,8 @@
 		318809012178166B00585AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		318809022178166B00585AB1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		3188090F2178172600585AB1 /* faceBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = faceBackground.png; sourceTree = "<group>"; };
+		319B470A21C705FB00451E9E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		319B470B21C705FB00451E9E /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		31A5F7EE21966CED000F1677 /* MathFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathFunctions.swift; sourceTree = "<group>"; };
 		31A5F7F221968221000F1677 /* BLACKROSE.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = BLACKROSE.TTF; sourceTree = "<group>"; };
 		31A5F7F321968221000F1677 /* ROTHERNBURGDECORATIVE.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = ROTHERNBURGDECORATIVE.TTF; sourceTree = "<group>"; };
@@ -512,6 +514,8 @@
 		318808C4217815E600585AB1 = {
 			isa = PBXGroup;
 			children = (
+				319B470A21C705FB00451E9E /* README.md */,
+				319B470B21C705FB00451E9E /* TODO.md */,
 				3123628B217AAAF000E78EFC /* Shared */,
 				318808CF217815E600585AB1 /* AppleWatchFaces */,
 				318808E52178166A00585AB1 /* Face */,
