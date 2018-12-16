@@ -7,9 +7,9 @@
 
 1. **Can I download this from the app store ?**
 
-**TLDR:** At this time, Apple is not ready for developer created watch faces -- see below for more
+  **TLDR:** At this time, Apple is not ready for developer created watch faces -- see below for more
 
-**Typical reponse from Apple if you submit an iOS app that has a wach face:**
+  **Typical reponse from Apple if you submit an iOS app that has a watch face:**
 
   Guideline 4.2.4 - Design - Minimum Functionality
 
@@ -19,25 +19,25 @@
 
   We encourage you to review your Apple Watch app concept and incorporate different content and features that are in compliance with the [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/), as well as the [watchOS Human Interface Guidelines](https://developer.apple.com/watchos/human-interface-guidelines/). If you want to show the time in your Apple Watch app, you may use the specialized Date Labels to display time-related values on Apple Watch.
 
-1. **Can I join your testFlght and help you beta test?**
+2. **Can I join your testFlight and help you beta test?**
 
   No. Apple also will block developers from *external* beta testing because of the H.I.G. ( see FAQ 1 ). If you have a large developer team ( which I do not ), then you might be able to do an *internal* beta test on testflight.
 
-1. **How do I get this on my phone / watch?**
+3. **How do I get this on my phone / watch?**
 
   Follow the installation instructions below to compile from the source and you can *side load* this application on to your phone and watch.
 
-1. **How can I create my own watch hands / background shapes?**
+4. **How can I create my own watch hands / background shapes?**
 
   Currently the watch hands are using UIKit paths, but the plan is to switch these out for loaded SVG files in a folder and load them up when the app starts. This should better allow for designers and non-developers to easily add shapes into the project. 
 
-1. **How can I create my add my own images for use as a background in the watch faces ?**
+5. **How can I create my add my own images for use as a background in the watch faces ?**
 
   1. Crop the image to a square at approximately 512x512 pixels ( 72 ppi )
   2. Drop it into the **/Shared/Resources/Materials** folder
 in the folder
 
-1. **Which versions of apple watches does this work with ?**
+6. **Which versions of apple watches does this work with ?**
 
 I only have the series 4 for testing, but any watch that can run spriteKit should be fine.
 
@@ -55,11 +55,11 @@ I only have the series 4 for testing, but any watch that can run spriteKit shoul
 1. Open AppleWatchFaces.xcodeproj in Xcode
 
 1. Run on your device:
-  1. Make sure you have an Apple developer account
-  1. Select your development team under the `Signing` area for each target (`AppleWatchFaces`, `face`, and `face (notifications)`)
-  1. Change the `Bundle Identifier` for each of the above targets to something unique. For example, `AppleWatchFaces` uses `com.mikehill.applewatchfaces`, so change that to something like `com.YOUR_USERNAME.applewatchfaces` 
-  1. *important note:* Bundle identifiers for watch extensions are really specific.  `face` uses `com.mikehill.applewatchfaces.watchkit`  & `face (notifications)` uses `com.mikehill.applewatchfaces.watchkit.extension`
-  1. Select the `face` scheme in the top left corner with your devices selected and run.
+    1. Make sure you have an Apple developer account
+    1. Select your development team under the `Signing` area for each target (`AppleWatchFaces`, `face`, and `face (notifications)`)
+    1. Change the `Bundle Identifier` for each of the above targets to something unique. For example, `AppleWatchFaces` uses `com.mikehill.applewatchfaces`, so change that to something like `com.YOUR_USERNAME.applewatchfaces` 
+    1. *important note:* Bundle identifiers for watch extensions are really specific.  `face` uses `com.mikehill.applewatchfaces.watchkit`  & `face (notifications)` uses `com.mikehill.applewatchfaces.watchkit.extension`
+    1. Select the `face` scheme in the top left corner with your devices selected and run.
 
   If you are still having issues, please check out a [sideloading tutorial](http://osxdaily.com/2016/01/12/howto-sideload-apps-iphone-ipad-xcode/) on OSXDaily 
 
