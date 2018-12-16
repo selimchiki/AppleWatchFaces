@@ -33,8 +33,8 @@
 
 5. **How can I create my add my own images for use as a background in the watch faces ?**
 
-  1. Crop the image to a square at approximately 512x512 pixels ( 72 ppi )
-  2. Drop it into the **/Shared/Resources/Materials** folder
+    1. Crop the image to a square at approximately 512x512 pixels ( 72 ppi )
+    2. Drop it into the **/Shared/Resources/Materials** folder
 in the folder
 
 6. **Which versions of apple watches does this work with ?**
