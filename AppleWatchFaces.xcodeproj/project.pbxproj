@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31061F2E218FEAA600EF511B /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 31061F2D218FEAA600EF511B /* readme.md */; };
 		31061F302192657200EF511B /* Colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31061F2F2192657200EF511B /* Colors.plist */; };
 		31061F322192716C00EF511B /* SKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31061F312192716C00EF511B /* SKColor.swift */; };
 		31061F332192730A00EF511B /* SKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31061F312192716C00EF511B /* SKColor.swift */; };
@@ -74,6 +73,8 @@
 		310D4A5521BE130100082A62 /* ED7929C5-3717-4DF9-A99E-2119BF36FA0C.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 310D4A5421BE130100082A62 /* ED7929C5-3717-4DF9-A99E-2119BF36FA0C.jpg */; };
 		310D4A5721BE187200082A62 /* 7A470717-7375-46BA-9C45-FAA721BA432E.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 310D4A5621BE187100082A62 /* 7A470717-7375-46BA-9C45-FAA721BA432E.jpg */; };
 		310D4A5921C0AA9000082A62 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310D4A5821C0AA9000082A62 /* Collection+Safe.swift */; };
+		312B1B7121C6DB1A00B6753E /* TODO.md in Resources */ = {isa = PBXBuildFile; fileRef = 312B1B6F21C6DB1900B6753E /* TODO.md */; };
+		312B1B7221C6DB1A00B6753E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 312B1B7021C6DB1A00B6753E /* README.md */; };
 		312D4C05218BCBF0008504D2 /* ClockDecoratorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */; };
 		312D4C08218BCDDB008504D2 /* HourHandNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D4C07218BCDDB008504D2 /* HourHandNode.swift */; };
 		314A010A21960409009BCE3C /* UserClockSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A010921960409009BCE3C /* UserClockSetting.swift */; };
@@ -267,7 +268,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		31061F2D218FEAA600EF511B /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		31061F2F2192657200EF511B /* Colors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Colors.plist; sourceTree = "<group>"; };
 		31061F312192716C00EF511B /* SKColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKColor.swift; sourceTree = "<group>"; };
 		3107B5CE21B3FCFA005BD26D /* DecoratorRingsSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoratorRingsSettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -332,6 +332,8 @@
 		310D4A5421BE130100082A62 /* ED7929C5-3717-4DF9-A99E-2119BF36FA0C.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ED7929C5-3717-4DF9-A99E-2119BF36FA0C.jpg"; sourceTree = "<group>"; };
 		310D4A5621BE187100082A62 /* 7A470717-7375-46BA-9C45-FAA721BA432E.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "7A470717-7375-46BA-9C45-FAA721BA432E.jpg"; sourceTree = "<group>"; };
 		310D4A5821C0AA9000082A62 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
+		312B1B6F21C6DB1900B6753E /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
+		312B1B7021C6DB1A00B6753E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		312D4C04218BCBF0008504D2 /* ClockDecoratorTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockDecoratorTheme.swift; sourceTree = "<group>"; };
 		312D4C07218BCDDB008504D2 /* HourHandNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourHandNode.swift; sourceTree = "<group>"; };
 		314A010921960409009BCE3C /* UserClockSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClockSetting.swift; sourceTree = "<group>"; };
@@ -514,7 +516,8 @@
 		318808C4217815E600585AB1 = {
 			isa = PBXGroup;
 			children = (
-				31061F2D218FEAA600EF511B /* readme.md */,
+				312B1B7021C6DB1A00B6753E /* README.md */,
+				312B1B6F21C6DB1900B6753E /* TODO.md */,
 				3123628B217AAAF000E78EFC /* Shared */,
 				318808CF217815E600585AB1 /* AppleWatchFaces */,
 				318808E52178166A00585AB1 /* Face */,
@@ -906,6 +909,7 @@
 				310BA21421B0F90D00A146B7 /* decoratorTheme-hightechfancy.jpg in Resources */,
 				31C05DF821A73D3A0021AEAB /* BE439252-6A95-4D3D-8D21-C9BBB5B806CD.jpg in Resources */,
 				31C05E0E21A73D3A0021AEAB /* E6F3C2AC-38DD-4825-9D4B-6E203AD3A097.jpg in Resources */,
+				312B1B7221C6DB1A00B6753E /* README.md in Resources */,
 				310BA21821B0F90D00A146B7 /* decoratorTheme-retrodiner.jpg in Resources */,
 				31C05E0321A73D3A0021AEAB /* D1896EB5-1C6E-47D6-8629-2881C0770D58.jpg in Resources */,
 				314A010E219605AA009BCE3C /* Themes.json in Resources */,
@@ -954,6 +958,7 @@
 				310BA1CC21AFBDE300A146B7 /* wrist.jpg in Resources */,
 				31F4F1CD219A5F1C0050177A /* watchGears.jpg in Resources */,
 				310BA21121B0F90D00A146B7 /* decoratorTheme-oldtimes2.jpg in Resources */,
+				312B1B7121C6DB1A00B6753E /* TODO.md in Resources */,
 				31C05DFC21A73D3A0021AEAB /* BE8F5A1E-17EC-4626-9CFC-78BC3ED21D8A.jpg in Resources */,
 				31A5F80A21968223000F1677 /* IRONLOUNGE.TTF in Resources */,
 				310BA22021B0F90D00A146B7 /* decoratorTheme-romannumerals.jpg in Resources */,
@@ -962,7 +967,6 @@
 				31C05E0B21A73D3A0021AEAB /* B96D7F1B-F55F-4526-9D52-7F67A73EFAA7.jpg in Resources */,
 				310BA21521B0F90D00A146B7 /* decoratorTheme-spectacle.jpg in Resources */,
 				310BA21321B0F90D00A146B7 /* decoratorTheme-decorativelines.jpg in Resources */,
-				31061F2E218FEAA600EF511B /* readme.md in Resources */,
 				31F4F1C6219A5CA60050177A /* wallpaper70s.jpg in Resources */,
 				31A5F80421968223000F1677 /* GERMANICA.TTF in Resources */,
 				310BA21D21B0F90D00A146B7 /* decoratorTheme-lessplanejain.jpg in Resources */,
