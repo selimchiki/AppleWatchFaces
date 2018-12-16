@@ -335,7 +335,7 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
         
         //show gen thumbs button in simulator
         #if (arch(i386) || arch(x86_64))
-            self.generateThumbsButton.isHidden = false
+            //self.generateThumbsButton.isHidden = false
         #endif
         
         SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!

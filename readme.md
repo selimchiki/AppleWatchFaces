@@ -1,7 +1,7 @@
 
 ![APPLEWATCHFACES USAGE](gameplay.gif)
 
-**Design your own watch faces for the apple watch.**
+**Design your own watch faces for the apple watch. They are not *real* watch faces, but a watchOS app running on the watch that tells you the time.**
 
 ## F.A.Q.
 
@@ -19,23 +19,27 @@
 
   We encourage you to review your Apple Watch app concept and incorporate different content and features that are in compliance with the [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/), as well as the [watchOS Human Interface Guidelines](https://developer.apple.com/watchos/human-interface-guidelines/). If you want to show the time in your Apple Watch app, you may use the specialized Date Labels to display time-related values on Apple Watch.
 
-2. **Can I join your testFlght and help you beta test?**
+1. **Can I join your testFlght and help you beta test?**
 
   No. Apple also will block developers from *external* beta testing because of the H.I.G. ( see FAQ 1 ). If you have a large developer team ( which I do not ), then you might be able to do an *internal* beta test on testflight.
 
-3. **How do I get this on my phone / watch?**
+1. **How do I get this on my phone / watch?**
 
   Follow the installation instructions below to compile from the source and you can *side load* this application on to your phone and watch.
 
-4. **How can I create my own watch hands / background shapes?**
+1. **How can I create my own watch hands / background shapes?**
 
   Currently the watch hands are using UIKit paths, but the plan is to switch these out for loaded SVG files in a folder and load them up when the app starts. This should better allow for designers and non-developers to easily add shapes into the project. 
 
-5. **How can I create my add my own images for use as a background in the watch faces ?**
+1. **How can I create my add my own images for use as a background in the watch faces ?**
 
   1. Crop the image to a square at approximately 512x512 pixels ( 72 ppi )
   2. Drop it into the **/Shared/Resources/Materials** folder
 in the folder
+
+1. **Which versions of apple watches does this work with ?**
+
+I only have the series 4 for testing, but any watch that can run spriteKit should be fine.
 
 ## Installation / Side Load
 
