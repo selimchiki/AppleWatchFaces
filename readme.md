@@ -1,7 +1,6 @@
-
-![APPLEWATCHFACES USAGE](AppleWatchFacesQuickDemo.gif)
-
+# AppleWatchFaces
 **Design your own watch faces for the apple watch. They are not *real* watch faces, but a watchOS app running on the watch that tells you the time.**
+![APPLEWATCHFACES USAGE](AppleWatchFacesQuickDemo.gif)
 
 ## F.A.Q.
 
@@ -65,7 +64,7 @@ Any watchOS that can run spriteKit should be fine
 
 ## Usage
 
-### iOS App ###
+### iOS App
 
 1. The main view is for previewing all the faces and deciding if you want to edit one of the them.  You can also create a new one or tapping edit to re-order the list or delete.  Tapping *send all to watch* will send all current designs to the watch and go to the first one.
 1. On the editor view, you can modify settings for that watch face, like the colors, hands, or indicators ( the parts that make up the face like the shapes and numbers that the hands point to ).  
@@ -75,7 +74,7 @@ Any watchOS that can run spriteKit should be fine
   
   ![APPLEWATCHFACES THEMES](AppleWatchFacesThemes.gif)
 
-### Watch App ###
+### Watch App
 
 1. When AppleWatchFaces is open on the watch, use the digital crown to cycle through the different designs in the iOS app
 
