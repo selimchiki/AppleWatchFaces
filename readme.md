@@ -1,14 +1,13 @@
 # AppleWatchFaces
 **Design your own watch faces for the apple watch. They are not *real* watch faces, but a watchOS app running on the watch that tells you the time.**
+
 ![APPLEWATCHFACES USAGE](AppleWatchFacesQuickDemo.gif)
 
-## F.A.Q.
+## Frequently Asked Questions
 
 1. **Can I download this from the app store ?**
 
-  **TLDR:** At this time, Apple is not ready for developer created watch faces -- see below for more
-
-  **Typical reponse from Apple if you submit an iOS app that has a watch face:**
+  At this time, Apple is not ready for developer created watch faces -- **Typical reponse from Apple if you submit an iOS app that has a watch face:**
 
   Guideline 4.2.4 - Design - Minimum Functionality
 
@@ -47,7 +46,7 @@ Any watchOS that can run spriteKit should be fine
 1. Open a Terminal instance and go to your working directory
 
 1. Do 
-<code>git clonehttps://github.com/orff/AppleWatchFaces.git</code>
+<code>git clone https://github.com/orff/AppleWatchFaces.git</code>
 
 1. Navigate to the "AppleWatchFaces" folder in your working directory
 
