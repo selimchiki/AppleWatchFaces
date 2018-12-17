@@ -333,9 +333,9 @@ class SettingsViewController: UIViewController, WCSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //show gen thumbs button in simulator
+        //show gen thumbs button, only in simulator and only if its turned on in AppUISettings
         #if (arch(i386) || arch(x86_64))
-            //self.generateThumbsButton.isHidden = false
+            self.generateThumbsButton.isHidden = !(AppUISettings.showRenderThumbsButton)
         #endif
         
         SettingsViewController.currentClockSetting = UserClockSetting.sharedClockSettings[currentClockIndex].clone()!

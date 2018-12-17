@@ -15,6 +15,9 @@ class AppUISettings: NSObject {
     /*
     These are "theme" settings for the app overall.  Items go here that will be set ( or overriden ) in code that will affect the look and feel of the app.
     Eventually, we might want to load this from JSON or a plist ? */
+    
+    //turn this of override in code to turn the button on to re-render the thumbnails into the docs folder using the simulator
+    static let showRenderThumbsButton = false
  
     //the color used when highlighting the cell items
     static let settingHighlightColor:String = "#38ff9b"
