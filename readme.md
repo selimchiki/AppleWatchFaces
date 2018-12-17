@@ -81,7 +81,7 @@ I havent thought much about the interface or settings for a digital clock that w
 1. On the editor view, you can modify settings for that watch face, like the colors, hands, or indicators ( the parts that make up the face like the shapes and numbers that the hands point to ).  
   1. On the editor view, swipe left and right to go to other faces in the list and swipe up to preview this design on the watch -- same as the *send to watch* button
   1. On the indicators view you can edit the shapes and numbers that make up the face backgrounds.  The designs are rendered on the watch as shapes like circle or squares and text numbers that are *rings* from the outside to the inside of the watch face.  By editing the list of shapes and text items and *empty space* items, you can change the design of the items in the face and see in the preview watch on the top.
-  1. You can also just choose from pre-definied *color themes* or *indicator themes* which will override current color or parts with known good settings
+  1. You can also just choose from pre-defined *color themes* or *indicator themes* which will override current color or parts with known good settings
   
   ![APPLEWATCHFACES THEMES](AppleWatchFacesThemes.gif)
 
