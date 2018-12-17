@@ -39,6 +39,14 @@
 
 Any watchOS that can run spriteKit should be fine
 
+7. **Are you planning to do complications ?**
+
+Maybe, Ive seen some open source battery / date ones. Those would be the simplest
+
+8. **Are all the designs round / analog ?**
+
+Yes, *for now*.  I havent thought much about the interface or settings for a digital clock that would make it interesting other than font or flipping animation
+
 ## Installation / Side Load
 
 1. Install [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) on your mac
