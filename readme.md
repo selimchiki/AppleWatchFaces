@@ -41,11 +41,15 @@ Any watchOS that can run spriteKit should be fine
 
 7. **Are you planning to do complications ?**
 
-Maybe, Ive seen some open source battery / date ones. Those would be the simplest
+Maybe, Ive seen some open source battery / date ones. Those would be the simplest to implement. Positioning out of the way of the other things might be one initial problem to solve
 
-8. **Are all the designs round / analog ?**
+8. **Are all the designs round  ?**
 
-Yes, *for now*.  I havent thought much about the interface or settings for a digital clock that would make it interesting other than font or flipping animation
+The current code renders the items by rotating spriteKit nodes which puts everything nicely in a circle. I have an upcoming [issue for non-circular path support](https://github.com/orff/AppleWatchFaces/issues/6) which should get more "traditional" apple watch rounded rectangles and also support any arbitrary path like a star, oval, or spiral. Hopefully it would eventually play nice with SVG file support as well
+
+8. **What about digital clocks  ?**
+
+I havent thought much about the interface or settings for a digital clock that would make it interesting other than font, position, or flipping animation. A flip clock or nixue tube watch face might be pretty interesting to look at.  Feel free to create an issue or wiki with your ideas 
 
 ## Installation / Side Load
 
