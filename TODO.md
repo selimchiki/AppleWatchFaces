@@ -1,4 +1,6 @@
 ## TO DO:
+- decide on a licence for github before making public
+- create screencast / gif showing the ring indicators
 - ring cells less / more with edit mode on by default
 
 - get ring settings / editor working
