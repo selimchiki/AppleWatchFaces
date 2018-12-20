@@ -51,6 +51,19 @@ class SecondHandAnimationSettingsTableViewCell: WatchSettingsSelectableTableView
         let secondHandMovement = SecondHandMovements.userSelectableValues[indexPath.row]
         cell.title.text = SecondHandNode.descriptionForMovement(secondHandMovement)
         
+        if secondHandMovement == .SecondHandMovementSmooth {
+            cell.thumbnail.image = UIImage.init(named: "secondhandAnimation-smooth.jpg")
+        }
+        if secondHandMovement == .SecondHandMovementStep {
+            cell.thumbnail.image = UIImage.init(named: "secondhandAnimation-step.jpg")
+        }
+        if secondHandMovement == .SecondHandMovementOscillate {
+            cell.thumbnail.image = UIImage.init(named: "secondhandAnimation-oscillate.jpg")
+        }
+        if secondHandMovement == .SecondHandMovementStepOver {
+            cell.thumbnail.image = UIImage.init(named: "secondhandAnimation-stepOver.jpg")
+        }
+        
         return cell
     }
 }

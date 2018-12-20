@@ -49,6 +49,14 @@ class MinuteHandAnimationSettingsTableViewCell: WatchSettingsSelectableTableView
         let minuteHandMovement = MinuteHandMovements.userSelectableValues[indexPath.row]
         cell.title.text = MinuteHandNode.descriptionForMovement(minuteHandMovement)
         
+        if minuteHandMovement == .MinuteHandMovementSmooth {
+            cell.thumbnail.image = UIImage.init(named: "secondhandAnimation-oscillate.jpg")
+        }
+        if minuteHandMovement == .MinuteHandMovementStep {
+            cell.thumbnail.image = UIImage.init(named: "secondhandAnimation-step.jpg")
+        }
+        
+        
         return cell
     }
 }

@@ -84,6 +84,10 @@
 		3153880421CB336400A972BC /* SecondHandAnimationSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3153880221CB336400A972BC /* SecondHandAnimationSettingsTableViewCell.swift */; };
 		3153880721CB395300A972BC /* MinuteHandAnimationSettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3153880521CB395200A972BC /* MinuteHandAnimationSettingCollectionViewCell.swift */; };
 		3153880821CB395300A972BC /* MinuteHandAnimationSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3153880621CB395300A972BC /* MinuteHandAnimationSettingsTableViewCell.swift */; };
+		3153880D21CB462D00A972BC /* secondhandAnimation-oscillate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3153880921CB462C00A972BC /* secondhandAnimation-oscillate.jpg */; };
+		3153880E21CB462D00A972BC /* secondhandAnimation-smooth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3153880A21CB462C00A972BC /* secondhandAnimation-smooth.jpg */; };
+		3153880F21CB462D00A972BC /* secondhandAnimation-stepOver.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3153880B21CB462C00A972BC /* secondhandAnimation-stepOver.jpg */; };
+		3153881021CB462D00A972BC /* secondhandAnimation-step.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3153880C21CB462C00A972BC /* secondhandAnimation-step.jpg */; };
 		318808D1217815E600585AB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808D0217815E600585AB1 /* AppDelegate.swift */; };
 		318808D3217815E600585AB1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808D2217815E600585AB1 /* SettingsViewController.swift */; };
 		318808D6217815E600585AB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318808D4217815E600585AB1 /* Main.storyboard */; };
@@ -344,6 +348,10 @@
 		3153880221CB336400A972BC /* SecondHandAnimationSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondHandAnimationSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		3153880521CB395200A972BC /* MinuteHandAnimationSettingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinuteHandAnimationSettingCollectionViewCell.swift; sourceTree = "<group>"; };
 		3153880621CB395300A972BC /* MinuteHandAnimationSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinuteHandAnimationSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		3153880921CB462C00A972BC /* secondhandAnimation-oscillate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "secondhandAnimation-oscillate.jpg"; sourceTree = "<group>"; };
+		3153880A21CB462C00A972BC /* secondhandAnimation-smooth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "secondhandAnimation-smooth.jpg"; sourceTree = "<group>"; };
+		3153880B21CB462C00A972BC /* secondhandAnimation-stepOver.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "secondhandAnimation-stepOver.jpg"; sourceTree = "<group>"; };
+		3153880C21CB462C00A972BC /* secondhandAnimation-step.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "secondhandAnimation-step.jpg"; sourceTree = "<group>"; };
 		318808CD217815E600585AB1 /* AppleWatchFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWatchFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318808D0217815E600585AB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		318808D2217815E600585AB1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -636,6 +644,10 @@
 		31C05DA621A734120021AEAB /* defaultThumbnails */ = {
 			isa = PBXGroup;
 			children = (
+				3153880921CB462C00A972BC /* secondhandAnimation-oscillate.jpg */,
+				3153880A21CB462C00A972BC /* secondhandAnimation-smooth.jpg */,
+				3153880C21CB462C00A972BC /* secondhandAnimation-step.jpg */,
+				3153880B21CB462C00A972BC /* secondhandAnimation-stepOver.jpg */,
 				310BA20C21B0F90C00A146B7 /* decoratorTheme-allnumbers.jpg */,
 				310BA20221B0F90B00A146B7 /* decoratorTheme-biggysmalls.jpg */,
 				310BA20321B0F90B00A146B7 /* decoratorTheme-decorativelines.jpg */,
@@ -914,6 +926,7 @@
 				31C05E0521A73D3A0021AEAB /* 97FB78D9-D2FA-4AAF-B084-3AC8811BFDCA.jpg in Resources */,
 				31A5F80221968223000F1677 /* RATIONALINT.TTF in Resources */,
 				31061F302192657200EF511B /* Colors.plist in Resources */,
+				3153880E21CB462D00A972BC /* secondhandAnimation-smooth.jpg in Resources */,
 				310BA21A21B0F90D00A146B7 /* decoratorTheme-outsidehours.jpg in Resources */,
 				31F4F1B6219899420050177A /* SettingsTableHeaderView.xib in Resources */,
 				310BA21421B0F90D00A146B7 /* decoratorTheme-hightechfancy.jpg in Resources */,
@@ -936,6 +949,7 @@
 				31F4F1C8219A5CBD0050177A /* wallpaperFlower.jpg in Resources */,
 				31A5F7FE21968223000F1677 /* ROTHERNBURGDECORATIVE.TTF in Resources */,
 				31F56FA62185817E00455FC6 /* SKWatchScene.sks in Resources */,
+				3153880F21CB462D00A972BC /* secondhandAnimation-stepOver.jpg in Resources */,
 				31C05E0421A73D3A0021AEAB /* 376BB937-10F8-4449-9CD5-D370D2AB648E.jpg in Resources */,
 				310BA1EF21B0EA6D00A146B7 /* colorTheme-retrodiner.jpg in Resources */,
 				310BA21621B0F90D00A146B7 /* decoratorTheme-energizer.jpg in Resources */,
@@ -967,6 +981,7 @@
 				310BA1CC21AFBDE300A146B7 /* wrist.jpg in Resources */,
 				31F4F1CD219A5F1C0050177A /* watchGears.jpg in Resources */,
 				310BA21121B0F90D00A146B7 /* decoratorTheme-oldtimes2.jpg in Resources */,
+				3153880D21CB462D00A972BC /* secondhandAnimation-oscillate.jpg in Resources */,
 				31C05DFC21A73D3A0021AEAB /* BE8F5A1E-17EC-4626-9CFC-78BC3ED21D8A.jpg in Resources */,
 				31A5F80A21968223000F1677 /* IRONLOUNGE.TTF in Resources */,
 				310BA22021B0F90D00A146B7 /* decoratorTheme-romannumerals.jpg in Resources */,
@@ -987,6 +1002,7 @@
 				310BA1EA21B0EA6D00A146B7 /* colorTheme-plainjane.jpg in Resources */,
 				310BA1FC21B0EA6E00A146B7 /* colorTheme-skyblue.jpg in Resources */,
 				31A5F80621968223000F1677 /* KINGTHINGS.TTF in Resources */,
+				3153881021CB462D00A972BC /* secondhandAnimation-step.jpg in Resources */,
 				31C05E1021A73D3A0021AEAB /* E080FBDB-BBA4-4A5E-B3DC-19018FFFB565.jpg in Resources */,
 				310BA1ED21B0EA6D00A146B7 /* colorTheme-bloodandtears.jpg in Resources */,
 				318808D6217815E600585AB1 /* Main.storyboard in Resources */,
