@@ -40,10 +40,15 @@ class WatchSettingsTableViewController: UITableViewController {
         ],
         [
             ["title":"Hand Display",                "rowHeight":"66.0","cellID":"handsOptionsSettingsTableViewCellID"],
+            
             ["title":"Second Hand",                 "rowHeight":"100.0","cellID":"secondHandSettingsTableViewCell"],
+            ["title":"Second Hand Animation",       "rowHeight":"130.0","cellID":"secondhandAnimationSettingsTableViewCellID"],
             ["title":"Second Hand Color",           "rowHeight":"100.0","cellID":"secondHandColorsTableViewCell"],
+            
             ["title":"Minute Hand",                 "rowHeight":"100.0","cellID":"minuteHandSettingsTableViewCell"],
+            ["title":"Minute Hand Animation",       "rowHeight":"130.0","cellID":"minutehandAnimationSettingsTableViewCellID"],
             ["title":"Minute Hand Color",           "rowHeight":"100.0","cellID":"minuteHandColorTableViewCell"],
+            
             ["title":"Hour Hand",                   "rowHeight":"100.0","cellID":"hourHandSettingsTableViewCell"],
             ["title":"Hour Hand Color",             "rowHeight":"100.0","cellID":"hourHandColorTableViewCell"],
             ["title":"Hand Outline Color",          "rowHeight":"100.0","cellID":"handOutlineColorTableViewCell"]
@@ -85,18 +90,26 @@ class WatchSettingsTableViewController: UITableViewController {
             } else {
                 settingText = "no outlines"
             }
+            
         case "secondHandSettingsTableViewCell":
             settingText = SecondHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandType)!)
+        case "secondhandAnimationSettingsTableViewCellID":
+            settingText = SecondHandNode.descriptionForMovement((SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandMovement)!)
         case "secondHandColorsTableViewCell":
             settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.secondHandMaterialName ?? ""
+            
         case "minuteHandSettingsTableViewCell":
             settingText = MinuteHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandType)!)
+        case "minutehandAnimationSettingsTableViewCellID":
+            settingText = MinuteHandNode.descriptionForMovement((SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandMovement)!)
         case "minuteHandColorTableViewCell":
             settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.minuteHandMaterialName ?? ""
+            
         case "hourHandSettingsTableViewCell":
             settingText = HourHandNode.descriptionForType((SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandType)!)
         case "hourHandColorTableViewCell":
             settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.hourHandMaterialName ?? ""
+            
         case "handOutlineColorTableViewCell":
             settingText = SettingsViewController.currentClockSetting.clockFaceSettings?.handOutlineMaterialName ?? ""
         case "ringMainColorsTableViewCell":

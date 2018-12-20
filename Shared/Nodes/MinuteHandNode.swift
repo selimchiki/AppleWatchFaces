@@ -68,6 +68,15 @@ class MinuteHandNode: SKSpriteNode {
         return typeKeysArray
     }
     
+    static func descriptionForMovement(_ nodeType: MinuteHandMovements) -> String {
+        var typeDescription = ""
+        
+        if (nodeType == MinuteHandMovements.MinuteHandMovementStep)  { typeDescription = "Step" }
+        if (nodeType == MinuteHandMovements.MinuteHandMovementSmooth)  { typeDescription = "Smooth" }
+        
+        return typeDescription
+    }
+    
     convenience init(minuteHandType: MinuteHandTypes) {
         self.init(minuteHandType: minuteHandType, material: "#ffffffff")
     }

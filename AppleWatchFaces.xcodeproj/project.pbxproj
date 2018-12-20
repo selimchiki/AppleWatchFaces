@@ -80,6 +80,10 @@
 		314A010E219605AA009BCE3C /* Themes.json in Resources */ = {isa = PBXBuildFile; fileRef = 314A010C219605AA009BCE3C /* Themes.json */; };
 		314A011021962FF4009BCE3C /* WatchFaceNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A010F21962FF4009BCE3C /* WatchFaceNode.swift */; };
 		314A011121963537009BCE3C /* WatchFaceNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A010F21962FF4009BCE3C /* WatchFaceNode.swift */; };
+		3153880321CB336400A972BC /* SecondHandAnimationSettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3153880121CB336400A972BC /* SecondHandAnimationSettingCollectionViewCell.swift */; };
+		3153880421CB336400A972BC /* SecondHandAnimationSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3153880221CB336400A972BC /* SecondHandAnimationSettingsTableViewCell.swift */; };
+		3153880721CB395300A972BC /* MinuteHandAnimationSettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3153880521CB395200A972BC /* MinuteHandAnimationSettingCollectionViewCell.swift */; };
+		3153880821CB395300A972BC /* MinuteHandAnimationSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3153880621CB395300A972BC /* MinuteHandAnimationSettingsTableViewCell.swift */; };
 		318808D1217815E600585AB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808D0217815E600585AB1 /* AppDelegate.swift */; };
 		318808D3217815E600585AB1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318808D2217815E600585AB1 /* SettingsViewController.swift */; };
 		318808D6217815E600585AB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318808D4217815E600585AB1 /* Main.storyboard */; };
@@ -336,6 +340,10 @@
 		314A010B219605AA009BCE3C /* Settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Settings.json; sourceTree = "<group>"; };
 		314A010C219605AA009BCE3C /* Themes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Themes.json; sourceTree = "<group>"; };
 		314A010F21962FF4009BCE3C /* WatchFaceNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFaceNode.swift; sourceTree = "<group>"; };
+		3153880121CB336400A972BC /* SecondHandAnimationSettingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondHandAnimationSettingCollectionViewCell.swift; sourceTree = "<group>"; };
+		3153880221CB336400A972BC /* SecondHandAnimationSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondHandAnimationSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		3153880521CB395200A972BC /* MinuteHandAnimationSettingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinuteHandAnimationSettingCollectionViewCell.swift; sourceTree = "<group>"; };
+		3153880621CB395300A972BC /* MinuteHandAnimationSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinuteHandAnimationSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		318808CD217815E600585AB1 /* AppleWatchFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWatchFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318808D0217815E600585AB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		318808D2217815E600585AB1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -703,6 +711,10 @@
 		31EF9991219E602D00BB54E7 /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
+				3153880521CB395200A972BC /* MinuteHandAnimationSettingCollectionViewCell.swift */,
+				3153880621CB395300A972BC /* MinuteHandAnimationSettingsTableViewCell.swift */,
+				3153880121CB336400A972BC /* SecondHandAnimationSettingCollectionViewCell.swift */,
+				3153880221CB336400A972BC /* SecondHandAnimationSettingsTableViewCell.swift */,
 				3107B5CE21B3FCFA005BD26D /* DecoratorRingsSettingsTableViewCell.swift */,
 				31F4F1B5219899420050177A /* SettingsTableHeaderView.xib */,
 				31B3F8CB218F2F1F00AD22A5 /* SettingsTableHeaderViewCell.swift */,
@@ -1085,6 +1097,7 @@
 				31B5E8E4218CEF9000DE6429 /* MinuteHandSettingsTableViewCell.swift in Sources */,
 				310BA1C821AFAADB00A146B7 /* ColorThemeSettingsTableViewCell.swift in Sources */,
 				31FD61E921891B5000E15DEA /* SwiftyJSON.swift in Sources */,
+				3153880321CB336400A972BC /* SecondHandAnimationSettingCollectionViewCell.swift in Sources */,
 				3109D1DD21A872DF00561F13 /* IndicatorsMainColorSettingsTableViewCell.swift in Sources */,
 				3107B5D121B4023B005BD26D /* DecoratorsTableViewController.swift in Sources */,
 				312D4C08218BCDDB008504D2 /* HourHandNode.swift in Sources */,
@@ -1097,10 +1110,13 @@
 				3109D1E521A9A37B00561F13 /* FaceChooserEditTableViewCell.swift in Sources */,
 				31EF999D21A0C63A00BB54E7 /* MainBackgroundColorSettingTableViewCell.swift in Sources */,
 				318808D1217815E600585AB1 /* AppDelegate.swift in Sources */,
+				3153880821CB395300A972BC /* MinuteHandAnimationSettingsTableViewCell.swift in Sources */,
 				31B5E8E6218CEFF100DE6429 /* MinuteHandSettingCollectionViewCell.swift in Sources */,
 				31B3F8CC218F2F1F00AD22A5 /* SettingsTableHeaderViewCell.swift in Sources */,
+				3153880421CB336400A972BC /* SecondHandAnimationSettingsTableViewCell.swift in Sources */,
 				3107B5CF21B3FCFA005BD26D /* DecoratorRingsSettingsTableViewCell.swift in Sources */,
 				3107B5DA21B47634005BD26D /* DecoratorTableViewCell.swift in Sources */,
+				3153880721CB395300A972BC /* MinuteHandAnimationSettingCollectionViewCell.swift in Sources */,
 				310BA1D121B08F1A00A146B7 /* DecoratorThemeSettingCollectionViewCell.swift in Sources */,
 				31F56FA421857FC100455FC6 /* WatchPreviewViewController.swift in Sources */,
 				3107B5D321B40480005BD26D /* DecoratorPreviewController.swift in Sources */,
