@@ -16,6 +16,13 @@ enum RingTypes: String {
     static let userSelectableValues = [RingTypeShapeNode, RingTypeTextNode, RingTypeTextRotatingNode, RingTypeCircle, RingTypeSpacer]
 }
 
+//different types of shapes rings can render in
+enum RingRenderShapes: String {
+    case RingRenderShapeCircle, RingRenderShapeRoundedRect
+    
+    static let userSelectableValues = [RingRenderShapeCircle, RingRenderShapeRoundedRect]
+}
+
 class ClockRingSetting: NSObject {
     
     static func ringTotalOptions() -> [String] {
@@ -85,6 +92,33 @@ class ClockRingSetting: NSObject {
     static func ringTypeKeys() -> [String] {
         var typeKeysArray = [String]()
         for nodeType in RingTypes.userSelectableValues {
+            typeKeysArray.append(nodeType.rawValue)
+        }
+        
+        return typeKeysArray
+    }
+    
+    static func descriptionForRingRenderShapes(_ nodeType: RingRenderShapes) -> String {
+        var typeDescription = ""
+        
+        if (nodeType == RingRenderShapes.RingRenderShapeCircle)  { typeDescription = "Circle" }
+        if (nodeType == RingRenderShapes.RingRenderShapeRoundedRect)  { typeDescription = "Rounded Rect" }
+        
+        return typeDescription
+    }
+    
+    static func ringRenderShapesDescriptions() -> [String] {
+        var typeDescriptionsArray = [String]()
+        for nodeType in RingRenderShapes.userSelectableValues {
+            typeDescriptionsArray.append(descriptionForRingRenderShapes(nodeType))
+        }
+        
+        return typeDescriptionsArray
+    }
+    
+    static func ringRenderShapesKeys() -> [String] {
+        var typeKeysArray = [String]()
+        for nodeType in RingRenderShapes.userSelectableValues {
             typeKeysArray.append(nodeType.rawValue)
         }
         
