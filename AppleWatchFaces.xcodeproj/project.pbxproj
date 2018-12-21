@@ -103,6 +103,10 @@
 		318809002178166B00585AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 318808FF2178166B00585AB1 /* Assets.xcassets */; };
 		318809052178166B00585AB1 /* Face.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 318808E42178166A00585AB1 /* Face.app */; };
 		318809102178172600585AB1 /* faceBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 3188090F2178172600585AB1 /* faceBackground.png */; };
+		3188AC1121CC962000C90783 /* BezierPath+Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319095F921CC898100F71BC6 /* BezierPath+Length.swift */; };
+		3188AC1221CC962B00C90783 /* PathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319095FA21CC898100F71BC6 /* PathElement.swift */; };
+		319095FB21CC898200F71BC6 /* BezierPath+Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319095F921CC898100F71BC6 /* BezierPath+Length.swift */; };
+		319095FC21CC898200F71BC6 /* PathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319095FA21CC898100F71BC6 /* PathElement.swift */; };
 		31A5F7EF21966CED000F1677 /* MathFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5F7EE21966CED000F1677 /* MathFunctions.swift */; };
 		31A5F7F021966CED000F1677 /* MathFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A5F7EE21966CED000F1677 /* MathFunctions.swift */; };
 		31A5F7FC21968223000F1677 /* BLACKROSE.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 31A5F7F221968221000F1677 /* BLACKROSE.TTF */; };
@@ -373,6 +377,8 @@
 		318809012178166B00585AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		318809022178166B00585AB1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		3188090F2178172600585AB1 /* faceBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = faceBackground.png; sourceTree = "<group>"; };
+		319095F921CC898100F71BC6 /* BezierPath+Length.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BezierPath+Length.swift"; sourceTree = "<group>"; };
+		319095FA21CC898100F71BC6 /* PathElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathElement.swift; sourceTree = "<group>"; };
 		319B470A21C705FB00451E9E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		319B470B21C705FB00451E9E /* TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		31A5F7EE21966CED000F1677 /* MathFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathFunctions.swift; sourceTree = "<group>"; };
@@ -790,6 +796,8 @@
 		31F56F9E21857A5E00455FC6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				319095F921CC898100F71BC6 /* BezierPath+Length.swift */,
+				319095FA21CC898100F71BC6 /* PathElement.swift */,
 				31E5BC4A21A39DAF00C1B35E /* StringExtension.swift */,
 				31A5F7EE21966CED000F1677 /* MathFunctions.swift */,
 				31FD61E821891B4F00E15DEA /* SwiftyJSON.swift */,
@@ -1097,6 +1105,7 @@
 				31F4F1D9219D08890050177A /* FaceChooserViewController.swift in Sources */,
 				31F8ABCD2187EB520014E2ED /* SecondHandSettingsTableViewCell.swift in Sources */,
 				31B3F8D0218F4BAE00AD22A5 /* SecondHandColorSettingsTableViewCell.swift in Sources */,
+				319095FB21CC898200F71BC6 /* BezierPath+Length.swift in Sources */,
 				3107B5D621B406C8005BD26D /* DecoratorSpacerTableViewCell.swift in Sources */,
 				31EF999F21A2045B00BB54E7 /* FaceChooserTableViewController.swift in Sources */,
 				31E5BC4E21A3A0F700C1B35E /* UIImage+Loading.swift in Sources */,
@@ -1122,6 +1131,7 @@
 				31F4F1B82198ACB50050177A /* AppUISettings.swift in Sources */,
 				31B5E8D7218BD91400DE6429 /* ClockFaceSetting.swift in Sources */,
 				312D4C05218BCBF0008504D2 /* ClockDecoratorTheme.swift in Sources */,
+				319095FC21CC898200F71BC6 /* PathElement.swift in Sources */,
 				314A010A21960409009BCE3C /* UserClockSetting.swift in Sources */,
 				3109D1E521A9A37B00561F13 /* FaceChooserEditTableViewCell.swift in Sources */,
 				31EF999D21A0C63A00BB54E7 /* MainBackgroundColorSettingTableViewCell.swift in Sources */,
@@ -1147,6 +1157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31B5E8DE218CE02D00DE6429 /* FaceIndicatorNode.swift in Sources */,
+				3188AC1121CC962000C90783 /* BezierPath+Length.swift in Sources */,
 				31B5E8DD218CE01B00DE6429 /* ClockColorTheme.swift in Sources */,
 				31BC68FB21954BED00DD8CD6 /* KKInterfaceController.m in Sources */,
 				318808F62178166B00585AB1 /* InterfaceController.swift in Sources */,
@@ -1170,6 +1181,7 @@
 				31B5E8DC218CE01800DE6429 /* ClockDecoratorTheme.swift in Sources */,
 				31F56FA221857AC300455FC6 /* SecondHandNode.swift in Sources */,
 				31B5E8DF218CE03000DE6429 /* NumberTextNode.swift in Sources */,
+				3188AC1221CC962B00C90783 /* PathElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -66,6 +66,12 @@ class WatchFaceNode: SKShapeNode {
         hourHandNode.zPosition = 2
         
         self.addChild(hourHandNode)
+        
+        let totalWidth = CGFloat(SKWatchScene.sizeMulitplier * 2)
+        let rect =  CGRect(x: -totalWidth/2, y: -totalWidth/2, width: totalWidth, height: totalWidth)
+        
+        //let ringShape = UIBezierPath(roundedRect: rect, cornerRadius: 16.0)
+        let ringShape = UIBezierPath(ovalIn: rect)
     
         var currentDistance = Float(1.0)
         //loop through ring settings and render rings from outside to inside
@@ -102,7 +108,8 @@ class WatchFaceNode: SKShapeNode {
                     clockFaceSettings: clockFaceSettings,
                     ringSettings: ringSetting,
                     renderNumbers: true,
-                    renderShapes: true)
+                    renderShapes: true,
+                    ringShape: ringShape)
             }
             
             //move it closer to center
@@ -193,7 +200,7 @@ class WatchFaceNode: SKShapeNode {
         }
     }
     
-    func generateRingNode( _ clockFaceNode: SKShapeNode, patternTotal: Int, patternArray: [Int], ringType: RingTypes, material: String, currentDistance: Float, clockFaceSettings: ClockFaceSetting, ringSettings: ClockRingSetting, renderNumbers: Bool, renderShapes: Bool ) {
+    func generateRingNode( _ clockFaceNode: SKShapeNode, patternTotal: Int, patternArray: [Int], ringType: RingTypes, material: String, currentDistance: Float, clockFaceSettings: ClockFaceSetting, ringSettings: ClockRingSetting, renderNumbers: Bool, renderShapes: Bool, ringShape: UIBezierPath ) {
         
         let ringNode = SKNode()
         ringNode.name = "ringNode"
@@ -204,8 +211,6 @@ class WatchFaceNode: SKShapeNode {
         
         //only render shapes
         if (ringType != RingTypes.RingTypeShapeNode) { return }
-        
-        let sizeMultiplier:Float = Float(SKWatchScene.sizeMulitplier)
         
         // exit if pattern array is empty
         if (patternArray.count == 0) { return }
@@ -226,6 +231,26 @@ class WatchFaceNode: SKShapeNode {
             outerRingNode.name = "indicatorNode"
             
             let angleDiv = patternTotal
+            let angleOffset = 1.0 * Float(Double.pi*2) / Float(angleDiv)  * Float(outerRingIndex) + Float(Double.pi/2)
+            
+            outerRingNode.zRotation = CGFloat(angleOffset) //CGFloat(Double.pi/2)
+            
+            let percentOfPath:CGFloat = CGFloat(outerRingIndex) / CGFloat(patternTotal)
+            let distanceMult = CGFloat(currentDistance)
+            if let newPos = ringShape.point(at: percentOfPath) {
+                let xpos:CGFloat = CGFloat(newPos.x * distanceMult)
+                let ypos:CGFloat = CGFloat(newPos.y * distanceMult)
+                
+                outerRingNode.position = CGPoint.init(x: xpos, y: ypos)
+            }
+            
+            
+            
+            outerRingNode.zPosition = 1
+            ringNode.addChild(outerRingNode)
+            
+            /*
+            let angleDiv = patternTotal
             let angleOffset = -1.0 * Float(Double.pi*2) / Float(angleDiv)  * Float(outerRingIndex) + Float(Double.pi/2)
             
             outerRingNode.zRotation = CGFloat(Double.pi/2)
@@ -242,6 +267,7 @@ class WatchFaceNode: SKShapeNode {
             outerRingParentNode.addChild(outerRingNode)
             outerRingParentNode.zPosition = 1
             ringNode.addChild(outerRingParentNode)
+            */
         }
         
         
