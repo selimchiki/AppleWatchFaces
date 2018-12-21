@@ -102,7 +102,7 @@ class ClockRingSetting: NSObject {
         var typeDescription = ""
         
         if (nodeType == RingRenderShapes.RingRenderShapeCircle)  { typeDescription = "Circle" }
-        if (nodeType == RingRenderShapes.RingRenderShapeRoundedRect)  { typeDescription = "Rounded Rect" }
+        if (nodeType == RingRenderShapes.RingRenderShapeRoundedRect)  { typeDescription = "Rectangle" }
         
         return typeDescription
     }

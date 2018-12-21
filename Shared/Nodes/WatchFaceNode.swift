@@ -70,61 +70,37 @@ class WatchFaceNode: SKShapeNode {
         let totalWidth = CGFloat(SKWatchScene.sizeMulitplier * 2)
         
         let ringShapePath = UIBezierPath()
-        ringShapePath.move(to: CGPoint(x: 0, y: -100))
-        ringShapePath.addLine(to: CGPoint(x: 69.43, y: -100))
-        ringShapePath.addCurve(to: CGPoint(x: 86.6, y: -98.69), controlPoint1: CGPoint(x: 78.23, y: -100), controlPoint2: CGPoint(x: 82.63, y: -100))
-        ringShapePath.addLine(to: CGPoint(x: 87.37, y: -98.5))
-        ringShapePath.addCurve(to: CGPoint(x: 98.5, y: -87.37), controlPoint1: CGPoint(x: 92.54, y: -96.62), controlPoint2: CGPoint(x: 96.62, y: -92.54))
-        ringShapePath.addCurve(to: CGPoint(x: 100, y: -69.43), controlPoint1: CGPoint(x: 100, y: -82.63), controlPoint2: CGPoint(x: 100, y: -78.23))
-        ringShapePath.addLine(to: CGPoint(x: 100, y: 69.43))
-        ringShapePath.addCurve(to: CGPoint(x: 98.69, y: 86.6), controlPoint1: CGPoint(x: 100, y: 78.23), controlPoint2: CGPoint(x: 100, y: 82.63))
-        ringShapePath.addLine(to: CGPoint(x: 98.5, y: 87.37))
-        ringShapePath.addCurve(to: CGPoint(x: 87.37, y: 98.5), controlPoint1: CGPoint(x: 96.62, y: 92.54), controlPoint2: CGPoint(x: 92.54, y: 96.62))
-        ringShapePath.addCurve(to: CGPoint(x: 69.43, y: 100), controlPoint1: CGPoint(x: 82.63, y: 100), controlPoint2: CGPoint(x: 78.23, y: 100))
-        ringShapePath.addLine(to: CGPoint(x: -69.43, y: 100))
-        ringShapePath.addCurve(to: CGPoint(x: -86.6, y: 98.69), controlPoint1: CGPoint(x: -78.23, y: 100), controlPoint2: CGPoint(x: -82.63, y: 100))
-        ringShapePath.addLine(to: CGPoint(x: -87.37, y: 98.5))
-        ringShapePath.addCurve(to: CGPoint(x: -98.5, y: 87.37), controlPoint1: CGPoint(x: -92.54, y: 96.62), controlPoint2: CGPoint(x: -96.62, y: 92.54))
-        ringShapePath.addCurve(to: CGPoint(x: -100, y: 69.43), controlPoint1: CGPoint(x: -100, y: 82.63), controlPoint2: CGPoint(x: -100, y: 78.23))
-        ringShapePath.addLine(to: CGPoint(x: -100, y: -69.43))
-        ringShapePath.addCurve(to: CGPoint(x: -98.69, y: -86.6), controlPoint1: CGPoint(x: -100, y: -78.23), controlPoint2: CGPoint(x: -100, y: -82.63))
-        ringShapePath.addLine(to: CGPoint(x: -98.5, y: -87.37))
-        ringShapePath.addCurve(to: CGPoint(x: -87.37, y: -98.5), controlPoint1: CGPoint(x: -96.62, y: -92.54), controlPoint2: CGPoint(x: -92.54, y: -96.62))
-        ringShapePath.addCurve(to: CGPoint(x: -69.43, y: -100), controlPoint1: CGPoint(x: -82.63, y: -100), controlPoint2: CGPoint(x: -78.23, y: -100))
-        ringShapePath.close()
-
-        /*
-        let ringShapePath = UIBezierPath()
-        ringShapePath.move(to:CGPoint(x: 0, y: -100))  //CGPoint(x: -20.51, y: -100)
-        ringShapePath.addLine(to: CGPoint(x: 20.51, y: -100))
-        ringShapePath.addCurve(to: CGPoint(x: 65.16, y: -96.59), controlPoint1: CGPoint(x: 43.4, y: -100), controlPoint2: CGPoint(x: 54.84, y: -100))
-        ringShapePath.addLine(to: CGPoint(x: 67.16, y: -96.1))
-        ringShapePath.addCurve(to: CGPoint(x: 96.1, y: -67.16), controlPoint1: CGPoint(x: 80.61, y: -91.21), controlPoint2: CGPoint(x: 91.21, y: -80.61))
-        ringShapePath.addCurve(to: CGPoint(x: 100, y: -20.51), controlPoint1: CGPoint(x: 100, y: -54.84), controlPoint2: CGPoint(x: 100, y: -43.4))
-        ringShapePath.addLine(to: CGPoint(x: 100, y: 20.51))
-        ringShapePath.addCurve(to: CGPoint(x: 96.59, y: 65.16), controlPoint1: CGPoint(x: 100, y: 43.4), controlPoint2: CGPoint(x: 100, y: 54.84))
-        ringShapePath.addLine(to: CGPoint(x: 96.1, y: 67.16))
-        ringShapePath.addCurve(to: CGPoint(x: 67.16, y: 96.1), controlPoint1: CGPoint(x: 91.21, y: 80.61), controlPoint2: CGPoint(x: 80.61, y: 91.21))
-        ringShapePath.addCurve(to: CGPoint(x: 20.51, y: 100), controlPoint1: CGPoint(x: 54.84, y: 100), controlPoint2: CGPoint(x: 43.4, y: 100))
-        ringShapePath.addLine(to: CGPoint(x: -20.51, y: 100))
-        ringShapePath.addCurve(to: CGPoint(x: -65.16, y: 96.59), controlPoint1: CGPoint(x: -43.4, y: 100), controlPoint2: CGPoint(x: -54.84, y: 100))
-        ringShapePath.addLine(to: CGPoint(x: -67.16, y: 96.1))
-        ringShapePath.addCurve(to: CGPoint(x: -96.1, y: 67.16), controlPoint1: CGPoint(x: -80.61, y: 91.21), controlPoint2: CGPoint(x: -91.21, y: 80.61))
-        ringShapePath.addCurve(to: CGPoint(x: -100, y: 20.51), controlPoint1: CGPoint(x: -100, y: 54.84), controlPoint2: CGPoint(x: -100, y: 43.4))
-        ringShapePath.addLine(to: CGPoint(x: -100, y: -20.51))
-        ringShapePath.addCurve(to: CGPoint(x: -96.59, y: -65.16), controlPoint1: CGPoint(x: -100, y: -43.4), controlPoint2: CGPoint(x: -100, y: -54.84))
-        ringShapePath.addLine(to: CGPoint(x: -96.1, y: -67.16))
-        ringShapePath.addCurve(to: CGPoint(x: -67.16, y: -96.1), controlPoint1: CGPoint(x: -91.21, y: -80.61), controlPoint2: CGPoint(x: -80.61, y: -91.21))
-        ringShapePath.addCurve(to: CGPoint(x: -20.51, y: -100), controlPoint1: CGPoint(x: -54.84, y: -100), controlPoint2: CGPoint(x: -43.4, y: -100))
-        ringShapePath.close()
-         */
- 
-        ringShapePath.apply(CGAffineTransform.init(scaleX: 1, y: -1.275)) //flip and stretch
-
         
-//        let ringShapePath = UIBezierPath()
-//        ringShapePath.addArc(withCenter: CGPoint.zero, radius: totalWidth/2, startAngle: CGFloat(Double.pi/2), endAngle: -CGFloat(Double.pi*2)+CGFloat(Double.pi/2), clockwise: false) //reversed, but works
-//        ringShapePath.close()
+        if clockFaceSettings.ringRenderShape == .RingRenderShapeRoundedRect {
+            ringShapePath.move(to: CGPoint(x: 0, y: -100))
+            ringShapePath.addLine(to: CGPoint(x: 69.43, y: -100))
+            ringShapePath.addCurve(to: CGPoint(x: 86.6, y: -98.69), controlPoint1: CGPoint(x: 78.23, y: -100), controlPoint2: CGPoint(x: 82.63, y: -100))
+            ringShapePath.addLine(to: CGPoint(x: 87.37, y: -98.5))
+            ringShapePath.addCurve(to: CGPoint(x: 98.5, y: -87.37), controlPoint1: CGPoint(x: 92.54, y: -96.62), controlPoint2: CGPoint(x: 96.62, y: -92.54))
+            ringShapePath.addCurve(to: CGPoint(x: 100, y: -69.43), controlPoint1: CGPoint(x: 100, y: -82.63), controlPoint2: CGPoint(x: 100, y: -78.23))
+            ringShapePath.addLine(to: CGPoint(x: 100, y: 69.43))
+            ringShapePath.addCurve(to: CGPoint(x: 98.69, y: 86.6), controlPoint1: CGPoint(x: 100, y: 78.23), controlPoint2: CGPoint(x: 100, y: 82.63))
+            ringShapePath.addLine(to: CGPoint(x: 98.5, y: 87.37))
+            ringShapePath.addCurve(to: CGPoint(x: 87.37, y: 98.5), controlPoint1: CGPoint(x: 96.62, y: 92.54), controlPoint2: CGPoint(x: 92.54, y: 96.62))
+            ringShapePath.addCurve(to: CGPoint(x: 69.43, y: 100), controlPoint1: CGPoint(x: 82.63, y: 100), controlPoint2: CGPoint(x: 78.23, y: 100))
+            ringShapePath.addLine(to: CGPoint(x: -69.43, y: 100))
+            ringShapePath.addCurve(to: CGPoint(x: -86.6, y: 98.69), controlPoint1: CGPoint(x: -78.23, y: 100), controlPoint2: CGPoint(x: -82.63, y: 100))
+            ringShapePath.addLine(to: CGPoint(x: -87.37, y: 98.5))
+            ringShapePath.addCurve(to: CGPoint(x: -98.5, y: 87.37), controlPoint1: CGPoint(x: -92.54, y: 96.62), controlPoint2: CGPoint(x: -96.62, y: 92.54))
+            ringShapePath.addCurve(to: CGPoint(x: -100, y: 69.43), controlPoint1: CGPoint(x: -100, y: 82.63), controlPoint2: CGPoint(x: -100, y: 78.23))
+            ringShapePath.addLine(to: CGPoint(x: -100, y: -69.43))
+            ringShapePath.addCurve(to: CGPoint(x: -98.69, y: -86.6), controlPoint1: CGPoint(x: -100, y: -78.23), controlPoint2: CGPoint(x: -100, y: -82.63))
+            ringShapePath.addLine(to: CGPoint(x: -98.5, y: -87.37))
+            ringShapePath.addCurve(to: CGPoint(x: -87.37, y: -98.5), controlPoint1: CGPoint(x: -96.62, y: -92.54), controlPoint2: CGPoint(x: -92.54, y: -96.62))
+            ringShapePath.addCurve(to: CGPoint(x: -69.43, y: -100), controlPoint1: CGPoint(x: -82.63, y: -100), controlPoint2: CGPoint(x: -78.23, y: -100))
+            ringShapePath.close()
+            ringShapePath.apply(CGAffineTransform.init(scaleX: 1, y: -1.275)) //flip and stretch
+        }
+
+        if clockFaceSettings.ringRenderShape == .RingRenderShapeCircle {
+            ringShapePath.addArc(withCenter: CGPoint.zero, radius: totalWidth/2, startAngle: CGFloat(Double.pi/2), endAngle: -CGFloat(Double.pi*2)+CGFloat(Double.pi/2), clockwise: false) //reversed, but works
+            ringShapePath.close()
+        }
     
         var currentDistance = Float(1.0)
         //loop through ring settings and render rings from outside to inside
